@@ -1,0 +1,84 @@
+[roslaunch][INFO] 2020-10-02 09:02:37,254: Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+[roslaunch][INFO] 2020-10-02 09:02:37,258: Done checking log file disk usage. Usage is <1GB.
+[roslaunch][INFO] 2020-10-02 09:02:37,258: roslaunch starting with args ['roscore', '--core']
+[roslaunch][INFO] 2020-10-02 09:02:37,258: roslaunch env is environ({'ROS_VERSION': '1', 'NVIDIA_VISIBLE_DEVICES': 'all', 'PKG_CONFIG_PATH': '/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'HOSTNAME': 'luigi', 'NVIDIA_REQUIRE_CUDA': 'cuda>=10.2 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411 brand=tesla,driver>=440,driver<441', 'NCCL_VERSION': '2.7.8', 'ROS_PACKAGE_PATH': '/opt/ros/noetic/share:/home/catkin_ws', 'ROSLISP_PACKAGE_DIRECTORIES': '', 'PWD': '/root/catkin_ws', 'NVIDIA_DRIVER_CAPABILITIES': 'compute,utility', 'CUDA_PKG_VERSION': '10-2=10.2.89-1', 'HOME': '/root', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'CUDA_VERSION': '10.2.89', 'CMAKE_PREFIX_PATH': '/opt/ros/noetic', 'ROS_WORKSPACE': '/home/catkin_ws', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PYTHONPATH': '/opt/ros/noetic/lib/python3/dist-packages', 'TERM': 'xterm', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'DISPLAY': '', 'SHLVL': '1', 'ROS_MASTER_URI': 'http://localhost:11311', 'CUDNN_VERSION': '7.6.5.32', 'LD_LIBRARY_PATH': '/opt/ros/noetic/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64', 'PATH': '/opt/ros/noetic/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'QT_X11_NO_MITSHM': '1', '_': '/opt/ros/noetic/bin/roscore', 'OLDPWD': '/root', 'LC_CTYPE': 'C.UTF-8', 'ROS_LOG_FILENAME': '/root/.ros/log/047d0072-048e-11eb-85fc-0cc47a82249c/roslaunch-luigi-32.log'})
+[roslaunch][INFO] 2020-10-02 09:02:37,259: starting in server mode
+[roslaunch.parent][INFO] 2020-10-02 09:02:37,259: starting roslaunch parent run
+[roslaunch][INFO] 2020-10-02 09:02:37,260: loading roscore config file /opt/ros/noetic/etc/ros/roscore.xml
+[roslaunch][INFO] 2020-10-02 09:02:37,751: Added core node of type [rosout/rosout] in namespace [/]
+[roslaunch.pmon][INFO] 2020-10-02 09:02:37,752: start_process_monitor: creating ProcessMonitor
+[roslaunch.pmon][INFO] 2020-10-02 09:02:37,752: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
+[roslaunch.pmon][INFO] 2020-10-02 09:02:37,753: start_process_monitor: ProcessMonitor started
+[roslaunch.parent][INFO] 2020-10-02 09:02:37,753: starting parent XML-RPC server
+[roslaunch.server][INFO] 2020-10-02 09:02:37,753: starting roslaunch XML-RPC server
+[roslaunch.server][INFO] 2020-10-02 09:02:37,753: waiting for roslaunch XML-RPC server to initialize
+[xmlrpc][INFO] 2020-10-02 09:02:37,754: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-10-02 09:02:37,754: Started XML-RPC server [http://luigi:42729/]
+[xmlrpc][INFO] 2020-10-02 09:02:37,755: xml rpc node: starting XML-RPC server
+[roslaunch][INFO] 2020-10-02 09:02:37,767: started roslaunch server http://luigi:42729/
+[roslaunch.parent][INFO] 2020-10-02 09:02:37,767: ... parent XML-RPC server started
+[roslaunch][INFO] 2020-10-02 09:02:37,768: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:37,780: auto-starting new master
+[roslaunch][INFO] 2020-10-02 09:02:37,780: create_master_process: rosmaster, /opt/ros/noetic/share/ros, 11311, 3, None, False
+[roslaunch][INFO] 2020-10-02 09:02:37,780: process[master]: launching with args [['rosmaster', '--core', '-p', '11311', '-w', '3']]
+[roslaunch.pmon][INFO] 2020-10-02 09:02:37,781: ProcessMonitor.register[master]
+[roslaunch.pmon][INFO] 2020-10-02 09:02:37,781: ProcessMonitor.register[master] complete
+[roslaunch][INFO] 2020-10-02 09:02:37,781: process[master]: starting os process
+[roslaunch][INFO] 2020-10-02 09:02:37,781: process[master]: start w/ args [['rosmaster', '--core', '-p', '11311', '-w', '3', '__log:=/root/.ros/log/047d0072-048e-11eb-85fc-0cc47a82249c/master.log']]
+[roslaunch][INFO] 2020-10-02 09:02:37,781: process[master]: cwd will be [/root/.ros]
+[roslaunch][INFO] 2020-10-02 09:02:37,785: process[master]: started with pid [40]
+[roslaunch][INFO] 2020-10-02 09:02:37,785: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:37,886: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:37,986: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:38,087: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:38,090: master.is_running[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:38,093: ROS_MASTER_URI=http://luigi:11311/
+[roslaunch][INFO] 2020-10-02 09:02:38,095: setting /run_id to 047d0072-048e-11eb-85fc-0cc47a82249c
+[roslaunch][INFO] 2020-10-02 09:02:38,097: setting /roslaunch/uris/host_luigi__42729' to http://luigi:42729/
+[roslaunch][INFO] 2020-10-02 09:02:38,101: ... preparing to launch node of type [rosout/rosout]
+[roslaunch][INFO] 2020-10-02 09:02:38,101: create_node_process: package[rosout] type[rosout] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://luigi:11311/]
+[roslaunch][INFO] 2020-10-02 09:02:38,101: process[rosout-1]: env[{'ROS_VERSION': '1', 'NVIDIA_VISIBLE_DEVICES': 'all', 'PKG_CONFIG_PATH': '/opt/ros/noetic/lib/pkgconfig', 'ROS_PYTHON_VERSION': '3', 'HOSTNAME': 'luigi', 'NVIDIA_REQUIRE_CUDA': 'cuda>=10.2 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411 brand=tesla,driver>=440,driver<441', 'NCCL_VERSION': '2.7.8', 'ROS_PACKAGE_PATH': '/opt/ros/noetic/share:/home/catkin_ws', 'ROSLISP_PACKAGE_DIRECTORIES': '', 'PWD': '/root/catkin_ws', 'NVIDIA_DRIVER_CAPABILITIES': 'compute,utility', 'CUDA_PKG_VERSION': '10-2=10.2.89-1', 'HOME': '/root', 'ROS_ETC_DIR': '/opt/ros/noetic/etc/ros', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'CUDA_VERSION': '10.2.89', 'CMAKE_PREFIX_PATH': '/opt/ros/noetic', 'ROS_WORKSPACE': '/home/catkin_ws', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PYTHONPATH': '/opt/ros/noetic/lib/python3/dist-packages', 'TERM': 'xterm', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'DISPLAY': '', 'SHLVL': '1', 'ROS_MASTER_URI': 'http://luigi:11311/', 'CUDNN_VERSION': '7.6.5.32', 'LD_LIBRARY_PATH': '/opt/ros/noetic/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64', 'PATH': '/opt/ros/noetic/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_ROOT': '/opt/ros/noetic/share/ros', 'ROS_DISTRO': 'noetic', 'QT_X11_NO_MITSHM': '1', '_': '/opt/ros/noetic/bin/roscore', 'OLDPWD': '/root', 'LC_CTYPE': 'C.UTF-8', 'ROS_LOG_FILENAME': '/root/.ros/log/047d0072-048e-11eb-85fc-0cc47a82249c/roslaunch-luigi-32.log'}]
+[roslaunch][INFO] 2020-10-02 09:02:38,141: process[rosout-1]: args[['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout']]
+[roslaunch][INFO] 2020-10-02 09:02:38,141: ... created process [rosout-1]
+[roslaunch.pmon][INFO] 2020-10-02 09:02:38,141: ProcessMonitor.register[rosout-1]
+[roslaunch.pmon][INFO] 2020-10-02 09:02:38,142: ProcessMonitor.register[rosout-1] complete
+[roslaunch][INFO] 2020-10-02 09:02:38,142: ... registered process [rosout-1]
+[roslaunch][INFO] 2020-10-02 09:02:38,142: process[rosout-1]: starting os process
+[roslaunch][INFO] 2020-10-02 09:02:38,142: process[rosout-1]: start w/ args [['/opt/ros/noetic/lib/rosout/rosout', '__name:=rosout', '__log:=/root/.ros/log/047d0072-048e-11eb-85fc-0cc47a82249c/rosout-1.log']]
+[roslaunch][INFO] 2020-10-02 09:02:38,142: process[rosout-1]: cwd will be [/root/.ros]
+[roslaunch][INFO] 2020-10-02 09:02:38,147: process[rosout-1]: started with pid [50]
+[roslaunch][INFO] 2020-10-02 09:02:38,148: ... successfully launched [rosout-1]
+[roslaunch][INFO] 2020-10-02 09:02:38,148: load_parameters starting ...
+[roslaunch][INFO] 2020-10-02 09:02:38,154: ... load_parameters complete
+[roslaunch][INFO] 2020-10-02 09:02:38,154: launch_nodes: launching local nodes ...
+[roslaunch][INFO] 2020-10-02 09:02:38,154: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2020-10-02 09:02:38,155: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 140032080078592)>
+[roslaunch.parent][INFO] 2020-10-02 09:02:38,155: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2020-10-02 09:02:38,155: spin
+[roslaunch.pmon][INFO] 2020-10-02 09:03:17,772: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, started daemon 140032080078592)>
+[roslaunch.pmon][INFO] 2020-10-02 09:03:17,863: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 140032080078592)>
+[roslaunch.pmon][INFO] 2020-10-02 09:03:17,863: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 140032080078592)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0x7f5bc26b3fa0>, <roslaunch.nodeprocess.LocalProcess object at 0x7f5bc264f670>]
+[roslaunch.pmon][INFO] 2020-10-02 09:03:17,866: ProcessMonitor exit: killing rosout-1
+[roslaunch][INFO] 2020-10-02 09:03:17,866: [rosout-1] killing on exit
+[roslaunch][INFO] 2020-10-02 09:03:17,866: process[rosout-1]: killing os process with pid[50] pgid[50]
+[roslaunch][INFO] 2020-10-02 09:03:17,866: [rosout-1] sending SIGINT to pgid [50]
+[roslaunch][INFO] 2020-10-02 09:03:17,866: [rosout-1] sent SIGINT to pgid [50]
+[roslaunch][INFO] 2020-10-02 09:03:18,067: process[rosout-1]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2020-10-02 09:03:18,067: ProcessMonitor exit: killing master
+[roslaunch][INFO] 2020-10-02 09:03:18,067: [master] killing on exit
+[roslaunch][INFO] 2020-10-02 09:03:18,067: process[master]: killing os process with pid[40] pgid[40]
+[roslaunch][INFO] 2020-10-02 09:03:18,067: [master] sending SIGINT to pgid [40]
+[roslaunch][INFO] 2020-10-02 09:03:18,067: [master] sent SIGINT to pgid [40]
+[roslaunch][INFO] 2020-10-02 09:03:18,268: process[master]: SIGINT killed with return value 0
+[roslaunch.pmon][INFO] 2020-10-02 09:03:18,268: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2020-10-02 09:03:18,268: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2020-10-02 09:03:18,269: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2020-10-02 09:03:18,269: runner.stop()
+[roslaunch][INFO] 2020-10-02 09:03:18,269: shutting down processing monitor...
+[roslaunch][INFO] 2020-10-02 09:03:18,269: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 140032080078592)>
+[roslaunch.pmon][INFO] 2020-10-02 09:03:18,269: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 140032080078592)>
+[roslaunch][INFO] 2020-10-02 09:03:18,269: ... shutting down processing monitor complete
+[roslaunch][INFO] 2020-10-02 09:03:18,269: done
+[roslaunch.pmon][INFO] 2020-10-02 09:03:18,270: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 140032080078592)>
+[rospy.core][INFO] 2020-10-02 09:03:18,270: signal_shutdown [atexit]

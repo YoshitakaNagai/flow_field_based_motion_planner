@@ -1,0 +1,21 @@
+[rosmaster.main][INFO] 2020-10-02 08:55:31,353: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-10-02 08:55:31,353: Starting ROS Master Node
+[xmlrpc][INFO] 2020-10-02 08:55:31,354: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-10-02 08:55:31,355: Started XML-RPC server [http://192.168.0.191:11311/]
+[rosmaster.master][INFO] 2020-10-02 08:55:31,355: Master initialized: port[11311], uri[http://192.168.0.191:11311/]
+[xmlrpc][INFO] 2020-10-02 08:55:31,355: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-10-02 08:55:31,366: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 08:55:31,368: +PARAM [/roslaunch/uris/host_192_168_0_191__43467] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 08:55:31,411: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 08:55:31,412: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 08:55:31,428: +SERVICE [/rosout/get_loggers] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:31,429: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:31,430: +PUB [/rosout_agg] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:31,434: +SUB [/rosout] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:43,047: -PUB [/rosout_agg] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:43,048: -SUB [/rosout] /rosout http://192.168.0.191:44843/
+[rosmaster.master][INFO] 2020-10-02 08:55:43,048: -SERVICE [/rosout/get_loggers] /rosout rosrpc://192.168.0.191:38679
+[rosmaster.master][INFO] 2020-10-02 08:55:43,049: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://192.168.0.191:38679
+[rosmaster.main][INFO] 2020-10-02 08:55:43,059: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2020-10-02 08:55:43,059: stopping master...
+[rospy.core][INFO] 2020-10-02 08:55:43,059: signal_shutdown [atexit]

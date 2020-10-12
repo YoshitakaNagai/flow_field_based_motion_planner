@@ -1,0 +1,71 @@
+[rosmaster.main][INFO] 2020-10-02 10:02:23,293: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-10-02 10:02:23,293: Starting ROS Master Node
+[xmlrpc][INFO] 2020-10-02 10:02:23,294: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-10-02 10:02:23,295: Started XML-RPC server [http://luigi:11311/]
+[rosmaster.master][INFO] 2020-10-02 10:02:23,295: Master initialized: port[11311], uri[http://luigi:11311/]
+[xmlrpc][INFO] 2020-10-02 10:02:23,295: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-10-02 10:02:23,377: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 10:02:23,379: +PARAM [/roslaunch/uris/host_luigi__40921] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 10:02:23,433: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 10:02:23,433: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-10-02 10:02:23,453: +SERVICE [/rosout/get_loggers] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 10:02:23,454: +SERVICE [/rosout/set_logger_level] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 10:02:23,456: +PUB [/rosout_agg] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 10:02:23,459: +SUB [/rosout] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 10:46:58,439: +PUB [/rosout] /train_1409_1601635618304 http://luigi:39335/
+[rosmaster.master][INFO] 2020-10-02 10:46:58,441: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:39335/']
+[rosmaster.master][INFO] 2020-10-02 10:46:58,442: +SERVICE [/train_1409_1601635618304/get_loggers] /train_1409_1601635618304 http://luigi:39335/
+[rosmaster.master][INFO] 2020-10-02 10:46:58,446: +SERVICE [/train_1409_1601635618304/set_logger_level] /train_1409_1601635618304 http://luigi:39335/
+[rosmaster.master][INFO] 2020-10-02 10:46:58,448: -PUB [/rosout] /train_1409_1601635618304 http://luigi:39335/
+[rosmaster.master][INFO] 2020-10-02 10:46:58,448: -SERVICE [/train_1409_1601635618304/get_loggers] /train_1409_1601635618304 rosrpc://luigi:39341
+[rosmaster.master][INFO] 2020-10-02 10:46:58,449: -SERVICE [/train_1409_1601635618304/set_logger_level] /train_1409_1601635618304 rosrpc://luigi:39341
+[rosmaster.master][INFO] 2020-10-02 10:46:58,483: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:39335/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 10:46:58,483: publisherUpdate[/rosout] -> http://luigi:45173/ []
+[rosmaster.master][INFO] 2020-10-02 10:46:58,484: publisherUpdate[/rosout] -> http://luigi:45173/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 10:48:31,753: +PUB [/rosout] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,758: +SERVICE [/train_1426_1601635711614/get_loggers] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,760: +SERVICE [/train_1426_1601635711614/set_logger_level] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,762: +SUB [/bev/flow_image] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,765: -SUB [/bev/flow_image] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,765: -PUB [/rosout] /train_1426_1601635711614 http://luigi:35935/
+[rosmaster.master][INFO] 2020-10-02 10:48:31,765: -SERVICE [/train_1426_1601635711614/get_loggers] /train_1426_1601635711614 rosrpc://luigi:34503
+[rosmaster.master][INFO] 2020-10-02 10:48:31,765: -SERVICE [/train_1426_1601635711614/set_logger_level] /train_1426_1601635711614 rosrpc://luigi:34503
+[rosmaster.master][INFO] 2020-10-02 10:48:31,786: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:35935/']
+[rosmaster.master][INFO] 2020-10-02 10:48:31,824: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:35935/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 10:48:31,825: publisherUpdate[/rosout] -> http://luigi:45173/ []
+[rosmaster.master][INFO] 2020-10-02 10:48:31,825: publisherUpdate[/rosout] -> http://luigi:45173/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 10:49:16,319: +PUB [/rosout] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:16,323: +SERVICE [/train_1443_1601635756184/get_loggers] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:16,324: +SERVICE [/train_1443_1601635756184/set_logger_level] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:16,327: +SUB [/bev/flow_image] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:16,328: +PUB [/cmd_vel/train] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:16,373: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:42833/']
+[rosmaster.master][INFO] 2020-10-02 10:49:16,411: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:42833/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 10:49:20,286: -SUB [/bev/flow_image] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:20,286: -PUB [/rosout] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:20,287: -PUB [/cmd_vel/train] /train_1443_1601635756184 http://luigi:42833/
+[rosmaster.master][INFO] 2020-10-02 10:49:20,287: -SERVICE [/train_1443_1601635756184/get_loggers] /train_1443_1601635756184 rosrpc://luigi:44677
+[rosmaster.master][INFO] 2020-10-02 10:49:20,287: -SERVICE [/train_1443_1601635756184/set_logger_level] /train_1443_1601635756184 rosrpc://luigi:44677
+[rosmaster.master][INFO] 2020-10-02 10:49:20,308: publisherUpdate[/rosout] -> http://luigi:45173/ []
+[rosmaster.master][INFO] 2020-10-02 10:49:20,309: publisherUpdate[/rosout] -> http://luigi:45173/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 11:28:30,271: +PUB [/rosout] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:30,271: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:36733/']
+[rosmaster.master][INFO] 2020-10-02 11:28:30,273: publisherUpdate[/rosout] -> http://luigi:45173/ ['http://luigi:36733/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 11:28:30,276: +SERVICE [/train_1570_1601638110137/get_loggers] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:30,277: +SERVICE [/train_1570_1601638110137/set_logger_level] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:30,279: +SUB [/bev/flow_image] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:30,281: +PUB [/cmd_vel/train] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:33,469: -SUB [/bev/flow_image] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:33,469: -PUB [/rosout] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:33,469: -PUB [/cmd_vel/train] /train_1570_1601638110137 http://luigi:36733/
+[rosmaster.master][INFO] 2020-10-02 11:28:33,470: -SERVICE [/train_1570_1601638110137/get_loggers] /train_1570_1601638110137 rosrpc://luigi:42559
+[rosmaster.master][INFO] 2020-10-02 11:28:33,470: -SERVICE [/train_1570_1601638110137/set_logger_level] /train_1570_1601638110137 rosrpc://luigi:42559
+[rosmaster.master][INFO] 2020-10-02 11:28:33,479: publisherUpdate[/rosout] -> http://luigi:45173/ []
+[rosmaster.master][INFO] 2020-10-02 11:28:33,480: publisherUpdate[/rosout] -> http://luigi:45173/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-10-02 12:00:46,094: -PUB [/rosout_agg] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 12:00:46,095: -SUB [/rosout] /rosout http://luigi:45173/
+[rosmaster.master][INFO] 2020-10-02 12:00:46,096: -SERVICE [/rosout/get_loggers] /rosout rosrpc://luigi:51057
+[rosmaster.master][INFO] 2020-10-02 12:00:46,097: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://luigi:51057
+[rosmaster.main][INFO] 2020-10-02 12:00:46,133: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2020-10-02 12:00:46,133: stopping master...
+[rospy.core][INFO] 2020-10-02 12:00:46,134: signal_shutdown [atexit]

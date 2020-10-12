@@ -1,0 +1,21 @@
+[rosmaster.main][INFO] 2020-10-03 06:20:10,527: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-10-03 06:20:10,527: Starting ROS Master Node
+[xmlrpc][INFO] 2020-10-03 06:20:10,528: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-10-03 06:20:10,528: Started XML-RPC server [http://luigi:11311/]
+[rosmaster.master][INFO] 2020-10-03 06:20:10,529: Master initialized: port[11311], uri[http://luigi:11311/]
+[xmlrpc][INFO] 2020-10-03 06:20:10,529: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-10-03 06:20:10,609: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-10-03 06:20:10,610: +PARAM [/roslaunch/uris/host_luigi__32957] by /roslaunch
+[rosmaster.master][INFO] 2020-10-03 06:20:10,664: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-10-03 06:20:10,665: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-10-03 06:20:10,685: +SERVICE [/rosout/get_loggers] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:20:10,686: +SERVICE [/rosout/set_logger_level] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:20:10,688: +PUB [/rosout_agg] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:20:10,691: +SUB [/rosout] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:57:54,474: -PUB [/rosout_agg] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:57:54,475: -SUB [/rosout] /rosout http://luigi:33715/
+[rosmaster.master][INFO] 2020-10-03 06:57:54,476: -SERVICE [/rosout/get_loggers] /rosout rosrpc://luigi:55367
+[rosmaster.master][INFO] 2020-10-03 06:57:54,477: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://luigi:55367
+[rosmaster.main][INFO] 2020-10-03 06:57:54,559: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2020-10-03 06:57:54,559: stopping master...
+[rospy.core][INFO] 2020-10-03 06:57:54,560: signal_shutdown [atexit]
