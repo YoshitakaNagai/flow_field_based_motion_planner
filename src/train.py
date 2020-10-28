@@ -113,7 +113,7 @@ class ReplayMemory(object):
 
 
 class Network(nn.Module):
-    def __init__(self, h, w, input_channels, outputs=28):
+    def __init__(self, h, w, input_channels, outputs):
         print('[deepRL]  DQN::__init__()')
         super(Network, self).__init__()
         self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=8, stride=4)
@@ -125,7 +125,11 @@ class Network(nn.Module):
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
-    def forward(self, local_map, goal, velocity):
+    def forward(self, state):
+        local_map = state[0]
+        goal = state[1]
+        velocity = state[2]
+
         x_lm = F.relu(self.conv1(local_map))
         x_lm = F.relu(self.conv2(x_lm))
         x_lm = F.relu(self.conv3(x_lm))
@@ -323,20 +327,58 @@ class Brain:
         h = flow_map.size()[0]
         w = flow_map.size()[1]
         input_channels = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+
         self.main_q_network = Network(h, w, input_channels, num_actions)
+        self.target_q_network = Network(h, w, input_channels, num_actions)
+
+        self.optimizer = optim.Adam(self.main_q_network.parameters(), lr=LEARNING_RATE)
 
 
+    def replay(self):
+
+        # [1] check memory size
+        if len(self.memory) < BATCH_SIZE:
+            return
+
+        # [2] make mini batch
+        self.batch, self.state_batch, self.action_batch, self.reward_batch, self.non_final_next_states = self.make_minibatch()
+
+        # [3] calc Q(s_t, a_t) value
+        self.expected_state_action_values = self.get_expected_state_action_values()
+
+        # [4] update connected params
+        self.update_main_q_network()
 
 
+    def decide_action(self, state, episode):
+        # epsilon-greedy method
+        epsilon = 0.5 * (1 / (episode + 1))
+
+        if epsilon <= np.random.uniform(0, 1):
+            self.main_q_network.eval() # change network to evaluation mode
+            with torch.no_grad():
+                action = self.main_q_network(state).max(1)[1].view(1, 1)
+        else:
+            action = torch.LongTensor([[random.randrange(self.num_actions)]])
+
+        return action
 
 
+    def make_minibatch(self):
+        # [2-1] extract mini batch data from memory
+        transitions = self.memory.sample(BATCH_SIZE)
 
+        # [2-2] convert changable_nums like below
+        # (state*BATCH_SIZE, action*BATCH_SIZE, state_next*BATCH_SIZE, reward*BATCH_SIZE)
+        batch = Transition(*zip(*transitions))
 
+        # [2-3] convert elements
+        state_batch = torch.cat(batch.state)
+        action_batch = torch.cat(batch.action)
+        reward_batch = torch.cat(batch.reward)
+        non_final_next_states = torch.cat([s for s in batch.next_state if s is not None])
 
-
-
-
-
+        return batch, state_batch, action_batch, reward_batch, non_final_next_states
 
 
 
