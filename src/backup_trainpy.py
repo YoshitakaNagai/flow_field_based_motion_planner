@@ -20,7 +20,6 @@ import kornia
 import rospy
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import Twist
-from geometry_msgs.msg import Pose
 from geometry_msgs.msg import PoseArray
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
@@ -42,9 +41,6 @@ Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'
 odom = Odometry()
 #flow_image = Image()
 bridge = CvBridge()
-global_start_pose = Pose()
-global_goal_pose = Pose()
-relative_goal = np.array([0.0, 0.0])
 
 class ROSNode():
     def __init__(self):
@@ -66,11 +62,6 @@ class ROSNode():
     def odom_callback(self, msg):
         print("odom_callback")
         odom = msg
-
-    def pose_array_callback(self, msg):
-        print("pose_array_callback")
-        global_start.pose = msg[0].poses # or [1]
-        global_goal.pose = msg[1].poses # or [0]
 
     def cmd_vel_publisher(self, linear_v, angular_v):
         print("pub")
@@ -151,22 +142,13 @@ class Network(nn.Module):
 
 
 def robot_position_extractor(self):
-    x = odom.pose.pose.position.x
-    y = odom.pose.pose.position.y
+    self.x = odom.pose.pose.position.x
+    self.y = odom.pose.pose.position.y
     roll, pitch, yaw = euler_from_quaternion(odom.pose.pose.orientation)
-    robot_pose = RobotPosition(x, y, yaw)
+    self.theta = yaw
+    robot_position = RobotPosition(self.x, self.y, self.theta)
     
-    return robot_pose
-
-
-def relative_goal_calculator(self, robot_pose):
-    relative_x = global_goal.pose.position.x - robot_pose.x
-    relative_y = global_goal.pose.position.y - robot_pose.y
-    relative_dist = math.sqrt(relative_x * relative_x + relative_y * relative_y)
-    relative_direction = math.atan2(relative_y, relative_x)
-    relative_orientation = relative_direction - robot_pose.yaw
-
-    return np.array([relative_dist, relative_orientation])
+    return robot_position
 
 
 env.reset()
@@ -296,52 +278,6 @@ def training_loop():
         # [2] Update the target network, copying all weights and biases in DQN
         if i_episode % TARGET_UPDATE == 0:
             target_net.load_state_dict(policy_net.state_dict())
-
-
-
-
-
-
-
-
-
-NUM_ACTIONS = 28
-
-class Brain:
-    def __init__(self, num_states, num_actions):
-        self.num_actions = num_actions
-
-        self.memory = ReplayMemory(CAPACITY)
-        
-        h = 
-        self.main_q_network = Network(h, w, input_channels, num_actions)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

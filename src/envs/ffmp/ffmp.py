@@ -5,91 +5,8 @@ import math
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
-import sys
-import os
 
-from function.raycast import *
-
-
-class RobotPosition(object):
-    def __init__(self, x, y, theta):
-        self.x = x
-        self.y = y
-        self.theta = theta
-
-
-class RobotVelocity(object):
-    def __init__(self, linear_v, angular_v):
-        self.linear = linear_v
-        self.angular = angular_v
-
-
-class RobotState(RobotPosition, RobotVelocity):
-    def __init__(self, x, y, theta, linear_v, angular_v):
-        self.robot_position = RobotPosition(x, y, theta)
-        self.robot_velocity = RobotVelocity(linear_v, angular_v)
-
-
-class RobotAction(object):
-    def __init__(self):
-        self.cmd = [RobotVelocity()] * 28
-        self.cmd[0].linear = 0.0
-        self.cmd[0].angular = -0.9
-        self.cmd[1].linear = 0.0
-        self.cmd[1].angular = -0.6
-        self.cmd[2].linear = 0.0
-        self.cmd[2].angular = -0.3
-        self.cmd[3].linear = 0.0
-        self.cmd[3].angular = 0.0
-        self.cmd[4].linear = 0.0
-        self.cmd[4].angular = 0.3
-        self.cmd[5].linear = 0.0
-        self.cmd[5].angular = 0.6
-        self.cmd[6].linear = 0.0
-        self.cmd[6].angular = 0.9
-        self.cmd[7].linear = 0.2
-        self.cmd[7].angular = -0.9
-        self.cmd[8].linear = 0.2
-        self.cmd[8].angular = -0.6
-        self.cmd[9].linear = 0.2
-        self.cmd[9].angular = -0.3
-        self.cmd[10].linear = 0.2
-        self.cmd[10].angular = 0.0
-        self.cmd[11].linear = 0.2
-        self.cmd[11].angular = 0.3
-        self.cmd[12].linear = 0.2
-        self.cmd[12].angular = 0.6
-        self.cmd[13].linear = 0.2
-        self.cmd[13].angular = 0.9
-        self.cmd[14].linear = 0.4
-        self.cmd[14].angular = -0.9
-        self.cmd[15].linear = 0.4
-        self.cmd[15].angular = -0.6
-        self.cmd[16].linear = 0.4
-        self.cmd[16].angular = -0.3
-        self.cmd[17].linear = 0.4
-        self.cmd[17].angular = 0.0
-        self.cmd[18].linear = 0.4
-        self.cmd[18].angular = 0.3
-        self.cmd[19].linear = 0.4
-        self.cmd[19].angular = 0.6
-        self.cmd[20].linear = 0.4
-        self.cmd[20].angular = 0.9
-        self.cmd[21].linear = 0.6
-        self.cmd[21].angular = -0.9
-        self.cmd[22].linear = 0.6
-        self.cmd[22].angular = -0.6
-        self.cmd[23].linear = 0.6
-        self.cmd[23].angular = -0.3
-        self.cmd[24].linear = 0.6
-        self.cmd[24].angular = 0.0
-        self.cmd[25].linear = 0.6
-        self.cmd[25].angular = 0.3
-        self.cmd[26].linear = 0.6
-        self.cmd[26].angular = 0.6
-        self.cmd[27].linear = 0.6
-        self.cmd[27].angular = 0.9
-
+from robot import RobotPosition, RobotVelocity, RobotState, RobotAction
 
 
 class FFMP(gym.Env):
@@ -112,7 +29,7 @@ class FFMP(gym.Env):
         self.map_channels = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
         self.map_low  = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 0)
         self.map_high = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 255)
-        # [2-2] relative_goal [range, theta]
+        # [2-2] relative_goal [distance, orientation]
         self.goal_low  = np.array([0.0, 0.0])
         self.goal_high = np.array([sqrt(2.0) * self.map_range, math.pi)
         # [2-3] velocity
@@ -147,25 +64,16 @@ class FFMP(gym.Env):
         # self.position_max = RobotPosition(self.map_range, self.map_range, math.radians(360))
         # self.position_low  = np.array([self.position_min.x, \
         #                                self.position_min.y, \
-        #                                self.position_min.theta])
+        #                                self.position_min.yaw])
         # self.position_high = np.array([self.position_max.x, \
         #                                self.position_max.y, \
-        #                                self.position_max.theta])
+        #                                self.position_max.yaw])
         # self.position_space = spaces.Dict
  
     def reset(self, relative_goal_info):
         self.action = RobotAction()
-        self.state = np.array([[0.0, 0.0], relative_goal_info, self.action.cmd[3], False])
+        self.state = np.array([[0.0, 0.0], relative_goal_info, self.action.cmd[3], False, False])
 
-    def step(self, local_map_info, relative_goal_info, velocity_info, is_first, action):
-        self.state[0] = local_map_info
-        self.state[1] = relative_goal_info
-        self.state[2] = velocity_info
-        self.state[3] = self.is_collision(local_map_info)
-        self.observation = np.array([self.state[0], self.state[1], action])
-        self.reward = self.reward(self.state[1], self.state[3], is_first)
-
-        return self.observation, self.reward
 
 
     def is_collision(self, robot_grids, local_map_info):
@@ -178,24 +86,33 @@ class FFMP(gym.Env):
                 break
         return is_collision
                
+
+    def is_goal(self, cur_relative_goal_dist):
+        dist_threshold = 0.2 #[m]
+        is_goal = False
+
+        if cur_relative_goal_dist < dist_threshold:
+            is_goal = True
+
+        return is_goal
+
        
-    def reward(self, relative_goal_info, is_collision, is_first):
+    def reward(self, relative_goal_info, is_collision, is_goal, is_first):
         r_g = 0
         r_c = 0
         r_t = 0
         r_arr = 500
         r_col = -500
         r_s = -5
-        dist_threshold = 0.2 #[m]
         epsilon = 10
 
         global pre_relative_goal_dist
         if is_first == True:
             pre_relative_goal_dist = relative_goal_info[0]
         
-        cur_relative_goal_dist = relative_goal_info[0]
+        cur_relative_goal_dist = relative_goal_info[0] #[0]:range, [1]:orientation
 
-        if cur_relative_goal_dist < dist_threshold:
+        if is_goal:
             r_g = r_arr
         else:
             r_g = epsilon * (pre_relative_goal_dist - cur_relative_goal_dist)
@@ -210,10 +127,24 @@ class FFMP(gym.Env):
         return r_t
 
 
+    def is_done(self, is_collision, is_goal):
+        if is_collision or is_goal:
+            return True
+        else
+            return False
 
 
+    def step(self, local_map_info, relative_goal_info, velocity_info, is_first, action):
+        self.state[0] = local_map_info
+        self.state[1] = relative_goal_info
+        self.state[2] = velocity_info
+        self.state[3] = is_collision(local_map_info)
+        self.state[4] = is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
+        self.observation = np.array([self.state[0], self.state[1], action])
+        self.reward = self.reward(self.state[1], self.state[3], self.state[4], is_first)
+        self.is_done = is_done(self.state[3], self.state[4])
 
-
+        return self.observation, self.reward, self.is_done
 
 
 
