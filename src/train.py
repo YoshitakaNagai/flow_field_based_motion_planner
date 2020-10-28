@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import gym
 import math
 import random
@@ -40,28 +39,33 @@ Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'
 ##### ROS #####
 
 odom = Odometry()
-#flow_image = Image()
 bridge = CvBridge()
 global_start_pose = Pose()
 global_goal_pose = Pose()
 relative_goal = np.array([0.0, 0.0])
+tensor_maps = [] * 2
+temporal_tensor_maps = [] * 3
 
 class ROSNode():
     def __init__(self):
-        self.sub = rospy.Subscriber("/bev/flow_image", Image, self.image_callback)
-        self.sub = rospy.Subscriber("/occupancy_grid", Image, self.occupancy_grid_callback)
-        self.sub = rospy.Subscriber("/odom", Odometry, self.cmd_vel_callback)
-        self.sub = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
-        self.pub = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
+        self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
+        self.sub_occupancy = rospy.Subscriber("/occupancy_image", Image, self.occupancy_image_callback)
+        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.cmd_vel_callback)
+        self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
+        self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
 
-    def image_callback(self, msg):
+    def flow_image_callback(self, msg):
         print("image_callback")
         cv_flow_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=False).float()
-    
-    def occupancy_grid_callback(self, msg):
-        print("occupancy_grid_callback")
+        tensor_maps[0] = tensor_flow_image
+
+    def occupancy_image_callback(self, msg):
+        print("occupancy_image_callback")
+        cv_occupancy_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=False).float()
+        tensor_maps[1] = tensor_occupancy_image
 
     def odom_callback(self, msg):
         print("odom_callback")
@@ -82,6 +86,8 @@ class ROSNode():
         cmd_vel.angular.y = 0.0
         cmd_vel.angular.z = angular_v
         self.pub.publish(cmd_vel)
+
+
 
 
 ##### DDQN #####
@@ -313,7 +319,10 @@ class Brain:
 
         self.memory = ReplayMemory(CAPACITY)
         
-        h = 
+        flow_map = tensor_maps[0]
+        h = flow_map.size()[0]
+        w = flow_map.size()[1]
+        input_channels = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
         self.main_q_network = Network(h, w, input_channels, num_actions)
 
 
