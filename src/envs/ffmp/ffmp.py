@@ -47,6 +47,7 @@ class FFMP(gym.Env):
         self.collision_low  = False
         self.collision_high = True
         # observation_space
+        self.observation = np.array([self.goal_high, self.action_low])
         self.observation_space = spaces.Dict({
             "local_map": spaces.Box(self.map_low, self.map_high, dtype=np.int32), \
             "relative_goal": spaces.Box(self.goal_low, self.goal_high, dtype=np.float32), \
@@ -70,11 +71,11 @@ class FFMP(gym.Env):
         #                                self.position_max.yaw])
         # self.position_space = spaces.Dict
  
-    def reset(self, relative_goal_info):
-        self.action = RobotAction()
-        self.state = np.array([[0.0, 0.0], relative_goal_info, self.action.cmd[3], False, False])
-
-
+    def reset(self, local_map_info, relative_goal_info):
+        self.action = self.action_low
+        self.observation = np.array([relative_goal_info, self.action])
+        
+        return self.observation
 
     def is_collision(self, robot_grids, local_map_info):
         is_collision = False
@@ -84,6 +85,7 @@ class FFMP(gym.Env):
             if local_map_info[i][j][0] > 0:
                 is_collision = True
                 break
+        
         return is_collision
                
 
@@ -134,17 +136,15 @@ class FFMP(gym.Env):
             return False
 
 
-    def step(self, local_map_info, relative_goal_info, velocity_info, is_first, action):
-        self.state[0] = local_map_info
-        self.state[1] = relative_goal_info
-        self.state[2] = velocity_info
-        self.state[3] = is_collision(local_map_info)
-        self.state[4] = is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
-        self.observation = np.array([self.state[0], self.state[1], action])
-        self.reward = self.reward(self.state[1], self.state[3], self.state[4], is_first)
-        self.is_done = is_done(self.state[3], self.state[4])
+    def step(self, local_map_info, relative_goal_info, action, is_first):
+        is_collision = is_collision(local_map_info)
+        is_goal = is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
 
-        return self.observation, self.reward, self.is_done
+        self.observation = np.array([relative_goal_info, action])
+        reward = self.reward(relative_goal_info, is_collision, is_goal, is_first)
+        is_done = is_done(self.state[3], self.state[4])
+
+        return self.observation, reward, is_done
 
 
 
