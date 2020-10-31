@@ -71,18 +71,20 @@ class FFMP(gym.Env):
         #                                self.position_max.yaw])
         # self.position_space = spaces.Dict
  
-    def reset(self, local_map_info, relative_goal_info):
+    # def reset(self, local_map_info, relative_goal_info):
+    def reset(self):
         self.action = self.action_low
-        self.observation = np.array([relative_goal_info, self.action])
+        # self.observation = np.array([relative_goal_info, self.action])
+        reward = 0
         
-        return self.observation
+        return self.action, reward
 
-    def is_collision(self, robot_grids, local_map_info):
+    def is_collision(self, local_map_info):
         is_collision = False
-        for itr in robot_grids:
+        for itr in self.robot_grids:
             i = itr[0]
             j = itr[1]
-            if local_map_info[i][j][0] > 0:
+            if local_map_info[i,j] > 0:
                 is_collision = True
                 break
         
@@ -136,15 +138,17 @@ class FFMP(gym.Env):
             return False
 
 
-    def step(self, local_map_info, relative_goal_info, action, is_first):
+    # def step(self, local_map_info, relative_goal_info, action, is_first):
+    def step(self, local_map_info, relative_goal_info, is_first):
         is_collision = is_collision(local_map_info)
         is_goal = is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
 
-        self.observation = np.array([relative_goal_info, action])
+        # self.observation = np.array([relative_goal_info, action])
         reward = self.reward(relative_goal_info, is_collision, is_goal, is_first)
-        is_done = is_done(self.state[3], self.state[4])
+        is_done = is_done(is_collision, is_goal)
 
-        return self.observation, reward, is_done
+        # return self.observation, reward, is_done
+        return reward, is_done
 
 
 

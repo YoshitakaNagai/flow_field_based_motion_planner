@@ -33,7 +33,7 @@ from envs.ffmp.ffmp import FFMP
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # env = gym.make('FFMP-v0')
-Transition = namedtuple('Transition', ('state', 'action', 'next_state', 'reward'))
+Transition = namedtuple('Transition', ('pre_occupancy_map', 'pre_flow_map', 'pre_relative_goal', 'pre_action', 'action', 'occupancy_maps', 'flow_maps', 'reward'))
 
 
 ##### ROS #####
@@ -43,8 +43,11 @@ bridge = CvBridge()
 global_start_pose = Pose()
 global_goal_pose = Pose()
 relative_goal = np.array([0.0, 0.0])
-tensor_maps = [] * 2
-temporal_tensor_maps = [] * 3
+tensor_map = [] * 2
+flow_callback_flag = False
+occupancy_callback_flag = False
+odom_callback_flag = False
+posearray_callback_flag = False
 
 class ROSNode():
     def __init__(self):
@@ -58,23 +61,27 @@ class ROSNode():
         print("image_callback")
         cv_flow_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
-        tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=False).float()
-        tensor_maps[0] = tensor_flow_image
+        tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
+        tensor_map[0] = tensor_flow_image
+        flow_callback_flag = True
 
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
         cv_occupancy_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
-        tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=False).float()
-        tensor_maps[1] = tensor_occupancy_image
+        tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
+        tensor_map[1] = tensor_occupancy_image
+        occupancy_callback_flag = True
 
     def odom_callback(self, msg):
         print("odom_callback")
         odom = msg
+        odom_callback_flag = True
 
     def pose_array_callback(self, msg):
         print("pose_array_callback")
         global_start.pose = msg[0].poses # or [1]
         global_goal.pose = msg[1].poses # or [0]
+        posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
         print("pub")
@@ -86,8 +93,6 @@ class ROSNode():
         cmd_vel.angular.y = 0.0
         cmd_vel.angular.z = angular_v
         self.pub.publish(cmd_vel)
-
-
 
 
 ##### DDQN #####
@@ -128,11 +133,9 @@ class Network(nn.Module):
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
-    def forward(self, state, local_map):
-        goal = state[0]
-        velocity = state[1]
+    def forward(self, concat_maps, goal, velocity):
 
-        x_lm = F.relu(self.conv1(local_map))
+        x_lm = F.relu(self.conv1(concat_maps))
         x_lm = F.relu(self.conv2(x_lm))
         x_lm = F.relu(self.conv3(x_lm))
 
@@ -197,125 +200,7 @@ EPS_START = 0.9 # the param for eps-greedy
 EPS_END = 0.05 # the param for eps-greedy
 EPS_DECAY = 300 # the param for eps-greedy
 
-n_actions = 28
-
-# policy_net = Network(screen_height, screen_width, n_actions).to(device) # for learning
-# target_net = Network(screen_height, screen_width, n_actions).to(device) # for evaluating
-# target_net.load_state_dict(policy_net.state_dict()) # loading Network model
-# target_net.eval()
-#
-# optimizer = optim.RMSprop(policy_net.parameters())
-# memory = ReplayMemory(10000)
-# steps_done = 0
-#
-#
-# def select_action(state):
-#     global steps_done
-#     sample = random.random()
-#     eps_threshold = EPS_END + (EPS_START - EPS_END) * math.exp(-1. * steps_done / EPS_DECAY)
-#     # eps_threshold = 0.5 * (1 / (steps_done + 1))
-#     steps_done += 1
-#     if sample > eps_threshold:
-#         with torch.no_grad():
-#             return policy_net(state).max(1)[1].view(1, 1)
-#     else:
-#         return torch.tensor([[random.randrange(n_actions)]], device=device, dtype=torch.long)
-#         # Return a int number from 0 to 27 if n_actions=28
-#
-# episode_durations = []
-#
-#
-# def plot_durations():
-#     plt.figure(2)
-#     plt.clf()
-#     durations_t = torch.tensor(episode_durations, dtype=torch.float)
-#     plt.title('Training...')
-#     plt.xlabel('Episode')
-#     plt.ylabel('Duration')
-#     plt.plot(durations_t.numpy())
-#     # Take 100 episode averages and plot them too
-#     if len(durations_t) >= 100:
-#         means = durations_t.unfold(0, 100, 1).mean(1).view(-1)
-#         means = torch.cat((torch.zeros(99), means))
-#         plt.plot(means.numpy())
-#
-#     plt.pause(0.001)  # pause a bit so that plots are updated
-#
-#
-# def reset():
-#
-#
-# def optimization_model():
-#     if len(memory) < BATCH_SIZE:
-#         return
-#     transitions = memory.sample(BATCH_SIZE)
-#     batch = Transition(*zip(*transitions))
-#
-#     non_final_mask = torch.tensor(tuple(map(lambda s: s is not None,
-#                                           batch.next_state)), device=device, dtype=torch.bool)
-#     non_final_next_states = torch.cat([s for s in batch.next_state
-#                                                 if s is not None])
-#     state_batch = torch.cat(batch.state)
-#     action_batch = torch.cat(batch.action)
-#     reward_batch = torch.cat(batch.reward)
-#
-#     state_action_values = policy_net(state_batch).gather(1, action_batch)
-#
-#     next_state_values = torch.zeros(BATCH_SIZE, device=device)
-#     next_state_values[non_final_mask] = target_net(non_final_next_states).max(1)[0].detach()
-#     expected_state_action_values = (next_state_values * GAMMA) + reward_batch
-#
-#     loss = F.smooth_l1_loss(state_action_values, expected_state_action_values.unsqueeze(1))
-#
-#     # Optimize the model
-#     optimizer.zero_grad()
-#     loss.backward()
-#     for param in policy_net.parameters():
-#         param.grad.data.clamp_(-1, 1)
-#     optimizer.step()
-#
-#
-# def training_loop():
-#     num_episodes = 50
-#     for i_episode in range(num_episodes):
-#         # [1] Initialize the environment and state
-#
-#         for t in count():
-#             # [1-1] Select and perform an action
-#             action = select_action(state)
-#             _, reward, done, _ = env.step(action.item())
-#             reward = torch.tensor([reward], device=device)
-#
-#             # [1-2] Observe new state
-#
-#             if not done:
-#                 next_state = current_screen - last_screen
-#             else:
-#                 next_state = None
-#
-#             # [1-3] Store the transition in memory
-#             memory.push(state, action, next_state, reward)
-#
-#             # [1-4] Move to the next state
-#             state = next_state
-#
-#             # [1-5] Perform one step of the optimization (on the target network)
-#             optimize_model()
-#             if done:
-#                 episode_durations.append(t + 1)
-#                 plot_durations()
-#                 break
-#         # [2] Update the target network, copying all weights and biases in DQN
-#         if i_episode % TARGET_UPDATE == 0:
-#             target_net.load_state_dict(policy_net.state_dict())
-#
-#
-
-
-
-
-
-
+MAX_STEPS = 10000
 
 NUM_ACTIONS = 28
 
@@ -324,11 +209,13 @@ class Brain:
         self.num_actions = num_actions
 
         self.memory = ReplayMemory(CAPACITY)
-        
-        flow_map = tensor_maps[0]
-        h = flow_map.size()[0]
-        w = flow_map.size()[1]
+
         input_channels = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+
+        # h = occupancy_map.size()[0]
+        # w = occupancy_map.size()[1]
+        h = 60
+        w = 60
 
         self.main_q_network = Network(h, w, input_channels, num_actions)
         self.target_q_network = Network(h, w, input_channels, num_actions)
@@ -350,14 +237,15 @@ class Brain:
         # [4] update connected params
         self.update_main_q_network()
 
-    def decide_action(self, state, episode):
+
+    def decide_action(self, state_m, state_g, state_v, episode):
         # epsilon-greedy method
         epsilon = 0.5 * (1 / (episode + 1))
 
         if epsilon <= np.random.uniform(0, 1):
             self.main_q_network.eval() # change network to evaluation mode
             with torch.no_grad():
-                action = self.main_q_network(state).max(1)[1].view(1, 1)
+                action = self.main_q_network(state_m, state_g, state_v).max(1)[1].view(1, 1)
         else:
             action = torch.LongTensor([[random.randrange(self.num_actions)]])
 
@@ -428,12 +316,12 @@ class Agent:
     def update_q_function(self):
         self.brain.replay()
 
-    def get_action(self, state, episode):
-        action = self.brain.decide_action(state, episode)
+    def get_action(self, state_m, state_g, state_v, episode):
+        action = self.brain.decide_action(state_m, state_g, state_v, episode)
         return action
 
-    def memorize(self, state, action, state_next, reward):
-        self.brain.memory.push(state, action, state_next, reward)
+    def memorize(self, pre_occupancy_maps, pre_flow_maps, pre_relative_goal, pre_action, action, occupancy_maps, flow_maps, relative_goal, reward)
+        self.brain.memory.push(pre_occupancy_map, pre_flow_map, pre_relative_goal, pre_action, action, occupancy_maps, flow_maps, reward)
 
     def update_target_q_function(self):
         self.brain.update_target_q_network()
@@ -442,27 +330,118 @@ class Agent:
 class Environment:
     def __init__(self):
         self.env = gym.make(ENV)
-        num_states = self.env.observation_space.shape[0] # It's supposed to be 3; local_map, relative_goal, velocity
+        # num_states = self.env.observation_space.shape[0] # It's supposed to be 3; local_map, relative_goal, velocity
+        num_states = 3 # It's supposed to be 3; local_map, relative_goal, velocity
         num_actions = self.env.action_space.n # = 28
         self.agent = Agent(num_states, num_actions)
+        self.map_memory = []
 
-    def run(self):
-        episode_final = False
+    def make_concat_map(self, occupancy_map, flow_map):
+        # occupancy_map.size() = torch.Size([H, W])
+        # flow_map.size() = torch.Size([3, H, W])
+        occupancy_map = tf.expand_dims(occupancy_map, 0)
+        # occupancy_map.size() = torch.Size([1, H, W])
+        concat_map = torch.cat((occupancy_map, flow_map), 0)
+        #concat_map.size() = torch.Size([4, H, W])    
+        return concat_map
+    
+    def make_temporal_maps(concat_map, is_first):
+        if is_first:
+            self.map_memory.clear()
+            for i in range(3):
+                self.map_memory.append(concat_map)
+        else:
+            self.map_memory.append(concat_map)
+            del self.map_memory[0]
+        
+        tempral_maps = torch.cat(self.map_memory, 0)
+        # tempral_maps.size() = torch.Size([12, H, W])
+        return tempral_maps
 
-        for episode in range(EPISODE_LENGTH):
-            observation = self.env.reset(relative_goal)
-            state = observation
-            state = torch.from_numpy(state).type(torch.FloatTensor)
-            
 
+    def run(self, occupancy_map, flow_map, observation_gv, episode, is_first):
+
+        numpy_occupancy = occupancy_map.clone().numpy()
+        observation_m = self.make_concat_map(occupancy_map, flow_map)
+        state_m = self.make_temporal_maps(observation_m, is_first)
+        numpy_g = observation_gv[0,:]
+        state_g = torch.from_numpy(numpy_g).type(torch.FloatTensor)
+        numpy_v = observation_gv[1,:]
+        state_v = torch.from_numpy(numpy_v).type(torch.FloatTensor)
+        
+        action = self.agent.get_action(state_m, state_g, state_v, episode)
+        # numpy_action = action.clone().numpy()
+
+        # observation_gv_next, reward, is_done = self.env.step(numpy_occupancy, numpy_g, numpy_action)
+        reward, is_done = self.env.step(numpy_occupancy, numpy_g)
+
+        # return observation_gv_next, reward, is_done
+        return action, reward, is_done
 
 
 def main():
     rospy.init_node('train', anonymous=True)
 
     ros = ROSNode()
+    train_env = Environment()
+    episode = 0
+    step = 0
+    is_first = True
+    done = True
+    
+    action = None
+    pre_relative_goal = None
+    pre_action = None
+    pre_tensor_maps = None
+
+    numpy_next_gv = None
+    state_gv = None
+    state_next_gv = None
+
 
     while not rospy.is_shutdown():
+        if flow_callback_flag and occupancy_callback_flag and odom_callback_flag and posearray_callback_flag:
+
+            robot_pose = robot_position_extractor()
+            relative_goal = relative_goal_calculator(robot_pose)
+
+            if is_first:
+                action, reward = train_env.env.reset()
+                pre_relative_goal = relative_goal
+                pre_tensor_map = tensor_map
+
+            # observation_next_gv, reward, is_done = train_env.run(tensor_map[0], tensor_map[1], state_gv, episode, is_first)
+            action, reward, is_done = train_env.run(tensor_map[0], tensor_map[1], state_gv, episode, is_first)
+
+            is_first = False
+            step += 1
+
+            if is_done:
+                state_next_gv = None
+                episode_n_list = np.hstack(episode_n_list[1:], step + 1)
+
+                if step == MAX_STEPS:
+                    is_done = True
+            else:
+                state_next_gv = observation_next_gv
+                state_next_gv = torch.from_numpy(state_next_gv).type(torch.FloatTensor)
+
+            train_env.agent.memorize(pre_tensor_map[0], pre_tensor_map[1], pre_relative_goal, pre_action, action, tensor_map[0], tensor_map[1], relative_goal, reward)
+
+            if is_done:
+                episode += 1
+                step = 0
+                is_first = True
+                is_done = True
+
+            linear_v = action.cmd.linear_v
+            angular_v = action.cmd.angular_v
+            ros.cmd_vel_publisher(linear_v, angular_v)
+
+            pre_action = action
+            pre_relative_goal = relative_goal
+            pre_tensor_map = tensor_map
+
         rospy.spin()
 
 
