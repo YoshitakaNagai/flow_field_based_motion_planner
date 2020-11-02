@@ -8,6 +8,16 @@ from gym.utils import seeding
 
 from robot import RobotPosition, RobotVelocity, RobotState, RobotAction
 
+MAP_RANGE = 10.0 # [m]
+MAP_GRID_NUM = 60 # [grids]
+MAP_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+ROBOT_RSIZE = 0.2 # [m]
+
+R_ARR = 500
+R_COL = -500
+R_S = -5
+EPSILON = 10
+
 
 class FFMP(gym.Env):
     # metadata = {'render.modes' : ['human', 'rgb_array']}
@@ -23,10 +33,10 @@ class FFMP(gym.Env):
 
         # [2] observation_space
         # [2-1] local_map
-        self.map_range = 10.0 #[m]
-        self.map_grid_num = 60 #[grid]
+        self.map_range = MAP_RANGE #[m]
+        self.map_grid_num = MAP_GRID_NUM #[grids]
         self.map_grid_size = self.map_range / (float)self.map_grid_num
-        self.map_channels = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+        self.map_channels = MAP_CHANNELS #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
         self.map_low  = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 0)
         self.map_high = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 255)
         # [2-2] relative_goal [distance, orientation]
@@ -36,13 +46,11 @@ class FFMP(gym.Env):
         self.velocity_low  = self.action_low
         self.velocity_high = self.action_high
         # [2-4] colision
-        self.robot_rsize = 0.2 #[m]
+        self.robot_rsize = ROBOT_RSIZE #[m]
         self.robot_grids = np.empty([0, 0], dtype=int32)
         for i in range(self.map_grid_num):
             for j in range(self.map_grid_num):
-                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) \
-                            + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2) \
-                    <= self.robot_rsize:
+                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
                     self.robot_grids = np.append(self.robot_grids, [i, j])
         self.collision_low  = False
         self.collision_high = True
@@ -104,10 +112,10 @@ class FFMP(gym.Env):
         r_g = 0
         r_c = 0
         r_t = 0
-        r_arr = 500
-        r_col = -500
-        r_s = -5
-        epsilon = 10
+        r_arr = R_ARR
+        r_col = R_COL
+        r_s = R_S
+        epsilon = EPSILON
 
         global pre_relative_goal_dist
         if is_first == True:
