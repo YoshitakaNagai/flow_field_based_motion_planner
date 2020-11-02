@@ -38,8 +38,6 @@ Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action'
 
 ##### ROS #####
 
-odom = Odometry()
-bridge = CvBridge()
 tensor_map = [] * 2
 flow_callback_flag = False
 occupancy_callback_flag = False
@@ -56,17 +54,18 @@ class ROSNode():
         self.odom = Odometry()
         self.global_start = Pose()
         self.global_goal = Pose()
+        self.bridge = CvBridge()
 
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
-        cv_occupancy_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        cv_occupancy_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
         tensor_map[0] = tensor_occupancy_image
         occupancy_callback_flag = True
 
     def flow_image_callback(self, msg):
         print("image_callback")
-        cv_flow_image = bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
         tensor_map[1] = tensor_flow_image
@@ -427,7 +426,6 @@ def main():
             odom_callback_flag = False
 
         rospy.spin()
-
 
 
 if __name__ == '__main__':
