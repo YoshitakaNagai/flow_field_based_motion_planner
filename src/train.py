@@ -40,9 +40,6 @@ Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action'
 
 odom = Odometry()
 bridge = CvBridge()
-global_start_pose = Pose()
-global_goal_pose = Pose()
-relative_goal = np.array([0.0, 0.0])
 tensor_map = [] * 2
 flow_callback_flag = False
 occupancy_callback_flag = False
@@ -56,6 +53,9 @@ class ROSNode():
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.cmd_vel_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
+        self.odom = Odometry()
+        self.global_start = Pose()
+        self.global_goal = Pose()
 
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
@@ -74,13 +74,13 @@ class ROSNode():
 
     def odom_callback(self, msg):
         print("odom_callback")
-        odom = msg
+        self.odom = msg
         odom_callback_flag = True
 
     def pose_array_callback(self, msg):
         print("pose_array_callback")
-        global_start.pose = msg[0].poses # or [1]
-        global_goal.pose = msg[1].poses # or [0]
+        self.global_start.pose = msg[0].poses # or [1]
+        self.global_goal.pose = msg[1].poses # or [0]
         posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
@@ -94,41 +94,34 @@ class ROSNode():
         cmd_vel.angular.z = angular_v
         self.pub.publish(cmd_vel)
 
-# Global Functions
-def robot_position_extractor(self):
-    x = odom.pose.pose.position.x
-    y = odom.pose.pose.position.y
-    roll, pitch, yaw = euler_from_quaternion(odom.pose.pose.orientation)
-    robot_pose = RobotPose(x, y, yaw)
-    
-    return robot_pose
+    def robot_position_extractor(self):
+        x = self.odom.pose.pose.position.x
+        y = self.odom.pose.pose.position.y
+        roll, pitch, yaw = euler_from_quaternion(odom.pose.pose.orientation)
+        robot_pose = RobotPose(x, y, yaw)
+        return robot_pose
 
+    def pi_to_pi(self, angle):
+        while angle>=pi:
+            angle=angle-2*pi
+        while angle<=-pi:
+            angle=angle+2*pi
+        return angle
 
-def relative_goal_calculator(self, robot_pose):
-    relative_x = global_goal.pose.position.x - robot_pose.x
-    relative_y = global_goal.pose.position.y - robot_pose.y
-    relative_dist = math.sqrt(relative_x * relative_x + relative_y * relative_y)
-    relative_direction = math.atan2(relative_y, relative_x)
-    relative_orientation = relative_direction - robot_pose.yaw
+    def relative_goal_calculator(self, robot_pose):
+        relative_x = self.global_goal.pose.position.x - robot_pose.x
+        relative_y = self.global_goal.pose.position.y - robot_pose.y
+        relative_dist = math.sqrt(relative_x * relative_x + relative_y * relative_y)
+        relative_direction = math.atan2(relative_y, relative_x)
+        relative_orientation = self.pi_to_pi(relative_direction - robot_pose.yaw)
+        return np.array([relative_dist, relative_orientation])
 
-    return np.array([relative_dist, relative_orientation])
-
-def pi_to_pi(angle):
-    while angle>=pi:
-        angle=angle-2*pi
-    while angle<=-pi:
-        angle=angle+2*pi
-    return angle
-
-
-def robot_velocity_calculator(self, robot_pose, is_first):
-    if is_first:
-        pre_robot_pose = copy.deepcopy(robot_pose)
-    
-    linear_v = math.sqrt(math.pow(robot_pose.x - pre_robot_pose.x, 2) + math.pow(robot_pose.y - pre_robot_pose.y, 2))
-    angular_v = pi_to_pi(robot_pose.yaw - pre_robot_pose.yaw)
-
-    return np.array([linear_v, angular_v])
+    def robot_velocity_calculator(self, robot_pose, is_first):
+        if is_first:
+            pre_robot_pose = copy.deepcopy(robot_pose)
+        linear_v = math.sqrt(math.pow(robot_pose.x - pre_robot_pose.x, 2) + math.pow(robot_pose.y - pre_robot_pose.y, 2))
+        angular_v = self.pi_to_pi(robot_pose.yaw - pre_robot_pose.yaw)
+        return np.array([linear_v, angular_v])
 
 
 ##### DDQN #####
@@ -374,10 +367,10 @@ def main():
     while not rospy.is_shutdown():
         if flow_callback_flag and occupancy_callback_flag and odom_callback_flag and posearray_callback_flag:
 
-            robot_pose = robot_position_extractor() # numpy
-            relative_goal = relative_goal_calculator(robot_pose) # numpy
+            robot_pose = ros.robot_position_extractor() # numpy
+            relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
-            velocity = robot_velocity_calculator(robot_pose, is_first) # numpy
+            velocity = ros.robot_velocity_calculator(robot_pose, is_first) # numpy
             occpancy_map = tensor_map[0] # tensor
             flow_map = tensor_map[1] #tensor
 
