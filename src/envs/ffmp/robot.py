@@ -81,4 +81,7 @@ class RobotAction(object):
         self.cmd[26].angular = 0.6
         self.cmd[27].linear = 0.6
         self.cmd[27].angular = 0.9
+    
+    def commander(self, i):
+        return self.cmd[i]
 
