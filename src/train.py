@@ -204,8 +204,8 @@ class Brain:
     def __init__(self):
         self.num_actions = NUM_ACTIONS
         self.memory = ReplayMemory(CAPACITY)
-        self.main_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS)
-        self.target_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS)
+        self.main_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
+        self.target_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
         self.optimizer = optim.Adam(self.main_q_network.parameters(), lr=LEARNING_RATE)
 
     def replay(self):
