@@ -34,7 +34,7 @@ from envs.ffmp.ffmp import FFMP
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
-
+model_path = '../model/model.pth'
 
 
 ##### ROS #####
