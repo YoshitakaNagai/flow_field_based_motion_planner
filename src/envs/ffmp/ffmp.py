@@ -58,7 +58,6 @@ class FFMP(gym.Env):
             "local_map": spaces.Box(self.map_low, self.map_high, dtype=np.int32), \
             "relative_goal": spaces.Box(self.goal_low, self.goal_high, dtype=np.float32), \
             "velocity": spaces.Box(self.velocity_low, self.velocity_high, dtype=np.float32), \
-            "collision": spaces.Box(self.collision_low, self.collision_high, dtype=bool)})
  
         # [4] position_space (sub)
         # self.position_min = RobotPosition(0.0, 0.0, math.radians(0))
