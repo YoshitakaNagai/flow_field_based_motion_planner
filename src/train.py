@@ -142,18 +142,7 @@ BATCH_SIZE = 1024 # minibatch size
 CAPACITY = 200000 # replay buffer size
 INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 NUM_ACTIONS = 28
-
-
 LEARNING_RATE = 0.0005 # learning rate
-REPLAY_BUFFER_SIZE = 200000 # replay buffer size
-IMAGE_SIZE = [60, 60]
-INITIAL_EXPLORATION = 1.0
-EPISODE_LENGTH = 300
-FINAL_EXPLORATION = 0.1
-TARGET_UPDATE = 10 # the number to decide updating step
-EPS_START = 0.9 # the param for eps-greedy
-EPS_END = 0.05 # the param for eps-greedy
-EPS_DECAY = 300 # the param for eps-greedy
 
 
 class ReplayMemory(object):
