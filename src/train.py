@@ -36,9 +36,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
 
 
+
 ##### ROS #####
 
-tensor_map = [] * 2
+maps = [] * 2
 flow_callback_flag = False
 occupancy_callback_flag = False
 odom_callback_flag = False
@@ -60,7 +61,7 @@ class ROSNode():
         print("occupancy_image_callback")
         cv_occupancy_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
-        tensor_map[0] = tensor_occupancy_image
+        maps[0] = tensor_occupancy_image
         occupancy_callback_flag = True
 
     def flow_image_callback(self, msg):
@@ -68,7 +69,7 @@ class ROSNode():
         cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
-        tensor_map[1] = tensor_flow_image
+        maps[1] = tensor_flow_image
         flow_callback_flag = True
 
     def odom_callback(self, msg):
@@ -370,8 +371,8 @@ def main():
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
             velocity = ros.robot_velocity_calculator(robot_pose, is_first) # numpy
-            occpancy_map = tensor_map[0] # tensor
-            flow_map = tensor_map[1] #tensor
+            occpancy_map = maps[0] # tensor
+            flow_map = maps[1] #tensor
 
             concat_map = train_env.make_concat_map(occupancy_map, flow_map)
             observe_m = train_env.make_temporal_maps(concat_map, is_first)
