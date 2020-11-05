@@ -84,8 +84,8 @@ class ROSNode():
 
     def pose_array_callback(self, msg):
         print("pose_array_callback")
-        self.global_start.pose = msg[0].poses # or [1]
-        self.global_goal.pose = msg[1].poses # or [0]
+        self.global_start.pose = msg[0].poses
+        self.global_goal.pose = msg[1].poses
         posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
