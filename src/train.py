@@ -15,7 +15,9 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 import torchvision.transforms as T
+from torch.utils.tensorboard import SummaryWriter
 import kornia
+import model
 
 import rospy
 from sensor_msgs.msg import Image
@@ -24,6 +26,7 @@ from geometry_msgs.msg import Pose
 from geometry_msgs.msg import PoseArray
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
+from std_msgs.msg import Bool
 from cv_bridge import CvBridge
 
 import envs
@@ -34,7 +37,7 @@ from envs.ffmp.ffmp import FFMP
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
-model_path = '../model/model.pth'
+model_path = '../model/model.pt'
 
 
 ##### ROS #####
@@ -52,10 +55,12 @@ class ROSNode():
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.cmd_vel_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
+        self.pub_done_flag = rospy.Publisher("/train/episode", Bool, queue_size=1)
         self.odom = Odometry()
         self.global_start = Pose()
         self.global_goal = Pose()
         self.bridge = CvBridge()
+        self.done_flag = Bool()
 
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
@@ -84,7 +89,7 @@ class ROSNode():
         posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
-        print("pub")
+        print("pub cmd_vel")
         cmd_vel = Twist()
         cmd_vel.linear.x = linear_v
         cmd_vel.linear.y = 0.0
@@ -92,7 +97,12 @@ class ROSNode():
         cmd_vel.angular.x = 0.0
         cmd_vel.angular.y = 0.0
         cmd_vel.angular.z = angular_v
-        self.pub.publish(cmd_vel)
+        self.pub_cmd_vel.publish(cmd_vel)
+
+    def done_flag_publisher(self, is_done):
+        print("pub done_flag")
+        self.done_flag = is_done
+        self.pub_done_flag.publish(self.done_flag)
 
     def robot_position_extractor(self):
         x = self.odom.pose.pose.position.x
@@ -122,6 +132,7 @@ class ROSNode():
         linear_v = math.sqrt(math.pow(robot_pose.x - pre_robot_pose.x, 2) + math.pow(robot_pose.y - pre_robot_pose.y, 2))
         angular_v = self.pi_to_pi(robot_pose.yaw - pre_robot_pose.yaw)
         return np.array([linear_v, angular_v])
+    
 
 
 ##### DDQN #####
@@ -129,6 +140,7 @@ ENV = 'FFMP-v0'
 GAMMA = 0.99 # discount factor
 MAX_STEPS = 10000
 NUM_EPISODES = 500
+LOG_DIR = "./logs/experiment1"
 
 # params for Brain class
 BATCH_SIZE = 1024 # minibatch size
@@ -136,7 +148,8 @@ CAPACITY = 200000 # replay buffer size
 INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
-
+LOSS_THRESHOLD = 0.1 # threshold of loss
+LOSS_MEMORY_CAPACITY = 10
 
 class ReplayMemory(object):
     def __init__(self):
@@ -208,6 +221,8 @@ class Brain:
         self.main_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
         self.target_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
         self.optimizer = optim.Adam(self.main_q_network.parameters(), lr=LEARNING_RATE)
+        self.loss = None
+        self.step = 0
 
     def replay(self):
 
@@ -291,6 +306,7 @@ class Brain:
         # [4-2] calc loss
         # loss = F.smooth_l1_loss(self.state_action_values, self.expected_state_action_values.unsqeeze(1))
         loss = nn.MSELoss(self.state_action_values, self.expected_state_action_values.unsqeeze(1))
+        self.loss = loss
 
         # [4-3] update of connected params
         self.optimizer.zero_grad() # reset grad
@@ -299,6 +315,7 @@ class Brain:
 
     def update_target_q_network(self):
         self.target_q_network.load_state_dict(self.main_q_network.state_dict())
+
 
 
 class Agent:
@@ -325,6 +342,11 @@ class Environment:
         self.env = gym.make(ENV)
         self.agent = Agent()
         self.map_memory = []
+        self.loss = None
+        self.loss_memory = []
+        self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
+        self.loss_ave = None
+        self.loss_convergence = False
 
     def make_concat_map(self, occupancy_map, flow_map):
         # occupancy_map.size() = torch.Size([H, W])
@@ -348,6 +370,21 @@ class Environment:
         # tempral_maps.size() = torch.Size([12, H, W])
         return tempral_maps
 
+    def check_convergence(self):
+        if len(self.loss_memory) > self.loss_memory_capacity:
+            del self.loss_memory[0]
+        
+        self.loss_memory.append(self.agent.brain.loss)
+        self.loss_ave = sum(self.loss_memory) / len(self.loss_memory)
+
+        if self.loss_ave < LOSS_THRESHOLD:
+            self.loss_convergence = True
+
+class UseTensorBord:
+    def __init__(self):
+        self.writer = SummaryWriter(log_dir=LOG_DIR)
+        # self.log_loss = []
+
 
 def main():
     rospy.init_node('train', anonymous=True)
@@ -363,6 +400,9 @@ def main():
     state_v = None
     action = None
     action_id = 3
+    is_complete = False
+
+    tensor_board = UseTensorBord()
 
     while not rospy.is_shutdown():
         if flow_callback_flag and occupancy_callback_flag and odom_callback_flag and posearray_callback_flag:
@@ -394,7 +434,7 @@ def main():
             reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal)
 
             is_first = False
-            step += 1
+            train_env.agent.brain.step += 1
 
             train_env.agent.memorize(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
 
@@ -402,6 +442,9 @@ def main():
                 is_done = True
 
             if is_done:
+                # tensor_board.log_loss.append(train_env.loss)
+                tensor_board.writer.add_scalar("ours", tensor_board.loss, episode)
+
                 episode += 1
                 step = 0
                 state_m = None
@@ -411,12 +454,17 @@ def main():
                 if(episode % 2 == 0):
                     self.agent.update_target_q_function()
 
+                if train_env.loss_convergence:
+                    torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
+                    is_complete = True
+
                 ros.cmd_vel_publisher(0.0, 0.0)
                 is_first = True
             else:
                 linear_v = train_env.agent.action.commander[action_id].linear_v
                 angular_v = train_env.agent.action.commander[action_id].angular_v
                 ros.cmd_vel_publisher(linear_v, angular_v)
+                ros.done_flag_publisher(is_done)
 
                 state_m = observe_m
                 state_g = observe_g
@@ -425,6 +473,11 @@ def main():
             flow_callback_flag = False
             occupancy_callback_flag = False
             odom_callback_flag = False
+
+        if is_complete:
+            print("complete")
+            tensor_board.writer.close()
+            break
 
         rospy.spin()
 
