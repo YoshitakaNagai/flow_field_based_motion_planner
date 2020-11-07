@@ -27,6 +27,8 @@ from geometry_msgs.msg import PoseArray
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import Bool
+
+import cv2
 from cv_bridge import CvBridge
 
 import envs
@@ -42,11 +44,13 @@ model_path = '../model/model.pt'
 
 ##### ROS #####
 
-maps = [] * 2
+maps = [] * 3 # [0]:occupancy with robot, [1]:flow, [2]:occupancy without robot
 flow_callback_flag = False
 occupancy_callback_flag = False
 odom_callback_flag = False
 posearray_callback_flag = False
+
+IMAGE_SIZE = 40
 
 class ROSNode():
     def __init__(self):
@@ -65,6 +69,13 @@ class ROSNode():
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
         cv_occupancy_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+        maps[2] = cv_occupancy_image.copy()
+
+        for i in range(IMAGE_SIZE):
+            for j in range(IMAGE_SIZE):
+                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+                    cv_occupancy_image[i, j] = 1.0
+
         tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
         maps[0] = tensor_occupancy_image
         occupancy_callback_flag = True
