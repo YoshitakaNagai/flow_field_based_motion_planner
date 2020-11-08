@@ -17,6 +17,6 @@ docker run -it --rm -p 10000:20022\
   --volume="$PWD/../:/root/catkin_ws/src/flow_field_based_motion_planner" \
   --volume="$DIR/.ros/:/root/.ros/" \
   --net="host" \
-  --name="flow_field_based_motion_planner" \
+  --name="ffmp" \
   $IMAGE_NAME \
   bash

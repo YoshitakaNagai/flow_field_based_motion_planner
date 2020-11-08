@@ -58,14 +58,14 @@ RUN pip3 install tensorboard
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     zlib1g-dev
-    libjpeg-dev
-    xvfb
-    ffmpeg
-    xorg-dev
-    python-opengl
-    libboost-all-dev
-    libsdl2-dev
-    swig
+    # libjpeg-dev
+    # xvfb
+    # ffmpeg
+    # xorg-dev
+    # python-opengl
+    # libboost-all-dev
+    # libsdl2-dev
+    # swig
 
 
 # vim install

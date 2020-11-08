@@ -1,0 +1,262 @@
+[rosmaster.main][INFO] 2020-11-08 08:00:45,549: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-11-08 08:00:45,549: Starting ROS Master Node
+[xmlrpc][INFO] 2020-11-08 08:00:45,551: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-11-08 08:00:45,551: Started XML-RPC server [http://192.168.0.191:11311/]
+[rosmaster.master][INFO] 2020-11-08 08:00:45,551: Master initialized: port[11311], uri[http://192.168.0.191:11311/]
+[xmlrpc][INFO] 2020-11-08 08:00:45,551: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-11-08 08:00:45,633: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:00:45,635: +PARAM [/roslaunch/uris/host_192_168_0_191__45895] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:00:45,690: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:00:45,690: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:00:45,711: +SERVICE [/rosout/get_loggers] /rosout http://192.168.0.191:37499/
+[rosmaster.master][INFO] 2020-11-08 08:00:45,712: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.0.191:37499/
+[rosmaster.master][INFO] 2020-11-08 08:00:45,713: +PUB [/rosout_agg] /rosout http://192.168.0.191:37499/
+[rosmaster.master][INFO] 2020-11-08 08:00:45,717: +SUB [/rosout] /rosout http://192.168.0.191:37499/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,589: +PUB [/rosout] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,593: +SERVICE [/train_1118_1604822452475/get_loggers] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,595: +SERVICE [/train_1118_1604822452475/set_logger_level] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,598: +SUB [/bev/flow_image] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,602: +SUB [/occupancy_image] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,605: -SUB [/bev/flow_image] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,605: -SUB [/occupancy_image] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,606: -PUB [/rosout] /train_1118_1604822452475 http://luigi:33397/
+[rosmaster.master][INFO] 2020-11-08 08:00:52,606: -SERVICE [/train_1118_1604822452475/get_loggers] /train_1118_1604822452475 rosrpc://luigi:43939
+[rosmaster.master][INFO] 2020-11-08 08:00:52,606: -SERVICE [/train_1118_1604822452475/set_logger_level] /train_1118_1604822452475 rosrpc://luigi:43939
+[rosmaster.master][INFO] 2020-11-08 08:00:52,662: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:33397/']
+[rosmaster.master][INFO] 2020-11-08 08:00:52,705: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:33397/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:00:52,705: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:00:52,706: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:01:06,021: +PUB [/rosout] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,025: +SERVICE [/train_1135_1604822465909/get_loggers] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,026: +SERVICE [/train_1135_1604822465909/set_logger_level] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,029: +SUB [/bev/flow_image] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,029: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:42335/']
+[rosmaster.master][INFO] 2020-11-08 08:01:06,031: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:42335/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:01:06,032: +SUB [/occupancy_image] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,034: -SUB [/bev/flow_image] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,034: -SUB [/occupancy_image] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,034: -PUB [/rosout] /train_1135_1604822465909 http://luigi:42335/
+[rosmaster.master][INFO] 2020-11-08 08:01:06,034: -SERVICE [/train_1135_1604822465909/get_loggers] /train_1135_1604822465909 rosrpc://luigi:34617
+[rosmaster.master][INFO] 2020-11-08 08:01:06,034: -SERVICE [/train_1135_1604822465909/set_logger_level] /train_1135_1604822465909 rosrpc://luigi:34617
+[rosmaster.master][INFO] 2020-11-08 08:01:06,085: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:01:06,123: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:02:05,380: +PUB [/rosout] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,386: +SERVICE [/train_1153_1604822525263/get_loggers] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,386: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40339/']
+[rosmaster.master][INFO] 2020-11-08 08:02:05,387: +SERVICE [/train_1153_1604822525263/set_logger_level] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,390: +SUB [/bev/flow_image] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,393: +SUB [/occupancy_image] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,396: +SUB [/odom] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,398: +SUB [/start_goal] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,399: +PUB [/cmd_vel/train] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,401: +PUB [/train/episode] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,405: -SUB [/bev/flow_image] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,405: -SUB [/occupancy_image] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,405: -SUB [/odom] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -SUB [/start_goal] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -PUB [/rosout] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -PUB [/cmd_vel/train] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -PUB [/train/episode] /train_1153_1604822525263 http://luigi:40339/
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -SERVICE [/train_1153_1604822525263/get_loggers] /train_1153_1604822525263 rosrpc://luigi:32849
+[rosmaster.master][INFO] 2020-11-08 08:02:05,406: -SERVICE [/train_1153_1604822525263/set_logger_level] /train_1153_1604822525263 rosrpc://luigi:32849
+[rosmaster.master][INFO] 2020-11-08 08:02:05,424: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40339/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:02:05,425: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:02:05,426: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:07:35,811: +PUB [/rosout] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,816: +SERVICE [/train_1170_1604822855699/get_loggers] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,817: +SERVICE [/train_1170_1604822855699/set_logger_level] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,820: +SUB [/bev/flow_image] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,822: +SUB [/occupancy_image] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,824: +SUB [/odom] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,826: +SUB [/start_goal] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,827: +PUB [/cmd_vel/train] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,828: +PUB [/train/episode] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,832: -SUB [/bev/flow_image] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,832: -SUB [/occupancy_image] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,832: -SUB [/odom] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -SUB [/start_goal] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -PUB [/rosout] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -PUB [/cmd_vel/train] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -PUB [/train/episode] /train_1170_1604822855699 http://luigi:40453/
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -SERVICE [/train_1170_1604822855699/get_loggers] /train_1170_1604822855699 rosrpc://luigi:44061
+[rosmaster.master][INFO] 2020-11-08 08:07:35,833: -SERVICE [/train_1170_1604822855699/set_logger_level] /train_1170_1604822855699 rosrpc://luigi:44061
+[rosmaster.master][INFO] 2020-11-08 08:07:35,902: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40453/']
+[rosmaster.master][INFO] 2020-11-08 08:07:35,903: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40453/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:07:35,904: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:07:35,905: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:18:05,192: +PUB [/rosout] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,194: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40981/']
+[rosmaster.master][INFO] 2020-11-08 08:18:05,196: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40981/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:18:05,198: +SERVICE [/train_1187_1604823485075/get_loggers] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,199: +SERVICE [/train_1187_1604823485075/set_logger_level] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,203: +SUB [/bev/flow_image] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,205: +SUB [/occupancy_image] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,208: +SUB [/odom] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,211: +SUB [/start_goal] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,212: +PUB [/cmd_vel/train] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,214: +PUB [/train/episode] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,219: -SUB [/bev/flow_image] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,219: -SUB [/occupancy_image] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,219: -SUB [/odom] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,219: -SUB [/start_goal] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,220: -PUB [/rosout] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,220: -PUB [/cmd_vel/train] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,220: -PUB [/train/episode] /train_1187_1604823485075 http://luigi:40981/
+[rosmaster.master][INFO] 2020-11-08 08:18:05,220: -SERVICE [/train_1187_1604823485075/get_loggers] /train_1187_1604823485075 rosrpc://luigi:34049
+[rosmaster.master][INFO] 2020-11-08 08:18:05,220: -SERVICE [/train_1187_1604823485075/set_logger_level] /train_1187_1604823485075 rosrpc://luigi:34049
+[rosmaster.master][INFO] 2020-11-08 08:18:05,283: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:18:05,284: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:19:45,364: +PUB [/rosout] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,368: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:36163/']
+[rosmaster.master][INFO] 2020-11-08 08:19:45,369: +SERVICE [/train_1205_1604823585248/get_loggers] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,369: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:36163/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:19:45,370: +SERVICE [/train_1205_1604823585248/set_logger_level] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,373: +SUB [/bev/flow_image] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,375: +SUB [/occupancy_image] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,377: +SUB [/odom] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,379: +SUB [/start_goal] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,380: +PUB [/cmd_vel/train] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,381: +PUB [/train/episode] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,385: -SUB [/bev/flow_image] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,385: -SUB [/occupancy_image] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -SUB [/odom] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -SUB [/start_goal] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -PUB [/rosout] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -PUB [/cmd_vel/train] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -PUB [/train/episode] /train_1205_1604823585248 http://luigi:36163/
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -SERVICE [/train_1205_1604823585248/get_loggers] /train_1205_1604823585248 rosrpc://luigi:37611
+[rosmaster.master][INFO] 2020-11-08 08:19:45,386: -SERVICE [/train_1205_1604823585248/set_logger_level] /train_1205_1604823585248 rosrpc://luigi:37611
+[rosmaster.master][INFO] 2020-11-08 08:19:45,453: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:19:45,454: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:20:31,062: +PUB [/rosout] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,067: +SERVICE [/train_1223_1604823630950/get_loggers] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,068: +SERVICE [/train_1223_1604823630950/set_logger_level] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,070: +SUB [/bev/flow_image] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,072: +SUB [/occupancy_image] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,074: +SUB [/odom] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,076: +SUB [/start_goal] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,077: +PUB [/cmd_vel/train] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,078: +PUB [/train/episode] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -SUB [/bev/flow_image] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -SUB [/occupancy_image] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -SUB [/odom] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -SUB [/start_goal] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -PUB [/rosout] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -PUB [/cmd_vel/train] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -PUB [/train/episode] /train_1223_1604823630950 http://luigi:40553/
+[rosmaster.master][INFO] 2020-11-08 08:20:31,082: -SERVICE [/train_1223_1604823630950/get_loggers] /train_1223_1604823630950 rosrpc://luigi:42081
+[rosmaster.master][INFO] 2020-11-08 08:20:31,083: -SERVICE [/train_1223_1604823630950/set_logger_level] /train_1223_1604823630950 rosrpc://luigi:42081
+[rosmaster.master][INFO] 2020-11-08 08:20:31,132: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40553/']
+[rosmaster.master][INFO] 2020-11-08 08:20:31,133: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:40553/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:20:31,133: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:20:31,134: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:23:38,971: +PUB [/rosout] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,976: +SERVICE [/train_1240_1604823818860/get_loggers] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,977: +SERVICE [/train_1240_1604823818860/set_logger_level] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,980: +SUB [/bev/flow_image] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,983: +SUB [/occupancy_image] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,986: +SUB [/odom] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,988: +SUB [/start_goal] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,989: +PUB [/cmd_vel/train] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,990: +PUB [/train/episode] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,996: -SUB [/bev/flow_image] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -SUB [/occupancy_image] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -SUB [/odom] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -SUB [/start_goal] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -PUB [/rosout] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -PUB [/cmd_vel/train] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,997: -PUB [/train/episode] /train_1240_1604823818860 http://luigi:33613/
+[rosmaster.master][INFO] 2020-11-08 08:23:38,998: -SERVICE [/train_1240_1604823818860/get_loggers] /train_1240_1604823818860 rosrpc://luigi:46695
+[rosmaster.master][INFO] 2020-11-08 08:23:38,998: -SERVICE [/train_1240_1604823818860/set_logger_level] /train_1240_1604823818860 rosrpc://luigi:46695
+[rosmaster.master][INFO] 2020-11-08 08:23:39,051: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:33613/']
+[rosmaster.master][INFO] 2020-11-08 08:23:39,052: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:33613/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:23:39,053: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:23:39,053: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:24:21,707: +PUB [/rosout] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,711: +SERVICE [/train_1257_1604823861588/get_loggers] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,713: +SERVICE [/train_1257_1604823861588/set_logger_level] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,716: +SUB [/bev/flow_image] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,719: +SUB [/occupancy_image] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,721: +SUB [/odom] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,723: +SUB [/start_goal] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,724: +PUB [/cmd_vel/train] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,726: +PUB [/train/episode] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,726: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:34597/']
+[rosmaster.master][INFO] 2020-11-08 08:24:21,728: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:34597/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:24:21,736: -SUB [/bev/flow_image] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,736: -SUB [/occupancy_image] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,736: -SUB [/odom] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,736: -SUB [/start_goal] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,737: -PUB [/rosout] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,737: -PUB [/cmd_vel/train] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,737: -PUB [/train/episode] /train_1257_1604823861588 http://luigi:34597/
+[rosmaster.master][INFO] 2020-11-08 08:24:21,737: -SERVICE [/train_1257_1604823861588/get_loggers] /train_1257_1604823861588 rosrpc://luigi:39867
+[rosmaster.master][INFO] 2020-11-08 08:24:21,737: -SERVICE [/train_1257_1604823861588/set_logger_level] /train_1257_1604823861588 rosrpc://luigi:39867
+[rosmaster.master][INFO] 2020-11-08 08:24:21,828: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:24:21,829: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:24:38,285: +PUB [/rosout] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,290: +SERVICE [/train_1275_1604823878173/get_loggers] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,292: +SERVICE [/train_1275_1604823878173/set_logger_level] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,295: +SUB [/bev/flow_image] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,298: +SUB [/occupancy_image] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,300: +SUB [/odom] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,303: +SUB [/start_goal] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,304: +PUB [/cmd_vel/train] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,305: +PUB [/train/episode] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,319: -SUB [/bev/flow_image] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,319: -SUB [/occupancy_image] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,319: -SUB [/odom] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,319: -SUB [/start_goal] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,320: -PUB [/rosout] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,320: -PUB [/cmd_vel/train] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,320: -PUB [/train/episode] /train_1275_1604823878173 http://luigi:36629/
+[rosmaster.master][INFO] 2020-11-08 08:24:38,320: -SERVICE [/train_1275_1604823878173/get_loggers] /train_1275_1604823878173 rosrpc://luigi:39889
+[rosmaster.master][INFO] 2020-11-08 08:24:38,320: -SERVICE [/train_1275_1604823878173/set_logger_level] /train_1275_1604823878173 rosrpc://luigi:39889
+[rosmaster.master][INFO] 2020-11-08 08:24:38,357: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:36629/']
+[rosmaster.master][INFO] 2020-11-08 08:24:38,358: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:36629/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:24:38,359: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:24:38,359: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:25:50,397: +PUB [/rosout] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,401: +SERVICE [/train_1292_1604823950281/get_loggers] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,403: +SERVICE [/train_1292_1604823950281/set_logger_level] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,405: +SUB [/bev/flow_image] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,407: +SUB [/occupancy_image] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,409: +SUB [/odom] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,411: +SUB [/start_goal] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,412: +PUB [/cmd_vel/train] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,413: +PUB [/train/episode] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:50,483: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:38407/']
+[rosmaster.master][INFO] 2020-11-08 08:25:50,484: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:38407/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:25:52,737: -SUB [/bev/flow_image] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,737: -SUB [/occupancy_image] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,737: -SUB [/odom] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,737: -SUB [/start_goal] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,738: -PUB [/rosout] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,738: -PUB [/cmd_vel/train] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,738: -PUB [/train/episode] /train_1292_1604823950281 http://luigi:38407/
+[rosmaster.master][INFO] 2020-11-08 08:25:52,738: -SERVICE [/train_1292_1604823950281/get_loggers] /train_1292_1604823950281 rosrpc://luigi:33743
+[rosmaster.master][INFO] 2020-11-08 08:25:52,738: -SERVICE [/train_1292_1604823950281/set_logger_level] /train_1292_1604823950281 rosrpc://luigi:33743
+[rosmaster.master][INFO] 2020-11-08 08:25:52,789: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:25:52,790: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:29:34,041: +PUB [/rosout] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,046: +SERVICE [/train_1315_1604824173928/get_loggers] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,047: +SERVICE [/train_1315_1604824173928/set_logger_level] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,050: +SUB [/bev/flow_image] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,052: +SUB [/occupancy_image] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,054: +SUB [/odom] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,056: +SUB [/start_goal] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,057: +PUB [/cmd_vel/train] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,058: +PUB [/train/episode] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:34,071: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:42473/']
+[rosmaster.master][INFO] 2020-11-08 08:29:34,072: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ ['http://luigi:42473/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:29:52,476: -SUB [/bev/flow_image] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,476: -SUB [/occupancy_image] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,476: -SUB [/odom] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,476: -SUB [/start_goal] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,477: -PUB [/rosout] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,477: -PUB [/cmd_vel/train] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,477: -PUB [/train/episode] /train_1315_1604824173928 http://luigi:42473/
+[rosmaster.master][INFO] 2020-11-08 08:29:52,477: -SERVICE [/train_1315_1604824173928/get_loggers] /train_1315_1604824173928 rosrpc://luigi:37089
+[rosmaster.master][INFO] 2020-11-08 08:29:52,477: -SERVICE [/train_1315_1604824173928/set_logger_level] /train_1315_1604824173928 rosrpc://luigi:37089
+[rosmaster.master][INFO] 2020-11-08 08:29:52,504: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []
+[rosmaster.master][INFO] 2020-11-08 08:29:52,505: publisherUpdate[/rosout] -> http://192.168.0.191:37499/ []: sec=0.00, result=[1, '', 0]

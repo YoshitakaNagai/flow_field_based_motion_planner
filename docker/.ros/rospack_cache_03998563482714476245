@@ -1,0 +1,2 @@
+#ROS_PACKAGE_PATH=/root/catkin_ws
+/root/catkin_ws/src/flow_field_based_motion_planner

@@ -1,0 +1,79 @@
+[rospy.client][INFO] 2020-11-08 08:00:22,217: init_node, name[/train_1077_1604822422210], pid[1077]
+[xmlrpc][INFO] 2020-11-08 08:00:22,218: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-08 08:00:22,218: Started XML-RPC server [http://luigi:44169/]
+[rospy.init][INFO] 2020-11-08 08:00:22,219: ROS Slave URI: [http://luigi:44169/]
+[rospy.impl.masterslave][INFO] 2020-11-08 08:00:22,219: _ready: http://luigi:44169/
+[rospy.registration][INFO] 2020-11-08 08:00:22,220: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2020-11-08 08:00:22,221: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-08 08:00:22,319: registered with master
+[rospy.rosout][INFO] 2020-11-08 08:00:22,320: initializing /rosout core topic
+[rospy.registration][ERROR] 2020-11-08 08:00:22,325: [Errno 111] Connection refused
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+[rospy.core][INFO] 2020-11-08 08:00:26,961: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2020-11-08 08:00:26,962: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2020-11-08 08:00:26,962: signal-2
+[rospy.core][INFO] 2020-11-08 08:00:29,841: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,341: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,378: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,405: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,435: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,466: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,508: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,553: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,572: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,600: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,635: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,674: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,697: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,728: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,757: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,808: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,818: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,849: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,892: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,915: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,946: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:30,977: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,016: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,042: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,073: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,105: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,140: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,166: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-08 08:00:31,198: signal_shutdown [signal-2]
+[rospy.rosout][INFO] 2020-11-08 08:00:32,063: connected to core topic /rosout
+[rospy.simtime][ERROR] 2020-11-08 08:00:32,069: Unable to initialize /clock: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 79, in init_simtime
+    if not _is_use_simtime():
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 60, in _is_use_simtime
+    code, msg, val = m.getParam(rospy.names.get_caller_id(), _USE_SIMTIME)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/core.py", line 665, in _ServerProxy__request
+    return xmlrpcclient.ServerProxy._ServerProxy__request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1235, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1006, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 946, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 917, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.core][INFO] 2020-11-08 08:00:32,071: signal_shutdown [atexit]

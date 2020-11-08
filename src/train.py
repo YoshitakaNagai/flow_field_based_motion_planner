@@ -17,7 +17,6 @@ import torch.nn.functional as F
 import torchvision.transforms as T
 from torch.utils.tensorboard import SummaryWriter
 import kornia
-import model
 
 import rospy
 from sensor_msgs.msg import Image
@@ -31,9 +30,9 @@ from std_msgs.msg import Bool
 import cv2
 from cv_bridge import CvBridge
 
-import envs
-from envs.ffmp.robot import RobotPosition, RobotVelocity, RobotState, RobotAction
-from envs.ffmp.ffmp import FFMP
+import gym_ffmp
+from gym_ffmp.envs.robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
+from gym_ffmp.envs.ffmp import FFMP
 
 
 
@@ -45,10 +44,6 @@ model_path = '../model/model.pt'
 ##### ROS #####
 
 maps = [] * 3 # [0]:occupancy with robot, [1]:flow, [2]:occupancy without robot
-flow_callback_flag = False
-occupancy_callback_flag = False
-odom_callback_flag = False
-posearray_callback_flag = False
 
 IMAGE_SIZE = 40
 
@@ -56,15 +51,21 @@ class ROSNode():
     def __init__(self):
         self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
         self.sub_occupancy = rospy.Subscriber("/occupancy_image", Image, self.occupancy_image_callback)
-        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.cmd_vel_callback)
+        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
         self.pub_done_flag = rospy.Publisher("/train/episode", Bool, queue_size=1)
+
         self.odom = Odometry()
         self.global_start = Pose()
         self.global_goal = Pose()
         self.bridge = CvBridge()
         self.done_flag = Bool()
+
+        self.flow_callback_flag = False
+        self.occupancy_callback_flag = False
+        self.odom_callback_flag = False
+        self.posearray_callback_flag = False
 
     def occupancy_image_callback(self, msg):
         print("occupancy_image_callback")
@@ -78,7 +79,7 @@ class ROSNode():
 
         tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
         maps[0] = tensor_occupancy_image
-        occupancy_callback_flag = True
+        self.occupancy_callback_flag = True
 
     def flow_image_callback(self, msg):
         print("image_callback")
@@ -86,18 +87,18 @@ class ROSNode():
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
         maps[1] = tensor_flow_image
-        flow_callback_flag = True
+        self.flow_callback_flag = True
 
     def odom_callback(self, msg):
         print("odom_callback")
         self.odom = msg
-        odom_callback_flag = True
+        self.odom_callback_flag = True
 
     def pose_array_callback(self, msg):
         print("pose_array_callback")
         self.global_start.pose = msg[0].poses
         self.global_goal.pose = msg[1].poses
-        posearray_callback_flag = True
+        self.posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
         print("pub cmd_vel")
@@ -169,7 +170,6 @@ class ReplayMemory(object):
         self.index = 0
 
     def push(self, state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward):
-        """Saves a transition."""
         if len(self.memory) < self.capacity:
             self.memory.append(None)
         self.memory[self.index] = Transition(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
@@ -199,7 +199,7 @@ class Network(nn.Module):
         x_m = F.relu(self.conv2(x_m))
         x_m = F.relu(self.conv3(x_m))
 
-        x_gv_ = torch.cat((state_g, state_v, 0)
+        x_gv_ = torch.cat((state_g, state_v, 0))
         x_gv_ = F.relu(self.fc1(x_gv_))
         convw = x_gv_.shape[0]
         convh = convw
@@ -228,7 +228,7 @@ class Network(nn.Module):
 class Brain:
     def __init__(self):
         self.num_actions = NUM_ACTIONS
-        self.memory = ReplayMemory(CAPACITY)
+        self.memory = ReplayMemory()
         self.main_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
         self.target_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
         self.optimizer = optim.Adam(self.main_q_network.parameters(), lr=LEARNING_RATE)
@@ -341,7 +341,7 @@ class Agent:
         action = self.brain.decide_action(state_m, state_g, state_v, episode)
         return action
 
-    def memorize(self, state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
+    def memorize(self, state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward):
         self.brain.memory.push(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
 
     def update_target_q_function(self):
@@ -416,7 +416,7 @@ def main():
     tensor_board = UseTensorBord()
 
     while not rospy.is_shutdown():
-        if flow_callback_flag and occupancy_callback_flag and odom_callback_flag and posearray_callback_flag:
+        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and posearray_callback_flag:
 
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
@@ -448,6 +448,10 @@ def main():
             train_env.agent.brain.step += 1
 
             train_env.agent.memorize(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
+
+            ros.flow_callback_flag = False
+            ros.occupancy_callback_flag = False
+            ros.odom_callback_flag = False
 
             if step == MAX_STEPS:
                 is_done = True
@@ -481,9 +485,6 @@ def main():
                 state_g = observe_g
                 state_v = observe_v
 
-            flow_callback_flag = False
-            occupancy_callback_flag = False
-            odom_callback_flag = False
 
         if is_complete:
             print("complete")
