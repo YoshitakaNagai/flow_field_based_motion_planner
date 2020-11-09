@@ -1,0 +1,91 @@
+[rospy.client][INFO] 2020-11-09 08:31:07,197: init_node, name[/train_2501_1604910667193], pid[2501]
+[xmlrpc][INFO] 2020-11-09 08:31:07,198: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:31:07,198: Started XML-RPC server [http://luigi:41945/]
+[rospy.init][INFO] 2020-11-09 08:31:07,199: ROS Slave URI: [http://luigi:41945/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:31:07,199: _ready: http://luigi:41945/
+[rospy.registration][INFO] 2020-11-09 08:31:07,200: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:31:07,200: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:31:07,299: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:31:07,299: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:31:07,304: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:31:07,306: initializing /clock core topic
+[rospy.simtime][INFO] 2020-11-09 08:31:07,308: connected to core topic /clock
+[rospy.internal][INFO] 2020-11-09 08:31:07,311: topic[/clock] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 08:31:07,325: topic[/bev/flow_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 08:31:07,335: topic[/odom] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 08:31:07,340: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 08:31:07,528: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-09 08:31:07,669: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rosout][ERROR] 2020-11-09 08:31:08,798: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rosout][ERROR] 2020-11-09 08:31:10,138: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rosout][ERROR] 2020-11-09 08:31:10,817: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rosout][ERROR] 2020-11-09 08:31:12,397: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rosout][ERROR] 2020-11-09 08:31:12,847: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f633e304490>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 85, in occupancy_image_callback
+    tensor_occupancy_image[0, i, j] = 1
+IndexError: too many indices for tensor of dimension 2
+
+[rospy.core][INFO] 2020-11-09 08:31:13,502: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:31:13,506: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:31:13,507: topic[/clock] removing connection to http://192.168.0.201:45777/
+[rospy.internal][INFO] 2020-11-09 08:31:13,507: topic[/bev/flow_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 08:31:13,508: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 08:31:13,508: topic[/odom] removing connection to http://192.168.0.201:45777/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:31:13,509: signal-2
+[rospy.internal][WARNING] 2020-11-09 08:31:13,510: Unknown error initiating TCP/IP socket to 192.168.0.201:44289 (http://192.168.0.201:45777/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-09 08:31:13,511: Unknown error initiating TCP/IP socket to 192.168.0.201:44239 (http://192.168.0.201:40809/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-09 08:31:14,000: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:31:14,033: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:31:14,062: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:31:14,092: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:31:14,105: signal_shutdown [atexit]

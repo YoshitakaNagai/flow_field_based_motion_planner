@@ -26,6 +26,7 @@ from geometry_msgs.msg import PoseArray
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import Bool
+from tf.transformations import euler_from_quaternion
 
 import cv2
 from cv_bridge import CvBridge
@@ -43,14 +44,14 @@ model_path = '../model/model.pt'
 
 ##### ROS #####
 
-maps = [] * 3 # [0]:occupancy with robot, [1]:flow, [2]:occupancy without robot
+maps = [None] * 3 # [0]:occupancy with robot, [1]:flow, [2]:occupancy without robot
 
 IMAGE_SIZE = 40
 
 class ROSNode():
     def __init__(self):
         self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
-        self.sub_occupancy = rospy.Subscriber("/occupancy_image", Image, self.occupancy_image_callback)
+        self.sub_occupancy = rospy.Subscriber("/bev/occupancy_image", Image, self.occupancy_image_callback)
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
@@ -61,6 +62,9 @@ class ROSNode():
         self.global_goal = Pose()
         self.bridge = CvBridge()
         self.done_flag = Bool()
+        self.map_grid_size = 0.1
+        self.map_range = 5.0
+        self.robot_rsize = 0.2
 
         self.flow_callback_flag = False
         self.occupancy_callback_flag = False
@@ -72,25 +76,29 @@ class ROSNode():
         cv_occupancy_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         maps[2] = cv_occupancy_image.copy()
 
-        for i in range(IMAGE_SIZE):
-            for j in range(IMAGE_SIZE):
-                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
-                    cv_occupancy_image[i, j] = 1.0
+        # tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
+        tensor_occupancy_image = torch.from_numpy(cv_occupancy_image)
 
-        tensor_occupancy_image = kornia.image_to_tensor(cv_occupancy_image, keepdim=True).float()
+        for i in range(len(cv_occupancy_image[0])):
+            for j in range(len(cv_occupancy_image[1])):
+                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+                    # cv_occupancy_image[i, j] = 1.0
+                    tensor_occupancy_image[i, j] = 1
+
         maps[0] = tensor_occupancy_image
         self.occupancy_callback_flag = True
 
     def flow_image_callback(self, msg):
-        print("image_callback")
+        print("flow_image_callback")
         cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
+        # tensor_flow_image = torch.from_numpy(cv_flow_image)
         maps[1] = tensor_flow_image
         self.flow_callback_flag = True
 
     def odom_callback(self, msg):
-        print("odom_callback")
+        # print("odom_callback")
         self.odom = msg
         self.odom_callback_flag = True
 
@@ -119,20 +127,22 @@ class ROSNode():
     def robot_position_extractor(self):
         x = self.odom.pose.pose.position.x
         y = self.odom.pose.pose.position.y
-        roll, pitch, yaw = euler_from_quaternion(odom.pose.pose.orientation)
+        orientation_q = self.odom.pose.pose.orientation
+        orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
+        roll, pitch, yaw = euler_from_quaternion(orientation_list)
         robot_pose = RobotPose(x, y, yaw)
         return robot_pose
 
     def pi_to_pi(self, angle):
-        while angle>=pi:
-            angle=angle-2*pi
-        while angle<=-pi:
-            angle=angle+2*pi
+        while angle >= math.pi:
+            angle = angle - (2 * math.pi)
+        while angle <= -math.pi:
+            angle = angle + 2 * math.pi
         return angle
 
     def relative_goal_calculator(self, robot_pose):
-        relative_x = self.global_goal.pose.position.x - robot_pose.x
-        relative_y = self.global_goal.pose.position.y - robot_pose.y
+        relative_x = self.global_goal.position.x - robot_pose.x
+        relative_y = self.global_goal.position.y - robot_pose.y
         relative_dist = math.sqrt(relative_x * relative_x + relative_y * relative_y)
         relative_direction = math.atan2(relative_y, relative_x)
         relative_orientation = self.pi_to_pi(relative_direction - robot_pose.yaw)
@@ -185,6 +195,8 @@ class ReplayMemory(object):
 class Network(nn.Module):
     def __init__(self, input_channels, outputs):
         super(Network, self).__init__()
+        print("input_channels=")
+        print(input_channels)
         self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=8, stride=4)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=4, stride=2)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=3, stride=1)
@@ -195,8 +207,11 @@ class Network(nn.Module):
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state_m, state_g, state_v):
-        x_m = F.relu(self.conv1(concat_maps))
+        print("conv1")
+        x_m = F.relu(self.conv1(state_m))
+        print("conv2")
         x_m = F.relu(self.conv2(x_m))
+        print("conv3")
         x_m = F.relu(self.conv3(x_m))
 
         x_gv_ = torch.cat((state_g, state_v, 0))
@@ -362,13 +377,23 @@ class Environment:
     def make_concat_map(self, occupancy_map, flow_map):
         # occupancy_map.size() = torch.Size([H, W])
         # flow_map.size() = torch.Size([3, H, W])
-        occupancy_map = tf.expand_dims(occupancy_map, 0)
+
+        occupancy_map = torch.unsqueeze(occupancy_map, 0)
+        print("occupancy_map.size() = ", occupancy_map.size())
+        print("flow_map.size() = ", flow_map.size())
+        
         # occupancy_map.size() = torch.Size([1, H, W])
-        concat_map = torch.cat((occupancy_map, flow_map), 0)
+        repeat_vals = (1, 40, 40)
+
+        concat_map = torch.cat((flow_map, occupancy_map.expand(*repeat_vals)), 0)
+        print("concat_map.size() = ", concat_map.size())
+        # concat_map = torch.stack((flow_map, occupancy_map), 2)
         #concat_map.size() = torch.Size([4, H, W])    
+        # concat_map = torch.unsqueeze(concat_map, 0)
+        
         return concat_map
     
-    def make_temporal_maps(concat_map, is_first):
+    def make_temporal_maps(self, concat_map, is_first):
         if is_first:
             self.map_memory.clear()
             for i in range(3):
@@ -377,9 +402,10 @@ class Environment:
             self.map_memory.append(concat_map)
             del self.map_memory[0]
         
-        tempral_maps = torch.cat(self.map_memory, 0)
-        # tempral_maps.size() = torch.Size([12, H, W])
-        return tempral_maps
+        temporal_maps = torch.cat(self.map_memory, 0)
+        print("temporal_maps.size() = ", temporal_maps.size())
+        # temporal_maps.size() = torch.Size([12, H, W])
+        return temporal_maps
 
     def check_convergence(self):
         if len(self.loss_memory) > self.loss_memory_capacity:
@@ -400,6 +426,7 @@ class UseTensorBord:
 def main():
     rospy.init_node('train', anonymous=True)
     ros = ROSNode()
+    r = rospy.Rate(100)
 
     train_env = Environment()
     episode = 0
@@ -415,14 +442,17 @@ def main():
 
     tensor_board = UseTensorBord()
 
+    print("ros : start!")
     while not rospy.is_shutdown():
-        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and posearray_callback_flag:
+        # if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag:
+        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag:
 
+            print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
             velocity = ros.robot_velocity_calculator(robot_pose, is_first) # numpy
-            occpancy_map = maps[0] # tensor
+            occupancy_map = maps[0] # tensor
             flow_map = maps[1] #tensor
 
             concat_map = train_env.make_concat_map(occupancy_map, flow_map)
@@ -442,7 +472,7 @@ def main():
 
             tmp_tensor_occupancy = occupancy_map.clone()
             numpy_occupancy = tmp_tensor_occupancy.to('cpu').detach().numpy()
-            reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal)
+            reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
 
             is_first = False
             train_env.agent.brain.step += 1
@@ -491,8 +521,8 @@ def main():
             tensor_board.writer.close()
             break
 
-        rospy.spin()
-
+        # rospy.spin()
+        r.sleep()
 
 if __name__ == '__main__':
     main()

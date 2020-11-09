@@ -1,0 +1,36 @@
+[rospy.client][INFO] 2020-11-09 08:56:35,259: init_node, name[/train_3023_1604912195253], pid[3023]
+[xmlrpc][INFO] 2020-11-09 08:56:35,259: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:56:35,260: Started XML-RPC server [http://luigi:43953/]
+[rospy.init][INFO] 2020-11-09 08:56:35,260: ROS Slave URI: [http://luigi:43953/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:56:35,261: _ready: http://luigi:43953/
+[rospy.registration][INFO] 2020-11-09 08:56:35,262: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:56:35,262: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:56:35,361: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:56:35,361: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:56:35,367: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:56:35,368: initializing /clock core topic
+[rospy.simtime][INFO] 2020-11-09 08:56:35,371: connected to core topic /clock
+[rospy.internal][INFO] 2020-11-09 08:56:35,374: topic[/clock] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 08:56:35,386: topic[/bev/flow_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 08:56:35,399: topic[/odom] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 08:56:35,403: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 08:56:35,604: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-11-09 08:56:37,966: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-09 08:56:37,971: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:56:37,973: topic[/clock] removing connection to http://192.168.0.201:45777/
+[rospy.internal][INFO] 2020-11-09 08:56:37,974: topic[/bev/flow_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 08:56:37,977: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 08:56:37,978: topic[/odom] removing connection to http://192.168.0.201:45777/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:56:37,978: atexit
+[rospy.internal][ERROR] 2020-11-09 08:56:37,979: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 732, in receive_once
+    sock.setblocking(1)
+OSError: [Errno 9] Bad file descriptor
+
+[rospy.internal][ERROR] 2020-11-09 08:56:37,979: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 737, in receive_once
+    self.stat_bytes += recv_buff(sock, b, p.buff_size)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 104, in recv_buff
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+

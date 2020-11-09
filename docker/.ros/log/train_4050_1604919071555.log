@@ -1,0 +1,17 @@
+[rospy.client][INFO] 2020-11-09 10:51:11,561: init_node, name[/train_4050_1604919071555], pid[4050]
+[xmlrpc][INFO] 2020-11-09 10:51:11,562: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 10:51:11,562: Started XML-RPC server [http://luigi:46661/]
+[rospy.init][INFO] 2020-11-09 10:51:11,563: ROS Slave URI: [http://luigi:46661/]
+[rospy.impl.masterslave][INFO] 2020-11-09 10:51:11,563: _ready: http://luigi:46661/
+[rospy.registration][INFO] 2020-11-09 10:51:11,564: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 10:51:11,565: xml rpc node: starting XML-RPC server
+[rospy.core][INFO] 2020-11-09 10:51:11,565: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 10:51:12,066: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 10:51:12,108: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 10:51:12,127: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 10:51:12,157: signal_shutdown [signal-2]
+[rospy.init][INFO] 2020-11-09 10:51:12,166: registered with master
+[rospy.core][WARNING] 2020-11-09 10:51:12,167: add_shutdown_hook called after shutdown
+[rospy.impl.masterslave][INFO] 2020-11-09 10:51:12,167: already shutdown
+[rospy.client][WARNING] 2020-11-09 10:51:12,167: aborting node initialization as shutdown has been triggered
+[rospy.core][INFO] 2020-11-09 10:51:12,168: signal_shutdown [atexit]

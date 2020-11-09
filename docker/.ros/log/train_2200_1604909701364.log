@@ -1,0 +1,83 @@
+[rospy.client][INFO] 2020-11-09 08:15:01,372: init_node, name[/train_2200_1604909701364], pid[2200]
+[xmlrpc][INFO] 2020-11-09 08:15:01,372: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:15:01,373: Started XML-RPC server [http://luigi:36471/]
+[rospy.init][INFO] 2020-11-09 08:15:01,374: ROS Slave URI: [http://luigi:36471/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:15:01,374: _ready: http://luigi:36471/
+[rospy.registration][INFO] 2020-11-09 08:15:01,375: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:15:01,376: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:15:01,474: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:15:01,474: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:15:01,480: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:15:01,481: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 08:15:01,492: topic[/bev/flow_image] adding connection to [http://192.168.0.201:43537/], count 0
+[rospy.internal][INFO] 2020-11-09 08:15:01,496: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:43537/], count 0
+[rospy.internal][INFO] 2020-11-09 08:15:01,500: topic[/odom] adding connection to [http://192.168.0.201:42957/], count 0
+[rospy.internal][INFO] 2020-11-09 08:15:01,698: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-09 08:15:01,931: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f831b626280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image.shape()
+TypeError: 'torch.Size' object is not callable
+
+[rosout][ERROR] 2020-11-09 08:15:02,349: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f831b626280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image.shape()
+TypeError: 'torch.Size' object is not callable
+
+[rosout][ERROR] 2020-11-09 08:15:02,789: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f831b626280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image.shape()
+TypeError: 'torch.Size' object is not callable
+
+[rosout][ERROR] 2020-11-09 08:15:03,259: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f831b626280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image.shape()
+TypeError: 'torch.Size' object is not callable
+
+[rosout][ERROR] 2020-11-09 08:15:03,670: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f831b626280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image.shape()
+TypeError: 'torch.Size' object is not callable
+
+[rospy.core][INFO] 2020-11-09 08:15:03,927: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:15:03,930: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:15:03,931: topic[/bev/flow_image] removing connection to http://192.168.0.201:43537/
+[rospy.internal][INFO] 2020-11-09 08:15:03,931: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:43537/
+[rospy.internal][INFO] 2020-11-09 08:15:03,931: topic[/odom] removing connection to http://192.168.0.201:42957/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:15:03,932: signal-2
+[rospy.core][INFO] 2020-11-09 08:15:03,946: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:03,968: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:03,999: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,030: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,060: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,093: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,128: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,153: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,184: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,214: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,249: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,275: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,306: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,336: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,366: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,401: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,430: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,459: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,491: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,522: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,556: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:15:04,565: signal_shutdown [atexit]

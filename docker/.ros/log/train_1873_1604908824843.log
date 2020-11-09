@@ -1,0 +1,58 @@
+[rospy.client][INFO] 2020-11-09 08:00:24,851: init_node, name[/train_1873_1604908824843], pid[1873]
+[xmlrpc][INFO] 2020-11-09 08:00:24,852: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:00:24,852: Started XML-RPC server [http://luigi:36675/]
+[rospy.init][INFO] 2020-11-09 08:00:24,853: ROS Slave URI: [http://luigi:36675/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:00:24,853: _ready: http://luigi:36675/
+[rospy.registration][INFO] 2020-11-09 08:00:24,855: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:00:24,855: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:00:24,953: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:00:24,954: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:00:24,959: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:00:24,960: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 08:00:24,985: topic[/bev/flow_image] adding connection to [http://192.168.0.201:42413/], count 0
+[rospy.internal][INFO] 2020-11-09 08:00:24,988: topic[/odom] adding connection to [http://192.168.0.201:42957/], count 0
+[rospy.internal][INFO] 2020-11-09 08:00:24,992: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:42413/], count 0
+[rosout][ERROR] 2020-11-09 08:00:25,026: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f029d3cc280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+AttributeError: 'ROSNode' object has no attribute 'map_grid_size'
+
+[rospy.internal][INFO] 2020-11-09 08:00:25,189: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-09 08:00:25,465: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f029d3cc280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+AttributeError: 'ROSNode' object has no attribute 'map_grid_size'
+
+[rosout][ERROR] 2020-11-09 08:00:26,595: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f029d3cc280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+AttributeError: 'ROSNode' object has no attribute 'map_grid_size'
+
+[rosout][ERROR] 2020-11-09 08:00:27,255: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f029d3cc280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+AttributeError: 'ROSNode' object has no attribute 'map_grid_size'
+
+[rospy.core][INFO] 2020-11-09 08:00:27,405: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:00:27,409: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:00:27,409: topic[/bev/flow_image] removing connection to http://192.168.0.201:42413/
+[rospy.internal][INFO] 2020-11-09 08:00:27,409: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:42413/
+[rospy.internal][INFO] 2020-11-09 08:00:27,410: topic[/odom] removing connection to http://192.168.0.201:42957/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:00:27,410: signal-2
+[rospy.core][INFO] 2020-11-09 08:00:27,903: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:00:27,945: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:00:27,968: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:00:28,001: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:00:28,007: signal_shutdown [atexit]

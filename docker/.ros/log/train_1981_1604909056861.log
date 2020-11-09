@@ -1,0 +1,59 @@
+[rospy.client][INFO] 2020-11-09 08:04:16,865: init_node, name[/train_1981_1604909056861], pid[1981]
+[xmlrpc][INFO] 2020-11-09 08:04:16,866: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:04:16,866: Started XML-RPC server [http://luigi:37731/]
+[rospy.init][INFO] 2020-11-09 08:04:16,867: ROS Slave URI: [http://luigi:37731/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:04:16,867: _ready: http://luigi:37731/
+[rospy.registration][INFO] 2020-11-09 08:04:16,868: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:04:16,869: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:04:16,967: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:04:16,968: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:04:16,972: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:04:16,973: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 08:04:16,996: topic[/bev/flow_image] adding connection to [http://192.168.0.201:42413/], count 0
+[rospy.internal][INFO] 2020-11-09 08:04:16,999: topic[/odom] adding connection to [http://192.168.0.201:42957/], count 0
+[rospy.internal][INFO] 2020-11-09 08:04:17,001: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:42413/], count 0
+[rosout][ERROR] 2020-11-09 08:04:17,096: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7fb915d0a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    for i in range(cv_occupancy_image[0].Size()):
+AttributeError: 'numpy.ndarray' object has no attribute 'Size'
+
+[rospy.internal][INFO] 2020-11-09 08:04:17,186: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-09 08:04:17,505: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7fb915d0a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    for i in range(cv_occupancy_image[0].Size()):
+AttributeError: 'numpy.ndarray' object has no attribute 'Size'
+
+[rosout][ERROR] 2020-11-09 08:04:18,175: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7fb915d0a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    for i in range(cv_occupancy_image[0].Size()):
+AttributeError: 'numpy.ndarray' object has no attribute 'Size'
+
+[rosout][ERROR] 2020-11-09 08:04:18,615: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7fb915d0a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 77, in occupancy_image_callback
+    for i in range(cv_occupancy_image[0].Size()):
+AttributeError: 'numpy.ndarray' object has no attribute 'Size'
+
+[rospy.core][INFO] 2020-11-09 08:04:19,376: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:04:19,379: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:04:19,380: topic[/bev/flow_image] removing connection to http://192.168.0.201:42413/
+[rospy.internal][INFO] 2020-11-09 08:04:19,380: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:42413/
+[rospy.internal][INFO] 2020-11-09 08:04:19,380: topic[/odom] removing connection to http://192.168.0.201:42957/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:04:19,380: signal-2
+[rospy.core][INFO] 2020-11-09 08:04:19,389: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:04:19,429: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:04:19,450: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:04:19,482: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:04:19,511: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:04:20,017: signal_shutdown [atexit]

@@ -1,0 +1,24 @@
+[rospy.client][INFO] 2020-11-09 09:35:15,993: init_node, name[/train_3632_1604914515986], pid[3632]
+[xmlrpc][INFO] 2020-11-09 09:35:15,994: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 09:35:15,995: Started XML-RPC server [http://luigi:38287/]
+[rospy.init][INFO] 2020-11-09 09:35:15,995: ROS Slave URI: [http://luigi:38287/]
+[rospy.impl.masterslave][INFO] 2020-11-09 09:35:15,995: _ready: http://luigi:38287/
+[rospy.registration][INFO] 2020-11-09 09:35:15,997: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 09:35:15,997: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 09:35:16,096: registered with master
+[rospy.rosout][INFO] 2020-11-09 09:35:16,096: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 09:35:16,101: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 09:35:16,102: initializing /clock core topic
+[rospy.simtime][INFO] 2020-11-09 09:35:16,105: connected to core topic /clock
+[rospy.internal][INFO] 2020-11-09 09:35:16,109: topic[/clock] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 09:35:16,132: topic[/bev/flow_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 09:35:16,137: topic[/odom] adding connection to [http://192.168.0.201:45777/], count 0
+[rospy.internal][INFO] 2020-11-09 09:35:16,138: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:40809/], count 0
+[rospy.internal][INFO] 2020-11-09 09:35:16,314: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-11-09 09:35:18,688: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-09 09:35:18,693: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 09:35:18,693: topic[/clock] removing connection to http://192.168.0.201:45777/
+[rospy.internal][INFO] 2020-11-09 09:35:18,694: topic[/bev/flow_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 09:35:18,694: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:40809/
+[rospy.internal][INFO] 2020-11-09 09:35:18,694: topic[/odom] removing connection to http://192.168.0.201:45777/
+[rospy.impl.masterslave][INFO] 2020-11-09 09:35:18,694: atexit

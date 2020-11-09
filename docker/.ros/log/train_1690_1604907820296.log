@@ -1,0 +1,376 @@
+[rospy.client][INFO] 2020-11-09 07:43:40,303: init_node, name[/train_1690_1604907820296], pid[1690]
+[xmlrpc][INFO] 2020-11-09 07:43:40,304: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 07:43:40,305: Started XML-RPC server [http://luigi:42243/]
+[rospy.init][INFO] 2020-11-09 07:43:40,305: ROS Slave URI: [http://luigi:42243/]
+[rospy.impl.masterslave][INFO] 2020-11-09 07:43:40,305: _ready: http://luigi:42243/
+[rospy.registration][INFO] 2020-11-09 07:43:40,307: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 07:43:40,307: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 07:43:40,406: registered with master
+[rospy.rosout][INFO] 2020-11-09 07:43:40,406: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 07:43:40,414: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 07:43:40,416: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 07:43:40,646: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-09 07:46:06,997: topic[/odom] adding connection to [http://192.168.0.201:33537/], count 0
+[rospy.internal][INFO] 2020-11-09 07:46:11,410: topic[/bev/flow_image] adding connection to [http://192.168.0.201:33375/], count 0
+[rosout][ERROR] 2020-11-09 07:46:16,985: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:25,184: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:25,656: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:26,064: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:26,744: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:27,854: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:28,744: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:30,084: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:30,564: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:30,984: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:31,654: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:32,534: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:32,974: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:33,444: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:34,114: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:34,794: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:35,204: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:36,084: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:36,534: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:37,204: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:38,084: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:38,554: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:38,964: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:39,434: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:40,104: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:40,514: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:41,174: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:42,054: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:42,944: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:44,274: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:44,744: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:45,824: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:47,624: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:48,044: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:48,494: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:49,164: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:50,044: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:51,384: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:53,384: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:54,494: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:55,174: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:55,844: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:58,104: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rosout][ERROR] 2020-11-09 07:46:58,514: bad callback: <bound method ROSNode.flow_image_callback of <__main__.ROSNode object at 0x7f3fb479a280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 89, in flow_image_callback
+    maps[1] = tensor_flow_image
+IndexError: list assignment index out of range
+
+[rospy.core][INFO] 2020-11-09 07:46:58,743: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 07:46:58,750: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 07:46:58,750: topic[/bev/flow_image] removing connection to http://192.168.0.201:33375/
+[rospy.internal][INFO] 2020-11-09 07:46:58,751: topic[/odom] removing connection to http://192.168.0.201:33537/
+[rospy.impl.masterslave][INFO] 2020-11-09 07:46:58,751: signal-2
+[rospy.core][INFO] 2020-11-09 07:46:59,263: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 07:46:59,273: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 07:46:59,306: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 07:46:59,345: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 07:46:59,345: signal_shutdown [atexit]

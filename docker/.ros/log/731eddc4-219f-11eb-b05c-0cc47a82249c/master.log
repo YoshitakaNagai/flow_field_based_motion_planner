@@ -1,0 +1,43 @@
+[rosmaster.main][INFO] 2020-11-08 08:50:28,768: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-11-08 08:50:28,768: Starting ROS Master Node
+[xmlrpc][INFO] 2020-11-08 08:50:28,769: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-11-08 08:50:28,770: Started XML-RPC server [http://192.168.0.191:11311/]
+[rosmaster.master][INFO] 2020-11-08 08:50:28,770: Master initialized: port[11311], uri[http://192.168.0.191:11311/]
+[xmlrpc][INFO] 2020-11-08 08:50:28,770: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-11-08 08:50:28,783: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:50:28,785: +PARAM [/roslaunch/uris/host_192_168_0_191__44209] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:50:28,830: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:50:28,830: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-11-08 08:50:28,850: +SERVICE [/rosout/get_loggers] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:28,850: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:28,852: +PUB [/rosout_agg] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:28,855: +SUB [/rosout] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,037: +PUB [/rosout] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,042: +SERVICE [/train_1588_1604825433923/get_loggers] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,044: +SERVICE [/train_1588_1604825433923/set_logger_level] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,047: +SUB [/bev/flow_image] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,050: +SUB [/occupancy_image] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,054: +SUB [/odom] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,057: +SUB [/start_goal] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,058: +PUB [/cmd_vel/train] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,060: +PUB [/train/episode] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:34,078: publisherUpdate[/rosout] -> http://192.168.0.191:33839/ ['http://luigi:34647/']
+[rosmaster.master][INFO] 2020-11-08 08:50:34,122: publisherUpdate[/rosout] -> http://192.168.0.191:33839/ ['http://luigi:34647/']: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:50:37,940: -SUB [/bev/flow_image] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,940: -SUB [/occupancy_image] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,940: -SUB [/odom] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,941: -SUB [/start_goal] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,941: -PUB [/rosout] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,941: -PUB [/cmd_vel/train] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,941: -PUB [/train/episode] /train_1588_1604825433923 http://luigi:34647/
+[rosmaster.master][INFO] 2020-11-08 08:50:37,941: -SERVICE [/train_1588_1604825433923/get_loggers] /train_1588_1604825433923 rosrpc://luigi:46585
+[rosmaster.master][INFO] 2020-11-08 08:50:37,942: -SERVICE [/train_1588_1604825433923/set_logger_level] /train_1588_1604825433923 rosrpc://luigi:46585
+[rosmaster.master][INFO] 2020-11-08 08:50:37,985: publisherUpdate[/rosout] -> http://192.168.0.191:33839/ []
+[rosmaster.master][INFO] 2020-11-08 08:50:38,024: publisherUpdate[/rosout] -> http://192.168.0.191:33839/ []: sec=0.04, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-11-08 08:50:44,234: -PUB [/rosout_agg] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:44,235: -SUB [/rosout] /rosout http://192.168.0.191:33839/
+[rosmaster.master][INFO] 2020-11-08 08:50:44,236: -SERVICE [/rosout/get_loggers] /rosout rosrpc://192.168.0.191:43849
+[rosmaster.master][INFO] 2020-11-08 08:50:44,237: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://192.168.0.191:43849
+[rosmaster.main][INFO] 2020-11-08 08:50:44,289: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2020-11-08 08:50:44,289: stopping master...
+[rospy.core][INFO] 2020-11-08 08:50:44,289: signal_shutdown [atexit]

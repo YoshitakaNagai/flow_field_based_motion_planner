@@ -1,0 +1,97 @@
+[rospy.client][INFO] 2020-11-09 08:17:32,614: init_node, name[/train_2249_1604909852609], pid[2249]
+[xmlrpc][INFO] 2020-11-09 08:17:32,615: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:17:32,615: Started XML-RPC server [http://luigi:46773/]
+[rospy.init][INFO] 2020-11-09 08:17:32,616: ROS Slave URI: [http://luigi:46773/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:17:32,616: _ready: http://luigi:46773/
+[rospy.registration][INFO] 2020-11-09 08:17:32,617: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:17:32,618: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:17:32,716: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:17:32,717: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:17:32,722: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:17:32,723: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 08:17:32,747: topic[/odom] adding connection to [http://192.168.0.201:42957/], count 0
+[rospy.internal][INFO] 2020-11-09 08:17:32,984: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-09 08:17:41,444: topic[/bev/flow_image] adding connection to [http://192.168.0.201:36967/], count 0
+[rospy.internal][INFO] 2020-11-09 08:17:41,448: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:36967/], count 0
+[rosout][ERROR] 2020-11-09 08:17:42,629: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:43,283: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:43,684: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:44,564: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:45,004: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:45,474: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:45,884: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rosout][ERROR] 2020-11-09 08:17:46,364: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7faae848d280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 87, in occupancy_image_callback
+    cv_occupancy_image[i, j] = 1.0
+ValueError: assignment destination is read-only
+
+[rospy.core][INFO] 2020-11-09 08:17:46,697: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:17:46,703: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:17:46,703: topic[/bev/flow_image] removing connection to http://192.168.0.201:36967/
+[rospy.internal][INFO] 2020-11-09 08:17:46,704: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:36967/
+[rospy.internal][INFO] 2020-11-09 08:17:46,704: topic[/odom] removing connection to http://192.168.0.201:42957/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:17:46,705: signal-2
+[rospy.internal][WARNING] 2020-11-09 08:17:46,706: Unknown error initiating TCP/IP socket to 192.168.0.201:45869 (http://192.168.0.201:42957/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-09 08:17:47,198: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:17:47,240: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:17:47,264: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:17:47,294: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:17:47,299: signal_shutdown [atexit]

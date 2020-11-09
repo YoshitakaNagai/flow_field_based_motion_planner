@@ -1,0 +1,50 @@
+[rospy.client][INFO] 2020-11-09 08:14:26,712: init_node, name[/train_2173_1604909666705], pid[2173]
+[xmlrpc][INFO] 2020-11-09 08:14:26,713: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-09 08:14:26,713: Started XML-RPC server [http://luigi:40749/]
+[rospy.init][INFO] 2020-11-09 08:14:26,714: ROS Slave URI: [http://luigi:40749/]
+[rospy.impl.masterslave][INFO] 2020-11-09 08:14:26,714: _ready: http://luigi:40749/
+[rospy.registration][INFO] 2020-11-09 08:14:26,716: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-09 08:14:26,716: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-09 08:14:26,814: registered with master
+[rospy.rosout][INFO] 2020-11-09 08:14:26,815: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-09 08:14:26,820: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-09 08:14:26,821: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-09 08:14:26,833: topic[/bev/flow_image] adding connection to [http://192.168.0.201:43537/], count 0
+[rospy.internal][INFO] 2020-11-09 08:14:26,847: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:43537/], count 0
+[rospy.internal][INFO] 2020-11-09 08:14:26,850: topic[/odom] adding connection to [http://192.168.0.201:42957/], count 0
+[rosout][ERROR] 2020-11-09 08:14:26,881: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f03e0f93280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image[i,j] = 1
+IndexError: index 23 is out of bounds for dimension 0 with size 1
+
+[rospy.internal][INFO] 2020-11-09 08:14:27,056: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-09 08:14:28,601: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f03e0f93280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image[i,j] = 1
+IndexError: index 23 is out of bounds for dimension 0 with size 1
+
+[rosout][ERROR] 2020-11-09 08:14:29,071: bad callback: <bound method ROSNode.occupancy_image_callback of <__main__.ROSNode object at 0x7f03e0f93280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/root/catkin_ws/src/flow_field_based_motion_planner/src/train.py", line 86, in occupancy_image_callback
+    tensor_occupancy_image[i,j] = 1
+IndexError: index 23 is out of bounds for dimension 0 with size 1
+
+[rospy.core][INFO] 2020-11-09 08:14:29,244: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-09 08:14:29,249: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-09 08:14:29,250: topic[/bev/flow_image] removing connection to http://192.168.0.201:43537/
+[rospy.internal][INFO] 2020-11-09 08:14:29,250: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:43537/
+[rospy.internal][INFO] 2020-11-09 08:14:29,250: topic[/odom] removing connection to http://192.168.0.201:42957/
+[rospy.impl.masterslave][INFO] 2020-11-09 08:14:29,250: signal-2
+[rospy.core][INFO] 2020-11-09 08:14:29,745: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:14:29,783: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:14:29,808: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:14:29,838: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-09 08:14:29,846: signal_shutdown [atexit]
