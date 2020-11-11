@@ -11,15 +11,11 @@ from gym.utils import seeding
 # import robot
 from .robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 
-MAP_RANGE = 10.0 # [m]
-MAP_GRID_NUM = 60 # [grids]
+MAP_RANGE = 5.0 # [m]
+MAP_GRID_NUM = 40 # [grids]
 MAP_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
-ROBOT_RSIZE = 0.2 # [m]
+ROBOT_RSIZE = 0.1 # [m]
 
-R_ARR = 500
-R_COL = -500
-R_S = -5
-EPSILON = 10
 
 
 class FFMP(gym.Env):
@@ -51,11 +47,7 @@ class FFMP(gym.Env):
         # [2-4] colision
         self.robot_rsize = ROBOT_RSIZE #[m]
         # self.robot_grids = np.empty([0, 0], dtype=int32)
-        self.robot_grids = np.array([0, 0])
-        for i in range(self.map_grid_num):
-            for j in range(self.map_grid_num):
-                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
-                    self.robot_grids = np.append(self.robot_grids, [i, j])
+        self.robot_grids = []
         self.collision_low  = False
         self.collision_high = True
         # observation_space
@@ -91,15 +83,20 @@ class FFMP(gym.Env):
     #     return reward
 
     def is_collision(self, local_map_info):
-        is_collision = False
-        for itr in self.robot_grids:
-            i = itr[0]
-            j = itr[1]
+        for i in range(self.map_grid_num):
+            for j in range(self.map_grid_num):
+                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+                    self.robot_grids.append(np.array([i, j]))
+        is_collide = False
+        for itr in range(len(self.robot_grids)):
+            print(self.robot_grids[itr])
+            i = self.robot_grids[itr][0]
+            j = self.robot_grids[itr][1]
             if local_map_info[i,j] > 0:
-                is_collision = True
+                is_collide = True
                 break
         
-        return is_collision
+        return is_collide
                
 
     def is_goal(self, cur_relative_goal_dist):
@@ -116,13 +113,13 @@ class FFMP(gym.Env):
         r_g = 0
         r_c = 0
         r_t = 0
-        r_arr = R_ARR
-        r_col = R_COL
-        r_s = R_S
-        epsilon = EPSILON
+        r_arr = 500
+        r_col = -500
+        r_s = -5
+        epsilon = 10
 
         global pre_relative_goal_dist
-        if is_first == True:
+        if is_first:
             pre_relative_goal_dist = relative_goal_info[0]
         
         cur_relative_goal_dist = relative_goal_info[0] #[0]:range, [1]:orientation
@@ -132,8 +129,8 @@ class FFMP(gym.Env):
         else:
             r_g = epsilon * (pre_relative_goal_dist - cur_relative_goal_dist)
 
-        if is_collision == True:
-            r_c = r_coll
+        if is_collision:
+            r_c = r_col
         else:
             r_c = 0
 
@@ -150,12 +147,13 @@ class FFMP(gym.Env):
 
 
     def rewarder(self, local_map_info, relative_goal_info, is_first):
-        is_collision = is_collision(local_map_info)
-        is_goal = is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
+        is_collide = self.is_collision(local_map_info)
+        print("is_collide : ", is_collide)
+        is_goal = self.is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
 
         # self.observation = np.array([relative_goal_info, action])
-        reward = self.reward_calculator(relative_goal_info, is_collision, is_goal, is_first)
-        is_done = is_done(is_collision, is_goal)
+        reward = self.reward_calculator(relative_goal_info, is_collide, is_goal, is_first)
+        is_done = self.is_done(is_collide, is_goal)
 
         return reward, is_done
 

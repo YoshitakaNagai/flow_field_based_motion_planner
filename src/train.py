@@ -64,7 +64,7 @@ class ROSNode():
         self.done_flag = Bool()
         self.map_grid_size = 0.1
         self.map_range = 5.0
-        self.robot_rsize = 0.2
+        self.robot_rsize = 0.1
 
         self.flow_callback_flag = False
         self.occupancy_callback_flag = False
@@ -195,49 +195,66 @@ class ReplayMemory(object):
 class Network(nn.Module):
     def __init__(self, input_channels, outputs):
         super(Network, self).__init__()
-        print("input_channels=")
-        print(input_channels)
-        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=8, stride=4)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=4, stride=2)
-        self.conv3 = nn.Conv2d(64, 64, kernel_size=3, stride=1)
-        self.fc1 = nn.Linear(4, 64)
-        self.fc2 = nn.Linear(4096, 512)
+        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=16)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=8)
+        self.conv3 = nn.Conv2d(64, 64, kernel_size=3)
+        self.fc1 = nn.Linear(4, 16)
+        self.fc2 = nn.Linear(6400, 512)
         self.fc3 = nn.Linear(512, 512)
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state_m, state_g, state_v):
-        print("conv1")
         x_m = F.relu(self.conv1(state_m))
-        print("conv2")
+        print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))
-        print("conv3")
+        print("conv2 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv3(x_m))
+        print("conv3 -> x_m.size() = ", x_m.size())
 
-        x_gv_ = torch.cat((state_g, state_v, 0))
+        x_gv_ = torch.cat((state_g, state_v), 0)
         x_gv_ = F.relu(self.fc1(x_gv_))
         convw = x_gv_.shape[0]
         convh = convw
         x_gv = torch.empty(convw, convh)
         
-        for i in range(64):
+        for i in range(16):
             tile_gv = torch.full((convw, convh), fill_value=x_gv_[i])
-            x_gv = x_gv.stack(tile_gv, dim=0)
+            x_gv = torch.stack(tuple(tile_gv), 0)
+        
+        print("x_gv.size() = ", x_gv.size())
 
+        x_m = x_m.to('cpu')
+        x_gv = x_gv.to('cpu')
         x_pls = x_m + x_gv
+        x_pls = x_pls.to(device)
 
-        x_pls = F.relu(self.conv3(x))
-        x_pls = F.relu(self.conv3(x))
-        x_pls = F.relu(self.conv3(x))
+        x_pls = F.relu(self.conv3(x_pls))
+        x_pls = F.relu(self.conv3(x_pls))
+        x_pls = F.relu(self.conv3(x_pls))
+        print("x_pls.size() = ", x_pls.size())
 
         x = torch.flatten(x_pls)
+        print("x.size() = ", x.size())
 
         x = F.relu(self.fc2(x))
+        print("fc2 -> x.size() = ", x.size())
         x = F.relu(self.fc3(x))
+        print("fc3 -> x.size() = ", x.size())
         adv = self.fc4_ea(x)
         val = self.fc4_ev(x)
+        adv = torch.unsqueeze(adv, 0)
+        print("adv.size() = ", adv.size())
+        val = torch.unsqueeze(val, 0)
+        print("val.size() = ", val.size())
+        adv = adv.to('cpu')
+        val = val.to('cpu')
 
-        return adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
+        output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
+        output = output.to(device)
+        print("output.size()", output.size())
+
+        return output
 
 
 class Brain:
@@ -368,7 +385,6 @@ class Environment:
         self.env = gym.make(ENV)
         self.agent = Agent()
         self.map_memory = []
-        self.loss = None
         self.loss_memory = []
         self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
         self.loss_ave = None
@@ -429,6 +445,7 @@ def main():
     r = rospy.Rate(100)
 
     train_env = Environment()
+
     episode = 0
     step = 0
     is_first = True
@@ -466,6 +483,11 @@ def main():
                 state_g = observe_g
                 state_v = observe_v
                 action_id = 3
+            
+            state_m = torch.unsqueeze(state_m, 0)
+            state_m = state_m.to(device)
+            state_g = state_g.to(device)
+            state_v = state_v.to(device)
 
             action = train_env.agent.get_action(state_m, state_g, state_v, episode)
             action_id = action.item()
@@ -485,10 +507,12 @@ def main():
 
             if step == MAX_STEPS:
                 is_done = True
-
+            
+            print("is_done : ", is_done)
+            
             if is_done:
-                # tensor_board.log_loss.append(train_env.loss)
-                tensor_board.writer.add_scalar("ours", tensor_board.loss, episode)
+                print("train_env.agent.brain.loss : ", train_env.agent.brain.loss)
+                tensor_board.writer.add_scalar("ours", train_env.agent.brain.loss, episode)
 
                 episode += 1
                 step = 0
