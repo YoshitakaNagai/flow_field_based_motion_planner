@@ -47,7 +47,6 @@ class FFMP(gym.Env):
         # [2-4] colision
         self.robot_rsize = ROBOT_RSIZE #[m]
         # self.robot_grids = np.empty([0, 0], dtype=int32)
-        self.robot_grids = []
         self.collision_low  = False
         self.collision_high = True
         # observation_space
@@ -83,10 +82,16 @@ class FFMP(gym.Env):
     #     return reward
 
     def is_collision(self, local_map_info):
+        self.robot_grids = []
         for i in range(self.map_grid_num):
             for j in range(self.map_grid_num):
-                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+                x_dist_pow = math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2)
+                y_dist_pow = math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)
+                dist = math.sqrt(x_dist_pow + y_dist_pow)
+                print("dist[",i,"][",j,"] = ", dist)
+                if dist <= self.robot_rsize:
                     self.robot_grids.append(np.array([i, j]))
+                    print("INSIDE ROBOT ... dist = ", dist)
         is_collide = False
         for itr in range(len(self.robot_grids)):
             print(self.robot_grids[itr])
