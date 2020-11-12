@@ -88,13 +88,13 @@ class FFMP(gym.Env):
                 x_dist_pow = math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2)
                 y_dist_pow = math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)
                 dist = math.sqrt(x_dist_pow + y_dist_pow)
-                print("dist[",i,"][",j,"] = ", dist)
+                #print("dist[",i,"][",j,"] = ", dist)
                 if dist <= self.robot_rsize:
                     self.robot_grids.append(np.array([i, j]))
-                    print("INSIDE ROBOT ... dist = ", dist)
+                    #print("INSIDE ROBOT ... dist = ", dist)
         is_collide = False
         for itr in range(len(self.robot_grids)):
-            print(self.robot_grids[itr])
+            #print(self.robot_grids[itr])
             i = self.robot_grids[itr][0]
             j = self.robot_grids[itr][1]
             if local_map_info[i,j] > 0:
@@ -153,7 +153,7 @@ class FFMP(gym.Env):
 
     def rewarder(self, local_map_info, relative_goal_info, is_first):
         is_collide = self.is_collision(local_map_info)
-        print("is_collide : ", is_collide)
+        #print("is_collide : ", is_collide)
         is_goal = self.is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
 
         # self.observation = np.array([relative_goal_info, action])

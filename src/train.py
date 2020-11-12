@@ -62,6 +62,7 @@ class ROSNode():
         self.global_goal = Pose()
         self.bridge = CvBridge()
         self.done_flag = Bool()
+        self.pre_robot_pose = RobotPose(0.0, 0.0, 0.0)
         self.map_grid_size = 0.1
         self.map_range = 5.0
         self.robot_rsize = 0.1
@@ -72,7 +73,7 @@ class ROSNode():
         self.posearray_callback_flag = False
 
     def occupancy_image_callback(self, msg):
-        print("occupancy_image_callback")
+        # print("occupancy_image_callback")
         cv_occupancy_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         maps[2] = cv_occupancy_image.copy()
 
@@ -89,7 +90,7 @@ class ROSNode():
         self.occupancy_callback_flag = True
 
     def flow_image_callback(self, msg):
-        print("flow_image_callback")
+        # print("flow_image_callback")
         cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
         cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
         tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
@@ -103,24 +104,24 @@ class ROSNode():
         self.odom_callback_flag = True
 
     def pose_array_callback(self, msg):
-        print("pose_array_callback")
+        # print("pose_array_callback")
         self.global_start.pose = msg[0].poses
         self.global_goal.pose = msg[1].poses
         self.posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
-        print("pub cmd_vel")
+        # print("pub cmd_vel")
         cmd_vel = Twist()
         cmd_vel.linear.x = linear_v
         cmd_vel.linear.y = 0.0
-        cmd_vel.lineat.z = 0.0
+        cmd_vel.linear.z = 0.0
         cmd_vel.angular.x = 0.0
         cmd_vel.angular.y = 0.0
         cmd_vel.angular.z = angular_v
         self.pub_cmd_vel.publish(cmd_vel)
 
     def done_flag_publisher(self, is_done):
-        print("pub done_flag")
+        # print("pub done_flag")
         self.done_flag = is_done
         self.pub_done_flag.publish(self.done_flag)
 
@@ -150,9 +151,10 @@ class ROSNode():
 
     def robot_velocity_calculator(self, robot_pose, is_first):
         if is_first:
-            pre_robot_pose = copy.deepcopy(robot_pose)
-        linear_v = math.sqrt(math.pow(robot_pose.x - pre_robot_pose.x, 2) + math.pow(robot_pose.y - pre_robot_pose.y, 2))
-        angular_v = self.pi_to_pi(robot_pose.yaw - pre_robot_pose.yaw)
+            self.pre_robot_pose = copy.deepcopy(robot_pose)
+        linear_v = math.sqrt(math.pow(robot_pose.x - self.pre_robot_pose.x, 2) + math.pow(robot_pose.y - self.pre_robot_pose.y, 2))
+        angular_v = self.pi_to_pi(robot_pose.yaw - self.pre_robot_pose.yaw)
+        self.pre_robot_pose = copy.deepcopy(robot_pose)
         return np.array([linear_v, angular_v])
     
 
@@ -206,11 +208,11 @@ class Network(nn.Module):
 
     def forward(self, state_m, state_g, state_v):
         x_m = F.relu(self.conv1(state_m))
-        print("conv1 -> x_m.size() = ", x_m.size())
+        # print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))
-        print("conv2 -> x_m.size() = ", x_m.size())
+        # print("conv2 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv3(x_m))
-        print("conv3 -> x_m.size() = ", x_m.size())
+        # print("conv3 -> x_m.size() = ", x_m.size())
 
         x_gv_ = torch.cat((state_g, state_v), 0)
         x_gv_ = F.relu(self.fc1(x_gv_))
@@ -222,7 +224,7 @@ class Network(nn.Module):
             tile_gv = torch.full((convw, convh), fill_value=x_gv_[i])
             x_gv = torch.stack(tuple(tile_gv), 0)
         
-        print("x_gv.size() = ", x_gv.size())
+        # print("x_gv.size() = ", x_gv.size())
 
         x_m = x_m.to('cpu')
         x_gv = x_gv.to('cpu')
@@ -232,27 +234,27 @@ class Network(nn.Module):
         x_pls = F.relu(self.conv3(x_pls))
         x_pls = F.relu(self.conv3(x_pls))
         x_pls = F.relu(self.conv3(x_pls))
-        print("x_pls.size() = ", x_pls.size())
+        # print("x_pls.size() = ", x_pls.size())
 
         x = torch.flatten(x_pls)
-        print("x.size() = ", x.size())
+        # print("x.size() = ", x.size())
 
         x = F.relu(self.fc2(x))
-        print("fc2 -> x.size() = ", x.size())
+        # print("fc2 -> x.size() = ", x.size())
         x = F.relu(self.fc3(x))
-        print("fc3 -> x.size() = ", x.size())
+        # print("fc3 -> x.size() = ", x.size())
         adv = self.fc4_ea(x)
         val = self.fc4_ev(x)
         adv = torch.unsqueeze(adv, 0)
-        print("adv.size() = ", adv.size())
+        # print("adv.size() = ", adv.size())
         val = torch.unsqueeze(val, 0)
-        print("val.size() = ", val.size())
+        # print("val.size() = ", val.size())
         adv = adv.to('cpu')
         val = val.to('cpu')
 
         output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
         output = output.to(device)
-        print("output.size()", output.size())
+        # print("output.size()", output.size())
 
         return output
 
@@ -395,14 +397,14 @@ class Environment:
         # flow_map.size() = torch.Size([3, H, W])
 
         occupancy_map = torch.unsqueeze(occupancy_map, 0)
-        print("occupancy_map.size() = ", occupancy_map.size())
-        print("flow_map.size() = ", flow_map.size())
+        # print("occupancy_map.size() = ", occupancy_map.size())
+        # print("flow_map.size() = ", flow_map.size())
         
         # occupancy_map.size() = torch.Size([1, H, W])
         repeat_vals = (1, 40, 40)
 
         concat_map = torch.cat((flow_map, occupancy_map.expand(*repeat_vals)), 0)
-        print("concat_map.size() = ", concat_map.size())
+        # print("concat_map.size() = ", concat_map.size())
         # concat_map = torch.stack((flow_map, occupancy_map), 2)
         #concat_map.size() = torch.Size([4, H, W])    
         # concat_map = torch.unsqueeze(concat_map, 0)
@@ -419,7 +421,7 @@ class Environment:
             del self.map_memory[0]
         
         temporal_maps = torch.cat(self.map_memory, 0)
-        print("temporal_maps.size() = ", temporal_maps.size())
+        # print("temporal_maps.size() = ", temporal_maps.size())
         # temporal_maps.size() = torch.Size([12, H, W])
         return temporal_maps
 
@@ -464,7 +466,7 @@ def main():
         # if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag:
         if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag:
 
-            print("ros flags : OK")
+            # print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
@@ -508,10 +510,10 @@ def main():
             if step == MAX_STEPS:
                 is_done = True
             
-            print("is_done : ", is_done)
             
             if is_done:
-                print("train_env.agent.brain.loss : ", train_env.agent.brain.loss)
+                print("is_done : ", is_done)
+                print("episode", episode, ": loss = ", train_env.agent.brain.loss)
                 tensor_board.writer.add_scalar("ours", train_env.agent.brain.loss, episode)
 
                 episode += 1
@@ -530,8 +532,10 @@ def main():
                 ros.cmd_vel_publisher(0.0, 0.0)
                 is_first = True
             else:
-                linear_v = train_env.agent.action.commander[action_id].linear_v
-                angular_v = train_env.agent.action.commander[action_id].angular_v
+                print("step:",step , ", loss:",train_env.agent.brain.loss)
+                # output_velocity = train_env.agent.action.commander()
+                linear_v = train_env.agent.action.commander(action_id).linear_v
+                angular_v = train_env.agent.action.commander(action_id).angular_v
                 ros.cmd_vel_publisher(linear_v, angular_v)
                 ros.done_flag_publisher(is_done)
 
@@ -539,6 +543,7 @@ def main():
                 state_g = observe_g
                 state_v = observe_v
 
+                step += 1
 
         if is_complete:
             print("complete")
