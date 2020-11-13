@@ -254,7 +254,7 @@ class Network(nn.Module):
 
         output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
         output = output.to(device)
-        # print("output.size()", output.size())
+        print("output.size()", output.size())
 
         return output
 
@@ -402,7 +402,6 @@ class Environment:
         
         # occupancy_map.size() = torch.Size([1, H, W])
         repeat_vals = (1, 40, 40)
-
         concat_map = torch.cat((flow_map, occupancy_map.expand(*repeat_vals)), 0)
         # print("concat_map.size() = ", concat_map.size())
         # concat_map = torch.stack((flow_map, occupancy_map), 2)
