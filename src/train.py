@@ -39,7 +39,7 @@ from gym_ffmp.envs.ffmp import FFMP
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
-model_path = '../model/model.pt'
+model_path = './model/model.pt'
 
 
 ##### ROS #####
@@ -470,7 +470,7 @@ class Environment:
 class UseTensorBord:
     def __init__(self):
         self.writer = SummaryWriter(log_dir=LOG_DIR)
-        # self.log_loss = []
+        self.log_loss = []
 
 
 def main():
@@ -556,8 +556,11 @@ def main():
             
             if is_done:
                 print("is_done : ", is_done)
-                print("EPISODE", episode, ": loss = ", train_env.agent.brain.loss.item())
-                tensor_board.writer.add_scalar("ours", train_env.agent.brain.loss, episode)
+                loss_value = train_env.agent.brain.loss.item()
+                print("EPISODE", episode, ": loss = ", loss_value)
+
+                tensor_board.log_loss.append(loss_value)
+                tensor_board.writer.add_scalar("ours", tensor_board.log_loss[episode], episode)
 
                 episode += 1
                 step = 0
@@ -570,13 +573,13 @@ def main():
 
                 if train_env.loss_convergence:
                     torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
+                    print("Saved model!")
                     is_complete = True
 
                 ros.cmd_vel_publisher(0.0, 0.0)
                 is_first = True
             else:
                 print("step:",step , ", loss:",train_env.agent.brain.loss)
-                # output_velocity = train_env.agent.action.commander()
                 linear_v = train_env.agent.action.commander(action_id).linear_v
                 angular_v = train_env.agent.action.commander(action_id).angular_v
                 ros.cmd_vel_publisher(linear_v, angular_v)
@@ -595,6 +598,9 @@ def main():
 
         # rospy.spin()
         r.sleep()
+
+    torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
+    print("Saved model!")
 
 if __name__ == '__main__':
     main()
