@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2020-11-12 06:11:48,862: init_node, name[/train_9360_1605161508855], pid[9360]
+[xmlrpc][INFO] 2020-11-12 06:11:48,863: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-12 06:11:48,864: Started XML-RPC server [http://luigi:42987/]
+[rospy.init][INFO] 2020-11-12 06:11:48,864: ROS Slave URI: [http://luigi:42987/]
+[rospy.impl.masterslave][INFO] 2020-11-12 06:11:48,864: _ready: http://luigi:42987/
+[rospy.registration][INFO] 2020-11-12 06:11:48,866: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-12 06:11:48,866: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-12 06:11:48,965: registered with master
+[rospy.rosout][INFO] 2020-11-12 06:11:48,965: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-12 06:11:48,971: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-12 06:11:48,973: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-12 06:11:48,997: topic[/bev/flow_image] adding connection to [http://192.168.0.201:44563/], count 0
+[rospy.internal][INFO] 2020-11-12 06:11:48,997: topic[/odom] adding connection to [http://192.168.0.201:46639/], count 0
+[rospy.internal][INFO] 2020-11-12 06:11:49,001: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:44563/], count 0
+[rospy.internal][INFO] 2020-11-12 06:11:49,245: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-11-12 06:12:09,747: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-12 06:12:09,753: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-12 06:12:09,753: topic[/bev/flow_image] removing connection to http://192.168.0.201:44563/
+[rospy.internal][INFO] 2020-11-12 06:12:09,754: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:44563/
+[rospy.internal][INFO] 2020-11-12 06:12:09,754: topic[/odom] removing connection to http://192.168.0.201:46639/
+[rospy.impl.masterslave][INFO] 2020-11-12 06:12:09,754: atexit

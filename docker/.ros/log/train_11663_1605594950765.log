@@ -1,0 +1,36 @@
+[rospy.client][INFO] 2020-11-17 06:35:50,769: init_node, name[/train_11663_1605594950765], pid[11663]
+[xmlrpc][INFO] 2020-11-17 06:35:50,770: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-17 06:35:50,770: Started XML-RPC server [http://luigi:44877/]
+[rospy.init][INFO] 2020-11-17 06:35:50,770: ROS Slave URI: [http://luigi:44877/]
+[rospy.impl.masterslave][INFO] 2020-11-17 06:35:50,771: _ready: http://luigi:44877/
+[rospy.registration][INFO] 2020-11-17 06:35:50,772: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-17 06:35:50,772: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-17 06:35:50,871: registered with master
+[rospy.rosout][INFO] 2020-11-17 06:35:50,871: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-17 06:35:50,876: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-17 06:35:50,877: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-17 06:35:50,894: topic[/bev/flow_image] adding connection to [http://192.168.0.201:44775/], count 0
+[rospy.internal][INFO] 2020-11-17 06:35:50,898: topic[/odom] adding connection to [http://192.168.0.201:37487/], count 0
+[rospy.internal][INFO] 2020-11-17 06:35:50,901: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:44775/], count 0
+[rospy.internal][INFO] 2020-11-17 06:35:51,162: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][WARNING] 2020-11-17 06:35:52,057: Unknown error initiating TCP/IP socket to 192.168.0.201:36677 (http://192.168.0.201:44775/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 560, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.internal][WARNING] 2020-11-17 06:35:52,058: Unknown error initiating TCP/IP socket to 192.168.0.201:36677 (http://192.168.0.201:44775/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 560, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2020-11-17 06:35:52,058: topic[/bev/flow_image] removing connection to http://192.168.0.201:44775/
+[rospy.internal][INFO] 2020-11-17 06:35:52,058: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:44775/
+[rospy.core][INFO] 2020-11-17 06:36:23,377: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-17 06:36:23,385: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-17 06:36:23,386: topic[/odom] removing connection to http://192.168.0.201:37487/
+[rospy.impl.masterslave][INFO] 2020-11-17 06:36:23,386: signal-2
+[rospy.core][INFO] 2020-11-17 06:36:23,878: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-17 06:36:23,919: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-17 06:36:23,940: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-17 06:36:23,969: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-17 06:36:23,979: signal_shutdown [atexit]

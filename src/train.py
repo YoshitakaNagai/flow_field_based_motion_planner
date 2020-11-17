@@ -162,12 +162,14 @@ class ROSNode():
 ##### DDQN #####
 ENV = 'FFMP-v0'
 GAMMA = 0.99 # discount factor
-MAX_STEPS = 10000
+# MAX_STEPS = 10000
+MAX_STEPS = 10
 NUM_EPISODES = 500
 LOG_DIR = "./logs/experiment1"
 
 # params for Brain class
-BATCH_SIZE = 1024 # minibatch size
+# BATCH_SIZE = 1024 # minibatch size
+BATCH_SIZE = 4 # minibatch size
 CAPACITY = 200000 # replay buffer size
 INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 NUM_ACTIONS = 28
@@ -200,13 +202,16 @@ class Network(nn.Module):
         self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=16)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=8)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=3)
-        self.fc1 = nn.Linear(4, 16)
+        self.fc1 = nn.Linear(4, 64)
         self.fc2 = nn.Linear(6400, 512)
         self.fc3 = nn.Linear(512, 512)
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state_m, state_g, state_v):
+        # print("state_m.size() = ", state_m.size())
+        # print("state_g.size() = ", state_g.size())
+        # print("state_v.size() = ", state_v.size())
         x_m = F.relu(self.conv1(state_m))
         # print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))
@@ -214,14 +219,17 @@ class Network(nn.Module):
         x_m = F.relu(self.conv3(x_m))
         # print("conv3 -> x_m.size() = ", x_m.size())
 
-        x_gv_ = torch.cat((state_g, state_v), 0)
+        x_gv_ = torch.cat((state_g, state_v), 1)
         x_gv_ = F.relu(self.fc1(x_gv_))
-        convw = x_gv_.shape[0]
-        convh = convw
-        x_gv = torch.empty(convw, convh)
+        # print("x_gv_.size() = ", x_gv_.size())
+        convw = x_m.shape[2]
+        convh = x_m.shape[3]
+        # print("convw =", convw, ", convh =", convh)
+        x_gv = torch.empty(BATCH_SIZE, convw, convh)
         
-        for i in range(16):
-            tile_gv = torch.full((convw, convh), fill_value=x_gv_[i])
+        for i in range(64):
+            value = x_gv_[0][i].item()
+            tile_gv = torch.full((convw, convh), value)
             x_gv = torch.stack(tuple(tile_gv), 0)
         
         # print("x_gv.size() = ", x_gv.size())
@@ -236,7 +244,9 @@ class Network(nn.Module):
         x_pls = F.relu(self.conv3(x_pls))
         # print("x_pls.size() = ", x_pls.size())
 
-        x = torch.flatten(x_pls)
+        # batch_flattened_length = x_pls.shape[1] * x_pls.shape[2] * x_pls.shape[3]
+        # x = torch.empty(BATCH_SIZE, batch_flattened_length)
+        x = torch.flatten(x_pls, start_dim=1)
         # print("x.size() = ", x.size())
 
         x = F.relu(self.fc2(x))
@@ -245,16 +255,16 @@ class Network(nn.Module):
         # print("fc3 -> x.size() = ", x.size())
         adv = self.fc4_ea(x)
         val = self.fc4_ev(x)
-        adv = torch.unsqueeze(adv, 0)
+        # adv = torch.unsqueeze(adv, 0)
         # print("adv.size() = ", adv.size())
-        val = torch.unsqueeze(val, 0)
+        # val = torch.unsqueeze(val, 0)
         # print("val.size() = ", val.size())
         adv = adv.to('cpu')
         val = val.to('cpu')
 
         output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
         output = output.to(device)
-        print("output.size()", output.size())
+        # print("output.size()", output.size())
 
         return output
 
@@ -272,16 +282,20 @@ class Brain:
     def replay(self):
 
         # [1] check memory size
+        # print("[1] check memory size")
         if len(self.memory) < BATCH_SIZE:
             return
 
         # [2] make mini batch
+        # print("[2] make mini batch")
         self.batch, self.state_m_batch, self.state_g_batch, self.state_v_batch, self.action_batch, self.reward_batch, self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v = self.make_minibatch()
 
         # [3] calc Q(s_t, a_t) value
+        # print("[3] calc Q(s_t, a_t) value")
         self.expected_state_action_values = self.get_expected_state_action_values()
 
         # [4] update connected params
+        # print("[4] update connected params")
         self.update_main_q_network()
 
 
@@ -320,25 +334,43 @@ class Brain:
 
     def get_expected_state_action_values(self):
         # [3] get Q(s_t, a_t) value
+        # print("[3] get Q(s_t, a_t) value")
         # [3-1] change network to evaluation mode
+        # print("[3-1] change network to evaluation mode")
         self.main_q_network.eval()
         self.target_q_network.eval()
 
         # [3-2] get Q(s_t, a_t) from main_q_network
+        # print("[3-2] get Q(s_t, a_t) from main_q_network")
         self.state_action_values = self.main_q_network(self.state_m_batch, self.state_g_batch, self.state_v_batch).gather(1, self.action_batch)
 
         # [3-3] get max{Q(s_t+1, a)}
+        # print("[3-3] get max{Q(s_t+1, a)}")
         non_final_mask = torch.cuda.ByteTensor(tuple(map(lambda s: s is not None, {self.batch.observe_m, self.batch.observe_g, self.batch.observe_v})))
+        # print("non_final_mask = ", non_final_mask)
         next_state_values = torch.zeros(BATCH_SIZE)
 
         a_m = torch.zeros(BATCH_SIZE).type(torch.cuda.LongTensor)
-        a_m[non_final_mask] = self.main_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).detach().max(1)[1]
-        a_m_non_final_next_states = a_m[non_final_mask].view(-1, 1)
+        # a_m[non_final_mask] = self.main_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).detach().max(1)[1]
+        a_m = self.main_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).detach().max(1)[1]
+        # a_m_non_final_next_states = a_m[non_final_mask].view(-1, 1)
+        a_m_non_final_next_states = a_m.view(-1, 1)
 
-        next_state_values[non_final_mask] = self.target_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).gather(1, a_m_non_final_next_states).detach().squeeze()
+        # next_state_values[non_final_mask] = self.target_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).gather(1, a_m_non_final_next_states).detach().squeeze()
+        next_state_values = self.target_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).gather(1, a_m_non_final_next_states).detach().squeeze()
 
         # [3-4] get Q(s_t, a_t) from the equision of Q Learnning
-        expected_state_action_values = self.reward_batch + GAMMA * next_state_values
+        # print("[3-4] get Q(s_t, a_t) from the equision of Q Learnning")
+        reward_values = self.reward_batch.clone()
+        reward_values = reward_values.to('cpu')
+        next_s_values = next_state_values.clone()
+        next_s_values = next_s_values.to('cpu')
+        # expected_state_action_values = self.reward_batch + GAMMA * next_state_values
+        expected_state_action_values = reward_values + GAMMA * next_s_values
+        expected_state_action_values.requires_grad = True
+        expected_state_action_values = expected_state_action_values.to(device)
+        # print("expected_state_action_values.size() = ", expected_state_action_values.size())
+        # print("expected_state_action_values = ", expected_state_action_values)
 
         return expected_state_action_values
 
@@ -350,12 +382,13 @@ class Brain:
         
         # [4-2] calc loss
         # loss = F.smooth_l1_loss(self.state_action_values, self.expected_state_action_values.unsqeeze(1))
-        loss = nn.MSELoss(self.state_action_values, self.expected_state_action_values.unsqeeze(1))
-        self.loss = loss
+        loss = nn.MSELoss()
+        output = loss(self.state_action_values, self.expected_state_action_values.unsqueeze(1))
+        self.loss = output
 
         # [4-3] update of connected params
         self.optimizer.zero_grad() # reset grad
-        loss.backward() # calc back propagate
+        output.backward() # calc back propagate
         self.optimizer.step() # update connected params
 
     def update_target_q_network(self):
@@ -475,8 +508,17 @@ def main():
 
             concat_map = train_env.make_concat_map(occupancy_map, flow_map)
             observe_m = train_env.make_temporal_maps(concat_map, is_first)
+            observe_m = torch.unsqueeze(observe_m, 0)
+            observe_m = observe_m.to(device)
+            # print("observe_m.size() = ", observe_m.size())
             observe_g = torch.from_numpy(tmp_relative_goal).type(torch.FloatTensor)
+            observe_g = torch.unsqueeze(observe_g, 0)
+            observe_g = observe_g.to(device)
+            # print("observe_g.size() = ", observe_g.size())
             observe_v = torch.from_numpy(velocity).type(torch.FloatTensor)
+            observe_v = torch.unsqueeze(observe_v, 0)
+            observe_v = observe_v.to(device)
+            # print("observe_v.size() = ", observe_v.size())
 
             if is_first:
                 reward = 0
@@ -485,7 +527,6 @@ def main():
                 state_v = observe_v
                 action_id = 3
             
-            state_m = torch.unsqueeze(state_m, 0)
             state_m = state_m.to(device)
             state_g = state_g.to(device)
             state_v = state_v.to(device)
@@ -495,12 +536,15 @@ def main():
 
             tmp_tensor_occupancy = occupancy_map.clone()
             numpy_occupancy = tmp_tensor_occupancy.to('cpu').detach().numpy()
-            reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
+            numpy_reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
+            reward = torch.as_tensor(numpy_reward.astype('float32')).clone()
+            reward = torch.unsqueeze(reward, 0)
 
             is_first = False
             train_env.agent.brain.step += 1
 
             train_env.agent.memorize(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
+            train_env.agent.update_q_function()
 
             ros.flow_callback_flag = False
             ros.occupancy_callback_flag = False
@@ -512,7 +556,7 @@ def main():
             
             if is_done:
                 print("is_done : ", is_done)
-                print("episode", episode, ": loss = ", train_env.agent.brain.loss)
+                print("EPISODE", episode, ": loss = ", train_env.agent.brain.loss.item())
                 tensor_board.writer.add_scalar("ours", train_env.agent.brain.loss, episode)
 
                 episode += 1
@@ -522,7 +566,7 @@ def main():
                 state_v = None
 
                 if(episode % 2 == 0):
-                    self.agent.update_target_q_function()
+                    train_env.agent.update_target_q_function()
 
                 if train_env.loss_convergence:
                     torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
