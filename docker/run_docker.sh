@@ -1,9 +1,11 @@
 #!/bin/bash
 
-IMAGE_NAME=yoshi/flow_field_based_motion_planner:latest
+# IMAGE_NAME=yoshi/flow_field_based_motion_planner:latest
+IMAGE_NAME=ffmp_image_1118:latest
 
 DIR=$(cd $(dirname $0); pwd)
-docker run -it --rm -p 10000:20022\
+# docker run -it --rm -p 10000:20022\
+docker run -it --rm -p 6006:6006\
   --gpus all \
   --privileged \
   --env=QT_X11_NO_MITSHM=1 \

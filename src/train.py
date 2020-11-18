@@ -468,9 +468,9 @@ class Environment:
             self.loss_convergence = True
 
 class UseTensorBord:
-    def __init__(self):
-        self.writer = SummaryWriter(log_dir=LOG_DIR)
-        self.log_loss = []
+    def __init__(self, path):
+        self.writer = SummaryWriter(log_dir=path)
+        # self.log_loss = []
 
 
 def main():
@@ -491,7 +491,7 @@ def main():
     action_id = 3
     is_complete = False
 
-    tensor_board = UseTensorBord()
+    tensor_board = UseTensorBord(LOG_DIR)
 
     print("ros : start!")
     while not rospy.is_shutdown():
@@ -559,8 +559,11 @@ def main():
                 loss_value = train_env.agent.brain.loss.item()
                 print("EPISODE", episode, ": loss = ", loss_value)
 
-                tensor_board.log_loss.append(loss_value)
-                tensor_board.writer.add_scalar("ours", tensor_board.log_loss[episode], episode)
+                # tensor_board.log_loss.append(loss_value)
+                # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
+                tensor_board.writer.add_scalar('ours', loss_value, episode)
+                print("Saved model!")
+                # print(tensor_board.writer)
 
                 episode += 1
                 step = 0
@@ -601,6 +604,7 @@ def main():
 
     torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
     print("Saved model!")
+    tensor_board.writer.close()
 
 if __name__ == '__main__':
     main()

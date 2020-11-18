@@ -1,0 +1,28 @@
+[rospy.client][INFO] 2020-11-18 03:12:51,959: init_node, name[/train_14390_1605669171953], pid[14390]
+[xmlrpc][INFO] 2020-11-18 03:12:51,959: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-18 03:12:51,960: Started XML-RPC server [http://luigi:42629/]
+[rospy.init][INFO] 2020-11-18 03:12:51,960: ROS Slave URI: [http://luigi:42629/]
+[rospy.impl.masterslave][INFO] 2020-11-18 03:12:51,960: _ready: http://luigi:42629/
+[rospy.registration][INFO] 2020-11-18 03:12:51,962: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-18 03:12:51,962: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-18 03:12:52,061: registered with master
+[rospy.rosout][INFO] 2020-11-18 03:12:52,061: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-18 03:12:52,066: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-18 03:12:52,067: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-18 03:12:52,079: topic[/bev/flow_image] adding connection to [http://192.168.0.201:44617/], count 0
+[rospy.internal][INFO] 2020-11-18 03:12:52,086: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:44617/], count 0
+[rospy.internal][INFO] 2020-11-18 03:12:52,091: topic[/odom] adding connection to [http://192.168.0.201:37487/], count 0
+[rospy.internal][INFO] 2020-11-18 03:12:52,269: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-11-18 03:13:31,296: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-18 03:13:31,301: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-18 03:13:31,301: topic[/bev/flow_image] removing connection to http://192.168.0.201:44617/
+[rospy.internal][INFO] 2020-11-18 03:13:31,302: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:44617/
+[rospy.internal][INFO] 2020-11-18 03:13:31,302: topic[/odom] removing connection to http://192.168.0.201:37487/
+[rospy.impl.masterslave][INFO] 2020-11-18 03:13:31,303: signal-2
+[rospy.core][INFO] 2020-11-18 03:13:31,796: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,840: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,860: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,889: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,938: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,963: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-18 03:13:31,978: signal_shutdown [atexit]
