@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 import gym
 import math
 import random
@@ -13,14 +9,6 @@ import matplotlib.pyplot as plt
 from collections import namedtuple
 from itertools import count
 from PIL import Image
-
-import torch
-import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
-import torchvision.transforms as T
-from torch.utils.tensorboard import SummaryWriter
-import kornia
 
 import rospy
 from sensor_msgs.msg import Image
@@ -35,28 +23,57 @@ from tf.transformations import euler_from_quaternion
 import cv2
 from cv_bridge import CvBridge
 
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+import torchvision.transforms as T
+from torch.utils.tensorboard import SummaryWriter
+import kornia
+
 import gym_ffmp
 from gym_ffmp.envs.robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 from gym_ffmp.envs.ffmp import FFMP
 
+import csv
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
-model_path = './model/model.pt'
 
-
-##### ROS #####
-
+##### PARAM #####
+# for ALL
 maps = [None] * 3 # [0]:occupancy with robot, [1]:flow, [2]:occupancy without robot
 
+# for ROS
 IMAGE_SIZE = 40
+MAP_GRID_SIZE = 0.1
+MAP_RANGE = 5.0
+ROBOT_RSIZE = 0.1
+
+# for DDQN
+ENV = 'FFMP-v0'
+GAMMA = 0.99 # discount factor
+# MAX_STEPS = 10000
+MAX_STEPS = 10
+NUM_EPISODES = 500
+LOG_DIR = "./logs/experiment1"
+# BATCH_SIZE = 1024 # minibatch size
+BATCH_SIZE = 4 # minibatch size
+CAPACITY = 200000 # replay buffer size
+INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+NUM_ACTIONS = 28
+LEARNING_RATE = 0.0005 # learning rate
+LOSS_THRESHOLD = 0.1 # threshold of loss
+LOSS_MEMORY_CAPACITY = 10
+MODEL_PATH = './model/model.pt'
+################
 
 class ROSNode():
     def __init__(self):
         self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
         self.sub_occupancy = rospy.Subscriber("/bev/occupancy_image", Image, self.occupancy_image_callback)
-        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
+        self.sub_odom = rospy.Subscriber("/ground_truth/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
         self.pub_done_flag = rospy.Publisher("/train/episode", Bool, queue_size=1)
@@ -67,9 +84,9 @@ class ROSNode():
         self.bridge = CvBridge()
         self.done_flag = Bool()
         self.pre_robot_pose = RobotPose(0.0, 0.0, 0.0)
-        self.map_grid_size = 0.1
-        self.map_range = 5.0
-        self.robot_rsize = 0.1
+        self.map_grid_size = MAP_GRID_SIZE
+        self.map_range = MAP_RANGE
+        self.robot_rsize = ROBOT_RSIZE
 
         self.flow_callback_flag = False
         self.occupancy_callback_flag = False
@@ -162,24 +179,6 @@ class ROSNode():
         return np.array([linear_v, angular_v])
     
 
-
-##### DDQN #####
-ENV = 'FFMP-v0'
-GAMMA = 0.99 # discount factor
-# MAX_STEPS = 10000
-MAX_STEPS = 10
-NUM_EPISODES = 500
-LOG_DIR = "./logs/experiment1"
-
-# params for Brain class
-# BATCH_SIZE = 1024 # minibatch size
-BATCH_SIZE = 4 # minibatch size
-CAPACITY = 200000 # replay buffer size
-INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
-NUM_ACTIONS = 28
-LEARNING_RATE = 0.0005 # learning rate
-LOSS_THRESHOLD = 0.1 # threshold of loss
-LOSS_MEMORY_CAPACITY = 10
 
 class ReplayMemory(object):
     def __init__(self):
@@ -442,7 +441,7 @@ class Environment:
         concat_map = torch.cat((flow_map, occupancy_map.expand(*repeat_vals)), 0)
         # print("concat_map.size() = ", concat_map.size())
         # concat_map = torch.stack((flow_map, occupancy_map), 2)
-        #concat_map.size() = torch.Size([4, H, W])    
+        # concat_map.size() = torch.Size([4, H, W])    
         # concat_map = torch.unsqueeze(concat_map, 0)
         
         return concat_map
@@ -496,6 +495,10 @@ def main():
     is_complete = False
 
     tensor_board = UseTensorBord(LOG_DIR)
+    
+    f = open(LOG_DIR + '/log_loss.csv', 'w')
+    writer = csv.writer(f, lineterminator='\n')
+    writer.writerow(['epoch', 'loss'])
 
     print("ros : start!")
     while not rospy.is_shutdown():
@@ -566,8 +569,7 @@ def main():
                 # tensor_board.log_loss.append(loss_value)
                 # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
                 tensor_board.writer.add_scalar('ours', loss_value, episode)
-                print("Saved model!")
-                # print(tensor_board.writer)
+                writer.writerow([episode, loss_value])
 
                 episode += 1
                 step = 0
@@ -579,8 +581,9 @@ def main():
                     train_env.agent.update_target_q_function()
 
                 if train_env.loss_convergence:
-                    torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
-                    print("Saved model!")
+                    torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                    print("COMPLETED TO LEARN!")
+                    print("SAVED MODEL!")
                     is_complete = True
 
                 ros.cmd_vel_publisher(0.0, 0.0)
@@ -606,9 +609,10 @@ def main():
         # rospy.spin()
         r.sleep()
 
-    torch.save(train_env.agent.brain.main_q_network.state_dict(), model_path)
+    torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
     print("Saved model!")
     tensor_board.writer.close()
+    f.close()
 
 if __name__ == '__main__':
     main()

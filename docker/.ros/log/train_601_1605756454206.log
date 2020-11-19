@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2020-11-19 03:27:34,238: init_node, name[/train_601_1605756454206], pid[601]
+[xmlrpc][INFO] 2020-11-19 03:27:34,239: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-19 03:27:34,240: Started XML-RPC server [http://192.168.0.191:42335/]
+[rospy.init][INFO] 2020-11-19 03:27:34,240: ROS Slave URI: [http://192.168.0.191:42335/]
+[rospy.impl.masterslave][INFO] 2020-11-19 03:27:34,240: _ready: http://192.168.0.191:42335/
+[rospy.registration][INFO] 2020-11-19 03:27:34,242: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-19 03:27:34,242: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-19 03:27:34,341: registered with master
+[rospy.rosout][INFO] 2020-11-19 03:27:34,341: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-19 03:27:34,347: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-19 03:27:34,348: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-19 03:27:34,371: topic[/bev/flow_image] adding connection to [http://192.168.0.201:43137/], count 0
+[rospy.internal][INFO] 2020-11-19 03:27:34,373: topic[/odom] adding connection to [http://192.168.0.201:42357/], count 0
+[rospy.internal][INFO] 2020-11-19 03:27:34,376: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:43137/], count 0
+[rospy.internal][INFO] 2020-11-19 03:27:34,553: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-11-19 03:27:36,744: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-19 03:27:36,748: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-19 03:27:36,748: topic[/bev/flow_image] removing connection to http://192.168.0.201:43137/
+[rospy.internal][INFO] 2020-11-19 03:27:36,748: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:43137/
+[rospy.internal][INFO] 2020-11-19 03:27:36,748: topic[/odom] removing connection to http://192.168.0.201:42357/
+[rospy.impl.masterslave][INFO] 2020-11-19 03:27:36,749: atexit
