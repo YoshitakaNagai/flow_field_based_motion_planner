@@ -1,0 +1,57 @@
+[rospy.client][INFO] 2020-11-20 12:48:01,492: init_node, name[/train_2531_1605876481461], pid[2531]
+[xmlrpc][INFO] 2020-11-20 12:48:01,493: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 12:48:01,494: Started XML-RPC server [http://192.168.0.191:42793/]
+[rospy.init][INFO] 2020-11-20 12:48:01,495: ROS Slave URI: [http://192.168.0.191:42793/]
+[rospy.impl.masterslave][INFO] 2020-11-20 12:48:01,495: _ready: http://192.168.0.191:42793/
+[rospy.registration][INFO] 2020-11-20 12:48:01,497: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 12:48:01,497: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 12:48:01,595: registered with master
+[rospy.rosout][INFO] 2020-11-20 12:48:01,596: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 12:48:01,601: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 12:48:01,602: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 12:48:01,626: topic[/bev/flow_image] adding connection to [http://192.168.0.201:37547/], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,629: topic[/scan] adding connection to [http://192.168.0.201:36467/], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,635: topic[/scan] adding connection to [http://192.168.0.201:41431/], count 1
+[rospy.internal][INFO] 2020-11-20 12:48:01,636: topic[/start_goal_points] adding connection to [http://192.168.0.201:44137/], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,639: topic[/odom] adding connection to [http://192.168.0.201:36467/], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,639: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:37547/], count 0
+[rosout][ERROR] 2020-11-20 12:48:01,659: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fdf8eb281f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 5 is out of bounds for axis 0 with size 2
+
+[rosout][ERROR] 2020-11-20 12:48:01,706: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fdf8eb281f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 230 is out of bounds for axis 0 with size 230
+
+[rospy.internal][INFO] 2020-11-20 12:48:01,816: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,817: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-20 12:48:01,818: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rosout][ERROR] 2020-11-20 12:48:01,902: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fdf8eb281f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 293 is out of bounds for axis 0 with size 265
+
+[rospy.internal][INFO] 2020-11-20 12:48:01,916: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rospy.core][INFO] 2020-11-20 12:48:04,270: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-20 12:48:04,276: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 12:48:04,277: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-20 12:48:04,277: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-20 12:48:04,277: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 12:48:04,277: topic[/bev/flow_image] removing connection to http://192.168.0.201:37547/
+[rospy.internal][INFO] 2020-11-20 12:48:04,278: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:37547/
+[rospy.internal][INFO] 2020-11-20 12:48:04,278: topic[/odom] removing connection to http://192.168.0.201:36467/
+[rospy.internal][INFO] 2020-11-20 12:48:04,278: topic[/start_goal_points] removing connection to http://192.168.0.201:44137/
+[rospy.internal][INFO] 2020-11-20 12:48:04,279: topic[/scan] removing connection to http://192.168.0.201:36467/
+[rospy.internal][INFO] 2020-11-20 12:48:04,279: topic[/scan] removing connection to http://192.168.0.201:41431/
+[rospy.impl.masterslave][INFO] 2020-11-20 12:48:04,279: atexit

@@ -1,0 +1,146 @@
+[rospy.client][INFO] 2020-11-20 12:54:58,676: init_node, name[/train_2792_1605876898644], pid[2792]
+[xmlrpc][INFO] 2020-11-20 12:54:58,676: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 12:54:58,677: Started XML-RPC server [http://192.168.0.191:33321/]
+[rospy.init][INFO] 2020-11-20 12:54:58,677: ROS Slave URI: [http://192.168.0.191:33321/]
+[rospy.impl.masterslave][INFO] 2020-11-20 12:54:58,678: _ready: http://192.168.0.191:33321/
+[rospy.registration][INFO] 2020-11-20 12:54:58,679: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 12:54:58,679: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 12:54:58,778: registered with master
+[rospy.rosout][INFO] 2020-11-20 12:54:58,778: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 12:54:58,785: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 12:54:58,786: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 12:54:58,798: topic[/bev/flow_image] adding connection to [http://192.168.0.201:37547/], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,803: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:37547/], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,807: topic[/odom] adding connection to [http://192.168.0.201:36467/], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,811: topic[/start_goal_points] adding connection to [http://192.168.0.201:44137/], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,817: topic[/scan] adding connection to [http://192.168.0.201:36467/], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,819: topic[/scan] adding connection to [http://192.168.0.201:41431/], count 1
+[rosout][ERROR] 2020-11-20 12:54:58,947: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 39 is out of bounds for axis 0 with size 9
+
+[rospy.internal][INFO] 2020-11-20 12:54:58,966: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:58,967: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rosout][ERROR] 2020-11-20 12:54:58,981: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 221 is out of bounds for axis 0 with size 10
+
+[rospy.internal][INFO] 2020-11-20 12:54:59,064: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-20 12:54:59,066: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-11-20 12:54:59,186: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 39 is out of bounds for axis 0 with size 17
+
+[rosout][ERROR] 2020-11-20 12:54:59,226: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 221 is out of bounds for axis 0 with size 18
+
+[rosout][ERROR] 2020-11-20 12:54:59,427: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 39 is out of bounds for axis 0 with size 26
+
+[rosout][ERROR] 2020-11-20 12:54:59,462: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 221 is out of bounds for axis 0 with size 27
+
+[rosout][ERROR] 2020-11-20 12:54:59,668: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 39 is out of bounds for axis 0 with size 37
+
+[rosout][ERROR] 2020-11-20 12:54:59,704: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 221 is out of bounds for axis 0 with size 38
+
+[rosout][ERROR] 2020-11-20 12:54:59,915: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 342 is out of bounds for axis 0 with size 301
+
+[rosout][ERROR] 2020-11-20 12:54:59,940: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f9d5f2fc1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 152, in laser_callback
+    print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+IndexError: index 331 is out of bounds for axis 0 with size 329
+
+[rospy.core][INFO] 2020-11-20 12:55:01,395: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-20 12:55:01,399: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 12:55:01,399: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-20 12:55:01,399: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-20 12:55:01,400: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 12:55:01,400: topic[/bev/flow_image] removing connection to http://192.168.0.201:37547/
+[rospy.internal][INFO] 2020-11-20 12:55:01,400: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:37547/
+[rospy.internal][INFO] 2020-11-20 12:55:01,401: topic[/odom] removing connection to http://192.168.0.201:36467/
+[rospy.internal][INFO] 2020-11-20 12:55:01,401: topic[/start_goal_points] removing connection to http://192.168.0.201:44137/
+[rospy.internal][INFO] 2020-11-20 12:55:01,402: topic[/scan] removing connection to http://192.168.0.201:36467/
+[rospy.internal][INFO] 2020-11-20 12:55:01,403: topic[/scan] removing connection to http://192.168.0.201:41431/
+[rospy.internal][WARNING] 2020-11-20 12:55:01,403: Unknown error initiating TCP/IP socket to 192.168.0.201:57757 (http://192.168.0.201:37547/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.impl.masterslave][INFO] 2020-11-20 12:55:01,403: atexit
+[rospy.internal][WARNING] 2020-11-20 12:55:01,404: Unknown error initiating TCP/IP socket to 192.168.0.201:44769 (http://192.168.0.201:36467/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-20 12:55:01,405: Unknown error initiating TCP/IP socket to 192.168.0.201:47641 (http://192.168.0.201:44137/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-20 12:55:01,405: Unknown error initiating TCP/IP socket to 192.168.0.201:44769 (http://192.168.0.201:36467/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][WARNING] 2020-11-20 12:55:01,405: Unknown error initiating TCP/IP socket to 192.168.0.201:56079 (http://192.168.0.201:41431/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

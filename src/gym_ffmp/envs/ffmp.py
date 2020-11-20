@@ -14,7 +14,7 @@ from .robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 MAP_RANGE = 5.0 # [m]
 MAP_GRID_NUM = 40 # [grids]
 MAP_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
-ROBOT_RSIZE = 0.1 # [m]
+ROBOT_RSIZE = 0.13 # [m]
 
 
 
@@ -104,6 +104,19 @@ class FFMP(gym.Env):
         return is_collide
                
 
+    def is_collision2(self, scan_data):
+        is_collide = False
+        print("ROBOT_RSIZE", ROBOT_RSIZE)
+        for i in range(len(scan_data)):
+            print("scan_data[i]", scan_data[i])
+            if scan_data[i] < ROBOT_RSIZE:
+                is_collide = True
+                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                break
+
+        return is_collide
+
+
     def is_goal(self, cur_relative_goal_dist):
         dist_threshold = 0.2 #[m]
         is_goal = False
@@ -163,3 +176,13 @@ class FFMP(gym.Env):
         return reward, is_done
 
 
+    def rewarder2(self, scan_data, relative_goal_info, is_first):
+        is_collide = self.is_collision2(scan_data)
+        # print("is_collide : ", is_collide)
+        is_goal = self.is_goal(relative_goal_info[0]) #[0]:distance, [1]:orientation
+
+        # self.observation = np.array([relative_goal_info, action])
+        reward = self.reward_calculator(relative_goal_info, is_collide, is_goal, is_first)
+        is_done = self.is_done(is_collide, is_goal)
+
+        return reward, is_done

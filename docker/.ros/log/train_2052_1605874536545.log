@@ -1,0 +1,2066 @@
+[rospy.client][INFO] 2020-11-20 12:15:36,580: init_node, name[/train_2052_1605874536545], pid[2052]
+[xmlrpc][INFO] 2020-11-20 12:15:36,581: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 12:15:36,582: Started XML-RPC server [http://192.168.0.191:38243/]
+[rospy.init][INFO] 2020-11-20 12:15:36,582: ROS Slave URI: [http://192.168.0.191:38243/]
+[rospy.impl.masterslave][INFO] 2020-11-20 12:15:36,582: _ready: http://192.168.0.191:38243/
+[rospy.registration][INFO] 2020-11-20 12:15:36,584: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 12:15:36,584: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 12:15:36,683: registered with master
+[rospy.rosout][INFO] 2020-11-20 12:15:36,683: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 12:15:36,689: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 12:15:36,690: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 12:15:36,720: topic[/scan] adding connection to [http://192.168.0.201:37319/], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:36,722: topic[/scan] adding connection to [http://192.168.0.201:42031/], count 1
+[rospy.internal][INFO] 2020-11-20 12:15:36,727: topic[/odom] adding connection to [http://192.168.0.201:37319/], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:36,730: topic[/start_goal_points] adding connection to [http://192.168.0.201:33733/], count 0
+[rosout][ERROR] 2020-11-20 12:15:36,751: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 289 is out of bounds for axis 0 with size 289
+
+[rosout][ERROR] 2020-11-20 12:15:36,780: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 65 is out of bounds for axis 0 with size 64
+
+[rospy.internal][INFO] 2020-11-20 12:15:36,829: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:36,909: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:36,911: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-11-20 12:15:36,983: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 290 is out of bounds for axis 0 with size 290
+
+[rosout][ERROR] 2020-11-20 12:15:37,012: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 65 is out of bounds for axis 0 with size 65
+
+[rosout][ERROR] 2020-11-20 12:15:37,211: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 290 is out of bounds for axis 0 with size 290
+
+[rosout][ERROR] 2020-11-20 12:15:37,241: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 65 is out of bounds for axis 0 with size 65
+
+[rosout][ERROR] 2020-11-20 12:15:37,441: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 290 is out of bounds for axis 0 with size 290
+
+[rosout][ERROR] 2020-11-20 12:15:37,474: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 61 is out of bounds for axis 0 with size 58
+
+[rosout][ERROR] 2020-11-20 12:15:37,671: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 286 is out of bounds for axis 0 with size 286
+
+[rosout][ERROR] 2020-11-20 12:15:37,703: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 65 is out of bounds for axis 0 with size 63
+
+[rosout][ERROR] 2020-11-20 12:15:37,900: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 282 is out of bounds for axis 0 with size 282
+
+[rosout][ERROR] 2020-11-20 12:15:37,930: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 65 is out of bounds for axis 0 with size 62
+
+[rosout][ERROR] 2020-11-20 12:15:38,140: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:15:38,177: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 56
+
+[rosout][ERROR] 2020-11-20 12:15:38,373: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:15:38,407: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 61 is out of bounds for axis 0 with size 59
+
+[rosout][ERROR] 2020-11-20 12:15:38,609: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:15:38,645: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 61 is out of bounds for axis 0 with size 58
+
+[rosout][ERROR] 2020-11-20 12:15:38,844: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 275 is out of bounds for axis 0 with size 275
+
+[rosout][ERROR] 2020-11-20 12:15:38,874: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 56
+
+[rosout][ERROR] 2020-11-20 12:15:39,071: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:39,099: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:39,301: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:15:39,322: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:39,521: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:39,552: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 49
+
+[rosout][ERROR] 2020-11-20 12:15:39,750: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:39,778: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 52
+
+[rosout][ERROR] 2020-11-20 12:15:39,984: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:40,016: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 53
+
+[rosout][ERROR] 2020-11-20 12:15:40,221: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:40,248: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 53
+
+[rosout][ERROR] 2020-11-20 12:15:40,451: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:40,482: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:40,680: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:40,709: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:40,907: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:40,944: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:41,145: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:41,178: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 52
+
+[rosout][ERROR] 2020-11-20 12:15:41,380: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:41,414: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:41,611: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:41,646: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:41,841: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:41,875: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:42,070: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:15:42,105: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:42,303: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 263 is out of bounds for axis 0 with size 263
+
+[rosout][ERROR] 2020-11-20 12:15:42,554: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 260 is out of bounds for axis 0 with size 260
+
+[rosout][ERROR] 2020-11-20 12:15:42,764: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 257 is out of bounds for axis 0 with size 257
+
+[rosout][ERROR] 2020-11-20 12:15:42,977: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:43,184: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rospy.internal][WARNING] 2020-11-20 12:15:43,232: Unknown error initiating TCP/IP socket to 192.168.0.201:39309 (http://192.168.0.201:42031/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-20 12:15:43,232: topic[/scan] removing connection to http://192.168.0.201:42031/
+[rosout][ERROR] 2020-11-20 12:15:43,401: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:43,614: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:43,822: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:44,031: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:44,239: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:44,445: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:44,648: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:44,853: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:45,055: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:45,259: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:45,501: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rospy.internal][INFO] 2020-11-20 12:15:45,521: topic[/scan] adding connection to [http://192.168.0.201:39557/], count 1
+[rospy.internal][INFO] 2020-11-20 12:15:45,525: topic[/bev/flow_image] adding connection to [http://192.168.0.201:34195/], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:45,529: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:34195/], count 0
+[rosout][ERROR] 2020-11-20 12:15:45,711: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rospy.internal][INFO] 2020-11-20 12:15:45,726: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rosout][ERROR] 2020-11-20 12:15:45,740: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:45,937: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:45,965: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:46,164: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:46,192: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:46,390: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:46,421: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:46,621: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:46,647: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:46,842: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:46,876: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:47,072: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:47,106: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:47,308: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:47,338: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:47,536: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:47,565: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:47,761: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:47,787: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:47,990: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:48,018: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:48,220: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:48,248: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:48,450: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:48,479: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:48,678: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:48,709: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:48,905: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:48,934: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:49,130: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:49,162: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:49,358: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:49,394: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:49,590: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:49,623: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:49,823: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:49,856: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:50,061: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:50,085: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:50,281: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:50,304: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 42
+
+[rosout][ERROR] 2020-11-20 12:15:50,502: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:50,531: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:50,730: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:50,760: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:50,956: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:50,984: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:51,185: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:51,216: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:51,413: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:51,442: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:51,640: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:51,668: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:51,864: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:51,894: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:52,094: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:52,123: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:52,319: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:52,346: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:52,549: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:52,581: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:15:52,777: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:52,804: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:53,002: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:53,033: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:53,235: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 257 is out of bounds for axis 0 with size 257
+
+[rosout][ERROR] 2020-11-20 12:15:53,267: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:53,463: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 260 is out of bounds for axis 0 with size 260
+
+[rosout][ERROR] 2020-11-20 12:15:53,494: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 47
+
+[rosout][ERROR] 2020-11-20 12:15:53,689: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 264 is out of bounds for axis 0 with size 264
+
+[rosout][ERROR] 2020-11-20 12:15:53,719: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:53,921: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:15:53,950: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:54,152: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rospy.internal][WARNING] 2020-11-20 12:15:54,252: Unknown error initiating TCP/IP socket to 192.168.0.201:41647 (http://192.168.0.201:34195/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-20 12:15:54,252: Unknown error initiating TCP/IP socket to 192.168.0.201:41647 (http://192.168.0.201:34195/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-20 12:15:54,252: topic[/bev/flow_image] removing connection to http://192.168.0.201:34195/
+[rospy.internal][INFO] 2020-11-20 12:15:54,253: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:34195/
+[rosout][ERROR] 2020-11-20 12:15:54,389: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rospy.internal][INFO] 2020-11-20 12:15:54,559: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rosout][ERROR] 2020-11-20 12:15:54,596: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:54,799: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:55,014: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rospy.internal][WARNING] 2020-11-20 12:15:55,047: Unknown error initiating TCP/IP socket to 192.168.0.201:52087 (http://192.168.0.201:39557/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-20 12:15:55,048: topic[/scan] removing connection to http://192.168.0.201:39557/
+[rosout][ERROR] 2020-11-20 12:15:55,230: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:55,443: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:55,649: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:55,855: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:56,059: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:15:56,265: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:56,473: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:56,677: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:56,891: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:57,101: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:15:57,310: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:15:57,542: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rospy.internal][INFO] 2020-11-20 12:15:57,697: topic[/scan] adding connection to [http://192.168.0.201:38991/], count 1
+[rospy.internal][INFO] 2020-11-20 12:15:57,700: topic[/bev/flow_image] adding connection to [http://192.168.0.201:33693/], count 0
+[rospy.internal][INFO] 2020-11-20 12:15:57,702: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:33693/], count 0
+[rosout][ERROR] 2020-11-20 12:15:57,754: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rospy.internal][INFO] 2020-11-20 12:15:57,813: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rosout][ERROR] 2020-11-20 12:15:57,960: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:57,990: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:58,190: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:58,217: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:58,416: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:15:58,448: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:15:58,651: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:15:58,684: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:15:58,891: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 263 is out of bounds for axis 0 with size 263
+
+[rosout][ERROR] 2020-11-20 12:15:58,922: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 48
+
+[rosout][ERROR] 2020-11-20 12:15:59,123: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 260 is out of bounds for axis 0 with size 260
+
+[rosout][ERROR] 2020-11-20 12:15:59,151: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 47
+
+[rosout][ERROR] 2020-11-20 12:15:59,347: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 256 is out of bounds for axis 0 with size 256
+
+[rosout][ERROR] 2020-11-20 12:15:59,382: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 45
+
+[rosout][ERROR] 2020-11-20 12:15:59,585: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:59,620: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:15:59,817: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:15:59,846: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:16:00,053: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:16:00,084: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:16:00,280: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:16:00,311: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:16:00,507: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:16:00,536: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:16:00,736: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:16:00,762: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 44
+
+[rosout][ERROR] 2020-11-20 12:16:00,968: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 255 is out of bounds for axis 0 with size 255
+
+[rosout][ERROR] 2020-11-20 12:16:00,998: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:16:01,194: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 256 is out of bounds for axis 0 with size 256
+
+[rosout][ERROR] 2020-11-20 12:16:01,222: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:16:01,425: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 258 is out of bounds for axis 0 with size 258
+
+[rosout][ERROR] 2020-11-20 12:16:01,467: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 47
+
+[rosout][ERROR] 2020-11-20 12:16:01,665: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 264 is out of bounds for axis 0 with size 264
+
+[rosout][ERROR] 2020-11-20 12:16:01,694: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 49
+
+[rosout][ERROR] 2020-11-20 12:16:01,892: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 265 is out of bounds for axis 0 with size 265
+
+[rosout][ERROR] 2020-11-20 12:16:01,920: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 48
+
+[rosout][ERROR] 2020-11-20 12:16:02,120: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 265 is out of bounds for axis 0 with size 265
+
+[rosout][ERROR] 2020-11-20 12:16:02,159: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 49
+
+[rosout][ERROR] 2020-11-20 12:16:02,358: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:16:02,385: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 49 is out of bounds for axis 0 with size 49
+
+[rosout][ERROR] 2020-11-20 12:16:02,586: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 266 is out of bounds for axis 0 with size 266
+
+[rosout][ERROR] 2020-11-20 12:16:02,614: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 50
+
+[rosout][ERROR] 2020-11-20 12:16:02,815: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:16:02,836: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 45 is out of bounds for axis 0 with size 43
+
+[rosout][ERROR] 2020-11-20 12:16:03,038: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rosout][ERROR] 2020-11-20 12:16:03,068: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 51
+
+[rosout][ERROR] 2020-11-20 12:16:03,267: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:16:03,295: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 52
+
+[rosout][ERROR] 2020-11-20 12:16:03,496: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 268 is out of bounds for axis 0 with size 268
+
+[rosout][ERROR] 2020-11-20 12:16:03,527: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 52
+
+[rosout][ERROR] 2020-11-20 12:16:03,743: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:16:03,772: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 52
+
+[rosout][ERROR] 2020-11-20 12:16:03,975: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 271 is out of bounds for axis 0 with size 271
+
+[rosout][ERROR] 2020-11-20 12:16:04,006: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 53 is out of bounds for axis 0 with size 53
+
+[rosout][ERROR] 2020-11-20 12:16:04,204: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 272 is out of bounds for axis 0 with size 272
+
+[rosout][ERROR] 2020-11-20 12:16:04,239: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 54
+
+[rosout][ERROR] 2020-11-20 12:16:04,452: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 274 is out of bounds for axis 0 with size 274
+
+[rosout][ERROR] 2020-11-20 12:16:04,483: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 56
+
+[rosout][ERROR] 2020-11-20 12:16:04,690: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 273 is out of bounds for axis 0 with size 273
+
+[rosout][ERROR] 2020-11-20 12:16:04,719: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 56
+
+[rosout][ERROR] 2020-11-20 12:16:04,917: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 273 is out of bounds for axis 0 with size 273
+
+[rosout][ERROR] 2020-11-20 12:16:04,949: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 57 is out of bounds for axis 0 with size 55
+
+[rospy.internal][WARNING] 2020-11-20 12:16:05,133: Unknown error initiating TCP/IP socket to 192.168.0.201:32825 (http://192.168.0.201:33693/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-20 12:16:05,134: Unknown error initiating TCP/IP socket to 192.168.0.201:32825 (http://192.168.0.201:33693/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-20 12:16:05,134: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:33693/
+[rospy.internal][INFO] 2020-11-20 12:16:05,134: topic[/bev/flow_image] removing connection to http://192.168.0.201:33693/
+[rosout][ERROR] 2020-11-20 12:16:05,162: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 273 is out of bounds for axis 0 with size 273
+
+[rosout][ERROR] 2020-11-20 12:16:05,375: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 274 is out of bounds for axis 0 with size 274
+
+[rospy.internal][INFO] 2020-11-20 12:16:05,520: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rosout][ERROR] 2020-11-20 12:16:05,591: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 273 is out of bounds for axis 0 with size 273
+
+[rosout][ERROR] 2020-11-20 12:16:05,802: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 272 is out of bounds for axis 0 with size 272
+
+[rospy.internal][WARNING] 2020-11-20 12:16:05,999: Unknown error initiating TCP/IP socket to 192.168.0.201:60437 (http://192.168.0.201:38991/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-20 12:16:05,999: topic[/scan] removing connection to http://192.168.0.201:38991/
+[rosout][ERROR] 2020-11-20 12:16:06,009: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 271 is out of bounds for axis 0 with size 271
+
+[rosout][ERROR] 2020-11-20 12:16:06,235: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 269 is out of bounds for axis 0 with size 269
+
+[rosout][ERROR] 2020-11-20 12:16:06,452: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 270 is out of bounds for axis 0 with size 270
+
+[rosout][ERROR] 2020-11-20 12:16:06,657: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 272 is out of bounds for axis 0 with size 272
+
+[rosout][ERROR] 2020-11-20 12:16:06,863: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 274 is out of bounds for axis 0 with size 274
+
+[rosout][ERROR] 2020-11-20 12:16:07,066: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 275 is out of bounds for axis 0 with size 275
+
+[rosout][ERROR] 2020-11-20 12:16:07,272: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 277 is out of bounds for axis 0 with size 277
+
+[rosout][ERROR] 2020-11-20 12:16:07,480: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 278 is out of bounds for axis 0 with size 278
+
+[rosout][ERROR] 2020-11-20 12:16:07,684: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:16:07,889: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 280 is out of bounds for axis 0 with size 280
+
+[rosout][ERROR] 2020-11-20 12:16:08,093: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 281 is out of bounds for axis 0 with size 281
+
+[rosout][ERROR] 2020-11-20 12:16:08,297: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 282 is out of bounds for axis 0 with size 282
+
+[rosout][ERROR] 2020-11-20 12:16:08,503: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 282 is out of bounds for axis 0 with size 282
+
+[rosout][ERROR] 2020-11-20 12:16:08,712: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 281 is out of bounds for axis 0 with size 281
+
+[rosout][ERROR] 2020-11-20 12:16:08,914: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:16:09,116: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 280 is out of bounds for axis 0 with size 280
+
+[rosout][ERROR] 2020-11-20 12:16:09,318: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 279 is out of bounds for axis 0 with size 279
+
+[rosout][ERROR] 2020-11-20 12:16:09,522: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 278 is out of bounds for axis 0 with size 278
+
+[rosout][ERROR] 2020-11-20 12:16:09,729: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 275 is out of bounds for axis 0 with size 275
+
+[rosout][ERROR] 2020-11-20 12:16:09,932: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 273 is out of bounds for axis 0 with size 273
+
+[rosout][ERROR] 2020-11-20 12:16:10,137: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 270 is out of bounds for axis 0 with size 270
+
+[rosout][ERROR] 2020-11-20 12:16:10,343: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f19b4f9d1f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 157, in laser_callback
+    self.scan_data[i] = msg.ranges[i]
+IndexError: index 267 is out of bounds for axis 0 with size 267
+
+[rospy.core][INFO] 2020-11-20 12:16:10,353: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-20 12:16:10,358: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 12:16:10,358: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-20 12:16:10,358: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 12:16:10,359: topic[/odom] removing connection to http://192.168.0.201:37319/
+[rospy.internal][INFO] 2020-11-20 12:16:10,359: topic[/start_goal_points] removing connection to http://192.168.0.201:33733/
+[rospy.internal][INFO] 2020-11-20 12:16:10,360: topic[/scan] removing connection to http://192.168.0.201:37319/
+[rospy.impl.masterslave][INFO] 2020-11-20 12:16:10,360: signal-2
+[rospy.core][INFO] 2020-11-20 12:16:10,853: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:10,895: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:10,915: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:10,946: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:10,989: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:11,036: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:11,047: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:16:11,058: signal_shutdown [atexit]

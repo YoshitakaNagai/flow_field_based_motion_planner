@@ -1,0 +1,33 @@
+[rospy.client][INFO] 2020-11-20 08:57:02,372: init_node, name[/train_1297_1605862622340], pid[1297]
+[xmlrpc][INFO] 2020-11-20 08:57:02,373: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 08:57:02,373: Started XML-RPC server [http://192.168.0.191:42445/]
+[rospy.init][INFO] 2020-11-20 08:57:02,374: ROS Slave URI: [http://192.168.0.191:42445/]
+[rospy.impl.masterslave][INFO] 2020-11-20 08:57:02,374: _ready: http://192.168.0.191:42445/
+[rospy.registration][INFO] 2020-11-20 08:57:02,375: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 08:57:02,375: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 08:57:02,474: registered with master
+[rospy.rosout][INFO] 2020-11-20 08:57:02,475: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 08:57:02,482: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 08:57:02,483: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 08:57:02,494: topic[/bev/flow_image] adding connection to [http://192.168.0.201:44375/], count 0
+[rospy.internal][INFO] 2020-11-20 08:57:02,498: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:44375/], count 0
+[rospy.internal][INFO] 2020-11-20 08:57:02,503: topic[/odom] adding connection to [http://192.168.0.201:35939/], count 0
+[rospy.internal][INFO] 2020-11-20 08:57:02,507: topic[/start_goal_points] adding connection to [http://192.168.0.201:46107/], count 0
+[rospy.internal][INFO] 2020-11-20 08:57:02,755: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-20 08:57:02,756: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rospy.core][INFO] 2020-11-20 09:05:36,365: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-20 09:05:36,372: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 09:05:36,372: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 09:05:36,373: topic[/bev/flow_image] removing connection to http://192.168.0.201:44375/
+[rospy.internal][INFO] 2020-11-20 09:05:36,373: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:44375/
+[rospy.internal][INFO] 2020-11-20 09:05:36,374: topic[/odom] removing connection to http://192.168.0.201:35939/
+[rospy.internal][INFO] 2020-11-20 09:05:36,374: topic[/start_goal_points] removing connection to http://192.168.0.201:46107/
+[rospy.impl.masterslave][INFO] 2020-11-20 09:05:36,375: signal-2
+[rospy.core][INFO] 2020-11-20 09:05:36,864: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:36,908: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:36,924: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:36,966: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:37,001: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:37,033: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:37,059: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 09:05:37,060: signal_shutdown [atexit]

@@ -12,6 +12,7 @@ from PIL import Image
 
 import rospy
 from sensor_msgs.msg import Image
+from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import Pose
 from geometry_msgs.msg import PoseArray
@@ -54,8 +55,7 @@ ROBOT_RSIZE = 0.1
 # for DDQN
 ENV = 'FFMP-v0'
 GAMMA = 0.99 # discount factor
-# MAX_STEPS = 10000
-MAX_STEPS = 10
+MAX_STEPS = 10000
 NUM_EPISODES = 500
 LOG_DIR = "./logs/experiment1"
 # BATCH_SIZE = 1024 # minibatch size
@@ -73,16 +73,18 @@ class ROSNode():
     def __init__(self):
         self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
         self.sub_occupancy = rospy.Subscriber("/bev/occupancy_image", Image, self.occupancy_image_callback)
-        self.sub_odom = rospy.Subscriber("/ground_truth/odom", Odometry, self.odom_callback)
-        self.sub_start_goal = rospy.Subscriber("/start_goal", PoseArray, self.pose_array_callback)
-        self.pub_cmd_vel = rospy.Publisher("/cmd_vel/train", Twist, queue_size=1)
-        self.pub_done_flag = rospy.Publisher("/train/episode", Bool, queue_size=1)
+        self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
+        self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
+        self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
+        self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
+        self.pub_done_flag = rospy.Publisher("/is_created_scenarios", Bool, queue_size=1)
 
         self.odom = Odometry()
         self.global_start = Pose()
         self.global_goal = Pose()
         self.bridge = CvBridge()
         self.done_flag = Bool()
+        self.scan_data = None
         self.pre_robot_pose = RobotPose(0.0, 0.0, 0.0)
         self.map_grid_size = MAP_GRID_SIZE
         self.map_range = MAP_RANGE
@@ -92,6 +94,7 @@ class ROSNode():
         self.occupancy_callback_flag = False
         self.odom_callback_flag = False
         self.posearray_callback_flag = False
+        self.laser_callback_flag = False
 
     def occupancy_image_callback(self, msg):
         # print("occupancy_image_callback")
@@ -126,8 +129,8 @@ class ROSNode():
 
     def pose_array_callback(self, msg):
         # print("pose_array_callback")
-        self.global_start.pose = msg[0].poses
-        self.global_goal.pose = msg[1].poses
+        self.global_start = msg.poses[0]
+        self.global_goal = msg.poses[1]
         self.posearray_callback_flag = True
 
     def cmd_vel_publisher(self, linear_v, angular_v):
@@ -141,8 +144,16 @@ class ROSNode():
         cmd_vel.angular.z = angular_v
         self.pub_cmd_vel.publish(cmd_vel)
 
+    def laser_callback(self, msg):
+        for i in range(len(msg.ranges)):
+            # if i > 0 and msg.ranges[i] < 3.5 and msg.ranges[i] != None: # Detection distance : 120mm ~ 3,500mm
+            if msg.ranges[i] != float('inf'):
+                self.scan_data = np.append(self.scan_data, msg.ranges[i])
+                print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+                self.laser_callback_flag = True
+
     def done_flag_publisher(self, is_done):
-        # print("pub done_flag")
+        print("ros.done_flag =", is_done)
         self.done_flag = is_done
         self.pub_done_flag.publish(self.done_flag)
 
@@ -502,10 +513,8 @@ def main():
 
     print("ros : start!")
     while not rospy.is_shutdown():
-        # if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag:
-        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag:
-
-            # print("ros flags : OK")
+        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag:
+            print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
@@ -543,7 +552,8 @@ def main():
 
             tmp_tensor_occupancy = occupancy_map.clone()
             numpy_occupancy = tmp_tensor_occupancy.to('cpu').detach().numpy()
-            numpy_reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
+            # numpy_reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
+            numpy_reward, is_done = train_env.env.rewarder2(ros.scan_data, relative_goal, is_first)
             reward = torch.as_tensor(numpy_reward.astype('float32')).clone()
             reward = torch.unsqueeze(reward, 0)
 
@@ -556,12 +566,15 @@ def main():
             ros.flow_callback_flag = False
             ros.occupancy_callback_flag = False
             ros.odom_callback_flag = False
+            ros.posearray_callback_flag = False
+            ros.laser_callback_flag = False
+            ros.scan_data.clear()
 
             if step == MAX_STEPS:
                 is_done = True
             
             
-            if is_done:
+            if is_done and train_env.agent.brain.loss != None:
                 print("is_done : ", is_done)
                 loss_value = train_env.agent.brain.loss.item()
                 print("EPISODE", episode, ": loss = ", loss_value)
@@ -588,10 +601,14 @@ def main():
 
                 ros.cmd_vel_publisher(0.0, 0.0)
                 is_first = True
+                is_done = False
+                ros.done_flag_publisher(is_done)
             else:
                 print("step:",step , ", loss:",train_env.agent.brain.loss)
                 linear_v = train_env.agent.action.commander(action_id).linear_v
                 angular_v = train_env.agent.action.commander(action_id).angular_v
+                print("linear_v =", linear_v, "[m/s]")
+                print("angular_v =", angular_v, "[m/s]")
                 ros.cmd_vel_publisher(linear_v, angular_v)
                 ros.done_flag_publisher(is_done)
 

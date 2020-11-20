@@ -1,0 +1,3040 @@
+[rospy.client][INFO] 2020-11-20 06:33:12,462: init_node, name[/train_768_1605853992430], pid[768]
+[xmlrpc][INFO] 2020-11-20 06:33:12,462: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 06:33:12,463: Started XML-RPC server [http://192.168.0.191:37475/]
+[rospy.init][INFO] 2020-11-20 06:33:12,464: ROS Slave URI: [http://192.168.0.191:37475/]
+[rospy.impl.masterslave][INFO] 2020-11-20 06:33:12,464: _ready: http://192.168.0.191:37475/
+[rospy.registration][INFO] 2020-11-20 06:33:12,465: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 06:33:12,465: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 06:33:12,564: registered with master
+[rospy.rosout][INFO] 2020-11-20 06:33:12,564: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 06:33:12,571: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 06:33:12,572: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 06:33:12,593: topic[/bev/flow_image] adding connection to [http://192.168.0.201:33629/], count 0
+[rospy.internal][INFO] 2020-11-20 06:33:12,598: topic[/start_goal_points] adding connection to [http://192.168.0.201:42291/], count 0
+[rospy.internal][INFO] 2020-11-20 06:33:12,600: topic[/ground_truth/odom] adding connection to [http://192.168.0.201:40733/], count 0
+[rospy.internal][INFO] 2020-11-20 06:33:12,601: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:33629/], count 0
+[rosout][ERROR] 2020-11-20 06:33:12,611: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,620: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,631: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,640: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,651: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,689: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,698: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,710: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,720: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,730: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,739: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,752: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,761: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,772: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,783: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,793: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,803: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,813: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,824: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rospy.internal][INFO] 2020-11-20 06:33:12,834: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-20 06:33:12,835: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rospy.internal][INFO] 2020-11-20 06:33:12,837: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-11-20 06:33:12,844: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,854: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,865: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,874: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,885: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,922: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,937: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,947: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,958: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,970: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,980: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:12,992: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,004: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,014: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,026: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,037: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,048: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,057: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,068: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,080: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,089: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,100: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,110: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,120: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,131: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,169: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,179: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,189: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,198: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,209: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,220: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,229: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,240: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,250: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,260: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,270: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,281: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,290: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,301: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,312: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,322: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,332: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,342: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,352: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,362: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,397: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,408: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,418: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,428: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,438: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,449: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,458: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,469: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,479: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,490: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,500: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,509: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,520: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,530: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,541: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,550: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,561: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,572: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,582: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,594: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,630: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,640: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,651: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,662: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,672: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,681: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,692: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,702: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,712: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,723: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,733: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,743: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,752: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,763: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,774: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,783: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,794: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,804: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,814: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,823: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,860: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,871: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,886: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,891: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,902: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,911: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,922: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,931: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,942: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,951: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,962: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,973: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,982: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:13,993: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,003: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,014: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,023: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,034: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,044: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,054: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,092: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,103: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,112: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,123: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,133: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,144: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,154: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,163: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,174: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,184: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,195: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,204: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,216: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,225: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,236: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,247: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,256: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,267: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,276: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,287: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,321: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,334: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,346: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,357: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,368: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,380: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,390: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,402: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,413: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,424: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,433: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,444: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,454: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,464: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,474: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,485: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,497: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,507: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,518: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,528: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,567: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,576: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,590: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,601: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,611: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,622: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,633: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,643: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,653: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,664: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,675: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,684: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,694: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,705: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,716: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,726: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,736: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,750: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,756: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,767: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,802: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,812: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,822: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,833: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,842: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,853: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,863: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,874: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,884: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,894: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,904: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,915: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,927: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,937: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,948: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,959: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,969: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,979: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:14,989: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,000: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,035: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,044: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,056: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,065: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,076: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,085: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,096: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,106: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,118: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,129: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,140: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,150: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,160: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,171: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,182: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,192: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,203: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,212: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,223: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,233: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,271: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,281: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,292: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,303: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,313: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,323: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,333: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,344: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,353: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,364: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,377: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,386: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,397: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,406: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,417: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,428: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,437: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,448: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,465: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,478: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,516: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,527: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,538: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,547: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,559: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,569: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,581: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,589: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,599: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,609: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,619: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,630: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,640: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,650: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,660: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,670: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,680: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,690: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,701: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,711: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,751: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,761: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,771: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,781: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,791: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,801: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,812: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,822: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,833: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,844: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,854: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,864: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,876: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,888: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,897: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,907: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,920: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,929: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,940: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,951: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,987: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:15,999: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,011: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,021: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,034: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,044: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,055: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,066: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,077: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,088: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,098: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,108: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,118: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,129: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,138: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,149: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,160: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,170: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,180: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,190: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,227: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,238: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,248: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,258: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,269: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,279: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,289: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,299: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,310: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,320: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,331: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,342: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,352: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,363: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,373: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,383: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,394: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,403: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,414: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,425: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,462: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,473: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,483: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,494: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,503: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,514: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,524: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,535: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,546: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,555: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,566: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,576: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,589: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,600: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,611: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,624: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,634: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,645: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,656: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,667: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,702: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,715: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,723: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,734: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,743: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,754: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,765: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,775: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,787: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,796: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,807: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,817: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,827: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,838: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,848: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,858: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,868: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,880: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,889: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,899: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,936: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,947: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,957: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,967: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rosout][ERROR] 2020-11-20 06:33:16,977: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rospy.core][INFO] 2020-11-20 06:33:16,984: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-20 06:33:16,997: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 06:33:16,998: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 06:33:16,999: topic[/bev/flow_image] removing connection to http://192.168.0.201:33629/
+[rospy.internal][INFO] 2020-11-20 06:33:17,000: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:33629/
+[rospy.internal][INFO] 2020-11-20 06:33:17,001: topic[/ground_truth/odom] removing connection to http://192.168.0.201:40733/
+[rospy.internal][INFO] 2020-11-20 06:33:17,002: topic[/start_goal_points] removing connection to http://192.168.0.201:42291/
+[rospy.impl.masterslave][INFO] 2020-11-20 06:33:17,002: signal-2
+[rospy.rosout][ERROR] 2020-11-20 06:33:17,003: Unable to report rosout: publish() to a closed topic
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/rosout.py", line 100, in _rosout
+    _rosout_pub.publish(l)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 882, in publish
+    self.impl.publish(data)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 1041, in publish
+    raise ROSException("publish() to a closed topic")
+rospy.exceptions.ROSException: publish() to a closed topic
+
+[rosout][ERROR] 2020-11-20 06:33:16,998: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f298cff7730>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 129, in pose_array_callback
+    self.global_start.pose = msg.poses[0]
+AttributeError: 'Pose' object has no attribute 'pose'
+
+[rospy.internal][WARNING] 2020-11-20 06:33:17,004: Unknown error initiating TCP/IP socket to 192.168.0.201:37339 (http://192.168.0.201:40733/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-20 06:33:17,005: Unknown error initiating TCP/IP socket to 192.168.0.201:35341 (http://192.168.0.201:33629/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-20 06:33:17,006: Unknown error initiating TCP/IP socket to 192.168.0.201:35341 (http://192.168.0.201:33629/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-20 06:33:17,486: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,528: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,564: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,594: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,639: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,655: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 06:33:17,656: signal_shutdown [atexit]

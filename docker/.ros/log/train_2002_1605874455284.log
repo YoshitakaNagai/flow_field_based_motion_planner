@@ -1,0 +1,319 @@
+[rospy.client][INFO] 2020-11-20 12:14:15,315: init_node, name[/train_2002_1605874455284], pid[2002]
+[xmlrpc][INFO] 2020-11-20 12:14:15,316: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-20 12:14:15,317: Started XML-RPC server [http://192.168.0.191:36485/]
+[rospy.init][INFO] 2020-11-20 12:14:15,317: ROS Slave URI: [http://192.168.0.191:36485/]
+[rospy.impl.masterslave][INFO] 2020-11-20 12:14:15,317: _ready: http://192.168.0.191:36485/
+[rospy.registration][INFO] 2020-11-20 12:14:15,318: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-20 12:14:15,319: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-20 12:14:15,417: registered with master
+[rospy.rosout][INFO] 2020-11-20 12:14:15,418: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-20 12:14:15,424: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-20 12:14:15,425: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-20 12:14:15,441: topic[/odom] adding connection to [http://192.168.0.201:37319/], count 0
+[rospy.internal][INFO] 2020-11-20 12:14:15,446: topic[/start_goal_points] adding connection to [http://192.168.0.201:33733/], count 0
+[rospy.internal][INFO] 2020-11-20 12:14:15,451: topic[/scan] adding connection to [http://192.168.0.201:37319/], count 0
+[rospy.internal][INFO] 2020-11-20 12:14:15,453: topic[/scan] adding connection to [http://192.168.0.201:42031/], count 1
+[rosout][ERROR] 2020-11-20 12:14:15,465: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rospy.internal][INFO] 2020-11-20 12:14:15,601: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-20 12:14:15,629: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-11-20 12:14:15,669: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rospy.internal][INFO] 2020-11-20 12:14:15,702: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-11-20 12:14:15,705: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:15,901: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:15,937: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,138: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,167: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,368: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,403: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,606: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,627: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,827: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:16,863: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,067: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,097: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,298: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,335: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,537: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,569: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,766: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:17,805: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,004: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,038: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,238: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,272: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,471: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,499: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,696: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,732: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,929: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:18,965: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:19,172: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rosout][ERROR] 2020-11-20 12:14:19,202: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7f0376fbc4c0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    for i in range(msg.ranges.size()):
+AttributeError: 'tuple' object has no attribute 'size'
+
+[rospy.core][INFO] 2020-11-20 12:14:19,320: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-20 12:14:19,325: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-20 12:14:19,325: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-20 12:14:19,326: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-20 12:14:19,326: topic[/odom] removing connection to http://192.168.0.201:37319/
+[rospy.internal][INFO] 2020-11-20 12:14:19,327: topic[/start_goal_points] removing connection to http://192.168.0.201:33733/
+[rospy.internal][INFO] 2020-11-20 12:14:19,327: topic[/scan] removing connection to http://192.168.0.201:37319/
+[rospy.internal][WARNING] 2020-11-20 12:14:19,328: Unknown error initiating TCP/IP socket to 192.168.0.201:54625 (http://192.168.0.201:37319/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-11-20 12:14:19,328: topic[/scan] removing connection to http://192.168.0.201:42031/
+[rospy.impl.masterslave][INFO] 2020-11-20 12:14:19,329: signal-2
+[rospy.internal][WARNING] 2020-11-20 12:14:19,329: Unknown error initiating TCP/IP socket to 192.168.0.201:54625 (http://192.168.0.201:37319/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-20 12:14:19,330: Unknown error initiating TCP/IP socket to 192.168.0.201:50039 (http://192.168.0.201:33733/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-20 12:14:19,822: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,861: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,883: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,920: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,949: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,983: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-20 12:14:19,988: signal_shutdown [atexit]
