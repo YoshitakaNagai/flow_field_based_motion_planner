@@ -36,6 +36,7 @@ import gym_ffmp
 from gym_ffmp.envs.robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 from gym_ffmp.envs.ffmp import FFMP
 
+import time
 import csv
 
 
@@ -51,6 +52,7 @@ IMAGE_SIZE = 40
 MAP_GRID_SIZE = 0.1
 MAP_RANGE = 5.0
 ROBOT_RSIZE = 0.1
+SLEEP_TIME = 10
 
 # for DDQN
 ENV = 'FFMP-v0'
@@ -58,8 +60,7 @@ GAMMA = 0.99 # discount factor
 MAX_STEPS = 10000
 NUM_EPISODES = 500
 LOG_DIR = "./logs/experiment1"
-# BATCH_SIZE = 1024 # minibatch size
-BATCH_SIZE = 4 # minibatch size
+BATCH_SIZE = 1024 # minibatch size
 CAPACITY = 200000 # replay buffer size
 INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 NUM_ACTIONS = 28
@@ -77,14 +78,14 @@ class ROSNode():
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
         self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
-        self.pub_done_flag = rospy.Publisher("/is_created_scenarios", Bool, queue_size=1)
+        self.pub_done_flag = rospy.Publisher("/is_finish_episode", Bool, queue_size=1)
 
         self.odom = Odometry()
         self.global_start = Pose()
         self.global_goal = Pose()
         self.bridge = CvBridge()
         self.done_flag = Bool()
-        self.scan_data = None
+        self.scan_data = [None]
         self.pre_robot_pose = RobotPose(0.0, 0.0, 0.0)
         self.map_grid_size = MAP_GRID_SIZE
         self.map_range = MAP_RANGE
@@ -146,10 +147,9 @@ class ROSNode():
 
     def laser_callback(self, msg):
         for i in range(len(msg.ranges)):
-            # if i > 0 and msg.ranges[i] < 3.5 and msg.ranges[i] != None: # Detection distance : 120mm ~ 3,500mm
-            if msg.ranges[i] != float('inf'):
-                self.scan_data = np.append(self.scan_data, msg.ranges[i])
-                print("ROS:scan_data[",i,"] =" ,self.scan_data[i])
+            if msg.ranges[i] != float('inf') and msg.ranges[i]:
+                self.scan_data.append(msg.ranges[i])
+                # print("ROS:scan_data[0] =" ,self.scan_data[0])
                 self.laser_callback_flag = True
 
     def done_flag_publisher(self, is_done):
@@ -513,6 +513,11 @@ def main():
 
     print("ros : start!")
     while not rospy.is_shutdown():
+        # print("[1] ros.flow_callback_flag:", ros.flow_callback_flag)
+        # print("[2] ros.occupancy_callback_flag:", ros.occupancy_callback_flag)
+        # print("[3] ros.odom_callback_flag:", ros.odom_callback_flag)
+        # print("[4] ros.posearray_callback_flag:", ros.posearray_callback_flag)
+        # print("[5] ros.laser_callback_flag:", ros.laser_callback_flag)
         if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag:
             print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
@@ -600,9 +605,13 @@ def main():
                     is_complete = True
 
                 ros.cmd_vel_publisher(0.0, 0.0)
+                ros.done_flag_publisher(is_done)
+                for i in range(SLEEP_TIME):
+                    print(SLEEP_TIME - i - 1, "[sec] to reset gazebo simulation")
+                    time.sleep(1)
+                ros.done_flag_publisher(False)
                 is_first = True
                 is_done = False
-                ros.done_flag_publisher(is_done)
             else:
                 print("step:",step , ", loss:",train_env.agent.brain.loss)
                 linear_v = train_env.agent.action.commander(action_id).linear_v

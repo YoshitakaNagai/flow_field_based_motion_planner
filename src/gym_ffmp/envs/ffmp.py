@@ -106,13 +106,12 @@ class FFMP(gym.Env):
 
     def is_collision2(self, scan_data):
         is_collide = False
-        print("ROBOT_RSIZE", ROBOT_RSIZE)
         for i in range(len(scan_data)):
-            print("scan_data[i]", scan_data[i])
-            if scan_data[i] < ROBOT_RSIZE:
-                is_collide = True
-                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                break
+            if scan_data[i]:
+                if scan_data[i] < ROBOT_RSIZE:
+                    is_collide = True
+                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                    break
 
         return is_collide
 

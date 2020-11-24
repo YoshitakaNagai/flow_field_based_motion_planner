@@ -1,0 +1,40 @@
+[rospy.client][INFO] 2020-11-24 03:47:46,998: init_node, name[/train_3356_1606189666965], pid[3356]
+[xmlrpc][INFO] 2020-11-24 03:47:46,998: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-24 03:47:46,999: Started XML-RPC server [http://192.168.0.191:38189/]
+[rospy.init][INFO] 2020-11-24 03:47:47,000: ROS Slave URI: [http://192.168.0.191:38189/]
+[rospy.impl.masterslave][INFO] 2020-11-24 03:47:47,000: _ready: http://192.168.0.191:38189/
+[rospy.registration][INFO] 2020-11-24 03:47:47,001: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-24 03:47:47,001: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-24 03:47:47,100: registered with master
+[rospy.rosout][INFO] 2020-11-24 03:47:47,100: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-24 03:47:47,105: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-24 03:47:47,107: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-24 03:47:47,123: topic[/bev/flow_image] adding connection to [http://192.168.0.201:45935/], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,131: topic[/scan] adding connection to [http://192.168.0.201:41579/], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,131: topic[/scan] adding connection to [http://192.168.0.201:38893/], count 1
+[rospy.internal][INFO] 2020-11-24 03:47:47,135: topic[/odom] adding connection to [http://192.168.0.201:41579/], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,139: topic[/start_goal_points] adding connection to [http://192.168.0.201:40621/], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,143: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:45935/], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,316: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,317: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-24 03:47:47,318: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][INFO] 2020-11-24 03:47:47,416: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rospy.core][INFO] 2020-11-24 03:47:49,548: signal_shutdown [atexit]
+[rospy.internal][INFO] 2020-11-24 03:47:49,554: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-24 03:47:49,554: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-24 03:47:49,554: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-24 03:47:49,555: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-24 03:47:49,555: topic[/bev/flow_image] removing connection to http://192.168.0.201:45935/
+[rospy.internal][INFO] 2020-11-24 03:47:49,555: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:45935/
+[rospy.internal][INFO] 2020-11-24 03:47:49,556: topic[/odom] removing connection to http://192.168.0.201:41579/
+[rospy.internal][INFO] 2020-11-24 03:47:49,556: topic[/start_goal_points] removing connection to http://192.168.0.201:40621/
+[rospy.internal][INFO] 2020-11-24 03:47:49,556: topic[/scan] removing connection to http://192.168.0.201:41579/
+[rospy.internal][INFO] 2020-11-24 03:47:49,557: topic[/scan] removing connection to http://192.168.0.201:38893/
+[rospy.impl.masterslave][INFO] 2020-11-24 03:47:49,557: atexit
+[rospy.internal][WARNING] 2020-11-24 03:47:49,558: Unknown error initiating TCP/IP socket to 192.168.0.201:58309 (http://192.168.0.201:41579/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

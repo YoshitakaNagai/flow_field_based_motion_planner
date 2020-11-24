@@ -1,0 +1,583 @@
+[rospy.client][INFO] 2020-11-24 03:32:30,419: init_node, name[/train_2979_1606188750388], pid[2979]
+[xmlrpc][INFO] 2020-11-24 03:32:30,420: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-24 03:32:30,420: Started XML-RPC server [http://192.168.0.191:40487/]
+[rospy.init][INFO] 2020-11-24 03:32:30,421: ROS Slave URI: [http://192.168.0.191:40487/]
+[rospy.impl.masterslave][INFO] 2020-11-24 03:32:30,421: _ready: http://192.168.0.191:40487/
+[rospy.registration][INFO] 2020-11-24 03:32:30,423: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-24 03:32:30,423: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-24 03:32:30,521: registered with master
+[rospy.rosout][INFO] 2020-11-24 03:32:30,522: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-24 03:32:30,528: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-24 03:32:30,529: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-24 03:32:30,556: topic[/bev/flow_image] adding connection to [http://192.168.0.201:45935/], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,558: topic[/scan] adding connection to [http://192.168.0.201:38893/], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,558: topic[/scan] adding connection to [http://192.168.0.201:41579/], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,564: topic[/start_goal_points] adding connection to [http://192.168.0.201:40621/], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,565: topic[/odom] adding connection to [http://192.168.0.201:41579/], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,569: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:45935/], count 0
+[rosout][ERROR] 2020-11-24 03:32:30,592: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rospy.internal][INFO] 2020-11-24 03:32:30,753: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,754: topic[/is_created_scenarios] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,767: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-24 03:32:30,770: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rosout][ERROR] 2020-11-24 03:32:30,793: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:30,829: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,025: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,058: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,254: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,287: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,482: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,516: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,716: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,750: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,945: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:31,977: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,173: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,201: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,400: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,429: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,627: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,657: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,855: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:32,883: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,079: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,109: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,309: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,338: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,535: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,562: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,762: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,790: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:33,994: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,022: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,223: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,254: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,456: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,484: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,681: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,709: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,908: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:34,938: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,138: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,164: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,363: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,390: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,588: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,616: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,812: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:35,842: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,046: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,075: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,276: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,303: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,499: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,525: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,722: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,753: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,949: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:36,980: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,186: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,222: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,418: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,449: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,647: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,681: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,876: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:37,907: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:38,111: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rosout][ERROR] 2020-11-24 03:32:38,145: bad callback: <bound method ROSNode.laser_callback of <__main__.ROSNode object at 0x7fe0521621f0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 150, in laser_callback
+    if msg.ranges[i] != float('inf') and msg.ranges[i] is not None and msg.ranges[i] is not NoneType:
+NameError: name 'NoneType' is not defined
+
+[rospy.core][INFO] 2020-11-24 03:32:38,288: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-24 03:32:38,293: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-24 03:32:38,294: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-24 03:32:38,294: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-24 03:32:38,295: topic[/is_created_scenarios] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-24 03:32:38,295: topic[/bev/flow_image] removing connection to http://192.168.0.201:45935/
+[rospy.internal][INFO] 2020-11-24 03:32:38,295: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:45935/
+[rospy.internal][INFO] 2020-11-24 03:32:38,296: topic[/odom] removing connection to http://192.168.0.201:41579/
+[rospy.internal][INFO] 2020-11-24 03:32:38,296: topic[/start_goal_points] removing connection to http://192.168.0.201:40621/
+[rospy.internal][INFO] 2020-11-24 03:32:38,297: topic[/scan] removing connection to http://192.168.0.201:38893/
+[rospy.internal][INFO] 2020-11-24 03:32:38,297: topic[/scan] removing connection to http://192.168.0.201:41579/
+[rospy.impl.masterslave][INFO] 2020-11-24 03:32:38,297: signal-2
+[rospy.internal][WARNING] 2020-11-24 03:32:38,298: Unknown error initiating TCP/IP socket to 192.168.0.201:53063 (http://192.168.0.201:38893/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-24 03:32:38,788: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,831: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,856: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,888: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,940: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,954: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 03:32:38,959: signal_shutdown [atexit]
