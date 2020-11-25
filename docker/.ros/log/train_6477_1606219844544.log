@@ -1,0 +1,160 @@
+[rospy.client][INFO] 2020-11-24 12:10:44,572: init_node, name[/train_6477_1606219844544], pid[6477]
+[xmlrpc][INFO] 2020-11-24 12:10:44,573: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-24 12:10:44,573: Started XML-RPC server [http://192.168.0.191:39477/]
+[rospy.init][INFO] 2020-11-24 12:10:44,574: ROS Slave URI: [http://192.168.0.191:39477/]
+[rospy.impl.masterslave][INFO] 2020-11-24 12:10:44,574: _ready: http://192.168.0.191:39477/
+[rospy.registration][INFO] 2020-11-24 12:10:44,575: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-24 12:10:44,575: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-24 12:10:44,674: registered with master
+[rospy.rosout][INFO] 2020-11-24 12:10:44,674: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-24 12:10:44,680: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-24 12:10:44,681: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-24 12:10:44,705: topic[/bev/flow_image] adding connection to [http://192.168.0.201:40519/], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,709: topic[/scan] adding connection to [http://192.168.0.201:37485/], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,714: topic[/scan] adding connection to [http://192.168.0.201:39545/], count 1
+[rospy.internal][INFO] 2020-11-24 12:10:44,716: topic[/start_goal_points] adding connection to [http://192.168.0.201:40107/], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,718: topic[/odom] adding connection to [http://192.168.0.201:39545/], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,720: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:40519/], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,900: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:44,902: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-24 12:10:45,000: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][INFO] 2020-11-24 12:10:45,001: topic[/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][ERROR] 2020-11-24 12:10:59,534: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/scan] from [TCPROS connection on port 56445 to [192.168.0.191:53040 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][ERROR] 2020-11-24 12:10:59,698: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/odom] from [TCPROS connection on port 56445 to [192.168.0.191:53042 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][INFO] 2020-11-24 12:11:00,037: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][ERROR] 2020-11-24 12:11:00,537: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/scan] from [TCPROS connection on port 56445 to [192.168.0.191:53044 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][ERROR] 2020-11-24 12:11:00,701: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/odom] from [TCPROS connection on port 56445 to [192.168.0.191:53046 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][ERROR] 2020-11-24 12:11:02,541: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/scan] from [TCPROS connection on port 56445 to [192.168.0.191:53048 on socket 100]] [/train_6477_1606219844544].
+
+[rospy.internal][ERROR] 2020-11-24 12:11:02,705: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/odom] from [TCPROS connection on port 56445 to [192.168.0.191:53050 on socket 102]] [/train_6477_1606219844544].
+
+[rospy.internal][INFO] 2020-11-24 12:11:04,782: topic[/cmd_vel] adding connection to [/gazebo], count 1
+[rospy.internal][INFO] 2020-11-24 12:11:06,305: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][ERROR] 2020-11-24 12:11:06,546: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/scan] from [TCPROS connection on port 56445 to [192.168.0.191:53052 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][ERROR] 2020-11-24 12:11:06,710: Unable to initiate TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: received a connection for a nonexistent topic [/odom] from [TCPROS connection on port 56445 to [192.168.0.191:53054 on socket 89]] [/train_6477_1606219844544].
+
+[rospy.internal][INFO] 2020-11-24 12:11:10,944: topic[/cmd_vel] adding connection to [/gazebo], count 1
+[rospy.internal][WARNING] 2020-11-24 12:11:27,071: Unknown error initiating TCP/IP socket to 192.168.0.201:53517 (http://192.168.0.201:40107/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-24 12:11:27,072: topic[/start_goal_points] removing connection to http://192.168.0.201:40107/
+[rospy.internal][INFO] 2020-11-24 12:11:27,360: topic[/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][WARNING] 2020-11-24 12:11:27,481: Unknown error initiating TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-24 12:11:27,481: Unknown error initiating TCP/IP socket to 192.168.0.201:56445 (http://192.168.0.201:39545/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-24 12:11:27,481: topic[/scan] removing connection to http://192.168.0.201:39545/
+[rospy.internal][INFO] 2020-11-24 12:11:27,482: topic[/odom] removing connection to http://192.168.0.201:39545/
+[rospy.internal][INFO] 2020-11-24 12:11:27,860: topic[/cmd_vel] removing connection to /gazebo
+[rospy.core][INFO] 2020-11-24 12:23:23,808: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-24 12:23:23,821: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-24 12:23:23,822: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-24 12:23:23,823: topic[/bev/flow_image] removing connection to http://192.168.0.201:40519/
+[rospy.internal][WARNING] 2020-11-24 12:23:23,824: Unknown error initiating TCP/IP socket to 192.168.0.201:37907 (http://192.168.0.201:40519/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-11-24 12:23:23,824: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:40519/
+[rospy.internal][WARNING] 2020-11-24 12:23:23,825: Unknown error initiating TCP/IP socket to 192.168.0.201:37907 (http://192.168.0.201:40519/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-11-24 12:23:23,826: topic[/scan] removing connection to http://192.168.0.201:37485/
+[rospy.impl.masterslave][INFO] 2020-11-24 12:23:23,826: signal-2
+[rospy.internal][WARNING] 2020-11-24 12:23:23,826: Unknown error initiating TCP/IP socket to 192.168.0.201:42897 (http://192.168.0.201:37485/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.core][INFO] 2020-11-24 12:23:24,307: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,343: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,366: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,398: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,429: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,476: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-24 12:23:24,497: signal_shutdown [atexit]

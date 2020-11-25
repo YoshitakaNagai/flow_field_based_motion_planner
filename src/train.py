@@ -78,7 +78,7 @@ class ROSNode():
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
         self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
-        self.pub_done_flag = rospy.Publisher("/is_finish_episode", Bool, queue_size=1)
+        self.pub_done_flag = rospy.Publisher("/episode_watcher/is_finish_episode", Bool, queue_size=1)
 
         self.odom = Odometry()
         self.global_start = Pose()
@@ -443,6 +443,7 @@ class Environment:
         # occupancy_map.size() = torch.Size([H, W])
         # flow_map.size() = torch.Size([3, H, W])
 
+        # print("occupancy_map.size() = ", occupancy_map.size())
         occupancy_map = torch.unsqueeze(occupancy_map, 0)
         # print("occupancy_map.size() = ", occupancy_map.size())
         # print("flow_map.size() = ", flow_map.size())
@@ -579,30 +580,31 @@ def main():
                 is_done = True
             
             
-            if is_done and train_env.agent.brain.loss != None:
-                print("is_done : ", is_done)
-                loss_value = train_env.agent.brain.loss.item()
-                print("EPISODE", episode, ": loss = ", loss_value)
+            if is_done:
+                if train_env.agent.brain.loss != None:
+                    print("is_done : ", is_done)
+                    loss_value = train_env.agent.brain.loss.item()
+                    print("EPISODE", episode, ": loss = ", loss_value)
 
-                # tensor_board.log_loss.append(loss_value)
-                # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
-                tensor_board.writer.add_scalar('ours', loss_value, episode)
-                writer.writerow([episode, loss_value])
+                    # tensor_board.log_loss.append(loss_value)
+                    # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
+                    tensor_board.writer.add_scalar('ours', loss_value, episode)
+                    writer.writerow([episode, loss_value])
 
-                episode += 1
-                step = 0
-                state_m = None
-                state_g = None
-                state_v = None
+                    episode += 1
+                    step = 0
+                    state_m = None
+                    state_g = None
+                    state_v = None
 
-                if(episode % 2 == 0):
-                    train_env.agent.update_target_q_function()
+                    if(episode % 2 == 0):
+                        train_env.agent.update_target_q_function()
 
-                if train_env.loss_convergence:
-                    torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
-                    print("COMPLETED TO LEARN!")
-                    print("SAVED MODEL!")
-                    is_complete = True
+                    if train_env.loss_convergence:
+                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                        print("COMPLETED TO LEARN!")
+                        print("SAVED MODEL!")
+                        is_complete = True
 
                 ros.cmd_vel_publisher(0.0, 0.0)
                 ros.done_flag_publisher(is_done)
