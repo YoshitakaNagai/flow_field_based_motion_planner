@@ -1,0 +1,404 @@
+[rospy.client][INFO] 2020-11-26 11:14:20,790: init_node, name[/train_7587_1606389260762], pid[7587]
+[xmlrpc][INFO] 2020-11-26 11:14:20,791: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-26 11:14:20,791: Started XML-RPC server [http://192.168.0.191:42487/]
+[rospy.init][INFO] 2020-11-26 11:14:20,791: ROS Slave URI: [http://192.168.0.191:42487/]
+[rospy.impl.masterslave][INFO] 2020-11-26 11:14:20,792: _ready: http://192.168.0.191:42487/
+[rospy.registration][INFO] 2020-11-26 11:14:20,793: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-26 11:14:20,793: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-26 11:14:20,892: registered with master
+[rospy.rosout][INFO] 2020-11-26 11:14:20,892: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-26 11:14:20,897: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-26 11:14:20,899: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-26 11:14:20,923: topic[/bev/flow_image] adding connection to [http://192.168.0.201:32891/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:20,924: topic[/scan] adding connection to [http://192.168.0.201:44433/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:20,927: topic[/scan] adding connection to [http://192.168.0.201:36707/], count 1
+[rospy.internal][INFO] 2020-11-26 11:14:20,934: topic[/odom] adding connection to [http://192.168.0.201:36707/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:20,935: topic[/start_goal_points] adding connection to [http://192.168.0.201:34947/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:20,939: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:32891/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:21,138: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:21,141: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:21,142: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][INFO] 2020-11-26 11:14:21,142: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][WARNING] 2020-11-26 11:14:40,371: Unknown error initiating TCP/IP socket to 192.168.0.201:47031 (http://192.168.0.201:32891/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-26 11:14:40,371: Unknown error initiating TCP/IP socket to 192.168.0.201:47031 (http://192.168.0.201:32891/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:14:40,372: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:32891/
+[rospy.internal][INFO] 2020-11-26 11:14:40,372: topic[/bev/flow_image] removing connection to http://192.168.0.201:32891/
+[rospy.internal][INFO] 2020-11-26 11:14:40,769: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-26 11:14:41,231: Unknown error initiating TCP/IP socket to 192.168.0.201:53191 (http://192.168.0.201:44433/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:14:41,231: topic[/scan] removing connection to http://192.168.0.201:44433/
+[rospy.internal][INFO] 2020-11-26 11:14:44,500: topic[/bev/flow_image] adding connection to [http://192.168.0.201:46555/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:44,504: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:46555/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:44,505: topic[/scan] adding connection to [http://192.168.0.201:46467/], count 1
+[rospy.internal][INFO] 2020-11-26 11:14:44,690: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-26 11:14:50,438: Unknown error initiating TCP/IP socket to 192.168.0.201:44517 (http://192.168.0.201:46555/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-26 11:14:50,438: Unknown error initiating TCP/IP socket to 192.168.0.201:44517 (http://192.168.0.201:46555/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:14:50,439: topic[/bev/flow_image] removing connection to http://192.168.0.201:46555/
+[rospy.internal][INFO] 2020-11-26 11:14:50,439: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:46555/
+[rospy.internal][INFO] 2020-11-26 11:14:50,831: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-26 11:14:51,254: Unknown error initiating TCP/IP socket to 192.168.0.201:46359 (http://192.168.0.201:46467/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:14:51,254: topic[/scan] removing connection to http://192.168.0.201:46467/
+[rospy.internal][INFO] 2020-11-26 11:14:54,533: topic[/scan] adding connection to [http://192.168.0.201:37801/], count 1
+[rospy.internal][INFO] 2020-11-26 11:14:54,541: topic[/bev/flow_image] adding connection to [http://192.168.0.201:34213/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:54,544: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:34213/], count 0
+[rospy.internal][INFO] 2020-11-26 11:14:54,735: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-26 11:15:04,248: Unknown error initiating TCP/IP socket to 192.168.0.201:52653 (http://192.168.0.201:34213/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-26 11:15:04,249: Unknown error initiating TCP/IP socket to 192.168.0.201:52653 (http://192.168.0.201:34213/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:15:04,249: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:34213/
+[rospy.internal][INFO] 2020-11-26 11:15:04,249: topic[/bev/flow_image] removing connection to http://192.168.0.201:34213/
+[rospy.internal][INFO] 2020-11-26 11:15:04,681: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-26 11:15:05,144: Unknown error initiating TCP/IP socket to 192.168.0.201:56675 (http://192.168.0.201:37801/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:15:05,144: topic[/scan] removing connection to http://192.168.0.201:37801/
+[rospy.internal][INFO] 2020-11-26 11:15:08,428: topic[/bev/flow_image] adding connection to [http://192.168.0.201:44763/], count 0
+[rospy.internal][INFO] 2020-11-26 11:15:08,432: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:44763/], count 0
+[rospy.internal][INFO] 2020-11-26 11:15:08,436: topic[/scan] adding connection to [http://192.168.0.201:38407/], count 1
+[rospy.internal][INFO] 2020-11-26 11:15:08,515: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-26 11:15:18,397: Unknown error initiating TCP/IP socket to 192.168.0.201:52241 (http://192.168.0.201:44763/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-26 11:15:18,397: Unknown error initiating TCP/IP socket to 192.168.0.201:52241 (http://192.168.0.201:44763/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:15:18,398: topic[/bev/flow_image] removing connection to http://192.168.0.201:44763/
+[rospy.internal][INFO] 2020-11-26 11:15:18,398: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:44763/
+[rospy.internal][INFO] 2020-11-26 11:15:18,784: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-26 11:15:19,212: Unknown error initiating TCP/IP socket to 192.168.0.201:54007 (http://192.168.0.201:38407/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-26 11:15:19,212: topic[/scan] removing connection to http://192.168.0.201:38407/
+[rospy.core][INFO] 2020-11-26 11:15:20,499: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-26 11:15:20,505: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-26 11:15:20,506: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-26 11:15:20,506: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-26 11:15:20,507: topic[/odom] removing connection to http://192.168.0.201:36707/
+[rospy.internal][INFO] 2020-11-26 11:15:20,507: topic[/start_goal_points] removing connection to http://192.168.0.201:34947/
+[rospy.internal][INFO] 2020-11-26 11:15:20,508: topic[/scan] removing connection to http://192.168.0.201:36707/
+[rospy.impl.masterslave][INFO] 2020-11-26 11:15:20,508: signal-2
+[rospy.internal][WARNING] 2020-11-26 11:15:20,509: Unknown error initiating TCP/IP socket to 192.168.0.201:53483 (http://192.168.0.201:34947/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-26 11:15:20,998: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,040: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,059: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,089: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,132: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,160: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,190: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,225: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,250: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,281: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,311: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,341: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,375: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,405: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,434: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,465: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,496: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,526: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,576: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,588: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,618: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,653: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,680: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,711: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,741: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,773: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,817: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,834: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,864: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,895: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,932: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,958: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:21,988: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,018: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,052: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,085: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,110: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,142: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,174: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,213: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,236: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,268: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,298: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,332: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,361: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,392: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,423: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,454: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,484: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,520: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,544: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,576: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,605: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,654: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,666: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,705: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,737: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,765: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,795: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,826: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,863: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,888: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,917: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,955: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:22,980: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,012: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,042: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,080: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,105: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,138: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,170: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,207: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,231: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,261: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,296: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,335: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,383: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,399: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,429: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,469: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,502: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,529: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,559: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,588: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,637: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,671: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,694: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,726: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,756: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,786: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,823: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,847: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,878: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,910: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,949: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:23,970: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,004: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,043: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,066: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,098: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,128: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,177: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,188: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,218: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,249: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,284: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,313: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,345: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,374: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,404: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,438: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,467: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,497: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,527: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,561: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,588: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,619: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,651: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,689: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,711: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,746: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,775: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,808: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,837: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,867: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,897: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,936: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,959: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:24,990: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,019: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,049: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,086: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,110: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,141: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,172: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,203: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,253: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,288: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,315: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,345: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,376: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,411: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,447: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,475: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,505: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,536: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,573: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,598: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,627: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,657: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,722: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,751: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,781: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,813: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,845: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,880: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,905: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,936: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,967: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:25,997: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,038: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,080: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,100: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,130: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,161: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,205: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,232: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,262: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,293: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,324: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,354: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,402: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,418: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,449: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,483: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,522: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,544: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,574: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,605: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,641: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,665: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,698: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,728: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,760: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,806: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,840: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,867: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,897: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,934: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,960: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:26,991: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,021: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,052: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,084: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,118: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,146: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,176: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,207: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,252: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,279: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,310: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,341: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,386: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,403: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,433: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,462: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,495: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,525: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,556: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,587: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,620: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,650: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,680: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,710: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,740: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,771: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,806: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,846: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,866: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,897: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,928: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,957: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:27,987: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,017: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,048: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,079: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,112: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,142: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,174: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,219: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,239: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-26 11:15:28,245: signal_shutdown [atexit]

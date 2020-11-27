@@ -77,6 +77,7 @@ class ROSNode():
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
         self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
+        self.sub_start_flag = rospy.Subscriber("/is_start_episode", Bool, self.is_start_callback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
         self.pub_done_flag = rospy.Publisher("/episode_watcher/is_finish_episode", Bool, queue_size=1)
 
@@ -96,6 +97,10 @@ class ROSNode():
         self.odom_callback_flag = False
         self.posearray_callback_flag = False
         self.laser_callback_flag = False
+        self.is_start_callback_flag = True
+
+    def is_start_callback(self, msg):
+        self.is_start_callback_flag = True
 
     def occupancy_image_callback(self, msg):
         # print("occupancy_image_callback")
@@ -519,7 +524,7 @@ def main():
         # print("[3] ros.odom_callback_flag:", ros.odom_callback_flag)
         # print("[4] ros.posearray_callback_flag:", ros.posearray_callback_flag)
         # print("[5] ros.laser_callback_flag:", ros.laser_callback_flag)
-        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag:
+        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag and ros.is_start_callback_flag:
             print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
@@ -608,12 +613,13 @@ def main():
 
                 ros.cmd_vel_publisher(0.0, 0.0)
                 ros.done_flag_publisher(is_done)
-                for i in range(SLEEP_TIME):
-                    print(SLEEP_TIME - i - 1, "[sec] to reset gazebo simulation")
-                    time.sleep(1)
-                ros.done_flag_publisher(False)
+                # for i in range(SLEEP_TIME):
+                #     print(SLEEP_TIME - i - 1, "[sec] to reset gazebo simulation")
+                #     time.sleep(1)
+                # ros.done_flag_publisher(False)
                 is_first = True
                 is_done = False
+                ros.is_start_callback_flag = False
             else:
                 print("step:",step , ", loss:",train_env.agent.brain.loss)
                 linear_v = train_env.agent.action.commander(action_id).linear_v

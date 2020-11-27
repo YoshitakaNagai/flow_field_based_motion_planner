@@ -1,0 +1,973 @@
+[rospy.client][INFO] 2020-11-27 07:56:45,726: init_node, name[/train_8721_1606463805696], pid[8721]
+[xmlrpc][INFO] 2020-11-27 07:56:45,727: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-27 07:56:45,727: Started XML-RPC server [http://192.168.0.191:34969/]
+[rospy.init][INFO] 2020-11-27 07:56:45,728: ROS Slave URI: [http://192.168.0.191:34969/]
+[rospy.impl.masterslave][INFO] 2020-11-27 07:56:45,728: _ready: http://192.168.0.191:34969/
+[rospy.registration][INFO] 2020-11-27 07:56:45,729: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-27 07:56:45,729: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-27 07:56:45,828: registered with master
+[rospy.rosout][INFO] 2020-11-27 07:56:45,828: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-27 07:56:45,833: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-27 07:56:45,834: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-27 07:56:45,859: topic[/is_start_episode] adding connection to [http://192.168.0.201:38655/], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:45,868: topic[/scan] adding connection to [http://192.168.0.201:39707/], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:45,869: topic[/scan] adding connection to [http://192.168.0.201:33677/], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:45,876: topic[/odom] adding connection to [http://192.168.0.201:39707/], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:45,878: topic[/start_goal_points] adding connection to [http://192.168.0.201:33723/], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:46,065: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:46,066: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-11-27 07:56:46,078: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][WARNING] 2020-11-27 07:57:18,933: Unknown error initiating TCP/IP socket to 192.168.0.201:45011 (http://192.168.0.201:33723/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:18,933: topic[/start_goal_points] removing connection to http://192.168.0.201:33723/
+[rospy.internal][WARNING] 2020-11-27 07:57:19,031: Unknown error initiating TCP/IP socket to 192.168.0.201:52397 (http://192.168.0.201:38655/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:19,031: topic[/is_start_episode] removing connection to http://192.168.0.201:38655/
+[rospy.internal][INFO] 2020-11-27 07:57:19,037: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][WARNING] 2020-11-27 07:57:19,321: Unknown error initiating TCP/IP socket to 192.168.0.201:41797 (http://192.168.0.201:39707/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-27 07:57:19,322: Unknown error initiating TCP/IP socket to 192.168.0.201:41797 (http://192.168.0.201:39707/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:19,322: topic[/scan] removing connection to http://192.168.0.201:39707/
+[rospy.internal][INFO] 2020-11-27 07:57:19,322: topic[/odom] removing connection to http://192.168.0.201:39707/
+[rospy.internal][INFO] 2020-11-27 07:57:19,538: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][WARNING] 2020-11-27 07:57:19,976: Unknown error initiating TCP/IP socket to 192.168.0.201:52301 (http://192.168.0.201:33677/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:19,976: topic[/scan] removing connection to http://192.168.0.201:33677/
+[rospy.internal][INFO] 2020-11-27 07:57:36,645: topic[/is_start_episode] adding connection to [http://192.168.0.201:33311/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:36,696: topic[/start_goal_points] adding connection to [http://192.168.0.201:44937/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:36,857: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-11-27 07:57:39,283: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,285: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,293: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,302: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,313: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,322: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,333: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,342: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,353: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,362: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,373: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,383: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,393: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,403: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,413: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,423: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,434: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,443: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,454: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,463: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,473: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,484: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,493: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,503: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,513: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,523: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,534: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,543: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,554: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,563: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,574: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,583: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,594: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,603: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,614: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,624: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,634: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,644: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,653: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,664: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,673: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,684: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,694: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,704: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,714: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,723: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,734: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,744: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,754: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,764: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,774: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,784: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,793: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,804: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,814: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,824: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,834: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,843: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,854: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,864: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,874: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,884: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,894: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,904: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,914: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,924: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,934: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,944: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,954: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,963: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,974: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,983: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:39,994: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,004: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,014: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,024: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,035: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,044: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,054: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,064: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,074: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,084: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,094: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,105: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,114: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,125: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,135: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,145: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,154: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,165: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,175: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,185: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,195: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,205: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,215: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,225: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,235: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,245: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,255: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,266: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,275: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rosout][ERROR] 2020-11-27 07:57:40,286: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7f901db89280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 138, in pose_array_callback
+    self.global_start = msg.poses[0]
+IndexError: list index out of range
+
+[rospy.internal][INFO] 2020-11-27 07:57:41,612: topic[/scan] adding connection to [http://192.168.0.201:45259/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:41,730: topic[/bev/flow_image] adding connection to [http://192.168.0.201:45945/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:41,736: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:45945/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:41,838: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:43,084: topic[/scan] adding connection to [http://192.168.0.201:44181/], count 1
+[rospy.internal][INFO] 2020-11-27 07:57:44,901: topic[/odom] adding connection to [http://192.168.0.201:44181/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:45,026: topic[/cmd_vel] adding connection to [/gazebo], count 1
+[rospy.internal][WARNING] 2020-11-27 07:57:46,344: Unknown error initiating TCP/IP socket to 192.168.0.201:38007 (http://192.168.0.201:45945/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-27 07:57:46,345: Unknown error initiating TCP/IP socket to 192.168.0.201:38007 (http://192.168.0.201:45945/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:46,345: topic[/bev/flow_image] removing connection to http://192.168.0.201:45945/
+[rospy.internal][INFO] 2020-11-27 07:57:46,345: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:45945/
+[rospy.internal][INFO] 2020-11-27 07:57:46,706: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-27 07:57:47,176: Unknown error initiating TCP/IP socket to 192.168.0.201:46657 (http://192.168.0.201:45259/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-27 07:57:47,176: topic[/scan] removing connection to http://192.168.0.201:45259/
+[rospy.internal][INFO] 2020-11-27 07:57:50,459: topic[/scan] adding connection to [http://192.168.0.201:46559/], count 1
+[rospy.internal][INFO] 2020-11-27 07:57:50,469: topic[/bev/flow_image] adding connection to [http://192.168.0.201:36289/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:50,475: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:36289/], count 0
+[rospy.internal][INFO] 2020-11-27 07:57:50,557: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.core][INFO] 2020-11-27 07:57:51,286: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-27 07:57:51,290: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-27 07:57:51,291: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-27 07:57:51,291: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-27 07:57:51,292: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-27 07:57:51,292: topic[/bev/flow_image] removing connection to http://192.168.0.201:36289/
+[rospy.internal][INFO] 2020-11-27 07:57:51,292: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:36289/
+[rospy.internal][WARNING] 2020-11-27 07:57:51,293: Unknown error initiating TCP/IP socket to 192.168.0.201:36067 (http://192.168.0.201:36289/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-11-27 07:57:51,293: topic[/odom] removing connection to http://192.168.0.201:44181/
+[rospy.internal][INFO] 2020-11-27 07:57:51,294: topic[/start_goal_points] removing connection to http://192.168.0.201:44937/
+[rospy.internal][INFO] 2020-11-27 07:57:51,294: topic[/scan] removing connection to http://192.168.0.201:44181/
+[rospy.internal][INFO] 2020-11-27 07:57:51,295: topic[/scan] removing connection to http://192.168.0.201:46559/
+[rospy.internal][WARNING] 2020-11-27 07:57:51,295: Unknown error initiating TCP/IP socket to 192.168.0.201:50373 (http://192.168.0.201:44181/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-11-27 07:57:51,295: Unknown error initiating TCP/IP socket to 192.168.0.201:60435 (http://192.168.0.201:44937/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-11-27 07:57:51,296: topic[/is_start_episode] removing connection to http://192.168.0.201:33311/
+[rospy.impl.masterslave][INFO] 2020-11-27 07:57:51,297: signal-2
+[rospy.core][INFO] 2020-11-27 07:57:51,786: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,825: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,850: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,881: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,916: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,957: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-27 07:57:51,962: signal_shutdown [atexit]
