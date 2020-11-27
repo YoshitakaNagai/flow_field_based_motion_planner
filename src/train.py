@@ -58,9 +58,10 @@ SLEEP_TIME = 10
 ENV = 'FFMP-v0'
 GAMMA = 0.99 # discount factor
 MAX_STEPS = 10000
-NUM_EPISODES = 500
+NUM_EPISODES = 1000000
 LOG_DIR = "./logs/experiment1"
-BATCH_SIZE = 1024 # minibatch size
+# BATCH_SIZE = 1024 # minibatch size
+BATCH_SIZE = 128 # minibatch size
 CAPACITY = 200000 # replay buffer size
 INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 NUM_ACTIONS = 28
