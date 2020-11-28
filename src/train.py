@@ -68,7 +68,7 @@ NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 LOSS_THRESHOLD = 0.1 # threshold of loss
 LOSS_MEMORY_CAPACITY = 10
-MODEL_PATH = './model/model.pt'
+MODEL_PATH = './model/model.pth'
 ################
 
 class ROSNode():
