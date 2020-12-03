@@ -74,7 +74,7 @@ MODEL_PATH = './model/model.pth'
 class ROSNode():
     def __init__(self):
         self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
-        self.sub_occupancy = rospy.Subscriber("/bev/occupancy_image", Image, self.occupancy_image_callback)
+        self.sub_occupancy = rospy.Subscriber("/bev/raycast_image", Image, self.occupancy_image_callback)
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
         self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
@@ -566,7 +566,8 @@ def main():
             numpy_occupancy = tmp_tensor_occupancy.to('cpu').detach().numpy()
             # numpy_reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
             numpy_reward, is_done = train_env.env.rewarder2(ros.scan_data, relative_goal, is_first)
-            reward = torch.as_tensor(numpy_reward.astype('float32')).clone()
+            # reward = torch.as_tensor(numpy_reward.astype('float32')).clone()
+            reward = torch.as_tensor(float(numpy_reward)).clone()
             reward = torch.unsqueeze(reward, 0)
 
             is_first = False

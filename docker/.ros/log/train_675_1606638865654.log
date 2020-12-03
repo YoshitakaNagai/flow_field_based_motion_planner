@@ -1,0 +1,312 @@
+[rospy.client][INFO] 2020-11-29 08:34:25,685: init_node, name[/train_675_1606638865654], pid[675]
+[xmlrpc][INFO] 2020-11-29 08:34:25,686: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-11-29 08:34:25,686: Started XML-RPC server [http://192.168.0.191:42937/]
+[rospy.init][INFO] 2020-11-29 08:34:25,687: ROS Slave URI: [http://192.168.0.191:42937/]
+[rospy.impl.masterslave][INFO] 2020-11-29 08:34:25,687: _ready: http://192.168.0.191:42937/
+[rospy.registration][INFO] 2020-11-29 08:34:25,688: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-11-29 08:34:25,688: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-11-29 08:34:25,787: registered with master
+[rospy.rosout][INFO] 2020-11-29 08:34:25,787: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-11-29 08:34:25,795: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-11-29 08:34:25,796: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-11-29 08:34:25,814: topic[/odom] adding connection to [http://192.168.0.201:34681/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:25,820: topic[/start_goal_points] adding connection to [http://192.168.0.201:41767/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:25,824: topic[/scan] adding connection to [http://192.168.0.201:41873/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:25,826: topic[/scan] adding connection to [http://192.168.0.201:34681/], count 1
+[rospy.internal][INFO] 2020-11-29 08:34:25,831: topic[/is_start_episode] adding connection to [http://192.168.0.201:35281/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:25,946: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:25,947: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:26,044: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][WARNING] 2020-11-29 08:34:28,340: Unknown error initiating TCP/IP socket to 192.168.0.201:44879 (http://192.168.0.201:41873/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:34:28,341: topic[/scan] removing connection to http://192.168.0.201:41873/
+[rospy.internal][INFO] 2020-11-29 08:34:31,108: topic[/bev/flow_image] adding connection to [http://192.168.0.201:39121/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:31,113: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:39121/], count 0
+[rospy.internal][INFO] 2020-11-29 08:34:31,115: topic[/scan] adding connection to [http://192.168.0.201:35693/], count 1
+[rospy.internal][INFO] 2020-11-29 08:34:31,309: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][INFO] 2020-11-29 08:46:42,460: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 08:46:42,466: Unknown error initiating TCP/IP socket to 192.168.0.201:36221 (http://192.168.0.201:39121/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 08:46:42,467: Unknown error initiating TCP/IP socket to 192.168.0.201:36221 (http://192.168.0.201:39121/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:46:42,467: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:39121/
+[rospy.internal][INFO] 2020-11-29 08:46:42,468: topic[/bev/flow_image] removing connection to http://192.168.0.201:39121/
+[rospy.internal][WARNING] 2020-11-29 08:47:59,192: Unknown error initiating TCP/IP socket to 192.168.0.201:45029 (http://192.168.0.201:35693/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:47:59,193: topic[/scan] removing connection to http://192.168.0.201:35693/
+[rospy.internal][INFO] 2020-11-29 08:48:01,970: topic[/bev/flow_image] adding connection to [http://192.168.0.201:45091/], count 0
+[rospy.internal][INFO] 2020-11-29 08:48:01,976: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:45091/], count 0
+[rospy.internal][INFO] 2020-11-29 08:48:01,980: topic[/scan] adding connection to [http://192.168.0.201:46011/], count 1
+[rospy.internal][INFO] 2020-11-29 08:48:02,083: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 08:48:42,521: Unknown error initiating TCP/IP socket to 192.168.0.201:37863 (http://192.168.0.201:45091/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 08:48:42,522: Unknown error initiating TCP/IP socket to 192.168.0.201:37863 (http://192.168.0.201:45091/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:48:42,522: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:45091/
+[rospy.internal][INFO] 2020-11-29 08:48:42,523: topic[/bev/flow_image] removing connection to http://192.168.0.201:45091/
+[rospy.internal][INFO] 2020-11-29 08:48:42,997: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 08:48:57,880: Unknown error initiating TCP/IP socket to 192.168.0.201:38821 (http://192.168.0.201:46011/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:48:57,880: topic[/scan] removing connection to http://192.168.0.201:46011/
+[rospy.internal][INFO] 2020-11-29 08:49:00,202: topic[/scan] adding connection to [http://192.168.0.201:33339/], count 1
+[rospy.internal][INFO] 2020-11-29 08:49:00,306: topic[/bev/flow_image] adding connection to [http://192.168.0.201:41331/], count 0
+[rospy.internal][INFO] 2020-11-29 08:49:00,310: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:41331/], count 0
+[rospy.internal][INFO] 2020-11-29 08:49:00,401: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 08:49:10,105: Unknown error initiating TCP/IP socket to 192.168.0.201:41817 (http://192.168.0.201:41331/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 08:49:10,105: Unknown error initiating TCP/IP socket to 192.168.0.201:41817 (http://192.168.0.201:41331/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:49:10,105: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:41331/
+[rospy.internal][INFO] 2020-11-29 08:49:10,106: topic[/bev/flow_image] removing connection to http://192.168.0.201:41331/
+[rospy.internal][INFO] 2020-11-29 08:49:10,313: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 08:49:13,176: Unknown error initiating TCP/IP socket to 192.168.0.201:38691 (http://192.168.0.201:33339/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:49:13,176: topic[/scan] removing connection to http://192.168.0.201:33339/
+[rospy.internal][INFO] 2020-11-29 08:49:16,011: topic[/bev/flow_image] adding connection to [http://192.168.0.201:46187/], count 0
+[rospy.internal][INFO] 2020-11-29 08:49:16,016: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:46187/], count 0
+[rospy.internal][INFO] 2020-11-29 08:49:16,020: topic[/scan] adding connection to [http://192.168.0.201:46037/], count 1
+[rospy.internal][INFO] 2020-11-29 08:49:16,214: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 08:51:05,598: Unknown error initiating TCP/IP socket to 192.168.0.201:35365 (http://192.168.0.201:46187/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 08:51:05,599: Unknown error initiating TCP/IP socket to 192.168.0.201:35365 (http://192.168.0.201:46187/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:51:05,599: topic[/bev/flow_image] removing connection to http://192.168.0.201:46187/
+[rospy.internal][INFO] 2020-11-29 08:51:05,600: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:46187/
+[rospy.internal][INFO] 2020-11-29 08:51:06,070: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 08:56:58,622: Unknown error initiating TCP/IP socket to 192.168.0.201:59161 (http://192.168.0.201:46037/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:56:58,622: topic[/scan] removing connection to http://192.168.0.201:46037/
+[rospy.internal][INFO] 2020-11-29 08:57:01,369: topic[/scan] adding connection to [http://192.168.0.201:37745/], count 1
+[rospy.internal][INFO] 2020-11-29 08:57:01,379: topic[/bev/flow_image] adding connection to [http://192.168.0.201:34445/], count 0
+[rospy.internal][INFO] 2020-11-29 08:57:01,382: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:34445/], count 0
+[rospy.internal][INFO] 2020-11-29 08:57:01,580: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 08:57:26,517: Unknown error initiating TCP/IP socket to 192.168.0.201:47425 (http://192.168.0.201:34445/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 08:57:26,518: Unknown error initiating TCP/IP socket to 192.168.0.201:47425 (http://192.168.0.201:34445/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 08:57:26,518: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:34445/
+[rospy.internal][INFO] 2020-11-29 08:57:26,519: topic[/bev/flow_image] removing connection to http://192.168.0.201:34445/
+[rospy.internal][INFO] 2020-11-29 08:57:26,892: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 09:15:35,678: Unknown error initiating TCP/IP socket to 192.168.0.201:44017 (http://192.168.0.201:37745/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 09:15:35,679: topic[/scan] removing connection to http://192.168.0.201:37745/
+[rospy.internal][INFO] 2020-11-29 09:15:38,341: topic[/scan] adding connection to [http://192.168.0.201:45195/], count 1
+[rospy.internal][INFO] 2020-11-29 09:15:38,403: topic[/bev/flow_image] adding connection to [http://192.168.0.201:33535/], count 0
+[rospy.internal][INFO] 2020-11-29 09:15:38,406: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:33535/], count 0
+[rospy.internal][INFO] 2020-11-29 09:15:38,552: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 09:18:45,835: Unknown error initiating TCP/IP socket to 192.168.0.201:57957 (http://192.168.0.201:33535/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 09:18:45,836: Unknown error initiating TCP/IP socket to 192.168.0.201:57957 (http://192.168.0.201:33535/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 09:18:45,836: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:33535/
+[rospy.internal][INFO] 2020-11-29 09:18:45,837: topic[/bev/flow_image] removing connection to http://192.168.0.201:33535/
+[rospy.internal][INFO] 2020-11-29 09:18:45,995: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 09:20:08,453: Unknown error initiating TCP/IP socket to 192.168.0.201:34449 (http://192.168.0.201:45195/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 09:20:08,453: topic[/scan] removing connection to http://192.168.0.201:45195/
+[rospy.internal][INFO] 2020-11-29 09:20:11,051: topic[/scan] adding connection to [http://192.168.0.201:35379/], count 1
+[rospy.internal][INFO] 2020-11-29 09:20:11,172: topic[/bev/flow_image] adding connection to [http://192.168.0.201:38057/], count 0
+[rospy.internal][INFO] 2020-11-29 09:20:11,176: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:38057/], count 0
+[rospy.internal][INFO] 2020-11-29 09:20:11,270: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.internal][WARNING] 2020-11-29 09:24:57,127: Unknown error initiating TCP/IP socket to 192.168.0.201:51187 (http://192.168.0.201:38057/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][WARNING] 2020-11-29 09:24:57,128: Unknown error initiating TCP/IP socket to 192.168.0.201:51187 (http://192.168.0.201:38057/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 09:24:57,128: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:38057/
+[rospy.internal][INFO] 2020-11-29 09:24:57,129: topic[/bev/flow_image] removing connection to http://192.168.0.201:38057/
+[rospy.internal][INFO] 2020-11-29 09:24:57,310: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][WARNING] 2020-11-29 09:28:29,294: Unknown error initiating TCP/IP socket to 192.168.0.201:48719 (http://192.168.0.201:35379/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosgraph/network.py", line 357, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2020-11-29 09:28:29,294: topic[/scan] removing connection to http://192.168.0.201:35379/
+[rospy.internal][INFO] 2020-11-29 09:28:31,857: topic[/scan] adding connection to [http://192.168.0.201:44071/], count 1
+[rospy.internal][INFO] 2020-11-29 09:28:31,876: topic[/bev/flow_image] adding connection to [http://192.168.0.201:45951/], count 0
+[rospy.internal][INFO] 2020-11-29 09:28:31,879: topic[/bev/occupancy_image] adding connection to [http://192.168.0.201:45951/], count 0
+[rospy.internal][INFO] 2020-11-29 09:28:32,073: topic[/cmd_vel] adding connection to [/bev_flow_estimator], count 1
+[rospy.core][INFO] 2020-11-29 09:32:28,933: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-11-29 09:32:28,939: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-11-29 09:32:28,939: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-11-29 09:32:28,939: topic[/cmd_vel] removing connection to /bev_flow_estimator
+[rospy.internal][INFO] 2020-11-29 09:32:28,940: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-11-29 09:32:28,940: topic[/bev/flow_image] removing connection to http://192.168.0.201:45951/
+[rospy.internal][INFO] 2020-11-29 09:32:28,941: topic[/bev/occupancy_image] removing connection to http://192.168.0.201:45951/
+[rospy.internal][INFO] 2020-11-29 09:32:28,941: topic[/odom] removing connection to http://192.168.0.201:34681/
+[rospy.internal][INFO] 2020-11-29 09:32:28,942: topic[/start_goal_points] removing connection to http://192.168.0.201:41767/
+[rospy.internal][INFO] 2020-11-29 09:32:28,942: topic[/scan] removing connection to http://192.168.0.201:34681/
+[rospy.internal][INFO] 2020-11-29 09:32:28,943: topic[/scan] removing connection to http://192.168.0.201:44071/
+[rospy.internal][WARNING] 2020-11-29 09:32:28,943: Unknown error initiating TCP/IP socket to 192.168.0.201:33739 (http://192.168.0.201:41767/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-11-29 09:32:28,944: topic[/is_start_episode] removing connection to http://192.168.0.201:35281/
+[rospy.impl.masterslave][INFO] 2020-11-29 09:32:28,944: signal-2
+[rospy.internal][WARNING] 2020-11-29 09:32:28,945: Unknown error initiating TCP/IP socket to 192.168.0.201:52931 (http://192.168.0.201:44071/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-11-29 09:32:29,433: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,463: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,494: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,524: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,552: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,583: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-11-29 09:32:29,608: signal_shutdown [atexit]
