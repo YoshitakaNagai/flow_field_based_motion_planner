@@ -1,0 +1,1238 @@
+[rospy.client][INFO] 2020-12-07 09:29:54,218: init_node, name[/train_462_1607333394177], pid[462]
+[xmlrpc][INFO] 2020-12-07 09:29:54,218: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-07 09:29:54,219: Started XML-RPC server [http://192.168.0.191:41383/]
+[rospy.init][INFO] 2020-12-07 09:29:54,219: ROS Slave URI: [http://192.168.0.191:41383/]
+[rospy.impl.masterslave][INFO] 2020-12-07 09:29:54,219: _ready: http://192.168.0.191:41383/
+[rospy.registration][INFO] 2020-12-07 09:29:54,221: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-07 09:29:54,221: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-07 09:29:54,320: registered with master
+[rospy.rosout][INFO] 2020-12-07 09:29:54,320: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-07 09:29:54,325: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-07 09:29:54,326: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-07 09:29:54,348: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:36049/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,356: topic[/is_start_episode] adding connection to [http://192.168.0.201:44577/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,364: topic[/scan] adding connection to [http://192.168.0.201:33281/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,364: topic[/scan] adding connection to [http://192.168.0.201:45983/], count 1
+[rospy.internal][INFO] 2020-12-07 09:29:54,367: topic[/start_goal_points] adding connection to [http://192.168.0.201:39321/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,373: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:36049/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,374: topic[/bev/raycast_image] adding connection to [http://192.168.0.201:37487/], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,376: topic[/odom] adding connection to [http://192.168.0.201:33281/], count 0
+[rospy.internal][ERROR] 2020-12-07 09:29:54,378: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-07 09:29:54,378: unable to create subscriber transport: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection..  Will try again in 0.5s
+[rosout][ERROR] 2020-12-07 09:29:54,464: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][INFO] 2020-12-07 09:29:54,554: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,563: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-12-07 09:29:54,565: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-12-07 09:29:54,675: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:54,875: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:55,125: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:55,316: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][ERROR] 2020-12-07 09:29:55,383: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rosout][ERROR] 2020-12-07 09:29:55,517: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:55,705: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:55,914: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:56,136: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:56,367: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][ERROR] 2020-12-07 09:29:56,385: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rosout][ERROR] 2020-12-07 09:29:56,565: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:56,755: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:56,956: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:57,168: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:57,387: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:57,584: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:57,815: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:58,017: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:58,206: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:58,406: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][ERROR] 2020-12-07 09:29:58,408: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rosout][ERROR] 2020-12-07 09:29:58,616: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:58,835: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:59,077: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:59,267: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:59,455: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:59,657: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:29:59,877: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:00,116: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:00,306: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:00,486: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:00,697: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:00,916: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:01,156: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:01,346: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:01,535: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:01,734: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:01,957: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:02,196: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:02,387: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][ERROR] 2020-12-07 09:30:02,413: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rosout][ERROR] 2020-12-07 09:30:02,576: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:02,781: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:02,996: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:03,205: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:03,450: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:03,637: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:03,836: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:04,024: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:04,246: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:04,486: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:04,680: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:04,877: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:05,066: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:05,285: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:05,485: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:05,737: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:05,926: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:06,126: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:06,317: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:06,536: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:06,790: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:06,966: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:07,156: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:07,375: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:07,577: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:07,819: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:08,016: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:08,205: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:08,404: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:08,624: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:08,827: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:09,077: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:09,266: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:09,467: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:09,659: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:09,876: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:10,117: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:10,306: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.internal][ERROR] 2020-12-07 09:30:10,423: Unable to initiate TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_462_1607333394177] wants topic /bev/flow_array_y to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rosout][ERROR] 2020-12-07 09:30:10,508: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:10,699: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:10,915: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:11,156: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:11,346: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:11,548: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:11,736: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:11,956: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:12,156: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:12,397: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:12,586: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:12,775: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:12,987: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:13,208: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:13,406: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:13,636: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:13,825: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:14,026: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:14,246: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:14,446: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:14,695: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:14,886: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:15,092: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:15,278: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:15,495: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:15,696: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:15,936: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:16,124: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:16,327: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:16,526: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:16,746: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:16,986: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:17,175: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:17,366: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:17,568: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:17,766: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:17,986: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:18,224: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:18,426: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:18,616: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:18,806: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:19,026: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:19,224: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:19,471: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:19,656: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:19,849: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:20,066: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:20,266: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:20,506: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:20,706: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:20,895: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:21,095: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:21,317: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:21,557: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:21,746: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:21,935: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:22,135: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:22,357: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:22,556: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:22,796: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:22,986: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:23,186: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:23,386: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rosout][ERROR] 2020-12-07 09:30:23,597: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7f27edb255b0>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 149, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+IndexError: index 40 is out of bounds for dimension 0 with size 40
+
+[rospy.core][INFO] 2020-12-07 09:30:23,651: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-07 09:30:23,661: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-07 09:30:23,661: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-07 09:30:23,662: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-07 09:30:23,662: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:36049/
+[rospy.internal][INFO] 2020-12-07 09:30:23,663: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:36049/
+[rospy.internal][WARNING] 2020-12-07 09:30:23,663: Unknown error initiating TCP/IP socket to 192.168.0.201:44725 (http://192.168.0.201:36049/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-07 09:30:23,664: topic[/bev/raycast_image] removing connection to http://192.168.0.201:37487/
+[rospy.internal][WARNING] 2020-12-07 09:30:23,665: Unknown error initiating TCP/IP socket to 192.168.0.201:52859 (http://192.168.0.201:37487/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-07 09:30:23,665: topic[/odom] removing connection to http://192.168.0.201:33281/
+[rospy.internal][INFO] 2020-12-07 09:30:23,665: topic[/start_goal_points] removing connection to http://192.168.0.201:39321/
+[rospy.internal][INFO] 2020-12-07 09:30:23,666: topic[/scan] removing connection to http://192.168.0.201:33281/
+[rospy.internal][INFO] 2020-12-07 09:30:23,666: topic[/scan] removing connection to http://192.168.0.201:45983/
+[rospy.internal][INFO] 2020-12-07 09:30:23,666: topic[/is_start_episode] removing connection to http://192.168.0.201:44577/
+[rospy.impl.masterslave][INFO] 2020-12-07 09:30:23,667: signal-2
+[rospy.core][INFO] 2020-12-07 09:30:24,151: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,181: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,212: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,241: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,300: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,325: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,336: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-07 09:30:24,352: signal_shutdown [atexit]

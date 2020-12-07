@@ -19,6 +19,7 @@ from geometry_msgs.msg import PoseArray
 from nav_msgs.msg import Odometry
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import Bool
+from std_msgs.msg import Float32MultiArray
 from tf.transformations import euler_from_quaternion
 
 import cv2
@@ -63,7 +64,8 @@ LOG_DIR = "./logs/experiment1"
 # BATCH_SIZE = 1024 # minibatch size
 BATCH_SIZE = 128 # minibatch size
 CAPACITY = 200000 # replay buffer size
-INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+# INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
 NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 LOSS_THRESHOLD = 0.1 # threshold of loss
@@ -73,7 +75,8 @@ MODEL_PATH = './model/model.pth'
 
 class ROSNode():
     def __init__(self):
-        self.sub_flow = rospy.Subscriber("/bev/flow_image", Image, self.flow_image_callback)
+        self.sub_flow_x = rospy.Subscriber("/bev/flow_array_x", Float32MultiArray, self.flow_x_callback)
+        self.sub_flow_y = rospy.Subscriber("/bev/flow_array_y", Float32MultiArray, self.flow_y_callback)
         self.sub_occupancy = rospy.Subscriber("/bev/raycast_image", Image, self.occupancy_image_callback)
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
@@ -92,8 +95,14 @@ class ROSNode():
         self.map_grid_size = MAP_GRID_SIZE
         self.map_range = MAP_RANGE
         self.robot_rsize = ROBOT_RSIZE
+        self.flow_x = torch.zeros(IMAGE_SIZE, IMAGE_SIZE)
+        self.flow_y = torch.zeros(IMAGE_SIZE, IMAGE_SIZE)
+        self.flow_xy = torch.zeros(2, IMAGE_SIZE, IMAGE_SIZE)
 
-        self.flow_callback_flag = False
+        self.flow_x_callback_flag = False
+        self.flow_y_callback_flag = False
+        self.flow_xy_callback_flag = False
+        # self.flow_callback_flag = False
         self.occupancy_callback_flag = False
         self.odom_callback_flag = False
         self.posearray_callback_flag = False
@@ -120,14 +129,44 @@ class ROSNode():
         maps[0] = tensor_occupancy_image
         self.occupancy_callback_flag = True
 
-    def flow_image_callback(self, msg):
-        # print("flow_image_callback")
-        cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
-        cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
-        tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
-        # tensor_flow_image = torch.from_numpy(cv_flow_image)
-        maps[1] = tensor_flow_image
-        self.flow_callback_flag = True
+    # def flow_image_callback(self, msg):
+    #     # print("flow_image_callback")
+    #     cv_flow_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+    #     cv_flow_image = cv2.cvtColor(cv_flow_image, cv2.COLOR_BGR2RGB)
+    #     tensor_flow_image = kornia.image_to_tensor(cv_flow_image, keepdim=True).float()
+    #     # tensor_flow_image = torch.from_numpy(cv_flow_image)
+    #     maps[1] = tensor_flow_image
+    #     self.flow_callback_flag = True
+
+    def flow_x_callback(self, msg):
+        data_offset = msg.layout.data_offset
+        row = 0
+        col = 0
+        for i in range(len(msg.data)):
+            if (i + 1) % data_offset == 0:
+                col += 1
+            row = i - col * data_offset
+            if row < IMAGE_SIZE and col < IMAGE_SIZE:
+                self.flow_x[row][col] = msg.data[i]
+        self.flow_x_callback_flag = True
+
+    def flow_y_callback(self, msg):
+        data_offset = msg.layout.data_offset
+        row = 0
+        col = 0
+        for i in range(len(msg.data)):
+            if (i + 1) % data_offset == 0:
+                col += 1
+            row = i - col * data_offset
+            if row < IMAGE_SIZE and col < IMAGE_SIZE:
+                self.flow_y[row][col] = msg.data[i]
+        self.flow_y_callback_flag = True
+            
+    def concat_flow_xy(self):
+        flow_list = [self.flow_x, self.flow_y]
+        flow_xy = torch.cat(flow_list, 0)
+        maps[1] = self.flow_xy
+        self.flow_xy_callback_flag = True
 
     def odom_callback(self, msg):
         # print("odom_callback")
@@ -229,22 +268,22 @@ class Network(nn.Module):
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state_m, state_g, state_v):
-        # print("state_m.size() = ", state_m.size())
-        # print("state_g.size() = ", state_g.size())
-        # print("state_v.size() = ", state_v.size())
+        print("state_m.size() = ", state_m.size())
+        print("state_g.size() = ", state_g.size())
+        print("state_v.size() = ", state_v.size())
         x_m = F.relu(self.conv1(state_m))
-        # print("conv1 -> x_m.size() = ", x_m.size())
+        print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))
-        # print("conv2 -> x_m.size() = ", x_m.size())
+        print("conv2 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv3(x_m))
-        # print("conv3 -> x_m.size() = ", x_m.size())
+        print("conv3 -> x_m.size() = ", x_m.size())
 
         x_gv_ = torch.cat((state_g, state_v), 1)
         x_gv_ = F.relu(self.fc1(x_gv_))
-        # print("x_gv_.size() = ", x_gv_.size())
+        print("x_gv_.size() = ", x_gv_.size())
         convw = x_m.shape[2]
         convh = x_m.shape[3]
-        # print("convw =", convw, ", convh =", convh)
+        print("convw =", convw, ", convh =", convh)
         x_gv = torch.empty(BATCH_SIZE, convw, convh)
         
         for i in range(64):
@@ -252,7 +291,7 @@ class Network(nn.Module):
             tile_gv = torch.full((convw, convh), value)
             x_gv = torch.stack(tuple(tile_gv), 0)
         
-        # print("x_gv.size() = ", x_gv.size())
+        print("x_gv.size() = ", x_gv.size())
 
         x_m = x_m.to('cpu')
         x_gv = x_gv.to('cpu')
@@ -262,29 +301,29 @@ class Network(nn.Module):
         x_pls = F.relu(self.conv3(x_pls))
         x_pls = F.relu(self.conv3(x_pls))
         x_pls = F.relu(self.conv3(x_pls))
-        # print("x_pls.size() = ", x_pls.size())
+        print("x_pls.size() = ", x_pls.size())
 
-        # batch_flattened_length = x_pls.shape[1] * x_pls.shape[2] * x_pls.shape[3]
-        # x = torch.empty(BATCH_SIZE, batch_flattened_length)
+        ## batch_flattened_length = x_pls.shape[1] * x_pls.shape[2] * x_pls.shape[3]
+        ## x = torch.empty(BATCH_SIZE, batch_flattened_length)
         x = torch.flatten(x_pls, start_dim=1)
-        # print("x.size() = ", x.size())
+        print("x.size() = ", x.size())
 
         x = F.relu(self.fc2(x))
-        # print("fc2 -> x.size() = ", x.size())
+        print("fc2 -> x.size() = ", x.size())
         x = F.relu(self.fc3(x))
-        # print("fc3 -> x.size() = ", x.size())
+        print("fc3 -> x.size() = ", x.size())
         adv = self.fc4_ea(x)
         val = self.fc4_ev(x)
-        # adv = torch.unsqueeze(adv, 0)
-        # print("adv.size() = ", adv.size())
-        # val = torch.unsqueeze(val, 0)
-        # print("val.size() = ", val.size())
+        ## adv = torch.unsqueeze(adv, 0)
+        print("adv.size() = ", adv.size())
+        ## val = torch.unsqueeze(val, 0)
+        print("val.size() = ", val.size())
         adv = adv.to('cpu')
         val = val.to('cpu')
 
         output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
         output = output.to(device)
-        # print("output.size()", output.size())
+        print("output.size()", output.size())
 
         return output
 
@@ -447,7 +486,7 @@ class Environment:
 
     def make_concat_map(self, occupancy_map, flow_map):
         # occupancy_map.size() = torch.Size([H, W])
-        # flow_map.size() = torch.Size([3, H, W])
+        # flow_map.size() = torch.Size([3->2, H, W])
 
         # print("occupancy_map.size() = ", occupancy_map.size())
         occupancy_map = torch.unsqueeze(occupancy_map, 0)
@@ -459,7 +498,7 @@ class Environment:
         concat_map = torch.cat((flow_map, occupancy_map.expand(*repeat_vals)), 0)
         # print("concat_map.size() = ", concat_map.size())
         # concat_map = torch.stack((flow_map, occupancy_map), 2)
-        # concat_map.size() = torch.Size([4, H, W])    
+        # concat_map.size() = torch.Size([4->3, H, W])    
         # concat_map = torch.unsqueeze(concat_map, 0)
         
         return concat_map
@@ -520,12 +559,17 @@ def main():
 
     print("ros : start!")
     while not rospy.is_shutdown():
-        # print("[1] ros.flow_callback_flag:", ros.flow_callback_flag)
+        if ros.flow_x_callback_flag and ros.flow_y_callback_flag:
+            ros.concat_flow_xy()
+        # print("[0] ros.flow_x_callback_flag:", ros.flow_x_callback_flag)
+        # print("[0] ros.flow_y_callback_flag:", ros.flow_y_callback_flag)
+        # print("[1] ros.flow_xy_callback_flag:", ros.flow_xy_callback_flag)
         # print("[2] ros.occupancy_callback_flag:", ros.occupancy_callback_flag)
         # print("[3] ros.odom_callback_flag:", ros.odom_callback_flag)
         # print("[4] ros.posearray_callback_flag:", ros.posearray_callback_flag)
         # print("[5] ros.laser_callback_flag:", ros.laser_callback_flag)
-        if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag and ros.is_start_callback_flag:
+        # if ros.flow_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag and ros.is_start_callback_flag:
+        if ros.flow_xy_callback_flag and ros.occupancy_callback_flag and ros.odom_callback_flag and ros.posearray_callback_flag and ros.laser_callback_flag and ros.is_start_callback_flag:
             print("ros flags : OK")
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
@@ -535,7 +579,8 @@ def main():
             flow_map = maps[1] #tensor
 
             concat_map = train_env.make_concat_map(occupancy_map, flow_map)
-            observe_m = train_env.make_temporal_maps(concat_map, is_first)
+            # observe_m = train_env.make_temporal_maps(concat_map, is_first)
+            observe_m = concat_map
             observe_m = torch.unsqueeze(observe_m, 0)
             observe_m = observe_m.to(device)
             # print("observe_m.size() = ", observe_m.size())
@@ -576,7 +621,9 @@ def main():
             train_env.agent.memorize(state_m, state_g, state_v, action, observe_m, observe_g, observe_v, reward)
             train_env.agent.update_q_function()
 
-            ros.flow_callback_flag = False
+            ros.flow_xy_callback_flag = False
+            ros.flow_x_callback_flag = False
+            ros.flow_y_callback_flag = False
             ros.occupancy_callback_flag = False
             ros.odom_callback_flag = False
             ros.posearray_callback_flag = False

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # IMAGE_NAME=yoshi/flow_field_based_motion_planner:latest
-IMAGE_NAME=ffmp_image_1118:latest
+IMAGE_NAME=yoshi/ffmp1206:latest
 
 DIR=$(cd $(dirname $0); pwd)
 # docker run -it --rm -p 10000:20022\
