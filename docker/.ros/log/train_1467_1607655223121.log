@@ -1,0 +1,256 @@
+[rospy.client][INFO] 2020-12-11 02:53:43,162: init_node, name[/train_1467_1607655223121], pid[1467]
+[xmlrpc][INFO] 2020-12-11 02:53:43,163: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-11 02:53:43,164: Started XML-RPC server [http://192.168.0.191:34011/]
+[rospy.init][INFO] 2020-12-11 02:53:43,164: ROS Slave URI: [http://192.168.0.191:34011/]
+[rospy.impl.masterslave][INFO] 2020-12-11 02:53:43,164: _ready: http://192.168.0.191:34011/
+[rospy.registration][INFO] 2020-12-11 02:53:43,166: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-11 02:53:43,166: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-11 02:53:43,265: registered with master
+[rospy.rosout][INFO] 2020-12-11 02:53:43,265: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-11 02:53:43,271: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-11 02:53:43,273: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-11 02:53:43,293: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:33901/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,300: topic[/odom] adding connection to [http://192.168.0.201:34953/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,310: topic[/scan] adding connection to [http://192.168.0.201:45675/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,311: topic[/scan] adding connection to [http://192.168.0.201:34953/], count 1
+[rospy.internal][INFO] 2020-12-11 02:53:43,319: topic[/is_start_episode] adding connection to [http://192.168.0.201:36415/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,321: topic[/start_goal_points] adding connection to [http://192.168.0.201:36549/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,325: topic[/bev/raycast_image] adding connection to [http://192.168.0.201:41013/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,326: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:33901/], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,514: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-12-11 02:53:43,520: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-12-11 02:53:43,527: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rospy.internal][INFO] 2020-12-11 02:53:43,612: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rosout][ERROR] 2020-12-11 02:53:43,737: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:43,957: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:44,182: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:44,394: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:44,609: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:44,808: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:45,017: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:45,237: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:45,447: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:45,657: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:45,898: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:46,097: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:46,300: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:46,516: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:46,726: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:46,936: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:47,157: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:47,410: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:47,584: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:47,804: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:48,011: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:48,216: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rosout][ERROR] 2020-12-11 02:53:48,436: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fc3d8cf3280>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 135, in raycast_multiarray_callback
+    data_offset = msg.layout.data_offset
+AttributeError: 'Image' object has no attribute 'layout'
+
+[rospy.core][INFO] 2020-12-11 02:53:48,616: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-11 02:53:48,622: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-11 02:53:48,623: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-11 02:53:48,623: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-11 02:53:48,624: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:33901/
+[rospy.internal][INFO] 2020-12-11 02:53:48,624: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:33901/
+[rospy.internal][INFO] 2020-12-11 02:53:48,625: topic[/bev/raycast_image] removing connection to http://192.168.0.201:41013/
+[rospy.internal][INFO] 2020-12-11 02:53:48,625: topic[/odom] removing connection to http://192.168.0.201:34953/
+[rospy.internal][INFO] 2020-12-11 02:53:48,626: topic[/start_goal_points] removing connection to http://192.168.0.201:36549/
+[rospy.internal][INFO] 2020-12-11 02:53:48,626: topic[/scan] removing connection to http://192.168.0.201:45675/
+[rospy.internal][INFO] 2020-12-11 02:53:48,627: topic[/scan] removing connection to http://192.168.0.201:34953/
+[rospy.internal][INFO] 2020-12-11 02:53:48,627: topic[/is_start_episode] removing connection to http://192.168.0.201:36415/
+[rospy.impl.masterslave][INFO] 2020-12-11 02:53:48,628: signal-2
+[rospy.internal][WARNING] 2020-12-11 02:53:48,630: Unknown error initiating TCP/IP socket to 192.168.0.201:50623 (http://192.168.0.201:36549/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-11 02:53:48,631: Unknown error initiating TCP/IP socket to 192.168.0.201:35061 (http://192.168.0.201:34953/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-11 02:53:48,632: Unknown error initiating TCP/IP socket to 192.168.0.201:41833 (http://192.168.0.201:36415/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-12-11 02:53:49,116: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,146: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,177: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,207: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,244: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,270: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,298: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:53:49,299: signal_shutdown [atexit]

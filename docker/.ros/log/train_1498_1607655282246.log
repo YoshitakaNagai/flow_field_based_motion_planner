@@ -1,0 +1,192 @@
+[rospy.client][INFO] 2020-12-11 02:54:42,279: init_node, name[/train_1498_1607655282246], pid[1498]
+[xmlrpc][INFO] 2020-12-11 02:54:42,279: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-11 02:54:42,280: Started XML-RPC server [http://192.168.0.191:43195/]
+[rospy.init][INFO] 2020-12-11 02:54:42,280: ROS Slave URI: [http://192.168.0.191:43195/]
+[rospy.impl.masterslave][INFO] 2020-12-11 02:54:42,281: _ready: http://192.168.0.191:43195/
+[rospy.registration][INFO] 2020-12-11 02:54:42,282: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-11 02:54:42,282: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-11 02:54:42,381: registered with master
+[rospy.rosout][INFO] 2020-12-11 02:54:42,381: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-11 02:54:42,387: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-11 02:54:42,389: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-11 02:54:42,419: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:33901/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,423: topic[/is_start_episode] adding connection to [http://192.168.0.201:36415/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,428: topic[/scan] adding connection to [http://192.168.0.201:34953/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,430: topic[/start_goal_points] adding connection to [http://192.168.0.201:36549/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,432: topic[/scan] adding connection to [http://192.168.0.201:45675/], count 1
+[rospy.internal][INFO] 2020-12-11 02:54:42,436: topic[/odom] adding connection to [http://192.168.0.201:34953/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,438: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:33901/], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,438: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:41013/], count 0
+[rospy.internal][ERROR] 2020-12-11 02:54:42,442: Unable to initiate TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:54:42,442: unable to create subscriber transport: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection..  Will try again in 0.5s
+[rospy.internal][INFO] 2020-12-11 02:54:42,624: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,626: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-12-11 02:54:42,713: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][ERROR] 2020-12-11 02:54:43,447: Unable to initiate TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:54:44,450: Unable to initiate TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:54:46,454: Unable to initiate TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:54:50,461: Unable to initiate TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][WARNING] 2020-12-11 02:54:58,503: Unknown error initiating TCP/IP socket to 192.168.0.201:36897 (http://192.168.0.201:41013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 560, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2020-12-11 02:54:58,514: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:41013/
+[rospy.internal][INFO] 2020-12-11 02:54:59,223: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:43039/], count 0
+[rospy.internal][ERROR] 2020-12-11 02:54:59,226: Unable to initiate TCP/IP socket to 192.168.0.201:51975 (http://192.168.0.201:43039/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:54:59,226: unable to create subscriber transport: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection..  Will try again in 0.5s
+[rospy.internal][ERROR] 2020-12-11 02:55:00,230: Unable to initiate TCP/IP socket to 192.168.0.201:51975 (http://192.168.0.201:43039/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:55:01,233: Unable to initiate TCP/IP socket to 192.168.0.201:51975 (http://192.168.0.201:43039/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:55:03,237: Unable to initiate TCP/IP socket to 192.168.0.201:51975 (http://192.168.0.201:43039/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][WARNING] 2020-12-11 02:55:07,243: Unknown error initiating TCP/IP socket to 192.168.0.201:51975 (http://192.168.0.201:43039/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 560, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2020-12-11 02:55:07,244: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:43039/
+[rospy.internal][INFO] 2020-12-11 02:55:20,355: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:40259/], count 0
+[rospy.internal][ERROR] 2020-12-11 02:55:20,358: Unable to initiate TCP/IP socket to 192.168.0.201:36193 (http://192.168.0.201:40259/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][ERROR] 2020-12-11 02:55:20,358: unable to create subscriber transport: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection..  Will try again in 0.5s
+[rospy.internal][ERROR] 2020-12-11 02:55:21,373: Unable to initiate TCP/IP socket to 192.168.0.201:36193 (http://192.168.0.201:40259/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 600, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+rospy.exceptions.TransportInitError: remote error reported: Client [/train_1498_1607655282246] wants topic /bev/raycast_multiarray to have datatype/md5sum [sensor_msgs/Image/060021388200f6f0f447d0fcd9c64743], but our version has [std_msgs/Float32MultiArray/6a40e0ffa6a17a503ac3f8616991b1f6]. Dropping connection.
+
+[rospy.internal][WARNING] 2020-12-11 02:55:22,407: Unknown error initiating TCP/IP socket to 192.168.0.201:36193 (http://192.168.0.201:40259/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 560, in connect
+    self.socket.connect((dest_addr, dest_port))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2020-12-11 02:55:22,416: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:40259/
+[rospy.core][INFO] 2020-12-11 02:56:59,125: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-11 02:56:59,134: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-11 02:56:59,134: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-11 02:56:59,135: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-11 02:56:59,135: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:33901/
+[rospy.internal][INFO] 2020-12-11 02:56:59,136: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:33901/
+[rospy.internal][INFO] 2020-12-11 02:56:59,137: topic[/odom] removing connection to http://192.168.0.201:34953/
+[rospy.internal][WARNING] 2020-12-11 02:56:59,137: Unknown error initiating TCP/IP socket to 192.168.0.201:36305 (http://192.168.0.201:33901/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-11 02:56:59,137: topic[/start_goal_points] removing connection to http://192.168.0.201:36549/
+[rospy.internal][WARNING] 2020-12-11 02:56:59,138: Unknown error initiating TCP/IP socket to 192.168.0.201:35061 (http://192.168.0.201:34953/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-11 02:56:59,139: topic[/scan] removing connection to http://192.168.0.201:34953/
+[rospy.internal][INFO] 2020-12-11 02:56:59,139: topic[/scan] removing connection to http://192.168.0.201:45675/
+[rospy.internal][WARNING] 2020-12-11 02:56:59,140: Unknown error initiating TCP/IP socket to 192.168.0.201:35061 (http://192.168.0.201:34953/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-11 02:56:59,140: topic[/is_start_episode] removing connection to http://192.168.0.201:36415/
+[rospy.impl.masterslave][INFO] 2020-12-11 02:56:59,140: signal-2
+[rospy.internal][WARNING] 2020-12-11 02:56:59,141: Unknown error initiating TCP/IP socket to 192.168.0.201:41833 (http://192.168.0.201:36415/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-12-11 02:56:59,624: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,654: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,685: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,714: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,756: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,801: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,811: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 02:56:59,822: signal_shutdown [atexit]
