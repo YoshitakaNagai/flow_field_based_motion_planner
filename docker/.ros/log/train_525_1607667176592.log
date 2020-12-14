@@ -1,0 +1,169 @@
+[rospy.client][INFO] 2020-12-11 06:12:56,624: init_node, name[/train_525_1607667176592], pid[525]
+[xmlrpc][INFO] 2020-12-11 06:12:56,625: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-11 06:12:56,626: Started XML-RPC server [http://192.168.0.191:35167/]
+[rospy.init][INFO] 2020-12-11 06:12:56,626: ROS Slave URI: [http://192.168.0.191:35167/]
+[rospy.impl.masterslave][INFO] 2020-12-11 06:12:56,626: _ready: http://192.168.0.191:35167/
+[rospy.registration][INFO] 2020-12-11 06:12:56,628: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-11 06:12:56,628: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-11 06:12:56,727: registered with master
+[rospy.rosout][INFO] 2020-12-11 06:12:56,727: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-11 06:12:56,732: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-11 06:12:56,734: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-11 06:12:56,753: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,766: topic[/scan] adding connection to [http://192.168.0.201:46111/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,767: topic[/scan] adding connection to [http://192.168.0.201:32805/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,769: topic[/is_start_episode] adding connection to [http://192.168.0.201:39135/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,779: topic[/start_goal_points] adding connection to [http://192.168.0.201:44349/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,780: topic[/odom] adding connection to [http://192.168.0.201:32805/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,783: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:42013/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,785: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,891: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-12-11 06:12:56,970: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rospy.internal][INFO] 2020-12-11 06:12:56,990: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-12-11 06:12:56,991: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rosout][ERROR] 2020-12-11 06:12:57,161: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:57,356: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:57,568: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:57,771: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:57,981: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:58,191: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:58,401: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:58,601: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:58,811: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:12:59,050: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fb75095a580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rospy.core][INFO] 2020-12-11 06:12:59,107: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-11 06:12:59,111: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-11 06:12:59,112: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-11 06:12:59,112: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-11 06:12:59,112: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:33183/
+[rospy.internal][INFO] 2020-12-11 06:12:59,113: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:33183/
+[rospy.internal][INFO] 2020-12-11 06:12:59,113: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:42013/
+[rospy.internal][INFO] 2020-12-11 06:12:59,114: topic[/odom] removing connection to http://192.168.0.201:32805/
+[rospy.internal][INFO] 2020-12-11 06:12:59,114: topic[/start_goal_points] removing connection to http://192.168.0.201:44349/
+[rospy.internal][WARNING] 2020-12-11 06:12:59,115: Unknown error initiating TCP/IP socket to 192.168.0.201:38421 (http://192.168.0.201:32805/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-11 06:12:59,116: topic[/scan] removing connection to http://192.168.0.201:46111/
+[rospy.internal][WARNING] 2020-12-11 06:12:59,116: Unknown error initiating TCP/IP socket to 192.168.0.201:47983 (http://192.168.0.201:33183/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-11 06:12:59,117: Unknown error initiating TCP/IP socket to 192.168.0.201:57601 (http://192.168.0.201:46111/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-11 06:12:59,117: topic[/scan] removing connection to http://192.168.0.201:32805/
+[rospy.internal][WARNING] 2020-12-11 06:12:59,117: Unknown error initiating TCP/IP socket to 192.168.0.201:38421 (http://192.168.0.201:32805/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-11 06:12:59,118: topic[/is_start_episode] removing connection to http://192.168.0.201:39135/
+[rospy.internal][WARNING] 2020-12-11 06:12:59,118: Unknown error initiating TCP/IP socket to 192.168.0.201:45437 (http://192.168.0.201:39135/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2020-12-11 06:12:59,118: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 846, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2020-12-11 06:12:59,119: signal-2
+[rospy.core][INFO] 2020-12-11 06:12:59,593: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,623: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,655: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,685: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,718: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,764: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,778: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:12:59,785: signal_shutdown [atexit]

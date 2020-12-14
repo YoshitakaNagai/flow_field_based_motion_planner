@@ -1,0 +1,680 @@
+[rospy.client][INFO] 2020-12-11 06:08:20,991: init_node, name[/train_432_1607666900945], pid[432]
+[xmlrpc][INFO] 2020-12-11 06:08:20,992: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-11 06:08:20,992: Started XML-RPC server [http://192.168.0.191:46423/]
+[rospy.init][INFO] 2020-12-11 06:08:20,992: ROS Slave URI: [http://192.168.0.191:46423/]
+[rospy.impl.masterslave][INFO] 2020-12-11 06:08:20,993: _ready: http://192.168.0.191:46423/
+[rospy.registration][INFO] 2020-12-11 06:08:20,994: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-11 06:08:20,994: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-11 06:08:21,093: registered with master
+[rospy.rosout][INFO] 2020-12-11 06:08:21,093: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-11 06:08:21,097: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-11 06:08:21,099: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-11 06:08:21,108: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:08:21,112: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:08:21,117: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:42013/], count 0
+[rospy.internal][INFO] 2020-12-11 06:08:21,126: topic[/odom] adding connection to [http://192.168.0.201:32805/], count 0
+[rosout][ERROR] 2020-12-11 06:08:21,122: bad callback: <bound method ROSNode.flow_x_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 167, in flow_x_callback
+    self.flow_x[row][col] = msg.data[i]
+AttributeError: 'ROSNode' object has no attribute 'flow_x'
+
+[rospy.internal][INFO] 2020-12-11 06:08:21,130: topic[/start_goal_points] adding connection to [http://192.168.0.201:44349/], count 0
+[rosout][ERROR] 2020-12-11 06:08:21,128: bad callback: <bound method ROSNode.flow_y_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 179, in flow_y_callback
+    self.flow_y[row][col] = msg.data[i]
+AttributeError: 'ROSNode' object has no attribute 'flow_y'
+
+[rospy.internal][INFO] 2020-12-11 06:08:21,139: topic[/scan] adding connection to [http://192.168.0.201:32805/], count 0
+[rospy.internal][INFO] 2020-12-11 06:08:21,141: topic[/scan] adding connection to [http://192.168.0.201:46111/], count 1
+[rospy.internal][INFO] 2020-12-11 06:08:21,142: topic[/is_start_episode] adding connection to [http://192.168.0.201:39135/], count 0
+[rosout][ERROR] 2020-12-11 06:08:21,238: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rospy.internal][INFO] 2020-12-11 06:08:21,369: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-11 06:08:21,370: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-12-11 06:08:21,445: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rospy.internal][INFO] 2020-12-11 06:08:21,470: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2020-12-11 06:08:21,655: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:21,864: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:22,067: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:22,271: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:22,471: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:22,681: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:22,891: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:23,091: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:23,301: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:23,501: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:23,711: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:23,929: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:24,160: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:24,345: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:24,567: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:24,765: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:24,971: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:25,171: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:25,381: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:25,591: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:25,791: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:26,001: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:26,211: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:26,423: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:26,655: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:26,840: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:27,045: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:27,245: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:27,455: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:27,666: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:27,867: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:28,071: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:28,281: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:28,481: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:28,691: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:28,891: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:29,101: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:29,311: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:29,511: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:29,734: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:29,956: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:30,151: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:30,367: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:30,555: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:30,766: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:30,971: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:31,175: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:31,381: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:31,591: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:31,801: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:32,011: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:32,223: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:32,445: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:32,645: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:32,856: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:33,054: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:33,256: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:33,470: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:33,671: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:33,881: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:34,091: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:34,301: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:34,501: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:34,711: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:34,924: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:35,141: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:35,351: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:35,551: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:35,756: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:35,971: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:36,175: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rosout][ERROR] 2020-12-11 06:08:36,391: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7fec21c71580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 139, in raycast_multiarray_callback
+    row = i - col * data_offset
+UnboundLocalError: local variable 'col' referenced before assignment
+
+[rospy.core][INFO] 2020-12-11 06:08:36,473: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-11 06:08:36,481: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-11 06:08:36,481: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-11 06:08:36,482: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-11 06:08:36,482: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:33183/
+[rospy.internal][INFO] 2020-12-11 06:08:36,484: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:33183/
+[rospy.internal][WARNING] 2020-12-11 06:08:36,485: Unknown error initiating TCP/IP socket to 192.168.0.201:47983 (http://192.168.0.201:33183/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-11 06:08:36,485: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:42013/
+[rospy.internal][WARNING] 2020-12-11 06:08:36,486: Unknown error initiating TCP/IP socket to 192.168.0.201:40633 (http://192.168.0.201:42013/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-11 06:08:36,486: topic[/odom] removing connection to http://192.168.0.201:32805/
+[rospy.internal][WARNING] 2020-12-11 06:08:36,487: Unknown error initiating TCP/IP socket to 192.168.0.201:47983 (http://192.168.0.201:33183/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][WARNING] 2020-12-11 06:08:36,488: Unknown error initiating TCP/IP socket to 192.168.0.201:38421 (http://192.168.0.201:32805/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2020-12-11 06:08:36,488: topic[/start_goal_points] removing connection to http://192.168.0.201:44349/
+[rospy.internal][INFO] 2020-12-11 06:08:36,489: topic[/scan] removing connection to http://192.168.0.201:32805/
+[rospy.internal][INFO] 2020-12-11 06:08:36,490: topic[/scan] removing connection to http://192.168.0.201:46111/
+[rospy.internal][INFO] 2020-12-11 06:08:36,490: topic[/is_start_episode] removing connection to http://192.168.0.201:39135/
+[rospy.impl.masterslave][INFO] 2020-12-11 06:08:36,491: signal-2
+[rospy.internal][WARNING] 2020-12-11 06:08:36,491: Unknown error initiating TCP/IP socket to 192.168.0.201:45437 (http://192.168.0.201:39135/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-12-11 06:08:36,973: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,005: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,036: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,065: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,096: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,139: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,163: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:08:37,164: signal_shutdown [atexit]

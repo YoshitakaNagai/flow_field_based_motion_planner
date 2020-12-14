@@ -11,11 +11,12 @@ from gym.utils import seeding
 # import robot
 from .robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 
-MAP_RANGE = 5.0 # [m]
+MAP_RANGE = 10.0 # [m]
 MAP_GRID_NUM = 40 # [grids]
 MAP_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 ROBOT_RSIZE = 0.13 # [m]
-
+MAP_RESOLUTION = 0.2
+GOAL_THRESHOLH = 0.5
 
 
 class FFMP(gym.Env):
@@ -34,7 +35,7 @@ class FFMP(gym.Env):
         # [2-1] local_map
         self.map_range = MAP_RANGE #[m]
         self.map_grid_num = MAP_GRID_NUM #[grids]
-        self.map_grid_size = self.map_range / self.map_grid_num
+        self.map_grid_size = MAP_RESOLUTION
         self.map_channels = MAP_CHANNELS #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
         self.map_low  = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 0)
         self.map_high = np.full((self.map_grid_num, self.map_grid_num, self.map_channels), 255)
@@ -117,7 +118,7 @@ class FFMP(gym.Env):
 
 
     def is_goal(self, cur_relative_goal_dist):
-        dist_threshold = 0.2 #[m]
+        dist_threshold = GOAL_THRESHOLH #[m]
         is_goal = False
 
         if cur_relative_goal_dist < dist_threshold:
@@ -184,4 +185,4 @@ class FFMP(gym.Env):
         reward = self.reward_calculator(relative_goal_info, is_collide, is_goal, is_first)
         is_done = self.is_done(is_collide, is_goal)
 
-        return reward, is_done
+        return reward, is_done, is_goal

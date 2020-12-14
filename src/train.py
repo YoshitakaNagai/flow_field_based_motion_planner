@@ -61,8 +61,8 @@ GAMMA = 0.99 # discount factor
 MAX_STEPS = 10000
 NUM_EPISODES = 1000000
 LOG_DIR = "./logs/experiment1"
-# BATCH_SIZE = 1024 # minibatch size
-BATCH_SIZE = 128 # minibatch size
+BATCH_SIZE = 1024 # minibatch size
+# BATCH_SIZE = 128 # minibatch size
 CAPACITY = 200000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
@@ -70,7 +70,9 @@ NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
 LOSS_THRESHOLD = 1.0 # threshold of loss
-LOSS_MEMORY_CAPACITY = 10
+LOSS_MEMORY_CAPACITY = 100
+REACH_RATE_THRESHOLD = 0.90
+REACH_MEMORY_CAPACITY = 100
 MODEL_PATH = './model/model.pth'
 ################
 
@@ -78,7 +80,7 @@ class ROSNode():
     def __init__(self):
         self.sub_flow_x = rospy.Subscriber("/bev/flow_array_x", Float32MultiArray, self.flow_x_callback)
         self.sub_flow_y = rospy.Subscriber("/bev/flow_array_y", Float32MultiArray, self.flow_y_callback)
-        self.sub_raycast = rospy.Subscriber("/bev/raycast_multiarray", Image, self.raycast_multiarray_callback)
+        self.sub_raycast = rospy.Subscriber("/bev/raycast_multiarray", Float32MultiArray, self.raycast_multiarray_callback)
         self.sub_odom = rospy.Subscriber("/odom", Odometry, self.odom_callback)
         self.sub_start_goal = rospy.Subscriber("/start_goal_points", PoseArray, self.pose_array_callback)
         self.sub_laser = rospy.Subscriber("/scan", LaserScan, self.laser_callback)
@@ -133,16 +135,18 @@ class ROSNode():
 
     def raycast_multiarray_callback(self, msg):
         data_offset = msg.layout.data_offset
+        row = 0
+        col = 0
         for i in range(len(msg.data)):
             if (i + 1) % data_offset == 0:
                 col += 1
             row = i - col * data_offset
             if row < IMAGE_SIZE and col < IMAGE_SIZE:
                 self.raycast[row, col] = msg.data[i]
-                if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
-                    self.raycast[i, j] = 1.0
+                if math.sqrt(math.pow(row * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(col * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+                    self.raycast[row][col] = 1.0
 
-        maps[0] = self.raycast[i, j]
+        maps[0] = self.raycast
         self.raycast_callback_flag = True
 
 
@@ -500,6 +504,7 @@ class Environment:
         self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
         self.loss_ave = None
         self.loss_convergence = False
+        self.reach_rate = 0.0
 
     def make_concat_map(self, occupancy_map, flow_map):
         # occupancy_map.size() = torch.Size([H, W])
@@ -559,6 +564,7 @@ def main():
 
     episode = 0
     step = 0
+    reach_times = np.empty(0)
     is_first = True
     is_done = True
     state_m = None
@@ -627,7 +633,18 @@ def main():
             tmp_tensor_occupancy = occupancy_map.clone()
             numpy_occupancy = tmp_tensor_occupancy.to('cpu').detach().numpy()
             # numpy_reward, is_done = train_env.env.rewarder(numpy_occupancy, relative_goal, is_first)
-            numpy_reward, is_done = train_env.env.rewarder2(ros.scan_data, relative_goal, is_first)
+            numpy_reward, is_done, is_goal = train_env.env.rewarder2(ros.scan_data, relative_goal, is_first)
+
+            if is_goal:
+                reach_times = np.append(reach_times, 1.0)
+            else:
+                reach_times = np.append(reach_times, 0.0)
+
+            if len(reach_times) > REACH_MEMORY_CAPACITY:
+                reach_times = np.delete(reach_times, 0, None)
+            
+            train_env.reach_rate = np.average(reach_times)
+            
             # reward = torch.as_tensor(numpy_reward.astype('float32')).clone()
             reward = torch.as_tensor(float(numpy_reward)).clone()
             reward = torch.unsqueeze(reward, 0)
@@ -655,12 +672,16 @@ def main():
                 if train_env.agent.brain.loss != None:
                     print("is_done : ", is_done)
                     loss_value = train_env.agent.brain.loss.item()
-                    print("EPISODE", episode, ": loss = ", loss_value)
+                    print("EPISODE :", episode)
+                    print("loss =", loss_value)
+                    print("reach_rate =", train_env.reach_rate)
 
                     # tensor_board.log_loss.append(loss_value)
                     # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
-                    tensor_board.writer.add_scalar('ours', loss_value, episode)
+                    tensor_board.writer.add_scalar('Flow Field Based Motion Planner', loss_value, episode)
                     writer.writerow([episode, loss_value])
+                    tensor_board.writer.add_scalar('Flow Field Based Motion Planner', train_env.reach_rate, episode)
+                    writer.writerow([episode, reach_rate])
 
                     episode += 1
                     step = 0
@@ -673,9 +694,15 @@ def main():
 
                     if train_env.loss_convergence:
                         torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
-                        print("COMPLETED TO LEARN!")
+                        print("COMPLETED TO LEARN! (loss)")
                         print("SAVED MODEL!")
                         is_complete = True
+                    if train_env.reach_rate > REACH_RATE_THRESHOLD:
+                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                        print("COMPLETED TO LEARN! (reach_rate)")
+                        print("SAVED MODEL!")
+                        is_complete = True
+
 
                 ros.cmd_vel_publisher(0.0, 0.0)
                 ros.done_flag_publisher(is_done)

@@ -1,0 +1,208 @@
+[rospy.client][INFO] 2020-12-11 06:10:49,917: init_node, name[/train_463_1607667049867], pid[463]
+[xmlrpc][INFO] 2020-12-11 06:10:49,925: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-11 06:10:49,925: Started XML-RPC server [http://192.168.0.191:43671/]
+[rospy.init][INFO] 2020-12-11 06:10:49,926: ROS Slave URI: [http://192.168.0.191:43671/]
+[rospy.impl.masterslave][INFO] 2020-12-11 06:10:49,926: _ready: http://192.168.0.191:43671/
+[rospy.registration][INFO] 2020-12-11 06:10:49,927: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-11 06:10:49,928: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-11 06:10:50,026: registered with master
+[rospy.rosout][INFO] 2020-12-11 06:10:50,027: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-11 06:10:50,033: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-11 06:10:50,034: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-11 06:10:50,062: topic[/bev/flow_array_x] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,067: topic[/is_start_episode] adding connection to [http://192.168.0.201:39135/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,069: topic[/scan] adding connection to [http://192.168.0.201:32805/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,075: topic[/scan] adding connection to [http://192.168.0.201:46111/], count 1
+[rospy.internal][INFO] 2020-12-11 06:10:50,080: topic[/start_goal_points] adding connection to [http://192.168.0.201:44349/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,080: topic[/odom] adding connection to [http://192.168.0.201:32805/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,085: topic[/bev/flow_array_y] adding connection to [http://192.168.0.201:33183/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,085: topic[/bev/raycast_multiarray] adding connection to [http://192.168.0.201:42013/], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,272: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rosout][ERROR] 2020-12-11 06:10:50,271: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rospy.internal][INFO] 2020-12-11 06:10:50,274: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-12-11 06:10:50,361: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2020-12-11 06:10:50,434: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:50,657: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:50,858: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:51,055: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:51,271: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:51,481: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:51,691: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:51,901: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:52,111: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:52,323: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:52,536: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:52,751: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:52,945: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:53,153: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:53,369: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:53,571: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:53,781: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rosout][ERROR] 2020-12-11 06:10:53,991: bad callback: <bound method ROSNode.raycast_multiarray_callback of <__main__.ROSNode object at 0x7f007bdc2580>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./train.py", line 144, in raycast_multiarray_callback
+    if math.sqrt(math.pow(i * self.map_grid_size - 0.5 * self.map_range, 2) + math.pow(j * self.map_grid_size - 0.5 * self.map_range, 2)) <= self.robot_rsize:
+NameError: name 'j' is not defined
+
+[rospy.core][INFO] 2020-12-11 06:10:54,103: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-11 06:10:54,110: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-11 06:10:54,111: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-11 06:10:54,111: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-11 06:10:54,112: topic[/bev/flow_array_x] removing connection to http://192.168.0.201:33183/
+[rospy.internal][INFO] 2020-12-11 06:10:54,112: topic[/bev/flow_array_y] removing connection to http://192.168.0.201:33183/
+[rospy.internal][INFO] 2020-12-11 06:10:54,113: topic[/bev/raycast_multiarray] removing connection to http://192.168.0.201:42013/
+[rospy.internal][INFO] 2020-12-11 06:10:54,113: topic[/odom] removing connection to http://192.168.0.201:32805/
+[rospy.internal][INFO] 2020-12-11 06:10:54,114: topic[/start_goal_points] removing connection to http://192.168.0.201:44349/
+[rospy.internal][INFO] 2020-12-11 06:10:54,114: topic[/scan] removing connection to http://192.168.0.201:32805/
+[rospy.internal][INFO] 2020-12-11 06:10:54,115: topic[/scan] removing connection to http://192.168.0.201:46111/
+[rospy.internal][INFO] 2020-12-11 06:10:54,115: topic[/is_start_episode] removing connection to http://192.168.0.201:39135/
+[rospy.impl.masterslave][INFO] 2020-12-11 06:10:54,116: signal-2
+[rospy.internal][WARNING] 2020-12-11 06:10:54,117: Unknown error initiating TCP/IP socket to 192.168.0.201:47841 (http://192.168.0.201:44349/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-11 06:10:54,118: Unknown error initiating TCP/IP socket to 192.168.0.201:45437 (http://192.168.0.201:39135/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2020-12-11 06:10:54,603: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,633: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,662: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,692: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,731: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,756: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-11 06:10:54,771: signal_shutdown [atexit]
