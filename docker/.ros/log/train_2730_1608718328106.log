@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2020-12-23 10:12:08,136: init_node, name[/train_2730_1608718328106], pid[2730]
+[xmlrpc][INFO] 2020-12-23 10:12:08,137: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-23 10:12:08,138: Started XML-RPC server [http://192.168.0.191:35887/]
+[rospy.init][INFO] 2020-12-23 10:12:08,138: ROS Slave URI: [http://192.168.0.191:35887/]
+[rospy.impl.masterslave][INFO] 2020-12-23 10:12:08,138: _ready: http://192.168.0.191:35887/
+[rospy.registration][INFO] 2020-12-23 10:12:08,139: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-23 10:12:08,140: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-23 10:12:08,238: registered with master
+[rospy.rosout][INFO] 2020-12-23 10:12:08,239: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-23 10:12:08,245: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-23 10:12:08,246: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-23 10:12:08,260: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:38273/], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,262: topic[/odom] adding connection to [http://192.168.0.201:39961/], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,267: topic[/start_goal_points] adding connection to [http://192.168.0.201:33305/], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,271: topic[/scan] adding connection to [http://192.168.0.201:39961/], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,274: topic[/scan] adding connection to [http://192.168.0.201:41653/], count 1
+[rospy.internal][INFO] 2020-12-23 10:12:08,278: topic[/is_start_episode] adding connection to [http://192.168.0.201:38289/], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,440: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,441: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-12-23 10:12:08,539: topic[/rosout] adding connection to [/rosout], count 0
