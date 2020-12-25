@@ -69,9 +69,9 @@ NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
 LOSS_THRESHOLD = 1.0 # threshold of loss
-LOSS_MEMORY_CAPACITY = 100
-REACH_RATE_THRESHOLD = 0.90
-REACH_MEMORY_CAPACITY = 100
+LOSS_MEMORY_CAPACITY = 10
+REACH_RATE_THRESHOLD = 0.70
+REACH_MEMORY_CAPACITY = 10
 MODEL_PATH = './model/model.pth'
 ################
 
@@ -545,8 +545,13 @@ def main():
             if step == MAX_STEPS:
                 is_done = True
             
+            if episode > 400:
+                print("[WARNING]:episode is more than 400!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             
             if is_done:
+                episode += 1
+                step = 0
+                
                 if train_env.agent.brain.loss != None:
                     print("is_done : ", is_done)
                     loss_value = train_env.agent.brain.loss.item()
@@ -556,13 +561,11 @@ def main():
 
                     # tensor_board.log_loss.append(loss_value)
                     # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
-                    tensor_board.writer.add_scalar('Flow Field Based Motion Planner', loss_value, episode)
+                    tensor_board.writer.add_scalar('LOSS [Flow Field Based Motion Planner]', loss_value, episode)
                     writer.writerow([episode, loss_value])
-                    tensor_board.writer.add_scalar('Flow Field Based Motion Planner', train_env.reach_rate, episode)
-                    writer.writerow([episode, reach_rate])
+                    tensor_board.writer.add_scalar('REACH_RATE [Flow Field Based Motion Planner]', train_env.reach_rate, episode)
+                    writer.writerow([episode, train_env.reach_rate])
 
-                    episode += 1
-                    step = 0
                     state_m = None
                     state_g = None
                     state_v = None

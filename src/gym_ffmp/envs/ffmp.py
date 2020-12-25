@@ -11,11 +11,11 @@ from gym.utils import seeding
 # import robot
 from .robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 
-MAP_RANGE = 10.0 # [m]
-MAP_GRID_NUM = 40 # [grids]
-MAP_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
+MAP_RANGE = 8.0 # [m]
+MAP_GRID_NUM = 80 # [grids]
+MAP_CHANNELS = 1 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 ROBOT_RSIZE = 0.13 # [m]
-MAP_RESOLUTION = 0.2
+MAP_RESOLUTION = 0.1
 GOAL_THRESHOLH = 0.5
 
 
