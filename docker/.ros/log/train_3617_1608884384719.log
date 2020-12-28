@@ -62,3 +62,29 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 [rospy.internal][INFO] 2020-12-25 08:21:03,970: topic[/scan] removing connection to http://192.168.0.201:32917/
 [rospy.internal][INFO] 2020-12-25 08:21:15,085: topic[/scan] adding connection to [http://192.168.0.201:44055/], count 1
 [rospy.internal][INFO] 2020-12-25 08:21:15,087: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:44267/], count 0
+[rospy.core][INFO] 2020-12-25 08:35:21,131: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-25 08:35:21,136: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-25 08:35:21,136: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-25 08:35:21,137: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-25 08:35:21,137: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.201:44267/
+[rospy.internal][INFO] 2020-12-25 08:35:21,137: topic[/odom] removing connection to http://192.168.0.201:40891/
+[rospy.internal][INFO] 2020-12-25 08:35:21,138: topic[/start_goal_points] removing connection to http://192.168.0.201:35493/
+[rospy.internal][INFO] 2020-12-25 08:35:21,138: topic[/scan] removing connection to http://192.168.0.201:40891/
+[rospy.internal][INFO] 2020-12-25 08:35:21,138: topic[/scan] removing connection to http://192.168.0.201:44055/
+[rospy.internal][INFO] 2020-12-25 08:35:21,139: topic[/is_start_episode] removing connection to http://192.168.0.201:40319/
+[rospy.impl.masterslave][INFO] 2020-12-25 08:35:21,139: signal-2
+[rospy.core][INFO] 2020-12-25 08:35:21,565: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,597: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,628: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,656: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,686: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,718: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,756: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,791: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:21,820: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:22,084: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:22,930: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:22,936: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:22,967: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:22,994: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-25 08:35:23,015: signal_shutdown [atexit]

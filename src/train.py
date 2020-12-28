@@ -47,20 +47,20 @@ Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action'
 maps = [None]
 
 # for ROS
-IMAGE_SIZE = 80
-MAP_GRID_SIZE = 0.1
-MAP_RANGE = 8.0
+IMAGE_SIZE = 100
+MAP_GRID_SIZE = 0.05
+MAP_RANGE = 5.0
 ROBOT_RSIZE = 0.13
 SLEEP_TIME = 10
 
 # for DDQN
 ENV = 'FFMP-v0'
 GAMMA = 0.99 # discount factor
-MAX_STEPS = 10000
-NUM_EPISODES = 1000000
+MAX_STEPS = 100
+NUM_EPISODES = 100000
 LOG_DIR = "./logs/experiment1"
-BATCH_SIZE = 1024 # minibatch size
-# BATCH_SIZE = 128 # minibatch size
+# BATCH_SIZE = 1024 # minibatch size
+BATCH_SIZE = 128# minibatch size
 CAPACITY = 200000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
@@ -70,7 +70,7 @@ LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
 LOSS_THRESHOLD = 1.0 # threshold of loss
 LOSS_MEMORY_CAPACITY = 10
-REACH_RATE_THRESHOLD = 0.70
+REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
 MODEL_PATH = './model/model.pth'
 ################
@@ -204,11 +204,11 @@ class Network(nn.Module):
     def __init__(self, input_channels, outputs):
         super(Network, self).__init__()
         self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=32)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=16)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=32)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=8)
-        self.conv4 = nn.Conv2d(64, 64, kernel_size=7)
-        self.fc1 = nn.Linear(4, 64)
-        self.fc2 = nn.Linear(5184, 512)
+        self.conv4 = nn.Conv2d(64, 64, kernel_size=8)
+        self.fc1 = nn.Linear(4, 67)
+        self.fc2 = nn.Linear(6400, 512)
         self.fc3 = nn.Linear(512, 512)
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
@@ -457,6 +457,7 @@ def main():
 
     episode = 0
     step = 0
+    total_step = 0
     reach_times = np.empty(0)
     is_first = True
     is_done = True
@@ -545,8 +546,6 @@ def main():
             if step == MAX_STEPS:
                 is_done = True
             
-            if episode > 400:
-                print("[WARNING]:episode is more than 400!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             
             if is_done:
                 episode += 1
@@ -595,7 +594,8 @@ def main():
                 is_done = False
                 ros.is_start_callback_flag = False
             else:
-                print("step:",step , ", loss:",train_env.agent.brain.loss)
+                print("episode:", episode, ", step :", step)
+                print("total_step:",total_step , ", loss:",train_env.agent.brain.loss)
                 linear_v = train_env.agent.action.commander(action_id).linear_v
                 angular_v = train_env.agent.action.commander(action_id).angular_v
                 print("linear_v =", linear_v, "[m/s]")
@@ -608,6 +608,7 @@ def main():
                 state_v = observe_v
 
                 step += 1
+                total_step += 1
 
         if is_complete:
             print("complete")

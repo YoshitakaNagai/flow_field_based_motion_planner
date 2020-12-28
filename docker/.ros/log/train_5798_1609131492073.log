@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2020-12-28 04:58:12,102: init_node, name[/train_5798_1609131492073], pid[5798]
+[xmlrpc][INFO] 2020-12-28 04:58:12,103: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-28 04:58:12,104: Started XML-RPC server [http://192.168.0.191:45195/]
+[rospy.init][INFO] 2020-12-28 04:58:12,104: ROS Slave URI: [http://192.168.0.191:45195/]
+[rospy.impl.masterslave][INFO] 2020-12-28 04:58:12,104: _ready: http://192.168.0.191:45195/
+[rospy.registration][INFO] 2020-12-28 04:58:12,106: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-28 04:58:12,106: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-28 04:58:12,205: registered with master
+[rospy.rosout][INFO] 2020-12-28 04:58:12,205: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-28 04:58:12,212: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-28 04:58:12,213: initializing /clock core topic
+[rospy.simtime][INFO] 2020-12-28 04:58:12,217: connected to core topic /clock
+[rospy.internal][INFO] 2020-12-28 04:58:12,220: topic[/clock] adding connection to [http://192.168.0.201:35809/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,229: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:40893/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,232: topic[/odom] adding connection to [http://192.168.0.201:35809/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,237: topic[/start_goal_points] adding connection to [http://192.168.0.201:41399/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,243: topic[/scan] adding connection to [http://192.168.0.201:37455/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,245: topic[/scan] adding connection to [http://192.168.0.201:35809/], count 1
+[rospy.internal][INFO] 2020-12-28 04:58:12,248: topic[/is_start_episode] adding connection to [http://192.168.0.201:43125/], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,455: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,456: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-28 04:58:12,458: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-12-28 05:41:01,599: topic[/cmd_vel] adding connection to [/rostopic_1457_1609134061411], count 1
+[rospy.internal][INFO] 2020-12-28 05:41:59,059: topic[/cmd_vel] removing connection to /rostopic_1457_1609134061411
+[rospy.internal][INFO] 2020-12-28 05:42:24,075: topic[/cmd_vel] adding connection to [/rostopic_1500_1609134143887], count 1
+[rospy.internal][INFO] 2020-12-28 05:42:43,583: topic[/cmd_vel] removing connection to /rostopic_1500_1609134143887
+[rospy.internal][INFO] 2020-12-28 06:17:46,879: topic[/cmd_vel] adding connection to [/rostopic_2381_1609136266691], count 1

@@ -11,11 +11,11 @@ from gym.utils import seeding
 # import robot
 from .robot.config import RobotPose, RobotVelocity, RobotState, RobotAction
 
-MAP_RANGE = 8.0 # [m]
-MAP_GRID_NUM = 80 # [grids]
+MAP_RANGE = 5.0 # [m]
+MAP_GRID_NUM = 100 # [grids]
 MAP_CHANNELS = 1 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 ROBOT_RSIZE = 0.13 # [m]
-MAP_RESOLUTION = 0.1
+MAP_RESOLUTION = 0.05
 GOAL_THRESHOLH = 0.5
 
 
@@ -131,10 +131,10 @@ class FFMP(gym.Env):
         r_g = 0
         r_c = 0
         r_t = 0
-        r_arr = 500
+        r_arr = 1000
         r_col = -500
         r_s = -5
-        epsilon = 10
+        epsilon = 50
 
         global pre_relative_goal_dist
         if is_first:

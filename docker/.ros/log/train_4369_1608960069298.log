@@ -1,0 +1,71 @@
+[rospy.client][INFO] 2020-12-26 05:21:09,328: init_node, name[/train_4369_1608960069298], pid[4369]
+[xmlrpc][INFO] 2020-12-26 05:21:09,329: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2020-12-26 05:21:09,330: Started XML-RPC server [http://192.168.0.191:41599/]
+[rospy.init][INFO] 2020-12-26 05:21:09,330: ROS Slave URI: [http://192.168.0.191:41599/]
+[rospy.impl.masterslave][INFO] 2020-12-26 05:21:09,331: _ready: http://192.168.0.191:41599/
+[rospy.registration][INFO] 2020-12-26 05:21:09,332: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2020-12-26 05:21:09,332: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2020-12-26 05:21:09,431: registered with master
+[rospy.rosout][INFO] 2020-12-26 05:21:09,431: initializing /rosout core topic
+[rospy.rosout][INFO] 2020-12-26 05:21:09,437: connected to core topic /rosout
+[rospy.simtime][INFO] 2020-12-26 05:21:09,438: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2020-12-26 05:21:09,464: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:33411/], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,465: topic[/is_start_episode] adding connection to [http://192.168.0.201:42987/], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,473: topic[/scan] adding connection to [http://192.168.0.201:40197/], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,474: topic[/start_goal_points] adding connection to [http://192.168.0.201:40835/], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,477: topic[/scan] adding connection to [http://192.168.0.201:46427/], count 1
+[rospy.internal][INFO] 2020-12-26 05:21:09,479: topic[/odom] adding connection to [http://192.168.0.201:40197/], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,619: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,620: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2020-12-26 05:21:09,718: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2020-12-26 05:21:27,253: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2020-12-26 05:21:27,261: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2020-12-26 05:21:27,262: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2020-12-26 05:21:27,262: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2020-12-26 05:21:27,263: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.201:33411/
+[rospy.internal][INFO] 2020-12-26 05:21:27,264: topic[/odom] removing connection to http://192.168.0.201:40197/
+[rospy.internal][INFO] 2020-12-26 05:21:27,265: topic[/start_goal_points] removing connection to http://192.168.0.201:40835/
+[rospy.internal][WARNING] 2020-12-26 05:21:27,266: Unknown error initiating TCP/IP socket to 192.168.0.201:56385 (http://192.168.0.201:40197/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2020-12-26 05:21:27,267: topic[/scan] removing connection to http://192.168.0.201:40197/
+[rospy.internal][INFO] 2020-12-26 05:21:27,267: topic[/scan] removing connection to http://192.168.0.201:46427/
+[rospy.internal][WARNING] 2020-12-26 05:21:27,268: Unknown error initiating TCP/IP socket to 192.168.0.201:56385 (http://192.168.0.201:40197/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-26 05:21:27,269: Unknown error initiating TCP/IP socket to 192.168.0.201:34085 (http://192.168.0.201:46427/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2020-12-26 05:21:27,269: Unknown error initiating TCP/IP socket to 192.168.0.201:42523 (http://192.168.0.201:40835/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2020-12-26 05:21:27,270: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 846, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][INFO] 2020-12-26 05:21:27,271: topic[/is_start_episode] removing connection to http://192.168.0.201:42987/
+[rospy.impl.masterslave][INFO] 2020-12-26 05:21:27,271: signal-2
+[rospy.core][INFO] 2020-12-26 05:21:27,754: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:27,786: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:27,816: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:27,845: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:27,981: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:29,210: signal_shutdown [signal-2]
+[rospy.core][INFO] 2020-12-26 05:21:35,839: signal_shutdown [atexit]
