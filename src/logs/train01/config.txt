@@ -20,7 +20,7 @@ IMAGE_SIZE = 100
   60 NUM_EPISODES = 100000
   61 LOG_DIR = "./logs/train02"
   62 # BATCH_SIZE = 1024 # minibatch size
-  63 BATCH_SIZE = 128# minibatch size
+  63 BATCH_SIZE = 512# minibatch size
   64 CAPACITY = 200000 # replay buffer size
   65 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
   66 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)

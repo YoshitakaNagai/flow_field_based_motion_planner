@@ -38,6 +38,7 @@ from gym_ffmp.envs.ffmp import FFMP
 import time
 import csv
 
+import pfrl
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'action', 'observe_m', 'observe_g', 'observe_v', 'reward'))
@@ -58,9 +59,9 @@ ENV = 'FFMP-v0'
 GAMMA = 0.95 # discount factor
 MAX_STEPS = 200
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/train02"
+LOG_DIR = "./logs/train01"
 # BATCH_SIZE = 1024 # minibatch size
-BATCH_SIZE = 128# minibatch size
+BATCH_SIZE = 512# minibatch size
 CAPACITY = 200000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
@@ -74,7 +75,7 @@ REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
 UPDATE_TARGET_EPISODE = 2
 MAX_TOTAL_STEP = 100000
-MODEL_PATH = './model/train02/model.pth'
+MODEL_PATH = './model/train01/model.pth'
 ################
 
 class ROSNode():
@@ -568,6 +569,8 @@ def main():
                     writer.writerow([episode, loss_value])
                     tensor_board.writer.add_scalar('REACH_RATE [Flow Field Based Motion Planner]', train_env.reach_rate, episode)
                     writer.writerow([episode, train_env.reach_rate])
+                    tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', reward, episode)
+                    writer.writerow([episode, numpy_reward])
 
                     state_m = None
                     state_g = None
