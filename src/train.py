@@ -55,10 +55,10 @@ SLEEP_TIME = 10
 
 # for DDQN
 ENV = 'FFMP-v0'
-GAMMA = 0.99 # discount factor
-MAX_STEPS = 100
+GAMMA = 0.95 # discount factor
+MAX_STEPS = 200
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/experiment1"
+LOG_DIR = "./logs/train02"
 # BATCH_SIZE = 1024 # minibatch size
 BATCH_SIZE = 128# minibatch size
 CAPACITY = 200000 # replay buffer size
@@ -68,11 +68,13 @@ INPUT_CHANNELS = 1 # only temporal_bev_image
 NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
-LOSS_THRESHOLD = 1.0 # threshold of loss
+# LOSS_THRESHOLD = 0.000000001 # threshold of loss
 LOSS_MEMORY_CAPACITY = 10
 REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
-MODEL_PATH = './model/model.pth'
+UPDATE_TARGET_EPISODE = 2
+MAX_TOTAL_STEP = 100000
+MODEL_PATH = './model/train02/model.pth'
 ################
 
 class ROSNode():
@@ -429,7 +431,7 @@ class Environment:
         self.loss_memory = []
         self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
         self.loss_ave = None
-        self.loss_convergence = False
+        # self.loss_convergence = False
         self.reach_rate = 0.0
 
     def check_convergence(self):
@@ -439,8 +441,8 @@ class Environment:
         self.loss_memory.append(self.agent.brain.loss)
         self.loss_ave = sum(self.loss_memory) / len(self.loss_memory)
 
-        if self.loss_ave < LOSS_THRESHOLD:
-            self.loss_convergence = True
+        # if self.loss_ave < LOSS_THRESHOLD:
+        #     self.loss_convergence = True
 
 class UseTensorBord:
     def __init__(self, path):
@@ -515,6 +517,8 @@ def main():
             action = train_env.agent.get_action(state_m, state_g, state_v, episode)
             action_id = action.item()
 
+            print("relative_goal =", relative_goal, "[m]")
+
             numpy_reward, is_done, is_goal = train_env.env.rewarder2(ros.scan_data, relative_goal, is_first)
 
             if is_goal:
@@ -569,19 +573,23 @@ def main():
                     state_g = None
                     state_v = None
 
-                    if(episode % 2 == 0):
+                    if(episode % UPDATE_TARGET_EPISODE == 0):
                         train_env.agent.update_target_q_function()
 
-                    if train_env.loss_convergence:
-                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
-                        print("COMPLETED TO LEARN! (loss)")
-                        print("SAVED MODEL!")
-                        is_complete = True
+                    # if train_env.loss_convergence:
+                    #     torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                    #     print("COMPLETED TO LEARN! (loss)")
+                    #     print("SAVED MODEL!")
+                    #     is_complete = True
                     if train_env.reach_rate > REACH_RATE_THRESHOLD:
                         torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
                         print("COMPLETED TO LEARN! (reach_rate)")
                         print("SAVED MODEL!")
                         is_complete = True
+                    if episode % 10 == 0:
+                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                        print("COMPLETED TO LEARN! (reach_rate)")
+                        print("SAVED MODEL!")
 
 
                 ros.cmd_vel_publisher(0.0, 0.0)
@@ -615,9 +623,13 @@ def main():
             tensor_board.writer.close()
             break
 
+        if total_step > MAX_TOTAL_STEP:
+            print("Game Over..................")
+            break
         # rospy.spin()
         r.sleep()
 
+    print("Try to save model!")
     torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
     print("Saved model!")
     tensor_board.writer.close()

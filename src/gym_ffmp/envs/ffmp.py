@@ -16,7 +16,7 @@ MAP_GRID_NUM = 100 # [grids]
 MAP_CHANNELS = 1 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 ROBOT_RSIZE = 0.13 # [m]
 MAP_RESOLUTION = 0.05
-GOAL_THRESHOLH = 0.5
+GOAL_THRESHOLHD = 0.5
 
 
 class FFMP(gym.Env):
@@ -118,7 +118,7 @@ class FFMP(gym.Env):
 
 
     def is_goal(self, cur_relative_goal_dist):
-        dist_threshold = GOAL_THRESHOLH #[m]
+        dist_threshold = GOAL_THRESHOLHD #[m]
         is_goal = False
 
         if cur_relative_goal_dist < dist_threshold:
@@ -128,13 +128,13 @@ class FFMP(gym.Env):
 
        
     def reward_calculator(self, relative_goal_info, is_collision, is_goal, is_first):
-        r_g = 0
-        r_c = 0
-        r_t = 0
-        r_arr = 1000
-        r_col = -500
-        r_s = -5
-        epsilon = 50
+        r_g = 0.0
+        r_c = 0.0
+        r_t = 0.0
+        r_arr = 100.0 / 100.0
+        r_col = -100.0 / 100.0
+        r_s = -5.0 / 100.0
+        epsilon = 5.0 / 100.0
 
         global pre_relative_goal_dist
         if is_first:

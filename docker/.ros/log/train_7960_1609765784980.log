@@ -1,0 +1,81 @@
+[rospy.client][INFO] 2021-01-04 13:09:45,007: init_node, name[/train_7960_1609765784980], pid[7960]
+[xmlrpc][INFO] 2021-01-04 13:09:45,008: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-04 13:09:45,008: Started XML-RPC server [http://192.168.0.191:44269/]
+[rospy.init][INFO] 2021-01-04 13:09:45,008: ROS Slave URI: [http://192.168.0.191:44269/]
+[rospy.impl.masterslave][INFO] 2021-01-04 13:09:45,009: _ready: http://192.168.0.191:44269/
+[rospy.registration][INFO] 2021-01-04 13:09:45,010: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2021-01-04 13:09:45,010: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-04 13:09:45,109: registered with master
+[rospy.rosout][INFO] 2021-01-04 13:09:45,109: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-04 13:09:45,115: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-04 13:09:45,117: initializing /clock core topic
+[rospy.simtime][INFO] 2021-01-04 13:09:45,121: connected to core topic /clock
+[rospy.internal][INFO] 2021-01-04 13:09:45,124: topic[/clock] adding connection to [http://192.168.0.201:33135/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,139: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:36011/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,145: topic[/odom] adding connection to [http://192.168.0.201:33135/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,149: topic[/start_goal_points] adding connection to [http://192.168.0.201:45151/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,160: topic[/scan] adding connection to [http://192.168.0.201:42325/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,161: topic[/scan] adding connection to [http://192.168.0.201:33135/], count 1
+[rospy.internal][INFO] 2021-01-04 13:09:45,163: topic[/is_start_episode] adding connection to [http://192.168.0.201:36285/], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,305: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,308: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2021-01-04 13:09:45,404: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2021-01-04 13:09:55,689: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2021-01-04 13:09:55,694: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2021-01-04 13:09:55,695: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2021-01-04 13:09:55,695: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2021-01-04 13:09:55,695: topic[/clock] removing connection to http://192.168.0.201:33135/
+[rospy.internal][INFO] 2021-01-04 13:09:55,696: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.201:36011/
+[rospy.internal][INFO] 2021-01-04 13:09:55,696: topic[/odom] removing connection to http://192.168.0.201:33135/
+[rospy.internal][INFO] 2021-01-04 13:09:55,697: topic[/start_goal_points] removing connection to http://192.168.0.201:45151/
+[rospy.internal][INFO] 2021-01-04 13:09:55,698: topic[/scan] removing connection to http://192.168.0.201:42325/
+[rospy.internal][INFO] 2021-01-04 13:09:55,698: topic[/scan] removing connection to http://192.168.0.201:33135/
+[rospy.internal][WARNING] 2021-01-04 13:09:55,699: Unknown error initiating TCP/IP socket to 192.168.0.201:56911 (http://192.168.0.201:36011/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2021-01-04 13:09:55,700: Unknown error initiating TCP/IP socket to 192.168.0.201:33703 (http://192.168.0.201:42325/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2021-01-04 13:09:55,701: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 846, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][WARNING] 2021-01-04 13:09:55,702: Unknown error initiating TCP/IP socket to 192.168.0.201:52291 (http://192.168.0.201:33135/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2021-01-04 13:09:55,702: Unknown error initiating TCP/IP socket to 192.168.0.201:50411 (http://192.168.0.201:45151/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2021-01-04 13:09:55,702: topic[/is_start_episode] removing connection to http://192.168.0.201:36285/
+[rospy.internal][WARNING] 2021-01-04 13:09:55,703: Unknown error initiating TCP/IP socket to 192.168.0.201:45997 (http://192.168.0.201:36285/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.impl.masterslave][INFO] 2021-01-04 13:09:55,703: signal-2
+[rospy.core][INFO] 2021-01-04 13:09:56,188: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-04 13:09:56,219: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-04 13:09:56,248: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-04 13:09:56,279: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-04 13:09:56,294: signal_shutdown [atexit]
