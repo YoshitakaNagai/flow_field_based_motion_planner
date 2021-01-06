@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   cv_bridge
   image_transport
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -70,11 +71,10 @@ find_package(Eigen3 REQUIRED COMPONENTS system)
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  Empty.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
