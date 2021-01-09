@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2021-01-09 04:42:16,551: init_node, name[/train_3215_1610167336531], pid[3215]
+[xmlrpc][INFO] 2021-01-09 04:42:16,551: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-09 04:42:16,551: Started XML-RPC server [http://192.168.0.162:43463/]
+[rospy.impl.masterslave][INFO] 2021-01-09 04:42:16,551: _ready: http://192.168.0.162:43463/
+[rospy.init][INFO] 2021-01-09 04:42:16,552: ROS Slave URI: [http://192.168.0.162:43463/]
+[rospy.registration][INFO] 2021-01-09 04:42:16,552: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2021-01-09 04:42:16,552: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-09 04:42:16,652: registered with master
+[rospy.rosout][INFO] 2021-01-09 04:42:16,652: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-09 04:42:16,656: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-09 04:42:16,657: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-01-09 04:42:16,673: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:33879/], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,676: topic[/is_start_episode] adding connection to [http://192.168.0.201:45929/], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,678: topic[/scan] adding connection to [http://192.168.0.201:35601/], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,679: topic[/scan] adding connection to [http://192.168.0.201:34577/], count 1
+[rospy.internal][INFO] 2021-01-09 04:42:16,680: topic[/start_goal_points] adding connection to [http://192.168.0.201:42155/], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,681: topic[/odom] adding connection to [http://192.168.0.201:34577/], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,886: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,887: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2021-01-09 04:42:16,891: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0

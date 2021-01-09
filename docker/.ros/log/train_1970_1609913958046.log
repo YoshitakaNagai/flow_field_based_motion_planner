@@ -1,0 +1,41 @@
+[rospy.client][INFO] 2021-01-06 06:19:18,061: init_node, name[/train_1970_1609913958046], pid[1970]
+[xmlrpc][INFO] 2021-01-06 06:19:18,066: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-06 06:19:18,066: Started XML-RPC server [http://192.168.0.162:39145/]
+[rospy.impl.masterslave][INFO] 2021-01-06 06:19:18,066: _ready: http://192.168.0.162:39145/
+[rospy.init][INFO] 2021-01-06 06:19:18,066: ROS Slave URI: [http://192.168.0.162:39145/]
+[rospy.registration][INFO] 2021-01-06 06:19:18,067: Registering with master node http://192.168.0.201:11311
+[xmlrpc][INFO] 2021-01-06 06:19:18,067: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-06 06:19:18,167: registered with master
+[rospy.rosout][INFO] 2021-01-06 06:19:18,167: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-06 06:19:18,170: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-06 06:19:18,170: initializing /clock core topic
+[rospy.simtime][INFO] 2021-01-06 06:19:18,172: connected to core topic /clock
+[rospy.internal][INFO] 2021-01-06 06:19:18,173: topic[/clock] adding connection to [http://192.168.0.201:45539/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,179: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.201:44187/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,180: topic[/odom] adding connection to [http://192.168.0.201:45539/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,183: topic[/start_goal_points] adding connection to [http://192.168.0.201:37983/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,185: topic[/is_start_episode] adding connection to [http://192.168.0.201:45321/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,187: topic[/scan] adding connection to [http://192.168.0.201:45539/], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,187: topic[/scan] adding connection to [http://192.168.0.201:44413/], count 1
+[rospy.internal][INFO] 2021-01-06 06:19:18,339: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,438: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2021-01-06 06:19:18,439: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.core][INFO] 2021-01-06 06:19:19,787: signal_shutdown [atexit]
+[rospy.internal][INFO] 2021-01-06 06:19:19,790: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2021-01-06 06:19:19,790: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/clock] removing connection to http://192.168.0.201:45539/
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.201:44187/
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/odom] removing connection to http://192.168.0.201:45539/
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/start_goal_points] removing connection to http://192.168.0.201:37983/
+[rospy.internal][INFO] 2021-01-06 06:19:19,791: topic[/scan] removing connection to http://192.168.0.201:45539/
+[rospy.internal][INFO] 2021-01-06 06:19:19,792: topic[/scan] removing connection to http://192.168.0.201:44413/
+[rospy.internal][INFO] 2021-01-06 06:19:19,792: topic[/is_start_episode] removing connection to http://192.168.0.201:45321/
+[rospy.impl.masterslave][INFO] 2021-01-06 06:19:19,792: atexit
+[rospy.internal][WARNING] 2021-01-06 06:19:19,792: Unknown error initiating TCP/IP socket to 192.168.0.201:34365 (http://192.168.0.201:37983/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

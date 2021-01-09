@@ -60,12 +60,13 @@ GAMMA = 0.95 # discount factor
 MAX_STEPS = 200
 NUM_EPISODES = 100000
 LOG_DIR = "./logs/train02"
-# BATCH_SIZE = 1024 # minibatch size
-BATCH_SIZE = 512# minibatch size
+BATCH_SIZE = 1024 # minibatch size
+# BATCH_SIZE = 512# minibatch size
 CAPACITY = 200000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
-INPUT_CHANNELS = 1 # only temporal_bev_image
+# INPUT_CHANNELS = 1 # only temporal_bev_image
+INPUT_CHANNELS = 2 # two steps of temporal_bev_image
 NUM_ACTIONS = 28
 LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
@@ -190,6 +191,8 @@ class ROSNode():
         rospy.wait_for_service('gazebo/pause_physics')
         try:
             srv_gazebo_pause = rospy.ServiceProxy('gazebo/pause_physics', Empty)
+            res = srv_gazebo_pause()
+            print("res", res)
             print("pause gazebo!")
         except rospy.ServiceException:
             print("Service call failed:")
@@ -198,6 +201,8 @@ class ROSNode():
         rospy.wait_for_service('gazebo/pause_physics')
         try:
             srv_gazebo_unpause = rospy.ServiceProxy('gazebo/unpause_physics', Empty)
+            res = srv_gazebo_unpause()
+            print("res", res)
             print("unpause gazebo!")
         except rospy.ServiceException:
             print("Service call failed:")
@@ -466,6 +471,19 @@ class Environment:
 
         # if self.loss_ave < LOSS_THRESHOLD:
         #     self.loss_convergence = True
+    def make_temporal_maps(self, import_map, is_first):
+        if is_first:
+            self.map_memory.clear()
+            for i in range(INPUT_CHANNELS):
+                self.map_memory.append(import_map)
+        else:
+            self.map_memory.append(import_map)
+            del self.map_memory[0]
+
+        temporal_maps = torch.cat(self.map_memory, 0)
+        ## temporal_maps.size() = torch.Size([2, H, W])
+        print("temporal_maps.size() = ", temporal_maps.size())
+        return temporal_maps
 
 class UseTensorBord:
     def __init__(self, path):
@@ -501,6 +519,7 @@ def main():
     writer.writerow(['epoch', 'loss'])
 
     print("ros : start!")
+    ros.gazebo_unpause_client()
     while not rospy.is_shutdown():
         # print("[0] ros.temporal_bev_image_callback_flag:", ros.temporal_bev_image_callback_flag)
         # print("[1] ros.odom_callback_flag:", ros.odom_callback_flag)
@@ -520,7 +539,8 @@ def main():
             flow_map = ros.temporal_bev_map.clone() #tensor
             ros.odom_dt = np.array([ros.current_odom_time - ros.previous_odom_time])
 
-            observe_m = flow_map
+            # observe_m = flow_map
+            observe_m = train_env.make_temporal_maps(flow_map, is_first)
             observe_m = torch.unsqueeze(observe_m, 0)
             observe_m = observe_m.to(device)
             # print("observe_m.size() = ", observe_m.size())
