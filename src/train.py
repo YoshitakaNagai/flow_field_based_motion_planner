@@ -57,9 +57,9 @@ SLEEP_TIME = 10
 # for DDQN
 ENV = 'FFMP-v0'
 GAMMA = 0.95 # discount factor
-MAX_STEPS = 200
+MAX_STEPS = 100
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/train03"
+LOG_DIR = "./logs/train05"
 BATCH_SIZE = 1024 # minibatch size
 # BATCH_SIZE = 512# minibatch size
 CAPACITY = 20000 # replay buffer size
@@ -76,7 +76,7 @@ REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
 UPDATE_TARGET_EPISODE = 2
 MAX_TOTAL_STEP = 100000
-MODEL_PATH = './model/train03/model.pth'
+MODEL_PATH = './model/train05/model.pth'
 ################
 
 class ROSNode():
@@ -501,6 +501,7 @@ def main():
     episode = 0
     step = 0
     total_step = 0
+    total_reward = 0
     reach_times = np.empty(0)
     is_first = True
     is_done = True
@@ -593,6 +594,8 @@ def main():
             is_first = False
             train_env.agent.brain.step += 1
 
+            if step == MAX_STEPS:
+                is_done = True
             train_env.agent.memorize(state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward)
             train_env.agent.update_q_function()
 
@@ -604,8 +607,6 @@ def main():
 
             ros.previous_odom_time = ros.current_odom_time
 
-            if step == MAX_STEPS:
-                is_done = True
             
             
             if is_done:
@@ -625,8 +626,8 @@ def main():
                     writer.writerow([episode, loss_value])
                     tensor_board.writer.add_scalar('REACH_RATE [Flow Field Based Motion Planner]', train_env.reach_rate, episode)
                     writer.writerow([episode, train_env.reach_rate])
-                    tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', reward, episode)
-                    writer.writerow([episode, total_step, loss_value, train_env.reach_rate, numpy_reward, relative_goal[0], relative_goal[1]])
+                    tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', total_reward, episode)
+                    writer.writerow([episode, total_step, loss_value, train_env.reach_rate, total_reward, relative_goal[0], relative_goal[1]])
 
                     state_m = None
                     state_g = None
@@ -659,6 +660,7 @@ def main():
                 #     print(SLEEP_TIME - i - 1, "[sec] to reset gazebo simulation")
                 #     time.sleep(1)
                 # ros.done_flag_publisher(False)
+                total_reward = 0
                 is_first = True
                 is_done = False
                 ros.is_start_callback_flag = False
@@ -680,6 +682,7 @@ def main():
 
                 step += 1
                 total_step += 1
+                total_reward += numpy_reward
 
         if is_complete:
             print("complete")
