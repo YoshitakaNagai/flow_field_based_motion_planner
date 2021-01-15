@@ -39,9 +39,9 @@ from gym_ffmp.envs.ffmp import FFMP
 import time
 import csv
 
+import pfrl
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-Transition = namedtuple('Transition', ('state_m', 'state_g', 'state_v', 'state_t', 'action', 'observe_m', 'observe_g', 'observe_v', 'observe_t', 'reward'))
 
 ##### PARAM #####
 # for ALL
@@ -57,9 +57,9 @@ SLEEP_TIME = 10
 # for DDQN
 ENV = 'FFMP-v0'
 GAMMA = 0.95 # discount factor
-MAX_STEPS = 200
+MAX_STEPS = 100
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/train02"
+LOG_DIR = "./logs/train06"
 BATCH_SIZE = 1024 # minibatch size
 # BATCH_SIZE = 512# minibatch size
 CAPACITY = 200000 # replay buffer size
@@ -76,7 +76,7 @@ REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
 UPDATE_TARGET_EPISODE = 2
 MAX_TOTAL_STEP = 100000
-MODEL_PATH = './model/train02/model.pth'
+MODEL_PATH = './model/train06/model.pth'
 ################
 
 class ROSNode():
@@ -179,13 +179,13 @@ class ROSNode():
         relative_orientation = self.pi_to_pi(relative_direction - robot_pose.yaw)
         return np.array([relative_dist, relative_orientation])
 
-    def robot_velocity_calculator(self, robot_pose, is_first):
+    def robot_displacement_calculator(self, robot_pose, is_first):
         if is_first:
             self.pre_robot_pose = copy.deepcopy(robot_pose)
-        linear_v = math.sqrt(math.pow(robot_pose.x - self.pre_robot_pose.x, 2) + math.pow(robot_pose.y - self.pre_robot_pose.y, 2))
-        angular_v = self.pi_to_pi(robot_pose.yaw - self.pre_robot_pose.yaw)
+        linear_displacement = math.sqrt(math.pow(robot_pose.x - self.pre_robot_pose.x, 2) + math.pow(robot_pose.y - self.pre_robot_pose.y, 2))
+        angular_displacement = self.pi_to_pi(robot_pose.yaw - self.pre_robot_pose.yaw)
         self.pre_robot_pose = copy.deepcopy(robot_pose)
-        return np.array([linear_v, angular_v])
+        return np.array([linear_displacement, angular_displacement])
     
     def gazebo_pause_client(self):
         rospy.wait_for_service('gazebo/pause_physics')
@@ -209,23 +209,6 @@ class ROSNode():
 
 
 
-class ReplayMemory(object):
-    def __init__(self):
-        self.capacity = CAPACITY
-        self.memory = []
-        self.index = 0
-
-    def push(self, state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward):
-        if len(self.memory) < self.capacity:
-            self.memory.append(None)
-        self.memory[self.index] = Transition(state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward)
-        self.index = (self.index + 1) % self.capacity
-
-    def sample(self, batch_size):
-        return random.sample(self.memory, batch_size)
-
-    def __len__(self):
-        return len(self.memory)
 
 
 class Network(nn.Module):
@@ -241,7 +224,11 @@ class Network(nn.Module):
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
-    def forward(self, state_m, state_g, state_v, state_t):
+    def forward(self, state):
+        state_m = state[:-5]
+        state_m = torch.reshape(state_m, (2, IMAGE_SIZE, IMAGE_SIZE))
+        state_g = state[-4:-3]
+        state_v = state[-2:]
         # print("state_m.size() = ", state_m.size())
         # print("state_g.size() = ", state_g.size())
         # print("state_v.size() = ", state_v.size())
@@ -252,8 +239,8 @@ class Network(nn.Module):
         x_m = F.relu(self.conv3(x_m))
         # print("conv3 -> x_m.size() = ", x_m.size())
 
-        x_gvt_ = torch.cat((state_g, state_v, state_t), 1)
-        x_gvt_ = F.relu(self.fc1(x_gvt_))
+        x_gv_ = torch.cat((state_g, state_v), 1)
+        x_gv_ = F.relu(self.fc1(x_gv_))
         # print("x_gvt_.size() = ", x_gvt_.size())
         convw = x_m.shape[2]
         convh = x_m.shape[3]
@@ -303,153 +290,6 @@ class Network(nn.Module):
         return output
 
 
-class Brain:
-    def __init__(self):
-        self.num_actions = NUM_ACTIONS
-        self.memory = ReplayMemory()
-        self.main_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
-        self.target_q_network = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
-        self.optimizer = optim.Adam(self.main_q_network.parameters(), lr=LEARNING_RATE)
-        self.loss = None
-        self.step = 0
-
-    def replay(self):
-
-        # [1] check memory size
-        # print("[1] check memory size")
-        if len(self.memory) < BATCH_SIZE:
-            return
-
-        # [2] make mini batch
-        # print("[2] make mini batch")
-        self.batch, self.state_m_batch, self.state_g_batch, self.state_v_batch, self.state_t_batch, self.action_batch, self.reward_batch, self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v, self.non_final_next_states_t = self.make_minibatch()
-
-        # [3] calc Q(s_t, a_t) value
-        # print("[3] calc Q(s_t, a_t) value")
-        self.expected_state_action_values = self.get_expected_state_action_values()
-
-        # [4] update connected params
-        # print("[4] update connected params")
-        self.update_main_q_network()
-
-
-    def decide_action(self, state_m, state_g, state_v, state_t, episode):
-        # epsilon-greedy method
-        epsilon = 0.5 * (1 / (episode + 1))
-
-        if epsilon <= np.random.uniform(0, 1):
-            self.main_q_network.eval() # change network to evaluation mode
-            with torch.no_grad():
-                action = self.main_q_network(state_m, state_g, state_v, state_t).max(1)[1].view(1, 1)
-        else:
-            action = torch.cuda.LongTensor([[random.randrange(self.num_actions)]])
-
-        return action
-
-    def make_minibatch(self):
-        # [2-1] extract mini batch data from memory
-        transitions = self.memory.sample(BATCH_SIZE)
-
-        # [2-2] convert changable_nums like below
-        # (state*BATCH_SIZE, action*BATCH_SIZE, state_next*BATCH_SIZE, reward*BATCH_SIZE)
-        batch = Transition(*zip(*transitions))
-
-        # [2-3] convert elements
-        state_m_batch = torch.cat(batch.state_m)
-        state_g_batch = torch.cat(batch.state_g)
-        state_v_batch = torch.cat(batch.state_v)
-        state_t_batch = torch.cat(batch.state_t)
-        action_batch = torch.cat(batch.action)
-        reward_batch = torch.cat(batch.reward)
-        non_final_next_states_m = torch.cat([s for s in batch.observe_m if s is not None])
-        non_final_next_states_g = torch.cat([s for s in batch.observe_g if s is not None])
-        non_final_next_states_v = torch.cat([s for s in batch.observe_v if s is not None])
-        non_final_next_states_t = torch.cat([s for s in batch.observe_t if s is not None])
-
-        return batch, state_m_batch, state_g_batch, state_v_batch, state_t_batch, action_batch, reward_batch, non_final_next_states_m, non_final_next_states_g, non_final_next_states_v, non_final_next_states_t
-
-    def get_expected_state_action_values(self):
-        # [3] get Q(s_t, a_t) value
-        # print("[3] get Q(s_t, a_t) value")
-        # [3-1] change network to evaluation mode
-        # print("[3-1] change network to evaluation mode")
-        self.main_q_network.eval()
-        self.target_q_network.eval()
-
-        # [3-2] get Q(s_t, a_t) from main_q_network
-        # print("[3-2] get Q(s_t, a_t) from main_q_network")
-        self.state_action_values = self.main_q_network(self.state_m_batch, self.state_g_batch, self.state_v_batch, self.state_t_batch).gather(1, self.action_batch)
-
-        # [3-3] get max{Q(s_t+1, a)}
-        # print("[3-3] get max{Q(s_t+1, a)}")
-        non_final_mask = torch.cuda.ByteTensor(tuple(map(lambda s: s is not None, {self.batch.observe_m, self.batch.observe_g, self.batch.observe_v, self.batch.observe_t})))
-        # print("non_final_mask = ", non_final_mask)
-        next_state_values = torch.zeros(BATCH_SIZE)
-
-        a_m = torch.zeros(BATCH_SIZE).type(torch.cuda.LongTensor)
-        # a_m[non_final_mask] = self.main_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).detach().max(1)[1]
-        a_m = self.main_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v, self.non_final_next_states_t).detach().max(1)[1]
-        # a_m_non_final_next_states = a_m[non_final_mask].view(-1, 1)
-        a_m_non_final_next_states = a_m.view(-1, 1)
-
-        # next_state_values[non_final_mask] = self.target_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v).gather(1, a_m_non_final_next_states).detach().squeeze()
-        next_state_values = self.target_q_network(self.non_final_next_states_m, self.non_final_next_states_g, self.non_final_next_states_v, self.non_final_next_states_t).gather(1, a_m_non_final_next_states).detach().squeeze()
-
-        # [3-4] get Q(s_t, a_t) from the equision of Q Learnning
-        # print("[3-4] get Q(s_t, a_t) from the equision of Q Learnning")
-        reward_values = self.reward_batch.clone()
-        reward_values = reward_values.to('cpu')
-        next_s_values = next_state_values.clone()
-        next_s_values = next_s_values.to('cpu')
-        # expected_state_action_values = self.reward_batch + GAMMA * next_state_values
-        expected_state_action_values = reward_values + GAMMA * next_s_values
-        expected_state_action_values.requires_grad = True
-        expected_state_action_values = expected_state_action_values.to(device)
-        # print("expected_state_action_values.size() = ", expected_state_action_values.size())
-        # print("expected_state_action_values = ", expected_state_action_values)
-
-        return expected_state_action_values
-
-    def update_main_q_network(self):
-        # [4] update of connected param
-        
-        # [4-1] change network to trainning mode
-        self.main_q_network.train()
-        
-        # [4-2] calc loss
-        # loss = F.smooth_l1_loss(self.state_action_values, self.expected_state_action_values.unsqeeze(1))
-        loss = nn.MSELoss()
-        output = loss(self.state_action_values, self.expected_state_action_values.unsqueeze(1))
-        self.loss = output
-
-        # [4-3] update of connected params
-        self.optimizer.zero_grad() # reset grad
-        output.backward() # calc back propagate
-        self.optimizer.step() # update connected params
-
-    def update_target_q_network(self):
-        self.target_q_network.load_state_dict(self.main_q_network.state_dict())
-
-
-
-class Agent:
-    def __init__(self):
-        self.brain = Brain()
-        self.action = RobotAction()
-
-    def update_q_function(self):
-        self.brain.replay()
-
-    def get_action(self, state_m, state_g, state_v, state_t, episode):
-        action = self.brain.decide_action(state_m, state_g, state_v, state_t, episode)
-        return action
-
-    def memorize(self, state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward):
-        self.brain.memory.push(state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward)
-
-    def update_target_q_function(self):
-        self.brain.update_target_q_network()
-
 
 class Environment:
     def __init__(self):
@@ -497,26 +337,39 @@ def main():
     r = rospy.Rate(100)
 
     train_env = Environment()
+    
+    # q_func = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
+    q_func = Network(INPUT_CHANNELS, NUM_ACTIONS)
+
+    agent = pfrl.agents.DoubleDQN(\
+            q_func,\
+            optimizer=torch.optim.Adam(q_func.parameters(), eps=1e-2),\
+            replay_buffer=pfrl.replay_buffers.ReplayBuffer(CAPACITY),\
+            gamma = GAMMA,\
+            explorer=pfrl.explorers.ConstantEpsilonGreedy(epsilon=0.3, random_action_func=env.action_space.sample),\
+            replay_start_size = BATCH_SIZE,\
+            update_interval=1,\
+            target_update_interval=100,\
+            gpu = device\
+            )
 
     episode = 0
     step = 0
     total_step = 0
+    total_reward = 0
     reach_times = np.empty(0)
     is_first = True
     is_done = True
-    state_m = None
-    state_g = None
-    state_v = None
-    state_t = None
     action = None
     action_id = 3
+    state = None
     is_complete = False
 
     tensor_board = UseTensorBord(LOG_DIR)
     
     f = open(LOG_DIR + '/log_loss.csv', 'w')
     writer = csv.writer(f, lineterminator='\n')
-    writer.writerow(['epoch', 'loss'])
+    writer.writerow(['episode', 'total_step', 'loss_value', 'train_env.reach_rate', 'numpy_reward', 'relative_goal_distance', 'relative_goal_direction', 'odom_x', 'odom_y', 'odom_yaw'])
 
     print("ros : start!")
     ros.gazebo_unpause_client()
@@ -535,14 +388,17 @@ def main():
             robot_pose = ros.robot_position_extractor() # numpy
             relative_goal = ros.relative_goal_calculator(robot_pose) # numpy
             tmp_relative_goal = copy.deepcopy(relative_goal) # numpy
-            velocity = ros.robot_velocity_calculator(robot_pose, is_first) # numpy
+            displacement = ros.robot_displacement_calculator(robot_pose, is_first) # numpy
+            odom_dt = ros.current_odom_time - ros.previous_odom_time
+            # ros.odom_dt = np.array([ros.current_odom_time - ros.previous_odom_time])
+            velocity = np.array([displacement[0] / odom_dt, displacement[1] / odom_dt])
             flow_map = ros.temporal_bev_map.clone() #tensor
-            ros.odom_dt = np.array([ros.current_odom_time - ros.previous_odom_time])
 
             # observe_m = flow_map
             observe_m = train_env.make_temporal_maps(flow_map, is_first)
             observe_m = torch.unsqueeze(observe_m, 0)
             observe_m = observe_m.to(device)
+            observe_m = torch.reshape(observe_m, (-1,))
             # print("observe_m.size() = ", observe_m.size())
             observe_g = torch.from_numpy(tmp_relative_goal).type(torch.FloatTensor)
             observe_g = torch.unsqueeze(observe_g, 0)
@@ -552,24 +408,20 @@ def main():
             observe_v = torch.unsqueeze(observe_v, 0)
             observe_v = observe_v.to(device)
             # print("observe_t.size() = ", observe_t.size())
-            observe_t = torch.from_numpy(ros.odom_dt).type(torch.FloatTensor)
-            observe_t = torch.unsqueeze(observe_t, 0)
-            observe_t = observe_t.to(device)
+            # observe_t = torch.from_numpy(ros.odom_dt).type(torch.FloatTensor)
+            # observe_t = torch.unsqueeze(observe_t, 0)
+            # observe_t = observe_t.to(device)
+            observe = torch.cat((observe_m, observe_g), 0)
+            observe = torch.cat((observe, observe_v), 0)
 
             if is_first:
                 reward = 0
-                state_m = observe_m
-                state_g = observe_g
-                state_v = observe_v
-                state_t = observe_t
                 action_id = 3
+                state = observe
             
-            state_m = state_m.to(device)
-            state_g = state_g.to(device)
-            state_v = state_v.to(device)
-            state_t = state_t.to(device)
+            state = state.to(device)
 
-            action = train_env.agent.get_action(state_m, state_g, state_v, state_t, episode)
+            action = agent.act(state)
             action_id = action.item()
 
             print("relative_goal =", relative_goal, "[m]")
@@ -590,11 +442,13 @@ def main():
             reward = torch.as_tensor(float(numpy_reward)).clone()
             reward = torch.unsqueeze(reward, 0)
 
-            is_first = False
-            train_env.agent.brain.step += 1
+            reset = step == MAX_STEPS
+            agent.observe(observe, reward, is_done, reset)
 
-            train_env.agent.memorize(state_m, state_g, state_v, state_t, action, observe_m, observe_g, observe_v, observe_t, reward)
-            train_env.agent.update_q_function()
+            is_first = False
+
+            if step == MAX_STEPS:
+                is_done = True
 
             ros.temporal_bev_image_callback_flag = False
             ros.odom_callback_flag = False
@@ -603,10 +457,6 @@ def main():
             ros.scan_data.clear()
 
             ros.previous_odom_time = ros.current_odom_time
-
-            if step == MAX_STEPS:
-                is_done = True
-            
             
             if is_done:
                 episode += 1
@@ -622,25 +472,13 @@ def main():
                     # tensor_board.log_loss.append(loss_value)
                     # tensor_board.writer.add_scalar('ours', tensor_board.log_loss[episode], episode)
                     tensor_board.writer.add_scalar('LOSS [Flow Field Based Motion Planner]', loss_value, episode)
-                    writer.writerow([episode, loss_value])
                     tensor_board.writer.add_scalar('REACH_RATE [Flow Field Based Motion Planner]', train_env.reach_rate, episode)
-                    writer.writerow([episode, train_env.reach_rate])
-                    tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', reward, episode)
-                    writer.writerow([episode, numpy_reward])
+                    tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', total_reward, episode)
+                    tensor_board.writer.add_scalar('RELATIVE_GOAL_DISTANCE [Flow Field Based Motion Planner]', relative_goal[0], episode)
+                    writer.writerow([episode, total_step, loss_value, train_env.reach_rate, total_reward, relative_goal[0], relative_goal[1], ros.robot_pose.x, ros.robot_pose.y)
 
-                    state_m = None
-                    state_g = None
-                    state_v = None
-                    state_t = None
+                    state = None
 
-                    if(episode % UPDATE_TARGET_EPISODE == 0):
-                        train_env.agent.update_target_q_function()
-
-                    # if train_env.loss_convergence:
-                    #     torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
-                    #     print("COMPLETED TO LEARN! (loss)")
-                    #     print("SAVED MODEL!")
-                    #     is_complete = True
                     if train_env.reach_rate > REACH_RATE_THRESHOLD:
                         torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
                         print("COMPLETED TO LEARN! (reach_rate)")
@@ -655,10 +493,7 @@ def main():
                 ros.gazebo_unpause_client()
                 ros.cmd_vel_publisher(0.0, 0.0)
                 ros.done_flag_publisher(is_done)
-                # for i in range(SLEEP_TIME):
-                #     print(SLEEP_TIME - i - 1, "[sec] to reset gazebo simulation")
-                #     time.sleep(1)
-                # ros.done_flag_publisher(False)
+                total_reward = 0
                 is_first = True
                 is_done = False
                 ros.is_start_callback_flag = False
@@ -673,13 +508,11 @@ def main():
                 ros.cmd_vel_publisher(linear_v, angular_v)
                 ros.done_flag_publisher(is_done)
 
-                state_m = observe_m
-                state_g = observe_g
-                state_v = observe_v
-                state_t = observe_t
+                state = observe
 
                 step += 1
                 total_step += 1
+                total_reward += numpy_reward
 
         if is_complete:
             print("complete")
