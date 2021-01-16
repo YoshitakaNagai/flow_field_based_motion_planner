@@ -429,13 +429,14 @@ def main():
                 action_id = 3
                 state = observe
             
-            # state = state.to(device)
-            np_state = state.to('cpu').detach().numpy().copy()
 
-            # print("action = agent.act(state)")
-            # action = agent.act(state)
-            print("action = agent.act(np_state)")
-            action = agent.act(np_state)
+            state = state.to(device)
+            print("action = agent.act(state)")
+            action = agent.act(state)
+
+            # np_state = state.to('cpu').detach().numpy().copy()
+            # print("action = agent.act(np_state)")
+            # action = agent.act(np_state)
             print("action_id...")
             action_id = action.item()
             print("...", action_id)
