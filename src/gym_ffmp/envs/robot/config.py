@@ -2,6 +2,10 @@
 
 import numpy as np
 import math
+import gym
+from gym import spaces
+
+ACTION_NUM = 28
 
 class RobotPose(object):
     def __init__(self, x, y, yaw):
@@ -24,7 +28,8 @@ class RobotState(object):
 
 class RobotAction(object):
     def __init__(self):
-        self.cmd = [None] * 28
+        self.action_space = spaces.Discrete(ACTION_NUM)
+        self.cmd = [None] * ACTION_NUM
         self.cmd[0] = RobotVelocity(0.0, -0.6)
         self.cmd[1] = RobotVelocity(0.0, -0.4)
         self.cmd[2] = RobotVelocity(0.0, -0.2)

@@ -242,9 +242,9 @@ class Network(nn.Module):
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state_m, state_g, state_v, state_t):
-        # print("state_m.size() = ", state_m.size())
-        # print("state_g.size() = ", state_g.size())
-        # print("state_v.size() = ", state_v.size())
+        print("state_m.size() = ", state_m.size())
+        print("state_g.size() = ", state_g.size())
+        print("state_v.size() = ", state_v.size())
         x_m = F.relu(self.conv1(state_m))
         # print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))

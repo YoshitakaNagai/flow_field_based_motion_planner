@@ -1,0 +1,1 @@
+episode,total_step,loss_value,train_env.reach_rate,numpy_reward,relative_goal_distance,relative_goal_direction,odom_x,odom_y,odom_yaw

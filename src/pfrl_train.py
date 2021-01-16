@@ -42,7 +42,7 @@ import csv
 import pfrl
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+GPU = 0
 ##### PARAM #####
 # for ALL
 maps = [None]
@@ -218,20 +218,28 @@ class Network(nn.Module):
         self.conv2 = nn.Conv2d(32, 64, kernel_size=32)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=8)
         self.conv4 = nn.Conv2d(64, 64, kernel_size=8)
-        self.fc1 = nn.Linear(5, 67)
+        self.fc1 = nn.Linear(4, 64)
         self.fc2 = nn.Linear(6400, 512)
         self.fc3 = nn.Linear(512, 512)
         self.fc4_ea = nn.Linear(512, outputs) # Elements A(s,a) that depend on your actions.
         self.fc4_ev = nn.Linear(512, 1) # Elements V(s) that are determined only by the state.
 
     def forward(self, state):
-        state_m = state[:-5]
-        state_m = torch.reshape(state_m, (2, IMAGE_SIZE, IMAGE_SIZE))
-        state_g = state[-4:-3]
-        state_v = state[-2:]
+        # print("NETWORK:forward")
+        # print("state.size() = ", state.size())
+        np_state = state.to('cpu').detach().numpy().copy()
+        state_m = torch.Tensor(np_state[0,:-4]).to(device)
+        state_g = torch.Tensor(np_state[0,-4:-2]).to(device)
+        state_v = torch.Tensor(np_state[0,-2:]).to(device)
         # print("state_m.size() = ", state_m.size())
         # print("state_g.size() = ", state_g.size())
         # print("state_v.size() = ", state_v.size())
+
+        state_m = torch.reshape(state_m, (2, IMAGE_SIZE, IMAGE_SIZE))
+        state_m = torch.unsqueeze(state_m, 0)
+        state_g = torch.unsqueeze(state_g, 0)
+        state_v = torch.unsqueeze(state_v, 0)
+        # print("reshaped_state_m.size() = ", state_m.size())
         x_m = F.relu(self.conv1(state_m))
         # print("conv1 -> x_m.size() = ", x_m.size())
         x_m = F.relu(self.conv2(x_m))
@@ -240,8 +248,8 @@ class Network(nn.Module):
         # print("conv3 -> x_m.size() = ", x_m.size())
 
         x_gv_ = torch.cat((state_g, state_v), 1)
+        # print("x_gv_.size() = ", x_gv_.size())
         x_gv_ = F.relu(self.fc1(x_gv_))
-        # print("x_gvt_.size() = ", x_gvt_.size())
         convw = x_m.shape[2]
         convh = x_m.shape[3]
         # print("convw =", convw, ", convh =", convh)
@@ -249,15 +257,15 @@ class Network(nn.Module):
         
         grid_num = convw
         for i in range(grid_num):
-            value = x_gvt_[0][i].item()
-            tile_gvt = torch.full((convw, convh), value)
-            x_gvt = torch.stack(tuple(tile_gvt), 0)
+            value = x_gv_[0][i].item()
+            tile_gv = torch.full((convw, convh), value)
+            x_gv = torch.stack(tuple(tile_gv), 0)
         
         # print("x_gv.size() = ", x_gv.size())
 
         x_m = x_m.to('cpu')
-        x_gvt = x_gvt.to('cpu')
-        x_pls = x_m + x_gvt
+        x_gv = x_gv.to('cpu')
+        x_pls = x_m + x_gv
         x_pls = x_pls.to(device)
 
         x_pls = F.relu(self.conv4(x_pls))
@@ -294,7 +302,7 @@ class Network(nn.Module):
 class Environment:
     def __init__(self):
         self.env = gym.make(ENV)
-        self.agent = Agent()
+        # self.agent = Agent()
         self.map_memory = []
         self.loss_memory = []
         self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
@@ -322,7 +330,7 @@ class Environment:
 
         temporal_maps = torch.cat(self.map_memory, 0)
         ## temporal_maps.size() = torch.Size([2, H, W])
-        print("temporal_maps.size() = ", temporal_maps.size())
+        # print("temporal_maps.size() = ", temporal_maps.size())
         return temporal_maps
 
 class UseTensorBord:
@@ -330,6 +338,8 @@ class UseTensorBord:
         self.writer = SummaryWriter(log_dir=path)
         # self.log_loss = []
 
+def random_action_sample():
+    return np.random.randint(28)
 
 def main():
     rospy.init_node('train', anonymous=True)
@@ -340,17 +350,17 @@ def main():
     
     # q_func = Network(INPUT_CHANNELS, NUM_ACTIONS).to(device)
     q_func = Network(INPUT_CHANNELS, NUM_ACTIONS)
-
+    robot_action_config = RobotAction()
     agent = pfrl.agents.DoubleDQN(\
             q_func,\
             optimizer=torch.optim.Adam(q_func.parameters(), eps=1e-2),\
             replay_buffer=pfrl.replay_buffers.ReplayBuffer(CAPACITY),\
             gamma = GAMMA,\
-            explorer=pfrl.explorers.ConstantEpsilonGreedy(epsilon=0.3, random_action_func=env.action_space.sample),\
+            explorer=pfrl.explorers.ConstantEpsilonGreedy(epsilon=0.3, random_action_func=random_action_sample),\
             replay_start_size = BATCH_SIZE,\
             update_interval=1,\
             target_update_interval=100,\
-            gpu = device\
+            gpu = GPU\
             )
 
     episode = 0
@@ -401,11 +411,11 @@ def main():
             observe_m = torch.reshape(observe_m, (-1,))
             # print("observe_m.size() = ", observe_m.size())
             observe_g = torch.from_numpy(tmp_relative_goal).type(torch.FloatTensor)
-            observe_g = torch.unsqueeze(observe_g, 0)
+            # observe_g = torch.unsqueeze(observe_g, 0)
             observe_g = observe_g.to(device)
             # print("observe_g.size() = ", observe_g.size())
             observe_v = torch.from_numpy(velocity).type(torch.FloatTensor)
-            observe_v = torch.unsqueeze(observe_v, 0)
+            # observe_v = torch.unsqueeze(observe_v, 0)
             observe_v = observe_v.to(device)
             # print("observe_t.size() = ", observe_t.size())
             # observe_t = torch.from_numpy(ros.odom_dt).type(torch.FloatTensor)
@@ -419,10 +429,16 @@ def main():
                 action_id = 3
                 state = observe
             
-            state = state.to(device)
+            # state = state.to(device)
+            np_state = state.to('cpu').detach().numpy().copy()
 
-            action = agent.act(state)
+            # print("action = agent.act(state)")
+            # action = agent.act(state)
+            print("action = agent.act(np_state)")
+            action = agent.act(np_state)
+            print("action_id...")
             action_id = action.item()
+            print("...", action_id)
 
             print("relative_goal =", relative_goal, "[m]")
 
@@ -475,7 +491,7 @@ def main():
                     tensor_board.writer.add_scalar('REACH_RATE [Flow Field Based Motion Planner]', train_env.reach_rate, episode)
                     tensor_board.writer.add_scalar('REWARD [Flow Field Based Motion Planner]', total_reward, episode)
                     tensor_board.writer.add_scalar('RELATIVE_GOAL_DISTANCE [Flow Field Based Motion Planner]', relative_goal[0], episode)
-                    writer.writerow([episode, total_step, loss_value, train_env.reach_rate, total_reward, relative_goal[0], relative_goal[1], ros.robot_pose.x, ros.robot_pose.y)
+                    writer.writerow([episode, total_step, loss_value, train_env.reach_rate, total_reward, relative_goal[0], relative_goal[1], ros.robot_pose.x, ros.robot_pose.y])
 
                     state = None
 
