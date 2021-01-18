@@ -1,0 +1,25 @@
+[rospy.client][INFO] 2021-01-18 08:35:15,716: init_node, name[/train_4442_1610958915685], pid[4442]
+[xmlrpc][INFO] 2021-01-18 08:35:15,717: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-18 08:35:15,718: Started XML-RPC server [http://192.168.0.191:35803/]
+[rospy.init][INFO] 2021-01-18 08:35:15,718: ROS Slave URI: [http://192.168.0.191:35803/]
+[rospy.impl.masterslave][INFO] 2021-01-18 08:35:15,718: _ready: http://192.168.0.191:35803/
+[rospy.registration][INFO] 2021-01-18 08:35:15,720: Registering with master node http://192.168.0.126:11311
+[xmlrpc][INFO] 2021-01-18 08:35:15,720: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-18 08:35:15,819: registered with master
+[rospy.rosout][INFO] 2021-01-18 08:35:15,819: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-18 08:35:15,824: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-18 08:35:15,826: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-01-18 08:35:15,837: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.126:34427/], count 0
+[rospy.internal][INFO] 2021-01-18 08:35:15,839: topic[/odom] adding connection to [http://192.168.0.126:44411/], count 0
+[rospy.internal][INFO] 2021-01-18 08:35:15,846: topic[/start_goal_points] adding connection to [http://192.168.0.126:40887/], count 0
+[rospy.internal][INFO] 2021-01-18 08:35:15,852: topic[/scan] adding connection to [http://192.168.0.126:44411/], count 0
+[rospy.internal][INFO] 2021-01-18 08:35:15,854: topic[/scan] adding connection to [http://192.168.0.126:46009/], count 1
+[rospy.internal][INFO] 2021-01-18 08:35:15,858: topic[/is_start_episode] adding connection to [http://192.168.0.126:40755/], count 0
+[rospy.core][INFO] 2021-01-18 08:35:15,861: signal_shutdown [atexit]
+[rospy.internal][INFO] 2021-01-18 08:35:15,870: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.126:34427/
+[rospy.internal][INFO] 2021-01-18 08:35:15,870: topic[/odom] removing connection to http://192.168.0.126:44411/
+[rospy.internal][INFO] 2021-01-18 08:35:15,871: topic[/start_goal_points] removing connection to http://192.168.0.126:40887/
+[rospy.internal][INFO] 2021-01-18 08:35:15,871: topic[/scan] removing connection to http://192.168.0.126:44411/
+[rospy.internal][INFO] 2021-01-18 08:35:15,871: topic[/scan] removing connection to http://192.168.0.126:46009/
+[rospy.internal][INFO] 2021-01-18 08:35:15,872: topic[/is_start_episode] removing connection to http://192.168.0.126:40755/
+[rospy.impl.masterslave][INFO] 2021-01-18 08:35:15,872: atexit

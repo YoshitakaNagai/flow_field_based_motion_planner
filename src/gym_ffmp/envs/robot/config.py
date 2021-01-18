@@ -58,6 +58,11 @@ class RobotAction(object):
         self.cmd[25] = RobotVelocity(0.6, 0.2)
         self.cmd[26] = RobotVelocity(0.6, 0.4)
         self.cmd[27] = RobotVelocity(0.6, 0.6)
+
+#        self.cmd[28] = RobotVelocity(-0.2, 0.0)
+#        self.cmd[29] = RobotVelocity(-0.2, 0.2)
+#        self.cmd[30] = RobotVelocity(-0.2, -0.2)
+#        self.cmd[31] = RobotVelocity(-0.4, 0.0)
     
     def commander(self, i):
         return self.cmd[i]

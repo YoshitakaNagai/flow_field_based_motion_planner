@@ -1,0 +1,38 @@
+[rospy.client][INFO] 2021-01-16 08:37:50,082: init_node, name[/train_1448_1610786270051], pid[1448]
+[xmlrpc][INFO] 2021-01-16 08:37:50,082: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-16 08:37:50,083: Started XML-RPC server [http://192.168.0.191:39971/]
+[rospy.init][INFO] 2021-01-16 08:37:50,083: ROS Slave URI: [http://192.168.0.191:39971/]
+[rospy.impl.masterslave][INFO] 2021-01-16 08:37:50,084: _ready: http://192.168.0.191:39971/
+[rospy.registration][INFO] 2021-01-16 08:37:50,085: Registering with master node http://192.168.0.126:11311
+[xmlrpc][INFO] 2021-01-16 08:37:50,085: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-16 08:37:50,184: registered with master
+[rospy.rosout][INFO] 2021-01-16 08:37:50,184: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-16 08:37:50,193: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-16 08:37:50,195: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-01-16 08:37:50,213: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.126:36903/], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,218: topic[/odom] adding connection to [http://192.168.0.126:45431/], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,224: topic[/start_goal_points] adding connection to [http://192.168.0.126:40949/], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,231: topic[/scan] adding connection to [http://192.168.0.126:45431/], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,233: topic[/scan] adding connection to [http://192.168.0.126:36669/], count 1
+[rospy.internal][INFO] 2021-01-16 08:37:50,235: topic[/is_start_episode] adding connection to [http://192.168.0.126:34007/], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,410: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,411: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2021-01-16 08:37:50,413: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.core][INFO] 2021-01-16 08:37:52,831: signal_shutdown [atexit]
+[rospy.internal][INFO] 2021-01-16 08:37:52,834: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2021-01-16 08:37:52,834: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2021-01-16 08:37:52,834: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2021-01-16 08:37:52,835: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.126:36903/
+[rospy.internal][INFO] 2021-01-16 08:37:52,835: topic[/odom] removing connection to http://192.168.0.126:45431/
+[rospy.internal][INFO] 2021-01-16 08:37:52,835: topic[/start_goal_points] removing connection to http://192.168.0.126:40949/
+[rospy.internal][INFO] 2021-01-16 08:37:52,835: topic[/scan] removing connection to http://192.168.0.126:45431/
+[rospy.internal][INFO] 2021-01-16 08:37:52,836: topic[/scan] removing connection to http://192.168.0.126:36669/
+[rospy.internal][INFO] 2021-01-16 08:37:52,836: topic[/is_start_episode] removing connection to http://192.168.0.126:34007/
+[rospy.impl.masterslave][INFO] 2021-01-16 08:37:52,836: atexit
+[rospy.internal][WARNING] 2021-01-16 08:37:52,837: Unknown error initiating TCP/IP socket to 192.168.0.126:53085 (http://192.168.0.126:36669/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

@@ -1,0 +1,31 @@
+[rospy.client][INFO] 2021-01-18 10:01:30,230: init_node, name[/train_6513_1610964090199], pid[6513]
+[xmlrpc][INFO] 2021-01-18 10:01:30,231: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-18 10:01:30,232: Started XML-RPC server [http://192.168.0.191:44795/]
+[rospy.init][INFO] 2021-01-18 10:01:30,233: ROS Slave URI: [http://192.168.0.191:44795/]
+[rospy.impl.masterslave][INFO] 2021-01-18 10:01:30,233: _ready: http://192.168.0.191:44795/
+[rospy.registration][INFO] 2021-01-18 10:01:30,234: Registering with master node http://192.168.0.126:11311
+[xmlrpc][INFO] 2021-01-18 10:01:30,235: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-18 10:01:30,333: registered with master
+[rospy.rosout][INFO] 2021-01-18 10:01:30,333: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-18 10:01:30,340: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-18 10:01:30,341: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-01-18 10:01:30,355: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.126:34427/], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,359: topic[/odom] adding connection to [http://192.168.0.126:44411/], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,365: topic[/start_goal_points] adding connection to [http://192.168.0.126:40887/], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,371: topic[/scan] adding connection to [http://192.168.0.126:44411/], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,372: topic[/scan] adding connection to [http://192.168.0.126:46009/], count 1
+[rospy.internal][INFO] 2021-01-18 10:01:30,378: topic[/is_start_episode] adding connection to [http://192.168.0.126:40755/], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,587: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,588: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rospy.internal][INFO] 2021-01-18 10:01:30,589: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2021-01-18 10:01:39,199: signal_shutdown [atexit]
+[rospy.internal][INFO] 2021-01-18 10:01:39,202: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2021-01-18 10:01:39,202: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2021-01-18 10:01:39,203: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2021-01-18 10:01:39,203: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.126:34427/
+[rospy.internal][INFO] 2021-01-18 10:01:39,203: topic[/odom] removing connection to http://192.168.0.126:44411/
+[rospy.internal][INFO] 2021-01-18 10:01:39,203: topic[/start_goal_points] removing connection to http://192.168.0.126:40887/
+[rospy.internal][INFO] 2021-01-18 10:01:39,204: topic[/scan] removing connection to http://192.168.0.126:44411/
+[rospy.internal][INFO] 2021-01-18 10:01:39,204: topic[/scan] removing connection to http://192.168.0.126:46009/
+[rospy.internal][INFO] 2021-01-18 10:01:39,204: topic[/is_start_episode] removing connection to http://192.168.0.126:40755/
+[rospy.impl.masterslave][INFO] 2021-01-18 10:01:39,204: atexit

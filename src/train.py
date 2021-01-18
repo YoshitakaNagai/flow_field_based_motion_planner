@@ -59,10 +59,10 @@ ENV = 'FFMP-v0'
 GAMMA = 0.95 # discount factor
 MAX_STEPS = 100
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/train05"
+LOG_DIR = "./logs/luigi/train01"
 BATCH_SIZE = 1024 # minibatch size
 # BATCH_SIZE = 512# minibatch size
-CAPACITY = 20000 # replay buffer size
+CAPACITY = 50000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
 # INPUT_CHANNELS = 1 # only temporal_bev_image
@@ -74,9 +74,9 @@ LEARNING_RATE = 0.0005 # learning rate
 LOSS_MEMORY_CAPACITY = 10
 REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
-UPDATE_TARGET_EPISODE = 2
-MAX_TOTAL_STEP = 100000
-MODEL_PATH = './model/train05/model.pth'
+UPDATE_TARGET_EPISODE = 10
+MAX_TOTAL_STEP = 200000
+MODEL_PATH = './model/luigi/train01/model.pth'
 ################
 
 class ROSNode():

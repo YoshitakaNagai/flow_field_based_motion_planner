@@ -1,0 +1,2819 @@
+[rospy.client][INFO] 2021-01-18 08:19:07,893: init_node, name[/train_4229_1610957947862], pid[4229]
+[xmlrpc][INFO] 2021-01-18 08:19:07,894: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-18 08:19:07,895: Started XML-RPC server [http://192.168.0.191:35335/]
+[rospy.init][INFO] 2021-01-18 08:19:07,895: ROS Slave URI: [http://192.168.0.191:35335/]
+[rospy.impl.masterslave][INFO] 2021-01-18 08:19:07,895: _ready: http://192.168.0.191:35335/
+[rospy.registration][INFO] 2021-01-18 08:19:07,897: Registering with master node http://192.168.0.126:11311
+[xmlrpc][INFO] 2021-01-18 08:19:07,897: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-18 08:19:07,996: registered with master
+[rospy.rosout][INFO] 2021-01-18 08:19:07,996: initializing /rosout core topic
+[rospy.rosout][INFO] 2021-01-18 08:19:08,000: connected to core topic /rosout
+[rospy.simtime][INFO] 2021-01-18 08:19:08,001: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2021-01-18 08:19:08,012: topic[/bev/temporal_bev_image] adding connection to [http://192.168.0.126:35915/], count 0
+[rospy.internal][INFO] 2021-01-18 08:19:08,019: topic[/odom] adding connection to [http://192.168.0.126:45329/], count 0
+[rospy.internal][INFO] 2021-01-18 08:19:08,025: topic[/scan] adding connection to [http://192.168.0.126:39733/], count 0
+[rospy.internal][INFO] 2021-01-18 08:19:08,028: topic[/is_start_episode] adding connection to [http://192.168.0.126:45787/], count 0
+[rospy.internal][INFO] 2021-01-18 08:19:08,032: topic[/scan] adding connection to [http://192.168.0.126:45329/], count 1
+[rospy.internal][INFO] 2021-01-18 08:19:08,034: topic[/start_goal_points] adding connection to [http://192.168.0.126:38003/], count 0
+[rosout][ERROR] 2021-01-18 08:19:08,040: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,050: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,071: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,081: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,092: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,102: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,111: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,121: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,131: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,141: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,151: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,161: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,182: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rospy.internal][INFO] 2021-01-18 08:19:08,193: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2021-01-18 08:19:08,192: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rospy.internal][INFO] 2021-01-18 08:19:08,195: topic[/episode_watcher/is_finish_episode] adding connection to [/episode_manager], count 0
+[rosout][ERROR] 2021-01-18 08:19:08,202: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,212: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,222: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,232: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,242: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,251: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,262: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,272: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,290: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rospy.internal][INFO] 2021-01-18 08:19:08,293: topic[/cmd_vel] adding connection to [/gazebo], count 0
+[rosout][ERROR] 2021-01-18 08:19:08,301: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,310: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,321: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,331: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,340: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,351: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,360: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,371: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,381: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,402: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,411: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,422: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,431: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,442: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,451: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,461: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,471: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,481: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,492: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,511: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,522: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,531: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,540: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,551: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,560: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,571: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,580: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,591: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,601: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,620: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,630: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,641: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,650: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,661: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,670: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,681: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,690: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,701: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,711: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,731: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,740: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,751: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,760: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,771: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,780: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,791: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,800: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,811: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,821: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,841: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,851: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,861: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,872: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,882: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,892: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,901: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,911: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,922: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,932: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,953: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,962: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,973: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,982: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:08,993: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,002: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,012: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,022: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,032: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,043: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,062: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,072: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,082: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,091: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,102: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,111: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,122: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,132: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,141: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,152: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,172: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,182: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,192: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,203: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,212: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,223: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,232: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,242: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,252: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,262: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,283: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,293: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,302: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,313: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,322: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,333: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,343: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,353: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,363: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,372: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,394: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,403: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,414: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,424: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,433: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,444: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,453: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,463: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,474: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,484: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,503: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,513: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,523: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,533: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,544: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,553: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,564: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,573: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,584: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,594: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,613: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,623: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,633: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,644: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,653: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,664: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,673: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,684: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,693: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,704: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,724: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,733: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,743: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,754: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,763: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,774: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,783: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,794: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,803: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,814: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,834: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,843: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,854: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,863: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,874: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,883: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,894: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,904: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,914: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,925: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,944: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,953: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,964: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,973: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,984: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:09,993: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,004: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,014: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,024: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,034: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,054: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,065: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,074: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,085: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,095: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,104: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,114: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,125: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,134: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,145: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,164: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,175: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,184: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,195: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,205: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,214: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,224: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,234: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,245: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,255: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,273: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,284: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,293: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,303: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,314: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,323: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,333: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,343: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,354: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,364: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,384: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,394: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,405: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,414: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,425: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,434: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,445: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,454: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,464: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,475: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,492: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,503: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,512: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,523: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,533: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,543: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,553: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,563: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,573: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,584: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,604: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,613: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,624: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,633: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,643: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,653: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,664: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,674: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,683: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,694: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,714: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,724: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,734: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,744: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,754: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,764: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,774: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,784: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,794: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,805: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,823: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,833: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,844: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,853: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,864: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,873: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,884: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,894: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,903: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,913: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,934: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,944: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,954: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,964: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,975: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,984: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:10,995: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,004: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,015: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,025: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,044: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,053: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,063: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,073: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,084: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,093: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,104: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,113: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,124: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,134: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,153: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,163: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,174: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,183: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,194: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,203: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,214: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,223: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,234: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,244: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,265: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,275: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,286: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,296: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,306: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,316: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,325: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,335: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,345: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,356: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,374: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,384: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,393: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,404: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,414: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,424: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,434: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,444: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,454: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,464: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,485: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,495: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,505: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,515: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,525: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,534: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,545: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,554: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,565: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,574: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,594: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,604: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,614: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,624: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,634: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,643: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,654: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,664: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,674: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,684: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,705: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,715: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,725: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,736: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,746: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rosout][ERROR] 2021-01-18 08:19:11,756: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rospy.core][INFO] 2021-01-18 08:19:11,761: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2021-01-18 08:19:11,767: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2021-01-18 08:19:11,767: topic[/cmd_vel] removing connection to /gazebo
+[rospy.internal][INFO] 2021-01-18 08:19:11,769: topic[/episode_watcher/is_finish_episode] removing connection to /episode_manager
+[rospy.internal][INFO] 2021-01-18 08:19:11,770: topic[/bev/temporal_bev_image] removing connection to http://192.168.0.126:35915/
+[rospy.rosout][ERROR] 2021-01-18 08:19:11,770: Unable to report rosout: publish() to a closed topic
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/rosout.py", line 100, in _rosout
+    _rosout_pub.publish(l)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 882, in publish
+    self.impl.publish(data)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 1041, in publish
+    raise ROSException("publish() to a closed topic")
+rospy.exceptions.ROSException: publish() to a closed topic
+
+[rospy.internal][INFO] 2021-01-18 08:19:11,771: topic[/odom] removing connection to http://192.168.0.126:45329/
+[rosout][ERROR] 2021-01-18 08:19:11,766: bad callback: <bound method ROSNode.pose_array_callback of <__main__.ROSNode object at 0x7fedf92ce070>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "./pfrl_train.py", line 131, in pose_array_callback
+    self.global_goal = msg.poses[1]
+IndexError: list index out of range
+
+[rospy.internal][WARNING] 2021-01-18 08:19:11,772: Unknown error initiating TCP/IP socket to 192.168.0.126:38131 (http://192.168.0.126:35915/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.topics][ERROR] 2021-01-18 08:19:11,772: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 846, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][WARNING] 2021-01-18 08:19:11,773: Unknown error initiating TCP/IP socket to 192.168.0.126:37229 (http://192.168.0.126:45329/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2021-01-18 08:19:11,773: topic[/start_goal_points] removing connection to http://192.168.0.126:38003/
+[rospy.internal][INFO] 2021-01-18 08:19:11,774: topic[/scan] removing connection to http://192.168.0.126:39733/
+[rospy.internal][WARNING] 2021-01-18 08:19:11,775: Unknown error initiating TCP/IP socket to 192.168.0.126:53217 (http://192.168.0.126:39733/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][WARNING] 2021-01-18 08:19:11,775: Unknown error initiating TCP/IP socket to 192.168.0.126:44355 (http://192.168.0.126:38003/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2021-01-18 08:19:11,776: topic[/scan] removing connection to http://192.168.0.126:45329/
+[rospy.internal][WARNING] 2021-01-18 08:19:11,776: Unknown error initiating TCP/IP socket to 192.168.0.126:37229 (http://192.168.0.126:45329/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 563, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2021-01-18 08:19:11,777: topic[/is_start_episode] removing connection to http://192.168.0.126:45787/
+[rospy.internal][WARNING] 2021-01-18 08:19:11,778: Unknown error initiating TCP/IP socket to 192.168.0.126:39673 (http://192.168.0.126:45787/): Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 562, in connect
+    self.read_header()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 657, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2021-01-18 08:19:11,778: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 846, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2021-01-18 08:19:11,778: signal-2
+[rospy.core][INFO] 2021-01-18 08:19:12,261: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-18 08:19:12,292: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-18 08:19:12,322: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-18 08:19:12,351: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-18 08:19:12,364: signal_shutdown [atexit]

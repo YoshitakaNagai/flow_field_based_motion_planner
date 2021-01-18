@@ -1,0 +1,218 @@
+[rospy.client][INFO] 2021-01-16 08:42:49,651: init_node, name[/train_1636_1610786569621], pid[1636]
+[xmlrpc][INFO] 2021-01-16 08:42:49,652: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-16 08:42:49,653: Started XML-RPC server [http://192.168.0.191:35967/]
+[rospy.init][INFO] 2021-01-16 08:42:49,653: ROS Slave URI: [http://192.168.0.191:35967/]
+[rospy.impl.masterslave][INFO] 2021-01-16 08:42:49,654: _ready: http://192.168.0.191:35967/
+[rospy.registration][INFO] 2021-01-16 08:42:49,655: Registering with master node http://192.168.0.191:11311
+[xmlrpc][INFO] 2021-01-16 08:42:49,655: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-16 08:42:49,754: registered with master
+[rospy.rosout][INFO] 2021-01-16 08:42:49,754: initializing /rosout core topic
+[rospy.registration][ERROR] 2021-01-16 08:42:49,756: [Errno 111] Connection refused
+Unable to register with master node [http://192.168.0.191:11311]: master may not be running yet. Will keep trying.
+[rospy.core][INFO] 2021-01-16 08:42:52,017: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2021-01-16 08:42:52,018: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2021-01-16 08:42:52,018: signal-2
+[rospy.core][INFO] 2021-01-16 08:42:52,049: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,079: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,108: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,138: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,169: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,199: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,229: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,259: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,291: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,322: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,355: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,386: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,414: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,444: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,477: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,504: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,535: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,565: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,595: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,625: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,655: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,686: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,717: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,747: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,777: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,808: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,837: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,867: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,898: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,928: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,958: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:52,989: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,021: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,050: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,080: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,110: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,141: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,172: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,203: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,235: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,265: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,295: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,326: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,357: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,388: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,417: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,448: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,478: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,508: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,540: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,571: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,599: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,629: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,660: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,691: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,721: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,752: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,780: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,812: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,842: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,873: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,904: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,936: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,967: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:53,997: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,026: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,056: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,089: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,119: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,148: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,179: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,209: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,239: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,270: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,301: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,331: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,361: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,393: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,422: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,451: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,482: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,513: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,544: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,574: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,605: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,638: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,666: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,696: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,727: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,757: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,787: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,818: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,849: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,879: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,909: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,939: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,968: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:54,998: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,031: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,061: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,091: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,122: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,153: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,184: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,214: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,244: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,274: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,305: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,336: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,366: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,397: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,426: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,457: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,488: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,518: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,550: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,579: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,607: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,638: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,667: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,698: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,728: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,758: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,790: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,821: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,851: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,881: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,910: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,940: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:55,970: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,001: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,030: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,063: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,092: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,122: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,153: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,184: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,214: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,245: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,275: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,306: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,336: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,367: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,396: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,426: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,457: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,487: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,518: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,548: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,579: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,609: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,640: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,671: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,701: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,731: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,761: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,791: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,822: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,851: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,881: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,917: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,945: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:56,976: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:57,006: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:57,037: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:57,067: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:57,097: signal_shutdown [signal-2]
+[rospy.rosout][INFO] 2021-01-16 08:42:57,119: connected to core topic /rosout
+[rospy.simtime][ERROR] 2021-01-16 08:42:57,125: Unable to initialize /clock: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 79, in init_simtime
+    if not _is_use_simtime():
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 60, in _is_use_simtime
+    code, msg, val = m.getParam(rospy.names.get_caller_id(), _USE_SIMTIME)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/core.py", line 665, in _ServerProxy__request
+    return xmlrpcclient.ServerProxy._ServerProxy__request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1235, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1006, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 946, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 917, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.core][INFO] 2021-01-16 08:42:57,127: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-16 08:42:57,128: signal_shutdown [atexit]

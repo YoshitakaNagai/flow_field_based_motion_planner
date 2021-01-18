@@ -48,9 +48,9 @@ GPU = 0
 maps = [None]
 
 # for ROS
-IMAGE_SIZE = 100
+IMAGE_SIZE = 60
 MAP_GRID_SIZE = 0.05
-MAP_RANGE = 5.0
+MAP_RANGE = 3.0
 ROBOT_RSIZE = 0.13
 SLEEP_TIME = 10
 
@@ -59,15 +59,16 @@ ENV = 'FFMP-v0'
 GAMMA = 0.95 # discount factor
 MAX_STEPS = 100
 NUM_EPISODES = 100000
-LOG_DIR = "./logs/train06"
-BATCH_SIZE = 1024 # minibatch size
-# BATCH_SIZE = 512# minibatch size
+LOG_DIR = "./logs/luigi/train02"
+# BATCH_SIZE = 1024 # minibatch size
+BATCH_SIZE = 50# minibatch size
 CAPACITY = 200000 # replay buffer size
 # INPUT_CHANNELS = 12 #[channel] = (occupancy(MONO) + flow(RGB)) * series(3 steps)
 # INPUT_CHANNELS = 3 #[channel] = (occupancy(MONO) + flow(xy)) * series(1 steps)
 # INPUT_CHANNELS = 1 # only temporal_bev_image
 INPUT_CHANNELS = 2 # two steps of temporal_bev_image
 NUM_ACTIONS = 28
+# NUM_ACTIONS = 32
 LEARNING_RATE = 0.0005 # learning rate
 # LOSS_THRESHOLD = 0.1 # threshold of loss
 # LOSS_THRESHOLD = 0.000000001 # threshold of loss
@@ -76,7 +77,7 @@ REACH_RATE_THRESHOLD = 0.80
 REACH_MEMORY_CAPACITY = 10
 UPDATE_TARGET_EPISODE = 2
 MAX_TOTAL_STEP = 100000
-MODEL_PATH = './model/train06/model.pth'
+MODEL_PATH = './model/luigi/train02/model.pth'
 ################
 
 class ROSNode():
@@ -103,6 +104,7 @@ class ROSNode():
         self.current_odom_time = 0.0
         self.previous_odom_time = 0.0
         self.odom_dt = 0.0
+        self.robot_pose = RobotPose(0.0, 0.0, 0.0)
 
         self.temporal_bev_image_callback_flag = False
         self.odom_callback_flag = False
@@ -214,8 +216,8 @@ class ROSNode():
 class Network(nn.Module):
     def __init__(self, input_channels, outputs):
         super(Network, self).__init__()
-        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=32)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=32)
+        self.conv1 = nn.Conv2d(input_channels, 32, kernel_size=16)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=8)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=8)
         self.conv4 = nn.Conv2d(64, 64, kernel_size=8)
         self.fc1 = nn.Linear(4, 64)
@@ -285,24 +287,31 @@ class Network(nn.Module):
         adv = self.fc4_ea(x)
         val = self.fc4_ev(x)
         ## adv = torch.unsqueeze(adv, 0)
-        # print("adv.size() = ", adv.size())
+        print("adv.size() = ", adv.size())
         ## val = torch.unsqueeze(val, 0)
-        # print("val.size() = ", val.size())
+        print("val.size() = ", val.size())
         adv = adv.to('cpu')
         val = val.to('cpu')
 
         output = adv + val - adv.mean(1, keepdim=True).expand(-1, adv.size(1))
         output = output.to(device)
-        # print("output.size()", output.size())
+        # output = torch.reshape(output, (NUM_ACTIONS,1))
+        output = torch.transpose(output, 0, 1)
+        print("output.size()", output.size())
 
-        return output
+        # return output
+        # discrete_action_value_head = pfrl.q_functions.DiscreteActionValueHead()
+        discrete_action_value_head = pfrl.q_functions.DiscreteActionValueHead()
+        q_values = discrete_action_value_head.forward(output)
+        print("q_values.shape[1]:", q_values.q_values.shape[1])
+        return q_values
 
 
 
 class Environment:
     def __init__(self):
         self.env = gym.make(ENV)
-        # self.agent = Agent()
+        self.robot = RobotAction()
         self.map_memory = []
         self.loss_memory = []
         self.loss_memory_capacity = LOSS_MEMORY_CAPACITY
@@ -339,7 +348,7 @@ class UseTensorBord:
         # self.log_loss = []
 
 def random_action_sample():
-    return np.random.randint(28)
+    return np.random.randint(NUM_ACTIONS)
 
 def main():
     rospy.init_node('train', anonymous=True)
@@ -359,7 +368,7 @@ def main():
             explorer=pfrl.explorers.ConstantEpsilonGreedy(epsilon=0.3, random_action_func=random_action_sample),\
             replay_start_size = BATCH_SIZE,\
             update_interval=1,\
-            target_update_interval=100,\
+            target_update_interval=10,\
             gpu = GPU\
             )
 
@@ -431,15 +440,13 @@ def main():
             
 
             state = state.to(device)
-            print("action = agent.act(state)")
             action = agent.act(state)
 
             # np_state = state.to('cpu').detach().numpy().copy()
             # print("action = agent.act(np_state)")
             # action = agent.act(np_state)
-            print("action_id...")
-            action_id = action.item()
-            print("...", action_id)
+            # action_id = action.item()
+            action_id = action
 
             print("relative_goal =", relative_goal, "[m]")
 
@@ -474,14 +481,15 @@ def main():
             ros.scan_data.clear()
 
             ros.previous_odom_time = ros.current_odom_time
-            
+            pfrl_loss = agent.get_statistics()
+            loss_value = pfrl_loss[1][1]
+
             if is_done:
                 episode += 1
                 step = 0
                 
-                if train_env.agent.brain.loss != None:
+                if loss_value != None:
                     print("is_done : ", is_done)
-                    loss_value = train_env.agent.brain.loss.item()
                     print("EPISODE :", episode)
                     print("loss =", loss_value)
                     print("reach_rate =", train_env.reach_rate)
@@ -497,12 +505,12 @@ def main():
                     state = None
 
                     if train_env.reach_rate > REACH_RATE_THRESHOLD:
-                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                        agent.save(MODEL_PATH)
                         print("COMPLETED TO LEARN! (reach_rate)")
                         print("SAVED MODEL!")
                         is_complete = True
                     if episode % 10 == 0:
-                        torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+                        agent.save(MODEL_PATH)
                         print("COMPLETED TO LEARN! (reach_rate)")
                         print("SAVED MODEL!")
 
@@ -516,9 +524,9 @@ def main():
                 ros.is_start_callback_flag = False
             else:
                 print("episode:", episode, ", step :", step)
-                print("total_step:",total_step , ", loss:",train_env.agent.brain.loss)
-                linear_v = train_env.agent.action.commander(action_id).linear_v
-                angular_v = train_env.agent.action.commander(action_id).angular_v
+                print("total_step:",total_step , ", loss:", loss_value)
+                linear_v = train_env.robot.commander(action_id).linear_v
+                angular_v = train_env.robot.commander(action_id).angular_v
                 ros.gazebo_unpause_client()
                 print("linear_v =", linear_v, "[m/s]")
                 print("angular_v =", angular_v, "[m/s]")
@@ -543,7 +551,7 @@ def main():
         r.sleep()
 
     print("Try to save model!")
-    torch.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
+    agent.save(train_env.agent.brain.main_q_network.state_dict(), MODEL_PATH)
     print("Saved model!")
     tensor_board.writer.close()
     f.close()

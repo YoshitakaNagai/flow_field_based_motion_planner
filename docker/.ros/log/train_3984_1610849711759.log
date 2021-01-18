@@ -1,0 +1,61 @@
+[rospy.client][INFO] 2021-01-17 02:15:11,788: init_node, name[/train_3984_1610849711759], pid[3984]
+[xmlrpc][INFO] 2021-01-17 02:15:11,789: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2021-01-17 02:15:11,789: Started XML-RPC server [http://192.168.0.191:40117/]
+[rospy.init][INFO] 2021-01-17 02:15:11,790: ROS Slave URI: [http://192.168.0.191:40117/]
+[rospy.impl.masterslave][INFO] 2021-01-17 02:15:11,790: _ready: http://192.168.0.191:40117/
+[rospy.registration][INFO] 2021-01-17 02:15:11,791: Registering with master node http://192.168.0.191:11311
+[xmlrpc][INFO] 2021-01-17 02:15:11,792: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2021-01-17 02:15:11,890: registered with master
+[rospy.rosout][INFO] 2021-01-17 02:15:11,891: initializing /rosout core topic
+[rospy.registration][ERROR] 2021-01-17 02:15:11,894: [Errno 111] Connection refused
+Unable to register with master node [http://192.168.0.191:11311]: master may not be running yet. Will keep trying.
+[rospy.core][INFO] 2021-01-17 02:15:18,195: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2021-01-17 02:15:18,196: cannot unregister with master due to network issues
+[rospy.impl.masterslave][INFO] 2021-01-17 02:15:18,196: signal-2
+[rospy.core][INFO] 2021-01-17 02:15:18,360: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:18,515: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:18,665: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:18,915: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,045: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,165: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,295: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,449: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,610: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,705: signal_shutdown [signal-2]
+[rospy.core][INFO] 2021-01-17 02:15:19,855: signal_shutdown [signal-2]
+[rospy.rosout][INFO] 2021-01-17 02:15:23,298: connected to core topic /rosout
+[rospy.simtime][ERROR] 2021-01-17 02:15:23,304: Unable to initialize /clock: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 79, in init_simtime
+    if not _is_use_simtime():
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/simtime.py", line 60, in _is_use_simtime
+    code, msg, val = m.getParam(rospy.names.get_caller_id(), _USE_SIMTIME)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1109, in __call__
+    return self.__send(self.__name, args)
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/core.py", line 665, in _ServerProxy__request
+    return xmlrpcclient.ServerProxy._ServerProxy__request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1450, in __request
+    response = self.__transport.request(
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1153, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1165, in single_request
+    http_conn = self.send_request(host, handler, request_body, verbose)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1278, in send_request
+    self.send_content(connection, request_body)
+  File "/usr/lib/python3.8/xmlrpc/client.py", line 1308, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python3.8/http/client.py", line 1235, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1006, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 946, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 917, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+[rospy.core][INFO] 2021-01-17 02:15:23,306: signal_shutdown [atexit]
